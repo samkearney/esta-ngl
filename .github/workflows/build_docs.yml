@@ -23,7 +23,9 @@ jobs:
       
     # Runs a set of commands using the runners shell
     - name: Build documentation
-      run: ./ci/publish_docs.sh
+      run: |
+        chmod +x ./ci/publish_docs.sh
+        ./ci/publish_docs.sh
 
     - name: Push documentation
       uses: ad-m/github-push-action@v0.6.0
