@@ -33,7 +33,6 @@ release = '0.1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autosectionlabel',
     'sphinx_tabs.tabs',
     'rstjinja'
 ]
@@ -71,8 +70,6 @@ for file_name in os.listdir('properties'):
     if file_name.endswith('.json'):
         with open(os.path.join('properties', file_name), 'r') as file_handle:
             property_descriptions[file_name.split('.')[0]] = json.load(file_handle)
-
-print(property_descriptions)
 
 html_context = {
     'property_descriptions': property_descriptions

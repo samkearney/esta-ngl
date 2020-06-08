@@ -2,6 +2,8 @@
 Intensity Properties
 ####################
 
+.. _properties-intensity-intensity:
+
 *********
 Intensity
 *********
