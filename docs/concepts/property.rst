@@ -6,14 +6,17 @@ A property represents a single piece of data related to a device. A **property d
 information about how to read (and write, if supported) the data associated with a property. A
 property definition defines several attributes about a property.
 
-**********
-Attributes
-**********
+*********************
+Definition Attributes
+*********************
 
-Name
+Definition attributes are part of the property definition; they apply to all *instances* of the
+property.
+
+Type
 ====
 
-A property's **name** is a unique string identifying an individual property definition.
+A property's **type** is a unique string identifying an individual property definition.
 
 Value
 =====
@@ -25,7 +28,24 @@ individual instance of a device, or may be the same across all instances of a de
 Data Type
 =========
 
-A property's **data type** specifies how to interpret the data store
+A property's **data type** specifies how to interpret the data stored with the property.
+
+The possible data types are:
+
+======= =======================================================
+number  A numeric value, either integral or floating point.
+string  A UTF-8 string.
+binary  Opaque binary data.
+boolean A boolean value (true or false).
+enum    A set of meaningful names assigned to numeric values.
+array   An array of values, all of which must be the same type.
+======= =======================================================
+
+*******************
+Instance Attributes
+*******************
+
+Instance attributes are per-property-instance; they can vary between instances of the property.
 
 .. _Property Access and Lifetime:
 

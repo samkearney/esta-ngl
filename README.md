@@ -36,3 +36,8 @@ make html
 ```
 
 The HTML documentation will be output to the `docs/_build` directory.
+
+## reStructuredText
+
+There is a good primer on the reStructuredText flavor used with Sphinx
+[here](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html).

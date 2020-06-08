@@ -14,42 +14,43 @@ Definition
 Intensity properties control the light intensity of a light-emitting device.
 
 =========== ===================================================================================
-Name        intensity
+Name        esta.intensity.1
 Description Represents an emitter intensity as a percentage of its maximum brightness.
 Data Type   number
 Unit        percent
 Minimum     0
 Maximum     100
-Access      Read-Write
-Lifetime    Runtime
 =========== ===================================================================================
 
-Markup
-======
+Definition Markup
+=================
 
 .. code-block:: xml
 
-  <propertydef name="intensity">
-    <propertydesc>Represents an emitter intensity as a percentage of its maximum brightness.</propertydesc>
-    <datadesc type="number" unit="percent" minimum="0" maximum="100" access="readwrite" lifetime="runtime" />
+  <propertydef name="esta.intensity.1" type="number" unit="percent" minimum="0" maximum="100">
+    <description>Represents an emitter intensity as a percentage of its maximum brightness.</description>
+    <tag id="lighting" />
+    <tag id="intensity" />
   </propertydef>
 
-Example
-=======
+Instance Example
+================
 
 .. tabs::
 
   .. code-tab:: xml
 
-    <property name="intensity" id="primary-emitter-intensity" />
+    <property name="esta.intensity.1" id="primary-emitter-intensity" access="readwrite" lifetime="runtime" />
     
   .. code-tab:: json
 
     {
       "properties": [
         {
-          "name": "intensity",
-          "id": "primary-emitter-intensity"
+          "name": "esta.intensity.1",
+          "id": "primary-emitter-intensity",
+          "access": "readwrite",
+          "lifetime": "runtime"
         }
       ]
     }
