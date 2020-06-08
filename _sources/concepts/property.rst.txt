@@ -19,13 +19,15 @@ Value
 =====
 
 A property's **value** is the data stored by a property. Depending on the property's
-:ref:`lifetime<Access and Lifetime>`, a property's value may be retrievable from an individual
-instance of a device, or may be the same across all instances of a device.
+:ref:`lifetime<Property Access and Lifetime>`, a property's value may be retrievable from an
+individual instance of a device, or may be the same across all instances of a device.
 
 Data Type
 =========
 
 A property's **data type** specifies how to interpret the data store
+
+.. _Property Access and Lifetime:
 
 Access and Lifetime
 ===================
@@ -76,7 +78,7 @@ changed, and when it is invalidated.
      - Data that can be changed from outside the device that is not retained between power cycles.
        This is typically data that is used to trigger the device to do an action.
 
-       **Example:** Beam Intensity.
+       **Example:** :ref:`Intensity<properties-intensity-intensity>`.
 
 
 ***********************************

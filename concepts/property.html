@@ -179,15 +179,15 @@ property definition defines several attributes about a property.</p>
 <div class="section" id="value">
 <h3>Value<a class="headerlink" href="#value" title="Permalink to this headline">¶</a></h3>
 <p>A property’s <strong>value</strong> is the data stored by a property. Depending on the property’s
-<a class="reference internal" href="#access-and-lifetime"><span class="std std-ref">lifetime</span></a>, a property’s value may be retrievable from an individual
-instance of a device, or may be the same across all instances of a device.</p>
+<a class="reference internal" href="#property-access-and-lifetime"><span class="std std-ref">lifetime</span></a>, a property’s value may be retrievable from an
+individual instance of a device, or may be the same across all instances of a device.</p>
 </div>
 <div class="section" id="data-type">
 <h3>Data Type<a class="headerlink" href="#data-type" title="Permalink to this headline">¶</a></h3>
 <p>A property’s <strong>data type</strong> specifies how to interpret the data store</p>
 </div>
 <div class="section" id="access-and-lifetime">
-<h3>Access and Lifetime<a class="headerlink" href="#access-and-lifetime" title="Permalink to this headline">¶</a></h3>
+<span id="property-access-and-lifetime"></span><h3>Access and Lifetime<a class="headerlink" href="#access-and-lifetime" title="Permalink to this headline">¶</a></h3>
 <p>Access and Lifetime define how the data associated with a property is stored, how it can be
 changed, and when it is invalidated.</p>
 <p><strong>Access</strong> defines whether property data can be changed by a user.</p>
@@ -236,7 +236,7 @@ This is typically status and health data.</p>
 </td>
 <td><p>Data that can be changed from outside the device that is not retained between power cycles.
 This is typically data that is used to trigger the device to do an action.</p>
-<p><strong>Example:</strong> Beam Intensity.</p>
+<p><strong>Example:</strong> <a class="reference internal" href="../properties/intensity.html#properties-intensity-intensity"><span class="std std-ref">Intensity</span></a>.</p>
 </td>
 </tr>
 </tbody>
