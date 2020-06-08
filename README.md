@@ -10,7 +10,8 @@ controlled by control and configuration software.
 
 ## Documentation Output
 
-The docs are served on the GitHub Page associated with this repository.
+The docs are served on the [GitHub Page](https://samkearney.github.io/esta-ngl) associated with
+this repository.
 
 Docs are rebuilt automically from the `master` branch.
 
