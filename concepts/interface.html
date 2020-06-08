@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Intensity Properties" href="../properties/intensity.html" />
+    <link rel="next" title="Exclusion Group" href="exclusion_group.html" />
     <link rel="prev" title="Property" href="property.html" /> 
 </head>
 
@@ -85,11 +85,32 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="general.html">General Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="property.html">Property</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Interface</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#definition-attributes">Definition Attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#name">Name</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Standard Properties</span></p>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#instance-attributes">Instance Attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id">Id</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#allowed-children">Allowed Children</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exclusion_group.html">Exclusion Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tag.html">Tag</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ESTA Interfaces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/device.html">Device Interface</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ESTA Properties</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../properties/intensity.html">Intensity Properties</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
 </ul>
 
             
@@ -156,7 +177,36 @@
             
   <div class="section" id="interface">
 <h1>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h1>
-<p>An interface describes a behavior contract for a feature of a device.</p>
+<p>An interface describes a behavior contract for a feature of a device. An <strong>interface definition</strong>
+provides information about how to interact with the interface and the contract the interface
+defines. An interface definition defines several attributes about an interface.</p>
+<div class="section" id="definition-attributes">
+<h2>Definition Attributes<a class="headerlink" href="#definition-attributes" title="Permalink to this headline">¶</a></h2>
+<p>Definition attributes are part of the interface definition; they apply to all <em>instances</em> of the
+interface.</p>
+<div class="section" id="name">
+<h3>Name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h3>
+<p>An interface’s <strong>name</strong> is a unique string identifying an individual interface definition.</p>
+</div>
+</div>
+<div class="section" id="instance-attributes">
+<h2>Instance Attributes<a class="headerlink" href="#instance-attributes" title="Permalink to this headline">¶</a></h2>
+<p>Instance attributes are per-interface-instance; they can vary between instances of the interface.</p>
+<div class="section" id="id">
+<h3>Id<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>id</strong> is a unique string identifying this interface instance. The string must be unique within
+a device definition.</p>
+</div>
+</div>
+<div class="section" id="allowed-children">
+<h2>Allowed Children<a class="headerlink" href="#allowed-children" title="Permalink to this headline">¶</a></h2>
+<p>Interface instances can have the following children:</p>
+<ul class="simple">
+<li><p>Interface Instance</p></li>
+<li><p>Property Instance</p></li>
+<li><p>Tag</p></li>
+</ul>
+</div>
 </div>
 
 
@@ -167,7 +217,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../properties/intensity.html" class="btn btn-neutral float-right" title="Intensity Properties" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="exclusion_group.html" class="btn btn-neutral float-right" title="Exclusion Group" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="property.html" class="btn btn-neutral float-left" title="Property" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

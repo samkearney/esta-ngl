@@ -85,10 +85,13 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="general.html">General Concepts</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Property</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#name">Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#definition-attributes">Definition Attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#type">Type</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#value">Value</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#data-type">Data Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#instance-attributes">Instance Attributes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#access-and-lifetime">Access and Lifetime</a></li>
 </ul>
 </li>
@@ -97,10 +100,20 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="interface.html">Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exclusion_group.html">Exclusion Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tag.html">Tag</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Standard Properties</span></p>
+<p class="caption"><span class="caption-text">ESTA Interfaces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/device.html">Device Interface</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ESTA Properties</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../properties/intensity.html">Intensity Properties</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
 </ul>
 
             
@@ -170,11 +183,13 @@
 <p>A property represents a single piece of data related to a device. A <strong>property definition</strong> provides
 information about how to read (and write, if supported) the data associated with a property. A
 property definition defines several attributes about a property.</p>
-<div class="section" id="attributes">
-<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="name">
-<h3>Name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h3>
-<p>A property’s <strong>name</strong> is a unique string identifying an individual property definition.</p>
+<div class="section" id="definition-attributes">
+<h2>Definition Attributes<a class="headerlink" href="#definition-attributes" title="Permalink to this headline">¶</a></h2>
+<p>Definition attributes are part of the property definition; they apply to all <em>instances</em> of the
+property.</p>
+<div class="section" id="type">
+<h3>Type<a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h3>
+<p>A property’s <strong>type</strong> is a unique string identifying an individual property definition.</p>
 </div>
 <div class="section" id="value">
 <h3>Value<a class="headerlink" href="#value" title="Permalink to this headline">¶</a></h3>
@@ -184,8 +199,39 @@ individual instance of a device, or may be the same across all instances of a de
 </div>
 <div class="section" id="data-type">
 <h3>Data Type<a class="headerlink" href="#data-type" title="Permalink to this headline">¶</a></h3>
-<p>A property’s <strong>data type</strong> specifies how to interpret the data store</p>
+<p>A property’s <strong>data type</strong> specifies how to interpret the data stored with the property.</p>
+<p>The possible data types are:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 89%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>number</p></td>
+<td><p>A numeric value, either integral or floating point.</p></td>
+</tr>
+<tr class="row-even"><td><p>string</p></td>
+<td><p>A UTF-8 string.</p></td>
+</tr>
+<tr class="row-odd"><td><p>binary</p></td>
+<td><p>Opaque binary data.</p></td>
+</tr>
+<tr class="row-even"><td><p>boolean</p></td>
+<td><p>A boolean value (true or false).</p></td>
+</tr>
+<tr class="row-odd"><td><p>enum</p></td>
+<td><p>A set of meaningful names assigned to numeric values.</p></td>
+</tr>
+<tr class="row-even"><td><p>array</p></td>
+<td><p>An array of values, all of which must be the same type.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
+</div>
+<div class="section" id="instance-attributes">
+<h2>Instance Attributes<a class="headerlink" href="#instance-attributes" title="Permalink to this headline">¶</a></h2>
+<p>Instance attributes are per-property-instance; they can vary between instances of the property.</p>
 <div class="section" id="access-and-lifetime">
 <span id="property-access-and-lifetime"></span><h3>Access and Lifetime<a class="headerlink" href="#access-and-lifetime" title="Permalink to this headline">¶</a></h3>
 <p>Access and Lifetime define how the data associated with a property is stored, how it can be

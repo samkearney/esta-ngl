@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>General Concepts &mdash; Library Data Model 0.1.0 documentation</title>
+  <title>Exclusion Group &mdash; Library Data Model 0.1.0 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Property" href="property.html" />
-    <link rel="prev" title="ESTA Next-Gen Library Data Model" href="../index.html" /> 
+    <link rel="next" title="Tag" href="tag.html" />
+    <link rel="prev" title="Interface" href="interface.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -83,13 +83,13 @@
             
               <p class="caption"><span class="caption-text">Concepts</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">General Concepts</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#device-and-device-instance">Device and Device Instance</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="property.html">Property</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface.html">Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exclusion_group.html">Exclusion Group</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Exclusion Group</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#markup-example">Markup Example</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="tag.html">Tag</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Interfaces</span></p>
@@ -148,13 +148,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>General Concepts</li>
+      <li>Exclusion Group</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/concepts/general.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/concepts/exclusion_group.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -167,13 +167,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="general-concepts">
-<h1>General Concepts<a class="headerlink" href="#general-concepts" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="device-and-device-instance">
-<h2>Device and Device Instance<a class="headerlink" href="#device-and-device-instance" title="Permalink to this headline">¶</a></h2>
-<p>A <strong>device</strong> refers to some type of entertainment equipment that is configurable. The term “device”
-in this standard is typically used to refer to a single model of equipment, and “device instance”
-refers to a single unit of that model.</p>
+  <div class="section" id="exclusion-group">
+<h1>Exclusion Group<a class="headerlink" href="#exclusion-group" title="Permalink to this headline">¶</a></h1>
+<p>An <strong>exclusion group</strong> represents a group of interface instances, identified by their id, of which
+only one can be used at a time.</p>
+<p>Exclusion groups have no attributes. They have one or more children, which are elements which
+identify an interface instance.</p>
+<div class="section" id="markup-example">
+<h2>Markup Example<a class="headerlink" href="#markup-example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;exclusiongroup&gt;</span>
+  <span class="nt">&lt;interfaceref</span> <span class="na">id=</span><span class="s">&quot;gobo-wheel-1-indexed&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;interfaceref</span> <span class="na">id=</span><span class="s">&quot;gobo-wheel-1-continuous&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/exclusiongroup&gt;</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -185,10 +192,10 @@ refers to a single unit of that model.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="property.html" class="btn btn-neutral float-right" title="Property" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tag.html" class="btn btn-neutral float-right" title="Tag" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral float-left" title="ESTA Next-Gen Library Data Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="interface.html" class="btn btn-neutral float-left" title="Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

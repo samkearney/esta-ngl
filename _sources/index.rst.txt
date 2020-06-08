@@ -16,9 +16,23 @@ equipment in a machine-readable way.
    concepts/general
    concepts/property
    concepts/interface
+   concepts/exclusion_group
+   concepts/tag
 
 .. toctree::
    :maxdepth: 2
-   :caption: Standard Properties
+   :caption: ESTA Interfaces
+
+   interfaces/device
+
+.. toctree::
+   :maxdepth: 2
+   :caption: ESTA Properties
 
    properties/intensity
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Examples
+
+   examples/multi_cell

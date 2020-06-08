@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Intensity Properties &mdash; Library Data Model 0.1.0 documentation</title>
+  <title>Device Interface &mdash; Library Data Model 0.1.0 documentation</title>
   
 
   
@@ -42,8 +42,8 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Multi-Cell Device Example" href="../examples/multi_cell.html" />
-    <link rel="prev" title="Device Interface" href="../interfaces/device.html" /> 
+    <link rel="next" title="Intensity Properties" href="../properties/intensity.html" />
+    <link rel="prev" title="Tag" href="../concepts/tag.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,20 +96,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../concepts/tag.html">Tag</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Interfaces</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../interfaces/device.html">Device Interface</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Device Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#definition">Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#required-interfaces">Required Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#required-properties">Required Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#instance-example">Instance Example</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Properties</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Intensity Properties</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#intensity">Intensity</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#definition">Definition</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#definition-markup">Definition Markup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#instance-example">Instance Example</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../properties/intensity.html">Intensity Properties</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
@@ -159,13 +157,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Intensity Properties</li>
+      <li>Device Interface</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/properties/intensity.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/interfaces/device.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -178,52 +176,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="intensity-properties">
-<h1>Intensity Properties<a class="headerlink" href="#intensity-properties" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="intensity">
-<span id="properties-intensity-intensity"></span><h2>Intensity<a class="headerlink" href="#intensity" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="device-interface">
+<h1>Device Interface<a class="headerlink" href="#device-interface" title="Permalink to this headline">¶</a></h1>
+<p>There can be only one instance of the device interface, which must be present at the root level of
+every device description.</p>
 <div class="section" id="definition">
-<h3>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
-<p>Intensity properties control the light intensity of a light-emitting device.</p>
+<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 12%" />
-<col style="width: 88%" />
+<col style="width: 18%" />
+<col style="width: 82%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p>Name</p></td>
-<td><p>esta.intensity.1</p></td>
+<tr class="row-odd"><td><p>Type</p></td>
+<td><p>esta.device.1</p></td>
 </tr>
 <tr class="row-even"><td><p>Description</p></td>
-<td><p>Represents an emitter intensity as a percentage of its maximum brightness.</p></td>
-</tr>
-<tr class="row-odd"><td><p>Data Type</p></td>
-<td><p>number</p></td>
-</tr>
-<tr class="row-even"><td><p>Unit</p></td>
-<td><p>percent</p></td>
-</tr>
-<tr class="row-odd"><td><p>Minimum</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-even"><td><p>Maximum</p></td>
-<td><p>100</p></td>
+<td><p>The root-level interface that describes a device.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="definition-markup">
-<h3>Definition Markup<a class="headerlink" href="#definition-markup" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;propertydef</span> <span class="na">name=</span><span class="s">&quot;esta.intensity.1&quot;</span> <span class="na">type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;percent&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;100&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;description&gt;</span>Represents an emitter intensity as a percentage of its maximum brightness.<span class="nt">&lt;/description&gt;</span>
-  <span class="nt">&lt;tag</span> <span class="na">id=</span><span class="s">&quot;lighting&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;tag</span> <span class="na">id=</span><span class="s">&quot;intensity&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/propertydef&gt;</span>
-</pre></div>
+<div class="section" id="required-interfaces">
+<h2>Required Interfaces<a class="headerlink" href="#required-interfaces" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Kinematics (TODO)</p></li>
+</ul>
 </div>
+<div class="section" id="required-properties">
+<h2>Required Properties<a class="headerlink" href="#required-properties" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Device ID</p></li>
+<li><p>Device Manufacturer</p></li>
+<li><p>Device Model</p></li>
+</ul>
 </div>
 <div class="section" id="instance-example">
-<h3>Instance Example<a class="headerlink" href="#instance-example" title="Permalink to this headline">¶</a></h3>
+<h2>Instance Example<a class="headerlink" href="#instance-example" title="Permalink to this headline">¶</a></h2>
 <div class="sphinx-tabs docutils container">
 <div class="ui top attached tabular menu sphinx-menu docutils container">
 <div class="active item sphinx-data-tab-WE1M docutils container">
@@ -231,30 +220,14 @@
 <p>XML</p>
 </div>
 </div>
-<div class="item sphinx-data-tab-SlNPTg== docutils container">
-<div class="docutils container">
-<p>JSON</p>
-</div>
-</div>
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;esta.intensity.1&quot;</span> <span class="na">id=</span><span class="s">&quot;primary-emitter-intensity&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="nt">/&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interface</span> <span class="na">type=</span><span class="s">&quot;esta.device.1&quot;</span> <span class="na">id=</span><span class="s">&quot;device&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;esta.deviceid.1&quot;</span> <span class="na">id=</span><span class="s">&quot;device-id&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span><span class="nt">&gt;</span>df5865a0-adbf-469f-969e-060732869f86<span class="nt">&lt;/property&gt;</span>
+  <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;esta.manufacturer.1&quot;</span> <span class="na">id=</span><span class="s">&quot;device-manufacturer&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span><span class="nt">&gt;</span>ACME Corp.<span class="nt">&lt;/property&gt;</span>
+  <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;esta.model.1&quot;</span> <span class="na">id=</span><span class="s">&quot;device-model&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span><span class="nt">&gt;</span>The Sun<span class="nt">&lt;/property&gt;</span>
+<span class="nt">&lt;/interface&gt;</span>
 </pre></div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;esta.intensity.1&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;primary-emitter-intensity&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;readwrite&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span> <span class="s2">&quot;runtime&quot;</span>
-    <span class="p">}</span>
-  <span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -269,10 +242,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../examples/multi_cell.html" class="btn btn-neutral float-right" title="Multi-Cell Device Example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../properties/intensity.html" class="btn btn-neutral float-right" title="Intensity Properties" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../interfaces/device.html" class="btn btn-neutral float-left" title="Device Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../concepts/tag.html" class="btn btn-neutral float-left" title="Tag" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
