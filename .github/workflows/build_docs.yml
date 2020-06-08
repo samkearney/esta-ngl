@@ -23,6 +23,13 @@ jobs:
       
     # Runs a set of commands using the runners shell
     - name: Build documentation
-      run: |
-        cd docs
-        make html
+      run: ./ci/publish_docs.sh
+
+    - name: Push documentation
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
+        force: true
+        directory: docs/_build/html
+
