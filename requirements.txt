@@ -1,4 +1,0 @@
-sphinx
-sphinx-tabs
-sphinx-rtd-theme
-sphinx-autobuild
