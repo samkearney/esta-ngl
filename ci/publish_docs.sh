@@ -31,11 +31,6 @@ if ! git diff-index --quiet HEAD; then
   # Commit the added files with a title and description containing the Azure Pipelines
   # build number and the GitHub commit reference that issued this build.
   git commit -m "Deploy code docs to GitHub Pages from Github Actions" -m "Run number: ${GITHUB_RUN_NUMBER}" -m "Commit: ${GITHUB_SHA}"
-
-  # Force push to the remote gh-pages branch.
-  # The ouput is redirected to /dev/null to hide any sensitive credential data
-  # that might otherwise be exposed.
-  git push --force "https://${SVC_ETCLABS_CREDENTIALS}@${GH_REPO_REF}" > /dev/null 2>&1
 else
   echo 'No documentation changes. Doing nothing.'
 fi
