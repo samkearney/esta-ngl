@@ -83,21 +83,25 @@
               <p class="caption"><span class="caption-text">Concepts</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="concepts/general.html">General Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/property.html">Property</a></li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/interface.html">Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/property_definition.html">Property Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/property_instance.html">Property Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/interface_definition.html">Interface Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/interface_instance.html">Interface Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="concepts/exclusion_group.html">Exclusion Group</a></li>
 <li class="toctree-l1"><a class="reference internal" href="concepts/tag.html">Tag</a></li>
 </ul>
-<p class="caption"><span class="caption-text">ESTA Interfaces</span></p>
+<p class="caption"><span class="caption-text">ESTA Interface Library</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="interfaces/device.html">Device Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interfaces/dimmer.html">Dimmer Interface</a></li>
 </ul>
-<p class="caption"><span class="caption-text">ESTA Properties</span></p>
+<p class="caption"><span class="caption-text">ESTA Property Library</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="properties/intensity.html">Intensity Properties</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/multi_cell.html">Multi-Cell Device Example</a></li>
 </ul>
 
@@ -174,17 +178,25 @@ equipment in a machine-readable way.</p>
 <li class="toctree-l2"><a class="reference internal" href="concepts/general.html#device-and-device-instance">Device and Device Instance</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/property.html">Property</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="concepts/property.html#definition-attributes">Definition Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/property.html#instance-attributes">Instance Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/property.html#standard-vs-non-standard-properties">Standard vs Non-Standard Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/property.html#markup">Markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/property_definition.html">Property Definition</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="concepts/property_definition.html#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/property_definition.html#standard-vs-non-standard-properties">Standard vs Non-Standard Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/property_definition.html#markup">Markup</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/interface.html">Interface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="concepts/interface.html#definition-attributes">Definition Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/interface.html#instance-attributes">Instance Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/interface.html#allowed-children">Allowed Children</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/property_instance.html">Property Instance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="concepts/property_instance.html#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/property_instance.html#markup">Markup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/interface_definition.html">Interface Definition</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="concepts/interface_definition.html#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/interface_definition.html#children">Children</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/interface_instance.html">Interface Instance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="concepts/interface_instance.html#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/interface_instance.html#markup">Markup</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="concepts/exclusion_group.html">Exclusion Group</a><ul>
@@ -195,7 +207,7 @@ equipment in a machine-readable way.</p>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">ESTA Interfaces</span></p>
+<p class="caption"><span class="caption-text">ESTA Interface Library</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="interfaces/device.html">Device Interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="interfaces/device.html#definition">Definition</a></li>
@@ -204,10 +216,17 @@ equipment in a machine-readable way.</p>
 <li class="toctree-l2"><a class="reference internal" href="interfaces/device.html#instance-example">Instance Example</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="interfaces/dimmer.html">Dimmer Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/dimmer.html#definition">Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/dimmer.html#required-properties">Required Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/dimmer.html#markup">Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/dimmer.html#instance-example">Instance Example</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">ESTA Properties</span></p>
+<p class="caption"><span class="caption-text">ESTA Property Library</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="properties/intensity.html">Intensity Properties</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="properties/intensity.html#intensity">Intensity</a></li>
@@ -218,6 +237,7 @@ equipment in a machine-readable way.</p>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/multi_cell.html">Multi-Cell Device Example</a></li>
 </ul>
 </div>

@@ -14,20 +14,23 @@ equipment in a machine-readable way.
    :caption: Concepts
 
    concepts/general
-   concepts/property
-   concepts/interface
+   concepts/property_definition
+   concepts/property_instance
+   concepts/interface_definition
+   concepts/interface_instance
    concepts/exclusion_group
    concepts/tag
 
 .. toctree::
    :maxdepth: 2
-   :caption: ESTA Interfaces
+   :caption: ESTA Interface Library
 
    interfaces/device
+   interfaces/dimmer
 
 .. toctree::
    :maxdepth: 2
-   :caption: ESTA Properties
+   :caption: ESTA Property Library
 
    properties/intensity
 
@@ -35,4 +38,5 @@ equipment in a machine-readable way.
    :maxdepth: 2
    :caption: Examples
 
+   examples/simple_dimmer
    examples/multi_cell

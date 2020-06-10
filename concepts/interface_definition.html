@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Device Interface &mdash; Library Data Model 0.1.0 documentation</title>
+  <title>Interface Definition &mdash; Library Data Model 0.1.0 documentation</title>
   
 
   
@@ -42,8 +42,8 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Dimmer Interface" href="dimmer.html" />
-    <link rel="prev" title="Tag" href="../concepts/tag.html" /> 
+    <link rel="next" title="Interface Instance" href="interface_instance.html" />
+    <link rel="prev" title="Property Instance" href="property_instance.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,25 +88,26 @@
             
             
               <p class="caption"><span class="caption-text">Concepts</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/general.html">General Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/property_definition.html">Property Definition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/property_instance.html">Property Instance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/interface_definition.html">Interface Definition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/interface_instance.html">Interface Instance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/exclusion_group.html">Exclusion Group</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/tag.html">Tag</a></li>
-</ul>
-<p class="caption"><span class="caption-text">ESTA Interface Library</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Device Interface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#definition">Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#required-interfaces">Required Interfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#required-properties">Required Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#instance-example">Instance Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property_definition.html">Property Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property_instance.html">Property Instance</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Interface Definition</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#type">Type</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="dimmer.html">Dimmer Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#children">Children</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interface_instance.html">Interface Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exclusion_group.html">Exclusion Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tag.html">Tag</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ESTA Interface Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/device.html">Device Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/dimmer.html">Dimmer Interface</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Property Library</span></p>
 <ul>
@@ -161,13 +162,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Device Interface</li>
+      <li>Interface Definition</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/interfaces/device.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/concepts/interface_definition.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -180,57 +181,48 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="device-interface">
-<h1>Device Interface<a class="headerlink" href="#device-interface" title="Permalink to this headline">¶</a></h1>
-<p>There can be only one instance of the device interface, which must be present at the root level of
-every device description.</p>
-<div class="section" id="definition">
-<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 82%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p>Type</p></td>
-<td><p>esta.device.1</p></td>
-</tr>
-<tr class="row-even"><td><p>Description</p></td>
-<td><p>The root-level interface that describes a device.</p></td>
-</tr>
-</tbody>
-</table>
+  <div class="section" id="interface-definition">
+<h1>Interface Definition<a class="headerlink" href="#interface-definition" title="Permalink to this headline">¶</a></h1>
+<p>An interface describes a behavior contract for a feature of a device. An <strong>interface definition</strong>
+provides information about how to interact with the interface and the contract the interface
+defines. An interface definition defines several attributes about an interface.</p>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="type">
+<h3>Type<a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h3>
+<p>An interface’s <strong>type</strong> is a unique string identifying an individual interface definition.</p>
 </div>
-<div class="section" id="required-interfaces">
-<h2>Required Interfaces<a class="headerlink" href="#required-interfaces" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="children">
+<h2>Children<a class="headerlink" href="#children" title="Permalink to this headline">¶</a></h2>
+<p>Interface definitions can have the following children:</p>
 <ul class="simple">
-<li><p>Kinematics (TODO)</p></li>
+<li><p>Interface Instance</p></li>
+<li><p>Property Instance</p></li>
+<li><p>Tag</p></li>
 </ul>
-</div>
-<div class="section" id="required-properties">
-<h2>Required Properties<a class="headerlink" href="#required-properties" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Device ID</p></li>
-<li><p>Device Manufacturer</p></li>
-<li><p>Device Model</p></li>
-</ul>
-</div>
-<div class="section" id="instance-example">
-<h2>Instance Example<a class="headerlink" href="#instance-example" title="Permalink to this headline">¶</a></h2>
+<p>These children indicate the behavior contract prescribed by the interface.</p>
 <div class="sphinx-tabs docutils container">
 <div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-WE1M docutils container">
+<div class="active item sphinx-data-tab-0-0 docutils container">
 <div class="docutils container">
 <p>XML</p>
 </div>
 </div>
 </div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interface</span> <span class="na">type=</span><span class="s">&quot;esta.device.1&quot;</span> <span class="na">id=</span><span class="s">&quot;device&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;esta.deviceid.1&quot;</span> <span class="na">id=</span><span class="s">&quot;device-id&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span><span class="nt">&gt;</span>df5865a0-adbf-469f-969e-060732869f86<span class="nt">&lt;/property&gt;</span>
-  <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;esta.manufacturer.1&quot;</span> <span class="na">id=</span><span class="s">&quot;device-manufacturer&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span><span class="nt">&gt;</span>ACME Corp.<span class="nt">&lt;/property&gt;</span>
-  <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;esta.model.1&quot;</span> <span class="na">id=</span><span class="s">&quot;device-model&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span><span class="nt">&gt;</span>The Sun<span class="nt">&lt;/property&gt;</span>
-<span class="nt">&lt;/interface&gt;</span>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active docutils container">
+<ul class="simple">
+<li><p>Tag name: <code class="docutils literal notranslate"><span class="pre">interfacedef</span></code></p></li>
+<li><p>Attributes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: Type</p></li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interfacedef</span> <span class="na">type=</span><span class="s">&quot;esta.interface.1&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;property</span> <span class="na">type=</span><span class="s">&quot;esta.property.1&quot;</span> <span class="na">id=</span><span class="s">&quot;property&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/interfacedef&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -246,10 +238,10 @@ every device description.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="dimmer.html" class="btn btn-neutral float-right" title="Dimmer Interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="interface_instance.html" class="btn btn-neutral float-right" title="Interface Instance" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../concepts/tag.html" class="btn btn-neutral float-left" title="Tag" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="property_instance.html" class="btn btn-neutral float-left" title="Property Instance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

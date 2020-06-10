@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Property Instance &mdash; Library Data Model 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
+        <script src="../_static/sphinx_tabs/tabs.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Interface Definition" href="interface_definition.html" />
+    <link rel="prev" title="Property Definition" href="property_definition.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Library Data Model
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Concepts</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="general.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property_definition.html">Property Definition</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Property Instance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id">Id</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#access-and-lifetime">Access and Lifetime</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#markup">Markup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interface_definition.html">Interface Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface_instance.html">Interface Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exclusion_group.html">Exclusion Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tag.html">Tag</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ESTA Interface Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/device.html">Device Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/dimmer.html">Dimmer Interface</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ESTA Property Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../properties/intensity.html">Intensity Properties</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Library Data Model</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Property Instance</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/concepts/property_instance.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="property-instance">
+<h1>Property Instance<a class="headerlink" href="#property-instance" title="Permalink to this headline">¶</a></h1>
+<p>A <strong>property instance</strong> is a single addressable instance of a <a class="reference internal" href="property_definition.html"><span class="doc">Property Definition</span></a>.</p>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<p>Instance attributes are per-property-instance; they can vary between instances of the property.</p>
+<div class="section" id="id">
+<h3>Id<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>id</strong> is a unique string identifying this property instance. The string must be unique within
+a device definition.</p>
+</div>
+<div class="section" id="access-and-lifetime">
+<span id="property-access-and-lifetime"></span><h3>Access and Lifetime<a class="headerlink" href="#access-and-lifetime" title="Permalink to this headline">¶</a></h3>
+<p>Access and Lifetime define how the data associated with a property is stored, how it can be
+changed, and when it is invalidated.</p>
+<p><strong>Access</strong> defines whether property data can be changed by a user.</p>
+<ul class="simple">
+<li><p><strong>Read-Only</strong> properties cannot be changed.</p></li>
+<li><p><strong>Read-Write</strong> properties can be changed.</p></li>
+</ul>
+<p><strong>Lifetime</strong> defines how property data is stored.</p>
+<ul class="simple">
+<li><p><strong>Static</strong> properties are properties that apply to all instances of a device. This data may or
+may not be retrievable from an individual device.</p></li>
+<li><p><strong>Persistent</strong> properties are individual to a specific device instance, and their data is
+retained between device power cycles.</p></li>
+<li><p><strong>Runtime</strong> properties are individual to a specific device instance, and their data is not
+retained between device power cycles.</p></li>
+</ul>
+<table class="colwidths-auto docutils align-default" id="id1">
+<caption><span class="caption-text">Access and Lifetime Grid</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Read-Only</p></th>
+<th class="head"><p>Read-Write</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Static</p></td>
+<td><p>Data that is the same for all units of a device type.</p>
+<p><strong>Example:</strong> Device Manufacturer.</p>
+</td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>Persistent</p></td>
+<td><p>Data that is per-device-instance and stored persistently but cannot be changed from outside
+the device.</p>
+<p><strong>Example:</strong> Serial Number.</p>
+</td>
+<td><p>Data that is per-device-instance and stored persistently and can be changed from outside
+the device.</p>
+<p><strong>Example:</strong> User-Assigned Device Name.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>Runtime</p></td>
+<td><p>Data that is measured or calculated at runtime and is not retained between power cycles.
+This is typically status and health data.</p>
+<p><strong>Example:</strong> Temperature Sensors.</p>
+</td>
+<td><p>Data that can be changed from outside the device that is not retained between power cycles.
+This is typically data that is used to trigger the device to do an action.</p>
+<p><strong>Example:</strong> <a class="reference internal" href="../properties/intensity.html#properties-intensity-intensity"><span class="std std-ref">Intensity</span></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="markup">
+<h2>Markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h2>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-0-0 docutils container">
+<div class="docutils container">
+<p>XML</p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active docutils container">
+<ul class="simple">
+<li><p>Tag name: <code class="docutils literal notranslate"><span class="pre">property</span></code></p></li>
+<li><p>Attributes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: Type</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: Id</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">access</span></code>: Access</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifetime</span></code>: Lifetime</p></li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span> <span class="na">type=</span><span class="s">&quot;esta.property.1&quot;</span> <span class="na">id=</span><span class="s">&quot;my-property-instance&quot;</span> <span class="na">access=</span><span class="s">&quot;readonly&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;persistent&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="interface_definition.html" class="btn btn-neutral float-right" title="Interface Definition" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="property_definition.html" class="btn btn-neutral float-left" title="Property Definition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, ESTA Next-Gen Library Study Group
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

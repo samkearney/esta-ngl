@@ -1,0 +1,340 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Property Definition &mdash; Library Data Model 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
+        <script src="../_static/sphinx_tabs/tabs.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Property Instance" href="property_instance.html" />
+    <link rel="prev" title="General Concepts" href="general.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Library Data Model
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Concepts</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="general.html">General Concepts</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Property Definition</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#type">Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#value">Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-type">Data Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unit">Unit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#minimum">Minimum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maximum">Maximum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#standard-vs-non-standard-properties">Standard vs Non-Standard Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#markup">Markup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="property_instance.html">Property Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface_definition.html">Interface Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface_instance.html">Interface Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exclusion_group.html">Exclusion Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tag.html">Tag</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ESTA Interface Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/device.html">Device Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/dimmer.html">Dimmer Interface</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ESTA Property Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../properties/intensity.html">Intensity Properties</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Library Data Model</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Property Definition</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/concepts/property_definition.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="property-definition">
+<h1>Property Definition<a class="headerlink" href="#property-definition" title="Permalink to this headline">¶</a></h1>
+<p>A property represents a single piece of data related to a device. A <strong>property definition</strong> provides
+information about how to read (and write, if supported) the data associated with a property. A
+property definition defines several attributes about a property.</p>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<p>Definition attributes are part of the property definition; they apply to all <em>instances</em> of the
+property.</p>
+<div class="section" id="type">
+<h3>Type<a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h3>
+<p>A property’s <strong>type</strong> is a unique string identifying an individual property definition.</p>
+</div>
+<div class="section" id="value">
+<h3>Value<a class="headerlink" href="#value" title="Permalink to this headline">¶</a></h3>
+<p>A property’s <strong>value</strong> is the data stored by a property. Depending on the property’s
+<a class="reference internal" href="property_instance.html#property-access-and-lifetime"><span class="std std-ref">lifetime</span></a>, a property’s value may be retrievable from an
+individual instance of a device, or may be the same across all instances of a device.</p>
+</div>
+<div class="section" id="data-type">
+<h3>Data Type<a class="headerlink" href="#data-type" title="Permalink to this headline">¶</a></h3>
+<p>A property’s <strong>data type</strong> specifies how to interpret the data stored with the property.</p>
+<p>The possible data types are:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 89%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>number</p></td>
+<td><p>A numeric value, either integral or floating point.</p></td>
+</tr>
+<tr class="row-even"><td><p>string</p></td>
+<td><p>A UTF-8 string.</p></td>
+</tr>
+<tr class="row-odd"><td><p>binary</p></td>
+<td><p>Opaque binary data.</p></td>
+</tr>
+<tr class="row-even"><td><p>boolean</p></td>
+<td><p>A boolean value (true or false).</p></td>
+</tr>
+<tr class="row-odd"><td><p>enum</p></td>
+<td><p>A set of meaningful names assigned to numeric values.</p></td>
+</tr>
+<tr class="row-even"><td><p>array</p></td>
+<td><p>An array of values, all of which must be the same type.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="unit">
+<h3>Unit<a class="headerlink" href="#unit" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="minimum">
+<h3>Minimum<a class="headerlink" href="#minimum" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="maximum">
+<h3>Maximum<a class="headerlink" href="#maximum" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="standard-vs-non-standard-properties">
+<h2>Standard vs Non-Standard Properties<a class="headerlink" href="#standard-vs-non-standard-properties" title="Permalink to this headline">¶</a></h2>
+<p><strong>Standard</strong> properties are defined by the Next-Gen Library standard. Their property definitions
+are immutable and do not appear in Next-Gen Library markup.</p>
+<p><strong>Non-Standard</strong> properties are defined by a Next-Gen Library document writer. Their property
+definitions are present in the markup, since the definition is necessary to interpret a
+previously-unknown property correctly.</p>
+</div>
+<div class="section" id="markup">
+<h2>Markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h2>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-0-0 docutils container">
+<div class="docutils container">
+<p>XML</p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active docutils container">
+<ul class="simple">
+<li><p>Tag name: <code class="docutils literal notranslate"><span class="pre">propertydef</span></code></p></li>
+<li><p>Attributes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: Type</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data_type</span></code>: Data Type</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code>: Unit</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimum</span></code>: Minimum</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximum</span></code>: Maximum</p></li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;propertydef</span> <span class="na">type=</span><span class="s">&quot;esta.property.1&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;hertz&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0.1&quot;</span> <span class="na">maximum=</span><span class="s">&quot;1000&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/propertydef&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="property_instance.html" class="btn btn-neutral float-right" title="Property Instance" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="general.html" class="btn btn-neutral float-left" title="General Concepts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, ESTA Next-Gen Library Study Group
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

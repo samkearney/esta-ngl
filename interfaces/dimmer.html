@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Device Interface &mdash; Library Data Model 0.1.0 documentation</title>
+  <title>Dimmer Interface &mdash; Library Data Model 0.1.0 documentation</title>
   
 
   
@@ -25,8 +25,6 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
-        <script src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
-        <script src="../_static/sphinx_tabs/tabs.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -35,15 +33,11 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Dimmer Interface" href="dimmer.html" />
-    <link rel="prev" title="Tag" href="../concepts/tag.html" /> 
+    <link rel="next" title="Intensity Properties" href="../properties/intensity.html" />
+    <link rel="prev" title="Device Interface" href="device.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -99,14 +93,14 @@
 </ul>
 <p class="caption"><span class="caption-text">ESTA Interface Library</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Device Interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="device.html">Device Interface</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dimmer Interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#definition">Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#required-interfaces">Required Interfaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#required-properties">Required Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#markup">Markup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#instance-example">Instance Example</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="dimmer.html">Dimmer Interface</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Property Library</span></p>
 <ul>
@@ -161,13 +155,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Device Interface</li>
+      <li>Dimmer Interface</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/interfaces/device.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/interfaces/dimmer.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -180,60 +174,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="device-interface">
-<h1>Device Interface<a class="headerlink" href="#device-interface" title="Permalink to this headline">¶</a></h1>
-<p>There can be only one instance of the device interface, which must be present at the root level of
-every device description.</p>
+  <div class="section" id="dimmer-interface">
+<h1>Dimmer Interface<a class="headerlink" href="#dimmer-interface" title="Permalink to this headline">¶</a></h1>
+<p>The dimmer interface represents a simple dimmer controlling an intensity.</p>
 <div class="section" id="definition">
 <h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 18%" />
-<col style="width: 82%" />
+<col style="width: 21%" />
+<col style="width: 79%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>Type</p></td>
-<td><p>esta.device.1</p></td>
+<td><p>esta.dimmer.1</p></td>
 </tr>
 <tr class="row-even"><td><p>Description</p></td>
-<td><p>The root-level interface that describes a device.</p></td>
+<td><p>A simple dimmer controlling an intensity.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="required-interfaces">
-<h2>Required Interfaces<a class="headerlink" href="#required-interfaces" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Kinematics (TODO)</p></li>
-</ul>
-</div>
 <div class="section" id="required-properties">
 <h2>Required Properties<a class="headerlink" href="#required-properties" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Device ID</p></li>
-<li><p>Device Manufacturer</p></li>
-<li><p>Device Model</p></li>
+<li><p><a class="reference internal" href="../properties/intensity.html#properties-intensity-intensity"><span class="std std-ref">Intensity</span></a></p></li>
 </ul>
 </div>
-<div class="section" id="instance-example">
-<h2>Instance Example<a class="headerlink" href="#instance-example" title="Permalink to this headline">¶</a></h2>
-<div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-WE1M docutils container">
-<div class="docutils container">
-<p>XML</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interface</span> <span class="na">type=</span><span class="s">&quot;esta.device.1&quot;</span> <span class="na">id=</span><span class="s">&quot;device&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;esta.deviceid.1&quot;</span> <span class="na">id=</span><span class="s">&quot;device-id&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span><span class="nt">&gt;</span>df5865a0-adbf-469f-969e-060732869f86<span class="nt">&lt;/property&gt;</span>
-  <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;esta.manufacturer.1&quot;</span> <span class="na">id=</span><span class="s">&quot;device-manufacturer&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span><span class="nt">&gt;</span>ACME Corp.<span class="nt">&lt;/property&gt;</span>
-  <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;esta.model.1&quot;</span> <span class="na">id=</span><span class="s">&quot;device-model&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span><span class="nt">&gt;</span>The Sun<span class="nt">&lt;/property&gt;</span>
-<span class="nt">&lt;/interface&gt;</span>
+<div class="section" id="markup">
+<h2>Markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interfacedef</span> <span class="na">type=</span><span class="s">&quot;esta.dimmer.1&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;property</span> <span class="na">type=</span><span class="s">&quot;esta.intensity.1&quot;</span> <span class="na">id=</span><span class="s">&quot;intensity&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/interfacedef&gt;</span>
 </pre></div>
 </div>
 </div>
+<div class="section" id="instance-example">
+<h2>Instance Example<a class="headerlink" href="#instance-example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interface</span> <span class="na">type=</span><span class="s">&quot;esta.dimmer.1&quot;</span> <span class="na">id=</span><span class="s">&quot;primary-dimmer&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
 </div>
 </div>
 </div>
@@ -246,10 +224,10 @@ every device description.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="dimmer.html" class="btn btn-neutral float-right" title="Dimmer Interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../properties/intensity.html" class="btn btn-neutral float-right" title="Intensity Properties" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../concepts/tag.html" class="btn btn-neutral float-left" title="Tag" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="device.html" class="btn btn-neutral float-left" title="Device Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

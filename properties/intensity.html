@@ -42,8 +42,8 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Multi-Cell Device Example" href="../examples/multi_cell.html" />
-    <link rel="prev" title="Device Interface" href="../interfaces/device.html" /> 
+    <link rel="next" title="Simple Dimmer Device Example" href="../examples/simple_dimmer.html" />
+    <link rel="prev" title="Dimmer Interface" href="../interfaces/dimmer.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,16 +90,19 @@
               <p class="caption"><span class="caption-text">Concepts</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../concepts/general.html">General Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/property.html">Property</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/interface.html">Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/property_definition.html">Property Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/property_instance.html">Property Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/interface_definition.html">Interface Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/interface_instance.html">Interface Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../concepts/exclusion_group.html">Exclusion Group</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../concepts/tag.html">Tag</a></li>
 </ul>
-<p class="caption"><span class="caption-text">ESTA Interfaces</span></p>
+<p class="caption"><span class="caption-text">ESTA Interface Library</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../interfaces/device.html">Device Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/dimmer.html">Dimmer Interface</a></li>
 </ul>
-<p class="caption"><span class="caption-text">ESTA Properties</span></p>
+<p class="caption"><span class="caption-text">ESTA Property Library</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Intensity Properties</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#intensity">Intensity</a><ul>
@@ -113,6 +116,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
 </ul>
 
@@ -191,7 +195,7 @@
 <col style="width: 88%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p>Name</p></td>
+<tr class="row-odd"><td><p>Type</p></td>
 <td><p>esta.intensity.1</p></td>
 </tr>
 <tr class="row-even"><td><p>Description</p></td>
@@ -214,7 +218,7 @@
 </div>
 <div class="section" id="definition-markup">
 <h3>Definition Markup<a class="headerlink" href="#definition-markup" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;propertydef</span> <span class="na">name=</span><span class="s">&quot;esta.intensity.1&quot;</span> <span class="na">type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;percent&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;100&quot;</span><span class="nt">&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;propertydef</span> <span class="na">type=</span><span class="s">&quot;esta.intensity.1&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;percent&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;100&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;description&gt;</span>Represents an emitter intensity as a percentage of its maximum brightness.<span class="nt">&lt;/description&gt;</span>
   <span class="nt">&lt;tag</span> <span class="na">id=</span><span class="s">&quot;lighting&quot;</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;tag</span> <span class="na">id=</span><span class="s">&quot;intensity&quot;</span> <span class="nt">/&gt;</span>
@@ -238,7 +242,7 @@
 </div>
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;esta.intensity.1&quot;</span> <span class="na">id=</span><span class="s">&quot;primary-emitter-intensity&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="nt">/&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span> <span class="na">type=</span><span class="s">&quot;esta.intensity.1&quot;</span> <span class="na">id=</span><span class="s">&quot;primary-emitter-intensity&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -246,7 +250,7 @@
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;esta.intensity.1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;esta.intensity.1&quot;</span><span class="p">,</span>
       <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;primary-emitter-intensity&quot;</span><span class="p">,</span>
       <span class="nt">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;readwrite&quot;</span><span class="p">,</span>
       <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span> <span class="s2">&quot;runtime&quot;</span>
@@ -269,10 +273,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../examples/multi_cell.html" class="btn btn-neutral float-right" title="Multi-Cell Device Example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../examples/simple_dimmer.html" class="btn btn-neutral float-right" title="Simple Dimmer Device Example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../interfaces/device.html" class="btn btn-neutral float-left" title="Device Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../interfaces/dimmer.html" class="btn btn-neutral float-left" title="Dimmer Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

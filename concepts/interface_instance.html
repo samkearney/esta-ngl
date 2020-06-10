@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>General Concepts &mdash; Library Data Model 0.1.0 documentation</title>
+  <title>Interface Instance &mdash; Library Data Model 0.1.0 documentation</title>
   
 
   
@@ -25,6 +25,8 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
+        <script src="../_static/sphinx_tabs/tabs.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,11 +35,15 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Property Definition" href="property_definition.html" />
-    <link rel="prev" title="ESTA Next-Gen Library Data Model" href="../index.html" /> 
+    <link rel="next" title="Exclusion Group" href="exclusion_group.html" />
+    <link rel="prev" title="Interface Definition" href="interface_definition.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -83,14 +89,18 @@
             
               <p class="caption"><span class="caption-text">Concepts</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">General Concepts</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#device-and-device-instance">Device and Device Instance</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="property_definition.html">Property Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="property_instance.html">Property Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface_definition.html">Interface Definition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interface_instance.html">Interface Instance</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Interface Instance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id">Id</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#markup">Markup</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="exclusion_group.html">Exclusion Group</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tag.html">Tag</a></li>
 </ul>
@@ -152,13 +162,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>General Concepts</li>
+      <li>Interface Instance</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/concepts/general.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/concepts/interface_instance.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -171,13 +181,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="general-concepts">
-<h1>General Concepts<a class="headerlink" href="#general-concepts" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="device-and-device-instance">
-<h2>Device and Device Instance<a class="headerlink" href="#device-and-device-instance" title="Permalink to this headline">¶</a></h2>
-<p>A <strong>device</strong> refers to some type of entertainment equipment that is configurable. The term “device”
-in this standard is typically used to refer to a single model of equipment, and “device instance”
-refers to a single unit of that model.</p>
+  <div class="section" id="interface-instance">
+<h1>Interface Instance<a class="headerlink" href="#interface-instance" title="Permalink to this headline">¶</a></h1>
+<p>An <strong>interface instance</strong> is a single addressable instance of a <a class="reference internal" href="interface_definition.html"><span class="doc">Interface Definition</span></a>.</p>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<p>Instance attributes are per-interface-instance; they can vary between instances of the interface.</p>
+<div class="section" id="id">
+<h3>Id<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>id</strong> is a unique string identifying this interface instance. The string must be unique within
+a device definition.</p>
+</div>
+</div>
+<div class="section" id="markup">
+<h2>Markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h2>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-0-0 docutils container">
+<div class="docutils container">
+<p>XML</p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active docutils container">
+<ul class="simple">
+<li><p>Tag name: <code class="docutils literal notranslate"><span class="pre">interface</span></code></p></li>
+<li><p>Attributes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: Type</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: Id</p></li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interface</span> <span class="na">type=</span><span class="s">&quot;esta.interface.1&quot;</span> <span class="na">id=</span><span class="s">&quot;my-interface-instance&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -189,10 +230,10 @@ refers to a single unit of that model.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="property_definition.html" class="btn btn-neutral float-right" title="Property Definition" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="exclusion_group.html" class="btn btn-neutral float-right" title="Exclusion Group" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral float-left" title="ESTA Next-Gen Library Data Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="interface_definition.html" class="btn btn-neutral float-left" title="Interface Definition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
