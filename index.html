@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,12 +11,19 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -29,11 +35,6 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="General Concepts" href="concepts/general.html" /> 
@@ -50,7 +51,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> Library Data Model
+            <a href="#" class="icon icon-home" alt="Documentation Home"> Library Data Model
           
 
           
@@ -73,6 +74,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -88,26 +90,35 @@
 <li class="toctree-l1"><a class="reference internal" href="concepts/interface_definition.html">Interface Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="concepts/interface_instance.html">Interface Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="concepts/exclusion_group.html">Exclusion Group</a></li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/tag.html">Tag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/identifiers.html">Identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/property_value.html">Property Value</a></li>
 </ul>
-<p class="caption"><span class="caption-text">ESTA Interface Library</span></p>
+<p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="interfaces/device.html">Device Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interfaces/dimmer.html">Dimmer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device_id_library/device_interface.html">Device Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device_id_library/identification_properties.html">Identification Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device_id_library/full_definition_list.html">Full Definition List Download</a></li>
 </ul>
-<p class="caption"><span class="caption-text">ESTA Property Library</span></p>
+<p class="caption"><span class="caption-text">ESTA Intensity Library</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="properties/intensity.html">Intensity Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intensity_library/dimmer_interface.html">Dimmer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intensity_library/intensity_properties.html">Intensity Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intensity_library/full_definition_list.html">Full Definition List Download</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/multi_cell.html">Multi-Cell Device Example</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Other Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="other_resources/xml_tag_reference.html">XML Tag Reference</a></li>
+</ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -146,7 +157,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#">Docs</a> &raquo;</li>
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
         
       <li>ESTA Next-Gen Library Data Model</li>
     
@@ -175,12 +186,14 @@ equipment in a machine-readable way.</p>
 <p class="caption"><span class="caption-text">Concepts</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="concepts/general.html">General Concepts</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="concepts/general.html#device-and-device-instance">Device and Device Instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/general.html#esta-device-library">ESTA Device Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/general.html#definition-list">Definition List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/general.html#device-list">Device List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/general.html#device-definition">Device Definition</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="concepts/property_definition.html">Property Definition</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="concepts/property_definition.html#attributes">Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/property_definition.html#standard-vs-non-standard-properties">Standard vs Non-Standard Properties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="concepts/property_definition.html#markup">Markup</a></li>
 </ul>
 </li>
@@ -192,10 +205,12 @@ equipment in a machine-readable way.</p>
 <li class="toctree-l1"><a class="reference internal" href="concepts/interface_definition.html">Interface Definition</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="concepts/interface_definition.html#attributes">Attributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="concepts/interface_definition.html#children">Children</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/interface_definition.html#markup">Markup</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="concepts/interface_instance.html">Interface Instance</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="concepts/interface_instance.html#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/interface_instance.html#children">Children</a></li>
 <li class="toctree-l2"><a class="reference internal" href="concepts/interface_instance.html#markup">Markup</a></li>
 </ul>
 </li>
@@ -203,35 +218,53 @@ equipment in a machine-readable way.</p>
 <li class="toctree-l2"><a class="reference internal" href="concepts/exclusion_group.html#markup-example">Markup Example</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/tag.html">Tag</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">ESTA Interface Library</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="interfaces/device.html">Device Interface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="interfaces/device.html#definition">Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interfaces/device.html#required-interfaces">Required Interfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interfaces/device.html#required-properties">Required Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interfaces/device.html#instance-example">Instance Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/identifiers.html">Identifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="concepts/identifiers.html#organization-identifier">Organization Identifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/identifiers.html#qualified-class">Qualified Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/identifiers.html#qualified-device-id">Qualified Device ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/identifiers.html#qualified-id">Qualified ID</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="interfaces/dimmer.html">Dimmer Interface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="interfaces/dimmer.html#definition">Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interfaces/dimmer.html#required-properties">Required Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interfaces/dimmer.html#markup">Markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interfaces/dimmer.html#instance-example">Instance Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/property_value.html">Property Value</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="concepts/property_value.html#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/property_value.html#markup">Markup</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">ESTA Property Library</span></p>
+<p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="properties/intensity.html">Intensity Properties</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="properties/intensity.html#intensity">Intensity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device_id_library/device_interface.html">Device Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="device_id_library/device_interface.html#definition">Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="device_id_library/device_interface.html#properties">Properties</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="device_id_library/identification_properties.html">Identification Properties</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="device_id_library/identification_properties.html#device-id">Device ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="device_id_library/identification_properties.html#manufacturer">Manufacturer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="device_id_library/identification_properties.html#model">Model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="device_id_library/full_definition_list.html">Full Definition List Download</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">ESTA Intensity Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intensity_library/dimmer_interface.html">Dimmer Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intensity_library/dimmer_interface.html#definition">Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intensity_library/dimmer_interface.html#required-properties">Required Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intensity_library/dimmer_interface.html#markup">Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intensity_library/dimmer_interface.html#instance-example">Instance Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="intensity_library/intensity_properties.html">Intensity Properties</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intensity_library/intensity_properties.html#intensity">Intensity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intensity_library/intensity_properties.html#binary-intensity">Binary Intensity</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="intensity_library/full_definition_list.html">Full Definition List Download</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -239,6 +272,12 @@ equipment in a machine-readable way.</p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/multi_cell.html">Multi-Cell Device Example</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Other Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="other_resources/xml_tag_reference.html">XML Tag Reference</a></li>
 </ul>
 </div>
 </div>
@@ -261,11 +300,19 @@ equipment in a machine-readable way.</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, ESTA Next-Gen Library Study Group
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -276,7 +323,6 @@ equipment in a machine-readable way.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

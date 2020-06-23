@@ -1,0 +1,341 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Identification Properties &mdash; Library Data Model 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Full Definition List Download" href="full_definition_list.html" />
+    <link rel="prev" title="Device Interface" href="device_interface.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Library Data Model
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/general.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/property_definition.html">Property Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/property_instance.html">Property Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/interface_definition.html">Interface Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/interface_instance.html">Interface Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/exclusion_group.html">Exclusion Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/identifiers.html">Identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/property_value.html">Property Value</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="device_interface.html">Device Interface</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Identification Properties</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#device-id">Device ID</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#definition">Definition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manufacturer">Manufacturer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Definition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#model">Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Definition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="full_definition_list.html">Full Definition List Download</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ESTA Intensity Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/dimmer_interface.html">Dimmer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/intensity_properties.html">Intensity Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/full_definition_list.html">Full Definition List Download</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../other_resources/xml_tag_reference.html">XML Tag Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Library Data Model</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Identification Properties</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/device_id_library/identification_properties.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="identification-properties">
+<h1>Identification Properties<a class="headerlink" href="#identification-properties" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="device-id">
+<span id="properties-identification-device-id"></span><h2>Device ID<a class="headerlink" href="#device-id" title="Permalink to this headline">¶</a></h2>
+<p>A globally unique identifier for a model of device. This identifier should follow a single device
+model for its lifetime and should not change with new firmware or hardware revisions of the device.</p>
+<div class="section" id="definition">
+<h3>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 81%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Class</p></td>
+<td><p>device-id</p></td>
+</tr>
+<tr class="row-even"><td><p>Qualified Class</p></td>
+<td><p>org.esta.identification.1/device-id</p></td>
+</tr>
+<tr class="row-odd"><td><p>Description</p></td>
+<td><p>A globally unique identifier for a device model.</p></td>
+</tr>
+<tr class="row-even"><td><p>Data Type</p></td>
+<td><p>string</p></td>
+</tr>
+<tr class="row-odd"><td><p>String Constraints</p></td>
+<td><p>Follows the convention of a <a class="reference internal" href="../concepts/identifiers.html#concepts-identifiers-qualified-device-id"><span class="std std-ref">Qualified Device ID</span></a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="manufacturer">
+<span id="properties-identification-manufacturer"></span><h2>Manufacturer<a class="headerlink" href="#manufacturer" title="Permalink to this headline">¶</a></h2>
+<p>A string identifying a device’s manufacturer.</p>
+<div class="section" id="id1">
+<h3>Definition<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 81%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Class</p></td>
+<td><p>manufacturer</p></td>
+</tr>
+<tr class="row-even"><td><p>Qualified Class</p></td>
+<td><p>org.esta.identification.1/manufacturer</p></td>
+</tr>
+<tr class="row-odd"><td><p>Description</p></td>
+<td><p>Identifies a device’s manufacturer.</p></td>
+</tr>
+<tr class="row-even"><td><p>Data Type</p></td>
+<td><p>string</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="model">
+<span id="properties-identification-model"></span><h2>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h2>
+<p>A string identifying a device’s model name.</p>
+<div class="section" id="id2">
+<h3>Definition<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 81%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Class</p></td>
+<td><p>model</p></td>
+</tr>
+<tr class="row-even"><td><p>Qualified Class</p></td>
+<td><p>org.esta.identification.1/model</p></td>
+</tr>
+<tr class="row-odd"><td><p>Description</p></td>
+<td><p>Identifies a device’s model name.</p></td>
+</tr>
+<tr class="row-even"><td><p>Data Type</p></td>
+<td><p>string</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="full_definition_list.html" class="btn btn-neutral float-right" title="Full Definition List Download" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="device_interface.html" class="btn btn-neutral float-left" title="Device Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, ESTA Next-Gen Library Study Group
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

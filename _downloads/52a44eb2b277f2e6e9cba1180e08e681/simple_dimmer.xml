@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<estadl>
+  <import name="esta.identification.1" />
+  <import name="esta.intensity.1" />
+  <devicelist class="com.etcconnect.devices.1">
+    <device id="90b5c733-9265-4089-b2d3-dba059cc0c53">
+      <interface class="esta.identification.1/device" id="device">
+        <propertyvalue id="device-id">com.etcconnect.es1.1</propertyvalue>
+        <propertyvalue id="device-manufacturer">ETC Inc.</propertyvalue>
+        <propertyvalue id="device-model">ES1</propertyvalue>
+      </interface>
+      <interface class="esta.intensity.1/dimmer" id="dimmer" />
+    </device>
+  </devicelist>
+</estadl>

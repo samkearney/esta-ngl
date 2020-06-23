@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<estadl>
+  <definitionlist class="org.esta.identification.1">
+    <!-- Properties -->
+    <propertydef 
+        class="device-id"
+        description="A globally unique identifier for a device model."
+        data_type="string" />
+    <propertydef 
+        class="manufacturer"
+        description="Identifies a device's manufacturer."
+        data_type="string" />
+    <propertydef 
+        class="model"
+        description="Identifies a device's model name."
+        data_type="string" />
+
+    <!-- Interfaces -->
+    <interfacedef 
+        class="device"
+        description="Describes essential characteristics of a device.">
+      <property class="device-id" id="device-id" lifetime="static" />
+      <property class="manufacturer" id="manufacturer" lifetime="static" />
+      <property class="model" id="model" lifetime="static" />
+    </interfacedef>
+  </definitionlist>
+</estadl>
+

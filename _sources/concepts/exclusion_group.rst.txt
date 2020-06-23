@@ -2,6 +2,10 @@
 Exclusion Group
 ###############
 
+.. role:: under-construction
+
+:under-construction:`This section is a work-in-progress and should not be referenced at this time.`
+
 An **exclusion group** represents a group of interface instances, identified by their id, of which
 only one can be used at a time.
 
