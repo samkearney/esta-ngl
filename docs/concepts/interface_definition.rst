@@ -1,3 +1,5 @@
+.. _concepts-interface-definition:
+
 ####################
 Interface Definition
 ####################
@@ -10,10 +12,21 @@ defines. An interface definition defines several attributes about an interface.
 Attributes
 **********
 
-Type
-====
+.. _concepts-interface-definition-class:
 
-An interface's **type** is a unique string identifying an individual interface definition.
+Class
+=====
+
+An interface's **class** is a string identifying an individual interface definition. This string
+must be unique within the :ref:`concepts-general-definition-list` that contains the interface
+definition.
+
+.. _concepts-interface-definition-description:
+
+Description
+===========
+
+A string that describes the purpose of an interface in human-readable language.
 
 ********
 Children
@@ -21,11 +34,16 @@ Children
 
 Interface definitions can have the following children:
 
-* Interface Instance
-* Property Instance
-* Tag
+* :ref:`concepts-interface-definition`
+* :ref:`concepts-interface-instance`
+* :ref:`concepts-property-definition`
+* :ref:`concepts-property-instance`
 
 These children indicate the behavior contract prescribed by the interface.
+
+******
+Markup
+******
 
 .. tabs::
 
@@ -34,12 +52,17 @@ These children indicate the behavior contract prescribed by the interface.
     * Tag name: ``interfacedef``
     * Attributes:
 
-      * ``type``: Type
+      * ``class``: :ref:`concepts-interface-definition-class`
+      * ``description`: :ref:`concepts-interface-definition-description`
     
     Example:
 
     .. code-block:: xml
 
-      <interfacedef type="esta.interface.1">
-        <property type="esta.property.1" id="property" />
+      <interfacedef
+        class="binary-dimmer"
+        description="Represents non-dimming control of a light source">
+
+        <property class="org.esta.intensity.1/binary-intensity" id="intensity" />
+
       </interfacedef>

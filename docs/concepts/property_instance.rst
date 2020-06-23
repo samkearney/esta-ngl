@@ -1,3 +1,5 @@
+.. _concepts-property-instance:
+
 #################
 Property Instance
 #################
@@ -10,13 +12,23 @@ Attributes
 
 Instance attributes are per-property-instance; they can vary between instances of the property.
 
+.. _concepts-property-instance-class:
+
+Class
+=====
+
+Indicates the :ref:`class<concepts-property-definition-class>` of the defined property of which
+this is an instance.
+
+.. _concepts-property-instance-id:
+
 Id
 ==
 
 The **id** is a unique string identifying this property instance. The string must be unique within
 a device definition.
 
-.. _Property Access and Lifetime:
+.. _concepts-property-instance-access-and-lifetime:
 
 Access and Lifetime
 ===================
@@ -80,13 +92,17 @@ Markup
     * Tag name: ``property``
     * Attributes:
 
-      * ``type``: Type
-      * ``id``: Id
-      * ``access``: Access
-      * ``lifetime``: Lifetime
+      * ``class``: Class
+      * ``id``: :ref:`concepts-property-instance-id`
+      * ``access``: :ref:`Access<concepts-property-instance-access-and-lifetime>`
+      * ``lifetime``: :ref:`Lifetime<concepts-property-instance-access-and-lifetime>`
     
     Example:
 
     .. code-block:: xml
 
-      <property type="esta.property.1" id="my-property-instance" access="readonly" lifetime="persistent" />
+      <property
+        class="org.esta.identification.1/firmware-version"
+        id="my-firmware-version"
+        access="readonly"
+        lifetime="persistent" />

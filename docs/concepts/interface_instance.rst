@@ -1,3 +1,5 @@
+.. _concepts-interface-instance:
+
 ##################
 Interface Instance
 ##################
@@ -10,11 +12,29 @@ Attributes
 
 Instance attributes are per-interface-instance; they can vary between instances of the interface.
 
+.. _concepts-interface-instance-class:
+
+Class
+=====
+
+Indicates the :ref:`class<concepts-interface-definition-class>` of the defined interface of which
+this is an instance.
+
+.. _concepts-interface-instance-id:
+
 Id
 ==
 
 The **id** is a unique string identifying this interface instance. The string must be unique within
-a device definition.
+the definition containing the interface instance.
+
+********
+Children
+********
+
+Interface instances can have the following children:
+
+* :ref:`concepts-property-value`
 
 ******
 Markup
@@ -27,11 +47,11 @@ Markup
     * Tag name: ``interface``
     * Attributes:
 
-      * ``type``: Type
-      * ``id``: Id
+      * ``class``: :ref:`concepts-interface-instance-class`
+      * ``id``: :ref:`concepts-interface-instance-id`
     
     Example:
 
     .. code-block:: xml
 
-      <interface type="esta.interface.1" id="my-interface-instance" />
+      <interface class="org.esta.intensity.1/binary-dimmer" id="primary-dimmer" />

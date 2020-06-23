@@ -19,20 +19,24 @@ equipment in a machine-readable way.
    concepts/interface_definition
    concepts/interface_instance
    concepts/exclusion_group
-   concepts/tag
+   concepts/identifiers
+   concepts/property_value
 
 .. toctree::
    :maxdepth: 2
-   :caption: ESTA Interface Library
+   :caption: ESTA Device Identification Library
 
-   interfaces/device
-   interfaces/dimmer
+   device_id_library/device_interface
+   device_id_library/identification_properties
+   device_id_library/full_definition_list
 
 .. toctree::
    :maxdepth: 2
-   :caption: ESTA Property Library
+   :caption: ESTA Intensity Library
 
-   properties/intensity
+   intensity_library/dimmer_interface
+   intensity_library/intensity_properties
+   intensity_library/full_definition_list
 
 .. toctree::
    :maxdepth: 2
@@ -40,3 +44,9 @@ equipment in a machine-readable way.
 
    examples/simple_dimmer
    examples/multi_cell
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Other Resources
+
+   other_resources/xml_tag_reference

@@ -9,7 +9,7 @@ Definition
 **********
 
 =========== =========================================
-Type        esta.dimmer.1
+Class       dimmer
 Description A simple dimmer controlling an intensity.
 =========== =========================================
 
@@ -25,8 +25,10 @@ Markup
 
 .. code-block:: xml
 
-  <interfacedef type="esta.dimmer.1">
-    <property type="esta.intensity.1" id="intensity" access="readwrite" lifetime="runtime" />
+  <interfacedef
+      class="dimmer"
+      description="A simple dimmer controlling an intensity.">
+    <property class="intensity" id="intensity" access="readwrite" lifetime="runtime" />
   </interfacedef>
 
 ****************
@@ -35,4 +37,4 @@ Instance Example
 
 .. code-block:: xml
 
-  <interface type="esta.dimmer.1" id="primary-dimmer" />
+  <interface class="esta.intensity.1/dimmer" id="primary-dimmer" />

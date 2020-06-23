@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<estadl>
+  <import name="org.esta.device.1" />
+  <import name="org.esta.intensity.1" />
+
+  <definitionlist class="com.acme.definitions.1">
+    <interfacedef class="cells-10">
+      <property class="org.esta.intensity.1/intensity" id="cell-1-intensity" />
+      <property class="org.esta.intensity.1/intensity" id="cell-2-intensity" />
+      <property class="org.esta.intensity.1/intensity" id="cell-3-intensity" />
+      <property class="org.esta.intensity.1/intensity" id="cell-4-intensity" />
+      <property class="org.esta.intensity.1/intensity" id="cell-5-intensity" />
+      <property class="org.esta.intensity.1/intensity" id="cell-6-intensity" />
+      <property class="org.esta.intensity.1/intensity" id="cell-7-intensity" />
+      <property class="org.esta.intensity.1/intensity" id="cell-8-intensity" />
+      <property class="org.esta.intensity.1/intensity" id="cell-9-intensity" />
+      <property class="org.esta.intensity.1/intensity" id="cell-10-intensity" />
+    </interfacedef>
+    <interfacedef class="cell-group">
+      <property class="org.esta.intensity.1/intensity" id="intensity-master" />
+      <interface class="cells-10" id="cells" />
+    </interfacedef>
+  </definitionlist>
+
+  <devicelist class="com.acme.devices.1" />
+    <device id="2409a1a5-a220-49ca-a674-2834c09bc58a">
+      <interface class="org.esta.device.1/device" id="device">
+        <propertyvalue id="device-id">com.acme.mymulticelldevice.1</propertyvalue>
+        <propertyvalue id="device-manufacturer">My Organization</propertyvalue>
+        <propertyvalue id="device-model">Multi-Cell 5000</propertyvalue>
+      </interface>
+      <interface class="com.acme.definitions.1/cell-group" id="cell-group-1" />
+      <interface class="com.acme.definitions.1/cell-group" id="cell-group-2" />
+    </device>
+  </devicelist>
+</estadl>

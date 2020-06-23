@@ -63,15 +63,3 @@ html_css_files = [
 ]
 
 # -- Templating --------------------------------------------------------------
-
-property_descriptions = {}
-
-for file_name in os.listdir('properties'):
-    if file_name.endswith('.json'):
-        with open(os.path.join('properties', file_name), 'r') as file_handle:
-            property_descriptions[file_name.split('.')[0]] = json.load(file_handle)
-
-html_context = {
-    'property_descriptions': property_descriptions
-}
-
