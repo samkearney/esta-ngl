@@ -90,6 +90,19 @@ A device list is a list of device definitions.
 Attributes
 ==========
 
+Class
+-----
+
+A device list's **class** is a unique string identifying an individual device list. This string
+string must be a :ref:`concepts-identifiers-qualified-class`.
+
+Children
+========
+
+* :ref:`concepts-general-device-definition`
+
+.. _concepts-general-device-definition:
+
 *****************
 Device Definition
 *****************
@@ -111,3 +124,28 @@ single model of equipment, and "device instance" refers to a single unit of that
     </device>
   </devicelist>
 
+.. _concepts-general-import:
+
+******
+Import
+******
+
+An import element makes the contents of a :ref:`concepts-general-definition-list` or
+:ref:`concepts-general-device-list` available for referencing in the current context.
+
+Attributes
+==========
+
+Name
+----
+
+The **name** of an import is the class of the definition list or device list that is being
+imported.
+
+Example
+=======
+
+.. code-block:: xml
+
+  <!-- Import the contents of "org.esta.device.1" into the current file. -->
+  <import name="org.esta.device.1" />

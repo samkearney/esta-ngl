@@ -101,10 +101,22 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#device-list">Device List</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Attributes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Class</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Children</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#device-definition">Device Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#import">Import</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Attributes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#name">Name</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="property_definition.html">Property Definition</a></li>
@@ -274,10 +286,21 @@ string must be a <a class="reference internal" href="identifiers.html#concepts-i
 <p>A device list is a list of device definitions.</p>
 <div class="section" id="id3">
 <h3>Attributes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h4>Class<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<p>A device list’s <strong>class</strong> is a unique string identifying an individual device list. This string
+string must be a <a class="reference internal" href="identifiers.html#concepts-identifiers-qualified-class"><span class="std std-ref">Qualified Class</span></a>.</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>Children<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#concepts-general-device-definition"><span class="std std-ref">Device Definition</span></a></p></li>
+</ul>
 </div>
 </div>
 <div class="section" id="device-definition">
-<h2>Device Definition<a class="headerlink" href="#device-definition" title="Permalink to this headline">¶</a></h2>
+<span id="concepts-general-device-definition"></span><h2>Device Definition<a class="headerlink" href="#device-definition" title="Permalink to this headline">¶</a></h2>
 <p>A <strong>device definition</strong> defines the behavior of a <strong>device</strong>, which is some type of entertainment
 equipment that is configurable. The term “device” in this standard is typically used to refer to a
 single model of equipment, and “device instance” refers to a single unit of that model.</p>
@@ -292,6 +315,26 @@ single model of equipment, and “device instance” refers to a single unit of 
   <span class="nt">&lt;/device&gt;</span>
 <span class="nt">&lt;/devicelist&gt;</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="import">
+<span id="concepts-general-import"></span><h2>Import<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
+<p>An import element makes the contents of a <a class="reference internal" href="#concepts-general-definition-list"><span class="std std-ref">Definition List</span></a> or
+<a class="reference internal" href="#concepts-general-device-list"><span class="std std-ref">Device List</span></a> available for referencing in the current context.</p>
+<div class="section" id="id6">
+<h3>Attributes<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="name">
+<h4>Name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h4>
+<p>The <strong>name</strong> of an import is the class of the definition list or device list that is being
+imported.</p>
+</div>
+</div>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Import the contents of &quot;org.esta.device.1&quot; into the current file. --&gt;</span>
+<span class="nt">&lt;import</span> <span class="na">name=</span><span class="s">&quot;org.esta.device.1&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>

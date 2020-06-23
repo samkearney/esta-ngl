@@ -37,4 +37,4 @@ Instance Example
 
 .. code-block:: xml
 
-  <interface class="esta.intensity.1/dimmer" id="primary-dimmer" />
+  <interface class="org.esta.intensity.1/dimmer" id="primary-dimmer" />

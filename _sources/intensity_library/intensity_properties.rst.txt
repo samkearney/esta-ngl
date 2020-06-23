@@ -43,7 +43,7 @@ Instance Example
   .. code-tab:: xml
 
     <property
-      type="esta.intensity.1/intensity"
+      type="org.esta.intensity.1/intensity"
       id="primary-emitter-intensity"
       access="readwrite"
       lifetime="runtime" />
@@ -53,7 +53,7 @@ Instance Example
     {
       "properties": [
         {
-          "type": "esta.intensity.1/intensity",
+          "type": "org.esta.intensity.1/intensity",
           "id": "primary-emitter-intensity",
           "access": "readwrite",
           "lifetime": "runtime"
@@ -96,7 +96,7 @@ Instance Example
   .. code-tab:: xml
 
     <property
-      class="esta.intensity.1/binary-intensity"
+      class="org.esta.intensity.1/binary-intensity"
       id="primary-emitter-intensity"
       access="readwrite"
       lifetime="runtime" />
@@ -106,7 +106,7 @@ Instance Example
     {
       "properties": [
         {
-          "class": "esta.intensity.1/binary-intensity",
+          "class": "org.esta.intensity.1/binary-intensity",
           "id": "primary-emitter-intensity",
           "access": "readwrite",
           "lifetime": "runtime"
