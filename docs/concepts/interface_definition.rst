@@ -41,6 +41,8 @@ Interface definitions can have the following children:
 
 These children indicate the behavior contract prescribed by the interface.
 
+.. _concepts-interface-definition-markup:
+
 ******
 Markup
 ******

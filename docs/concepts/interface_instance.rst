@@ -36,6 +36,8 @@ Interface instances can have the following children:
 
 * :ref:`concepts-property-value`
 
+.. _concepts-interface-instance-markup:
+
 ******
 Markup
 ******
