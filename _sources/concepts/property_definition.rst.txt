@@ -77,7 +77,7 @@ square-meter             Area in Square Meters
 cubic-meter              Volume in Cubic Meters
 meter-per-second         Velocity in Meters per Second
 meter-per-second-squared Acceleration in Meters per Second Squared
-newton                   Force in Netwons
+newton                   Force in Newtons
 joule                    Energy in Joules
 pascal                   Pressure in Pascals
 second                   Time in Seconds
@@ -107,7 +107,7 @@ string             The minimum length in characters of the string.
 binary             N/A
 boolean            N/A
 enum               N/A
-array              The minimum length in elements of the array.
+array              The minimum length of the array in elements.
 ================== ===============================================
 
 .. _concepts-property-definition-maximum:

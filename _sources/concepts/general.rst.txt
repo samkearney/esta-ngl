@@ -113,7 +113,7 @@ single model of equipment, and "device instance" refers to a single unit of that
 
 .. code-block:: xml
 
-  <devicelist>
+  <devicelist class="com.etcconnect.devices.1>
     <device id="90b5c733-9265-4089-b2d3-dba059cc0c53">
       <interface class="org.esta.device.1/device" id="device">
         <propertyvalue id="device-id">com.etcconnect.es1.1</propertyvalue>
