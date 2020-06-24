@@ -131,6 +131,8 @@ enum               N/A
 array              The maximum length of the array in elements.
 ================== ===============================================
 
+.. _concepts-property-definition-markup:
+
 ******
 Markup
 ******

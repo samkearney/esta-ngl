@@ -2,19 +2,15 @@
 XML Tag Reference
 #################
 
-.. role:: under-construction
-
-:under-construction:`TODO`
-
 =============== =======================================================
 estadl          The root tag of an ESTA Device Library XML file.
 definitionlist  :ref:`concepts-general-definition-list`
 device          :ref:`concepts-general-device-definition`
 devicelist      :ref:`concepts-general-device-list`  
 import          :ref:`concepts-general-import`
-interface       :ref:`concepts-interface_instance-markup`
-interfacedef    :ref:`concepts-interface_definition-markup`
-property        :ref:`concepts-property_instance-markup`
-propertydef     :ref:`concepts-property_definition-markup`
-propertyvalue   :ref:`concepts-property_value-markup`
+interface       :ref:`Interface Instance<concepts-interface-instance-markup>`
+interfacedef    :ref:`Interface Definition<concepts-interface-definition-markup>`
+property        :ref:`Property Instance<concepts-property-instance-markup>`
+propertydef     :ref:`Property Definition<concepts-property-definition-markup>`
+propertyvalue   :ref:`Property Value<concepts-property-value-markup>`
 =============== =======================================================
