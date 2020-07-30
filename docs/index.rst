@@ -36,6 +36,7 @@ equipment in a machine-readable way.
 
    intensity_library/dimmer_interface
    intensity_library/intensity_properties
+   intensity_library/spectral_power_distrobution
    intensity_library/full_definition_list
 
 .. toctree::
