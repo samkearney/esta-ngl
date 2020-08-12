@@ -90,6 +90,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../concepts/property_instance.html">Property Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../concepts/interface_definition.html">Interface Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../concepts/interface_instance.html">Interface Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/interface_heirarchy.html">Heirarchy of Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../concepts/exclusion_group.html">Exclusion Group</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../concepts/identifiers.html">Identifiers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../concepts/property_value.html">Property Value</a></li>
@@ -188,21 +189,13 @@
   <span class="nt">&lt;import</span> <span class="na">name=</span><span class="s">&quot;org.esta.intensity.1&quot;</span> <span class="nt">/&gt;</span>
 
   <span class="nt">&lt;definitionlist</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;cells-10&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;cell-1-intensity&quot;</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;cell-2-intensity&quot;</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;cell-3-intensity&quot;</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;cell-4-intensity&quot;</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;cell-5-intensity&quot;</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;cell-6-intensity&quot;</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;cell-7-intensity&quot;</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;cell-8-intensity&quot;</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;cell-9-intensity&quot;</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;cell-10-intensity&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;cell&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;intensity&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.color.1/rgb&quot;</span> <span class="na">id=</span><span class="s">&quot;color&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/interfacedef&gt;</span>
     <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;cell-group&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;intensity-master&quot;</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;cells-10&quot;</span> <span class="na">id=</span><span class="s">&quot;cells&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;child</span> <span class="na">class=</span><span class="s">&quot;cell&quot;</span> <span class="na">minimum=</span><span class="s">&quot;1&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/interfacedef&gt;</span>
   <span class="nt">&lt;/definitionlist&gt;</span>
 
@@ -213,8 +206,31 @@
         <span class="nt">&lt;propertyvalue</span> <span class="na">id=</span><span class="s">&quot;device-manufacturer&quot;</span><span class="nt">&gt;</span>My Organization<span class="nt">&lt;/propertyvalue&gt;</span>
         <span class="nt">&lt;propertyvalue</span> <span class="na">id=</span><span class="s">&quot;device-model&quot;</span><span class="nt">&gt;</span>Multi-Cell 5000<span class="nt">&lt;/propertyvalue&gt;</span>
       <span class="nt">&lt;/interface&gt;</span>
-      <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell-group&quot;</span> <span class="na">id=</span><span class="s">&quot;cell-group-1&quot;</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell-group&quot;</span> <span class="na">id=</span><span class="s">&quot;cell-group-2&quot;</span> <span class="nt">/&gt;</span>
+
+      <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell-group&quot;</span> <span class="na">id=</span><span class="s">&quot;cell-group-1&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;1&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;2&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;3&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;4&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;5&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;6&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;7&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;8&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;9&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;10&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/interface&gt;</span>
+      <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell-group&quot;</span> <span class="na">id=</span><span class="s">&quot;cell-group-2&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;1&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;2&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;3&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;4&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;5&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;6&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;7&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;8&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;9&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;10&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/interface&gt;</span>
     <span class="nt">&lt;/device&gt;</span>
   <span class="nt">&lt;/devicelist&gt;</span>
 <span class="nt">&lt;/estadl&gt;</span>

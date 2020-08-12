@@ -4,21 +4,13 @@
   <import name="org.esta.intensity.1" />
 
   <definitionlist class="com.acme.definitions.1">
-    <interfacedef class="cells-10">
-      <property class="org.esta.intensity.1/intensity" id="cell-1-intensity" />
-      <property class="org.esta.intensity.1/intensity" id="cell-2-intensity" />
-      <property class="org.esta.intensity.1/intensity" id="cell-3-intensity" />
-      <property class="org.esta.intensity.1/intensity" id="cell-4-intensity" />
-      <property class="org.esta.intensity.1/intensity" id="cell-5-intensity" />
-      <property class="org.esta.intensity.1/intensity" id="cell-6-intensity" />
-      <property class="org.esta.intensity.1/intensity" id="cell-7-intensity" />
-      <property class="org.esta.intensity.1/intensity" id="cell-8-intensity" />
-      <property class="org.esta.intensity.1/intensity" id="cell-9-intensity" />
-      <property class="org.esta.intensity.1/intensity" id="cell-10-intensity" />
+    <interfacedef class="cell">
+      <property class="org.esta.intensity.1/intensity" id="intensity" />
+      <property class="org.esta.color.1/rgb" id="color" />
     </interfacedef>
     <interfacedef class="cell-group">
       <property class="org.esta.intensity.1/intensity" id="intensity-master" />
-      <interface class="cells-10" id="cells" />
+      <child class="cell" minimum="1" />
     </interfacedef>
   </definitionlist>
 
@@ -29,8 +21,31 @@
         <propertyvalue id="device-manufacturer">My Organization</propertyvalue>
         <propertyvalue id="device-model">Multi-Cell 5000</propertyvalue>
       </interface>
-      <interface class="com.acme.definitions.1/cell-group" id="cell-group-1" />
-      <interface class="com.acme.definitions.1/cell-group" id="cell-group-2" />
+
+      <interface class="com.acme.definitions.1/cell-group" id="cell-group-1">
+        <interface class="com.acme.definitions.1/cell" id="1" />
+        <interface class="com.acme.definitions.1/cell" id="2" />
+        <interface class="com.acme.definitions.1/cell" id="3" />
+        <interface class="com.acme.definitions.1/cell" id="4" />
+        <interface class="com.acme.definitions.1/cell" id="5" />
+        <interface class="com.acme.definitions.1/cell" id="6" />
+        <interface class="com.acme.definitions.1/cell" id="7" />
+        <interface class="com.acme.definitions.1/cell" id="8" />
+        <interface class="com.acme.definitions.1/cell" id="9" />
+        <interface class="com.acme.definitions.1/cell" id="10" />
+      </interface>
+      <interface class="com.acme.definitions.1/cell-group" id="cell-group-2">
+        <interface class="com.acme.definitions.1/cell" id="1" />
+        <interface class="com.acme.definitions.1/cell" id="2" />
+        <interface class="com.acme.definitions.1/cell" id="3" />
+        <interface class="com.acme.definitions.1/cell" id="4" />
+        <interface class="com.acme.definitions.1/cell" id="5" />
+        <interface class="com.acme.definitions.1/cell" id="6" />
+        <interface class="com.acme.definitions.1/cell" id="7" />
+        <interface class="com.acme.definitions.1/cell" id="8" />
+        <interface class="com.acme.definitions.1/cell" id="9" />
+        <interface class="com.acme.definitions.1/cell" id="10" />
+      </interface>
     </device>
   </devicelist>
 </estadl>

@@ -18,6 +18,7 @@ equipment in a machine-readable way.
    concepts/property_instance
    concepts/interface_definition
    concepts/interface_instance
+   concepts/interface_heirarchy
    concepts/exclusion_group
    concepts/identifiers
    concepts/property_value
