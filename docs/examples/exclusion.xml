@@ -1,0 +1,81 @@
+<!--
+  An example of physical exclusion as applied to gobo wheels and gobos.
+
+  This device has a gobo wheel with six slots and a single motor that can rotate all of the slots
+  at once.
+
+  The gobo wheel is controllable via an angular position, an angular velocity, or an indexed position
+  where you select which gobo is displayed by index.
+
+  The gobo wheel also includes an interface-selector property by which one of the above three modes
+  can be selected, and a selected-interface property which reads back which interface is currently
+  active.
+
+  NOTE: Gobo is not yet defined - need an image solution
+-->
+<?xml version="1.0" encoding="UTF-8" ?>
+<estadl>
+  <import name="org.esta.device.1" />
+  <import name="org.esta.intensity.1" />
+
+  <definitionlist class="com.acme.definitions.1">
+    <!-- Standard ESTA definitions put here for convenience -->
+    <propertydef class="org.esta.core.1/interface-selector" description="" data_type="enum-id" />
+
+    <interfacedef class="org.esta.wheel.1/wheel-velocity" description="The speed of a wheel">
+      <property class="org.esta.something.1/angular-velocity" id="velocity" access="readwrite" lifetime="runtime" />
+    </interfacedef>
+    <interfacedef class="org.esta.wheel.1/wheel-position" description="The angular position of a wheel">
+      <property class="org.esta.something.1/angular-position" id="position" access="readwrite" lifetime="runtime" />
+    </interfacedef>
+    <interfacedef class="org.esta.wheel.1/wheel-position-indexed" description="The indexed position of a wheel">
+      <property class="org.esta.something.1/index" id="max-index" lifetime="static" />
+      <property class="org.esta.something.1/angular-position" id="index-offset" lifetime="static" />
+      <property class="org.esta.something.1/index" id="index" access="readwrite" lifetime="runtime" />
+    </interfacedef>
+    <interfacedef class="org.esta.wheel.1/wheel" description="A gobo wheel">
+      <property class="org.esta.core.1/interface-selector" id="wheel-control" lifetime="runtime" access="readwrite" />
+      <property class="org.esta.core.1/selected-interface" id="wheel-mode" lifetime="runtime" access="readonly" />
+
+      <child class="org.esta.wheel.1/wheel-velocity" minimum="0" maximum="1" exclusivegroup="wheel-control" />
+      <child class="org.esta.wheel.1/wheel-position" minimum="0" maximum="1" exclusivegroup="wheel-control" />
+      <child class="org.esta.wheel.1/wheel-position-indexed" minimum="0" maximum="1" exclusivegroup="wheel-control" />
+
+      <child class="org.esta.wheel.1/wheel" minimum="0" />
+      <child class="org.esta.wheel.1/gobo" minimum="0" />
+    </interfacedef>
+
+  </definitionlist>
+
+  <devicelist class="com.acme.devices.1" />
+    <device id="2409a1a5-a220-49ca-a674-2834c09bc58a">
+      <interface class="org.esta.device.1/device" id="device">
+        <propertyvalue id="device-id">com.acme.mydevice.1</propertyvalue>
+        <propertyvalue id="device-manufacturer">My Organization</propertyvalue>
+        <propertyvalue id="device-model">Multi-Cell 5000</propertyvalue>
+      </interface>
+
+      <interface class="org.esta.wheel.1/wheel" id="gobo-wheel">
+        <interface class="org.esta.wheel.1/wheel-velocity" id="velocity" />
+        <interface class="org.esta.wheel.1/wheel-position" id="position" />
+        <interface class="org.esta.wheel.1/wheel-position-indexed" id="position-indexed">
+          <propertyvalue id="max-index">6</propertyvalue>
+          <propertyvalue id="index-offset">30.0</propertyvalue>
+        </interface>
+
+        <interface class="org.esta.wheel.1/wheel" id="gobo-rotator">
+          <interface class="org.esta.wheel.1/wheel-velocity" id="velocity" />
+          <interface class="org.esta.wheel.1/wheel-position" id="position" />
+        </interface>
+
+        <interface class="org.esta.wheel.1/gobo" id="1" />
+        <interface class="org.esta.wheel.1/gobo" id="2" />
+        <interface class="org.esta.wheel.1/gobo" id="3" />
+        <interface class="org.esta.wheel.1/gobo" id="4" />
+        <interface class="org.esta.wheel.1/gobo" id="5" />
+        <interface class="org.esta.wheel.1/gobo" id="6" />
+      </interface>
+    </device>
+  </devicelist>
+</estadl>
+

@@ -38,6 +38,7 @@ Interface definitions can have the following children:
 * :ref:`concepts-interface-instance`
 * :ref:`concepts-property-definition`
 * :ref:`concepts-property-instance`
+* :ref:`concepts-interface-child`
 
 These children indicate the behavior contract prescribed by the interface.
 
