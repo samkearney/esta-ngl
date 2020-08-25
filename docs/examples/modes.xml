@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<estadl>
+  <import name="org.esta.device.1" />
+  <import name="org.esta.intensity.1" />
+
+  <definitionlist class="com.acme.definitions.1">
+    <propertydef class="org.esta.core.1/mode-selector" description="" data_type="enum-id" />
+
+    <interfacedef class="org.esta.core.1/operating-mode-group" description="A group of operation modes">
+      <property class="org.esta.core.1/mode-selector" id="mode-control" modeselector="mode-control" lifetime="runtime" access="readwrite" />
+      <child class="org.esta.core.1/operating-mode" minimum="1" exclusivegroup="mode-control" />
+    </interfacedef>
+
+    <interfacedef class="org.esta.core.1/operating-mode" description="A distinct mode for a device to operate in">
+      <child class="*" />
+    </interfacedef>
+  </definitionlist>
+
+  <devicelist class="com.acme.devices.1" />
+    <device id="2409a1a5-a220-49ca-a674-2834c09bc58a">
+      <interface class="org.esta.device.1/device" id="device">
+        <propertyvalue id="device-id">com.acme.mydevice.1</propertyvalue>
+        <propertyvalue id="device-manufacturer">My Organization</propertyvalue>
+        <propertyvalue id="device-model">LED 5000</propertyvalue>
+      </interface>
+
+      <interface class="org.esta.intensity.1/intensity" id="master-intensity" />
+
+      <interface class="org.esta.core.1/operating-mode-group" id="modes">
+        <interface class="org.esta.core.1/operating-mode" id="rgb-mode" displayname="RGB Mode">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="org.esta.core.1/operating-mode" id="hsi-mode" displayname="HSI Mode">
+          <interface class="org.esta.color.1/hsi" id="hsi" />
+        </interface>
+      </interface>
+
+    </device>
+  </devicelist>
+</estadl>
+

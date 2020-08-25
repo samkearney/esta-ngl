@@ -81,6 +81,17 @@ changed, and when it is invalidated.
 
        **Example:** :ref:`Intensity<properties-intensity-intensity>`.
 
+.. _concepts-property-instance-mode-selector:
+
+Mode Selector
+=============
+
+Indicates that this property is a *mode selector* for a group of exclusive child interfaces. See
+:ref:`concepts-exclusive-group` for more information.
+
+The value of this attribute is the name of the exclusive group for which the property is a mode
+selector.
+
 .. _concepts-property-instance-markup:       
 
 ******
@@ -98,6 +109,7 @@ Markup
       * ``id``: :ref:`concepts-property-instance-id`
       * ``access``: :ref:`Access<concepts-property-instance-access-and-lifetime>`
       * ``lifetime``: :ref:`Lifetime<concepts-property-instance-access-and-lifetime>`
+      * ``modeselector``: :ref:`concepts-property-instance-mode-selector`
     
     Example:
 

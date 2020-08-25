@@ -34,8 +34,10 @@
       <property class="org.esta.something.1/index" id="index" access="readwrite" lifetime="runtime" />
     </interfacedef>
     <interfacedef class="org.esta.wheel.1/wheel" description="A gobo wheel">
-      <property class="org.esta.core.1/interface-selector" id="wheel-control" lifetime="runtime" access="readwrite" />
-      <property class="org.esta.core.1/selected-interface" id="wheel-mode" lifetime="runtime" access="readonly" />
+      <property class="org.esta.core.1/interface-selector" id="wheel-control" modeselector="wheel-control" lifetime="runtime" access="readwrite" />
+      <!-- Implied but not actually present
+        <property class="org.esta.core.1/selected-interface" id="wheel-mode" lifetime="runtime" access="readonly" />
+      -->
 
       <child class="org.esta.wheel.1/wheel-velocity" minimum="0" maximum="1" exclusivegroup="wheel-control" />
       <child class="org.esta.wheel.1/wheel-position" minimum="0" maximum="1" exclusivegroup="wheel-control" />
@@ -52,7 +54,7 @@
       <interface class="org.esta.device.1/device" id="device">
         <propertyvalue id="device-id">com.acme.mydevice.1</propertyvalue>
         <propertyvalue id="device-manufacturer">My Organization</propertyvalue>
-        <propertyvalue id="device-model">Multi-Cell 5000</propertyvalue>
+        <propertyvalue id="device-model">Gobo Wheel 5000</propertyvalue>
       </interface>
 
       <interface class="org.esta.wheel.1/wheel" id="gobo-wheel">

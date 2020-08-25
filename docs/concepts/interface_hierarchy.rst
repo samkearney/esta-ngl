@@ -1,10 +1,10 @@
-.. _concepts-interface-heirarchy:
+.. _concepts-interface-hierarchy:
 
 #######################
-Heirarchy of Interfaces
+Hierarchy of Interfaces
 #######################
 
-Interfaces can be instantiated in a heirarchy. The interface instance heirarchy present in a device
+Interfaces can be instantiated in a hierarchy. The interface instance hierarchy present in a device
 definition provides meaningful information about how features are organized in a device.
 
 For example, consider the definition for a lighting fixture with a few individually-addressable
@@ -86,6 +86,14 @@ Maximum
 The maximum number of instances of the child interface that are allowed. If this attribute is
 absent, the maximum is assumed to be infinite.
 
+.. _concepts-interface-child-exclusive-group:
+
+Exclusive Group
+---------------
+
+The name of an exclusive group that this child is a member of, if instantiated. See
+:ref:`concepts-exclusive-group`.
+
 Markup
 ======
 
@@ -99,6 +107,7 @@ Markup
       * ``class``: :ref:`concepts-interface-child-class`
       * ``minimum``: :ref:`concepts-interface-child-minimum`
       * ``maximum``: :ref:`concepts-interface-child-maximum`
+      * ``exclusivegroup``: :ref:`concepts-interface-child-exclusive-group`
 
     Example:
 
