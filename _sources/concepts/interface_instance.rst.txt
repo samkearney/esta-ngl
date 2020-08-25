@@ -28,6 +28,14 @@ Id
 The **id** is a unique string identifying this interface instance. The string must be unique within
 the definition containing the interface instance.
 
+.. _concepts-interface-display-name:
+
+Display Name
+============
+
+The **display name** attribute provides a string that should be used to identify an interface in a
+software user interface.
+
 ********
 Children
 ********
@@ -52,6 +60,7 @@ Markup
 
       * ``class``: :ref:`concepts-interface-instance-class`
       * ``id``: :ref:`concepts-interface-instance-id`
+      * ``displayname``: :ref:`concepts-interface-display-name`
     
     Example:
 

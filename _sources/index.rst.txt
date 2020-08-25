@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 ESTA Next-Gen Library Data Model
-==============================================
+================================
 
 The **Next-Gen Library Data Model** describes a method for describing entertainment technology
 equipment in a machine-readable way.
@@ -18,8 +18,8 @@ equipment in a machine-readable way.
    concepts/property_instance
    concepts/interface_definition
    concepts/interface_instance
-   concepts/interface_heirarchy
-   concepts/exclusion_group
+   concepts/interface_hierarchy
+   concepts/exclusive_group
    concepts/identifiers
    concepts/property_value
 
@@ -45,6 +45,7 @@ equipment in a machine-readable way.
 
    examples/simple_dimmer
    examples/multi_cell
+   examples/exclusive_group
 
 .. toctree::
    :maxdepth: 2

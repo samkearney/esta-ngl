@@ -1,0 +1,288 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Exclusive Group &mdash; Library Data Model 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Identifiers" href="identifiers.html" />
+    <link rel="prev" title="Hierarchy of Interfaces" href="interface_hierarchy.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Library Data Model
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Concepts</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="general.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property_definition.html">Property Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property_instance.html">Property Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface_definition.html">Interface Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface_instance.html">Interface Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface_hierarchy.html">Hierarchy of Interfaces</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Exclusive Group</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#mode-selectors">Mode Selectors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="identifiers.html">Identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property_value.html">Property Value</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../device_id_library/device_interface.html">Device Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device_id_library/identification_properties.html">Identification Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device_id_library/full_definition_list.html">Full Definition List Download</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ESTA Intensity Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/dimmer_interface.html">Dimmer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/intensity_properties.html">Intensity Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/full_definition_list.html">Full Definition List Download</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_group.html">Exclusive Group Device Example</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../other_resources/xml_tag_reference.html">XML Tag Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Library Data Model</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Exclusive Group</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/concepts/exclusive_group.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="exclusive-group">
+<span id="concepts-exclusive-group"></span><h1>Exclusive Group<a class="headerlink" href="#exclusive-group" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="interface_hierarchy.html#concepts-interface-child"><span class="std std-ref">Child</span></a> elements within an interface definition can be members of an
+<strong>exclusive group</strong>. Child elements that are members of the same exclusive group indicate that
+their corresponding interfaces, when instantiated, can only be controlled “one at a time”.</p>
+<p>For example, you may see an interface definition with a number of <code class="docutils literal notranslate"><span class="pre">child</span></code> elements which have
+similar “Exclusive Group” attributes:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Simplified... --&gt;</span>
+<span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel&quot;</span> <span class="na">description=</span><span class="s">&quot;A gobo wheel&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;child</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-velocity&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;1&quot;</span> <span class="na">exclusivegroup=</span><span class="s">&quot;wheel-control&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;child</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-position&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;1&quot;</span> <span class="na">exclusivegroup=</span><span class="s">&quot;wheel-control&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/interfacedef&gt;</span>
+</pre></div>
+</div>
+<p>The child elements are determined to be in the same exclusive group using a case-sensitive string
+comparison of the <code class="docutils literal notranslate"><span class="pre">exclusivegroup</span></code> attribute.</p>
+<p>This indicates to control software that any instances of <code class="docutils literal notranslate"><span class="pre">wheel-velocity</span></code> and <code class="docutils literal notranslate"><span class="pre">wheel-position</span></code>
+that appear underneath a <code class="docutils literal notranslate"><span class="pre">wheel</span></code> interface instance are mutually exclusive, and it doesn’t make
+sense to control them at the same time.</p>
+<div class="section" id="mode-selectors">
+<h2>Mode Selectors<a class="headerlink" href="#mode-selectors" title="Permalink to this headline">¶</a></h2>
+<p>In the example given above, the two mutually exclusive interfaces are <em>implicitly</em> exclusive;
+there’s no concept of switching the device from one mode to the other. The exclusive group
+information simply exists to inform control software that it doesn’t make sense to control both of
+those interfaces simultaneously.</p>
+<p>Some devices have addressable properties that are used to switch between modes. This can happen
+when the device needs to change something, e.g. mechanically or in its software, to accept data for
+a different mode. In this case, a property can be designated as a <em>mode selector</em>. To expand on the
+example from above:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Simplified... --&gt;</span>
+<span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel&quot;</span> <span class="na">description=</span><span class="s">&quot;A gobo wheel&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.core.1/interface-selector&quot;</span> <span class="na">id=</span><span class="s">&quot;wheel-control&quot;</span> <span class="na">modeselector=</span><span class="s">&quot;wheel-control&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;child</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-velocity&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;1&quot;</span> <span class="na">exclusivegroup=</span><span class="s">&quot;wheel-control&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;child</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-position&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;1&quot;</span> <span class="na">exclusivegroup=</span><span class="s">&quot;wheel-control&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/interfacedef&gt;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">wheel-control</span></code> property has a <code class="docutils literal notranslate"><span class="pre">modeselector</span></code> attribute which is identical to the
+<code class="docutils literal notranslate"><span class="pre">exclusivegroup</span></code> attributes for the two child elements. This means that this property is used to
+select between the child interfaces, wherever two or more such children exists in an instance of
+the <code class="docutils literal notranslate"><span class="pre">wheel</span></code> interface.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="identifiers.html" class="btn btn-neutral float-right" title="Identifiers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="interface_hierarchy.html" class="btn btn-neutral float-left" title="Hierarchy of Interfaces" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, ESTA Next-Gen Library Study Group
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

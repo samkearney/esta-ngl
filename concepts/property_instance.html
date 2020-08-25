@@ -98,6 +98,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#class">Class</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#concepts-property-instance-id">Id</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#access-and-lifetime">Access and Lifetime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mode-selector">Mode Selector</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#markup">Markup</a></li>
@@ -105,8 +106,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="interface_definition.html">Interface Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface_instance.html">Interface Instance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interface_heirarchy.html">Heirarchy of Interfaces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exclusion_group.html">Exclusion Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface_hierarchy.html">Hierarchy of Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exclusive_group.html">Exclusive Group</a></li>
 <li class="toctree-l1"><a class="reference internal" href="identifiers.html">Identifiers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="property_value.html">Property Value</a></li>
 </ul>
@@ -126,6 +127,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_group.html">Exclusive Group Device Example</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Other Resources</span></p>
 <ul>
@@ -267,6 +269,13 @@ This is typically data that is used to trigger the device to do an action.</p>
 </tbody>
 </table>
 </div>
+<div class="section" id="mode-selector">
+<span id="concepts-property-instance-mode-selector"></span><h3>Mode Selector<a class="headerlink" href="#mode-selector" title="Permalink to this headline">¶</a></h3>
+<p>Indicates that this property is a <em>mode selector</em> for a group of exclusive child interfaces. See
+<a class="reference internal" href="exclusive_group.html#concepts-exclusive-group"><span class="std std-ref">Exclusive Group</span></a> for more information.</p>
+<p>The value of this attribute is the name of the exclusive group for which the property is a mode
+selector.</p>
+</div>
 </div>
 <div class="section" id="markup">
 <span id="concepts-property-instance-markup"></span><h2>Markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h2>
@@ -287,6 +296,7 @@ This is typically data that is used to trigger the device to do an action.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: <a class="reference internal" href="#concepts-property-instance-id"><span class="std std-ref">Id</span></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">access</span></code>: <a class="reference internal" href="#concepts-property-instance-access-and-lifetime"><span class="std std-ref">Access</span></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">lifetime</span></code>: <a class="reference internal" href="#concepts-property-instance-access-and-lifetime"><span class="std std-ref">Lifetime</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modeselector</span></code>: <a class="reference internal" href="#concepts-property-instance-mode-selector"><span class="std std-ref">Mode Selector</span></a></p></li>
 </ul>
 </li>
 </ul>
