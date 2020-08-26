@@ -1,6 +1,6 @@
-#############################
-Full Definition List Download
-#############################
+#####################
+Full Library Download
+#####################
 
 :download:`Download <intensity_library.xml>`
 

@@ -26,7 +26,7 @@ Markup
 .. code-block:: xml
 
   <interfacedef
-      class="dimmer"
+      class="org.esta.intensity.1/dimmer"
       description="A simple dimmer controlling an intensity.">
     <property class="intensity" id="intensity" access="readwrite" lifetime="runtime" />
   </interfacedef>

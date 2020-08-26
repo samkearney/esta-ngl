@@ -1,6 +1,6 @@
-#############################
-Full Definition List Download
-#############################
+#####################
+Full Library Download
+#####################
 
 :download:`Download <device_id_library.xml>`
 

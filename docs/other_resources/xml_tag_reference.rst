@@ -4,9 +4,8 @@ XML Tag Reference
 
 =============== =======================================================
 estadl          The root tag of an ESTA Device Library XML file.
-definitionlist  :ref:`concepts-general-definition-list`
-device          :ref:`concepts-general-device-definition`
-devicelist      :ref:`concepts-general-device-list`  
+library         :ref:`concepts-general-library`
+devicedef       :ref:`concepts-general-device-definition`
 import          :ref:`concepts-general-import`
 interface       :ref:`Interface Instance<concepts-interface-instance-markup>`
 interfacedef    :ref:`Interface Definition<concepts-interface-definition-markup>`

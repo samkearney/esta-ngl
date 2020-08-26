@@ -3,7 +3,7 @@
   <import name="org.esta.device.1" />
   <import name="org.esta.intensity.1" />
 
-  <definitionlist class="com.acme.definitions.1">
+  <library class="com.acme.definitions.1">
     <interfacedef class="cell">
       <property class="org.esta.intensity.1/intensity" id="intensity" />
       <property class="org.esta.color.1/rgb" id="color" />
@@ -12,10 +12,10 @@
       <property class="org.esta.intensity.1/intensity" id="intensity-master" />
       <child class="cell" minimum="1" />
     </interfacedef>
-  </definitionlist>
+  </library>
 
-  <devicelist class="com.acme.devices.1" />
-    <device id="2409a1a5-a220-49ca-a674-2834c09bc58a">
+  <library class="com.acme.devices.1" />
+    <devicedef class="multi-cell-5000">
       <interface class="org.esta.device.1/device" id="device">
         <propertyvalue id="device-id">com.acme.mymulticelldevice.1</propertyvalue>
         <propertyvalue id="device-manufacturer">My Organization</propertyvalue>
@@ -47,5 +47,5 @@
         <interface class="com.acme.definitions.1/cell" id="10" />
       </interface>
     </device>
-  </devicelist>
+  </library>
 </estadl>

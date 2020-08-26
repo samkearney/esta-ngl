@@ -34,8 +34,8 @@ The cell interface might look like:
 The cell has individual intensity and color properties.
 
 These interface definitions give this device the tools to communicate information about its cell
-layout. Assuming the definitions above appear in a definition list with the class
-"com.acme.definitions.1", the device might contain:
+layout. Assuming the definitions above appear in a library with the class ``com.acme.definitions.1``,
+the device might contain:
 
 .. code-block:: xml
 

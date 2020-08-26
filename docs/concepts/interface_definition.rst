@@ -18,8 +18,7 @@ Class
 =====
 
 An interface's **class** is a string identifying an individual interface definition. This string
-must be unique within the :ref:`concepts-general-definition-list` that contains the interface
-definition.
+must be unique within the :ref:`concepts-general-library` that contains the interface definition.
 
 .. _concepts-interface-definition-description:
 
