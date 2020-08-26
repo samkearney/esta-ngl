@@ -118,13 +118,13 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../device_id_library/device_interface.html">Device Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../device_id_library/identification_properties.html">Identification Properties</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../device_id_library/full_definition_list.html">Full Definition List Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device_id_library/full_definition_list.html">Full Library Download</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Intensity Library</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../intensity_library/dimmer_interface.html">Dimmer Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../intensity_library/intensity_properties.html">Intensity Properties</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../intensity_library/full_definition_list.html">Full Definition List Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/full_definition_list.html">Full Library Download</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
@@ -225,8 +225,8 @@ interface instance must have at least one cell child.</p>
 </div>
 <p>The cell has individual intensity and color properties.</p>
 <p>These interface definitions give this device the tools to communicate information about its cell
-layout. Assuming the definitions above appear in a definition list with the class
-“com.acme.definitions.1”, the device might contain:</p>
+layout. Assuming the definitions above appear in a library with the class <code class="docutils literal notranslate"><span class="pre">com.acme.definitions.1</span></code>,
+the device might contain:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- A group of 4 cells --&gt;</span>
 <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell-group&quot;</span> <span class="na">id=</span><span class="s">&quot;cell-group-1&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">id=</span><span class="s">&quot;1&quot;</span> <span class="nt">/&gt;</span>

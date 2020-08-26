@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <estadl>
-  <definitionlist class="org.esta.identification.1">
+  <library class="org.esta.identification.1">
     <!-- Properties -->
     <propertydef 
         class="device-id"
@@ -23,6 +23,6 @@
       <property class="manufacturer" id="manufacturer" lifetime="static" />
       <property class="model" id="model" lifetime="static" />
     </interfacedef>
-  </definitionlist>
+  </library>
 </estadl>
 

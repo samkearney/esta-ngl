@@ -105,13 +105,13 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../device_id_library/device_interface.html">Device Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../device_id_library/identification_properties.html">Identification Properties</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../device_id_library/full_definition_list.html">Full Definition List Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device_id_library/full_definition_list.html">Full Library Download</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Intensity Library</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../intensity_library/dimmer_interface.html">Dimmer Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../intensity_library/intensity_properties.html">Intensity Properties</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../intensity_library/full_definition_list.html">Full Definition List Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/full_definition_list.html">Full Library Download</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
@@ -202,14 +202,13 @@ class with <code class="docutils literal notranslate"><span class="pre">com.acme
 </div>
 <div class="section" id="qualified-class">
 <span id="concepts-identifiers-qualified-class"></span><h2>Qualified Class<a class="headerlink" href="#qualified-class" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="general.html#concepts-general-device-list"><span class="std std-ref">Device Lists</span></a> and <a class="reference internal" href="general.html#concepts-general-definition-list"><span class="std std-ref">Definition Lists</span></a>
-are identified by a qualified class. A qualified class is a string that begins with an
-<a class="reference internal" href="#concepts-identifiers-organization-id"><span class="std std-ref">Organization Identifier</span></a>.</p>
-<p>The organization identifier is followed by an identifying string for the device list or definition
-list, separated by a dot.</p>
+<p><a class="reference internal" href="general.html#concepts-general-library"><span class="std std-ref">Libraries</span></a> are identified by a qualified class. A qualified class
+is a string that begins with an <a class="reference internal" href="#concepts-identifiers-organization-id"><span class="std std-ref">Organization Identifier</span></a>.</p>
+<p>The organization identifier is followed by an identifying string for the library, separated by a
+dot.</p>
 <p>The last part of the qualified class is a version number. This must be an integer in string
 representation.</p>
-<p>Putting it all together, version 1 of ACME’s device list could have the qualified class
+<p>Putting it all together, version 1 of ACME’s device library could have the qualified class
 <code class="docutils literal notranslate"><span class="pre">com.acme.devices.1</span></code>.</p>
 </div>
 <div class="section" id="qualified-device-id">

@@ -18,7 +18,7 @@
   <import name="org.esta.device.1" />
   <import name="org.esta.intensity.1" />
 
-  <definitionlist class="com.acme.definitions.1">
+  <library class="com.acme.definitions.1">
     <!-- Standard ESTA definitions put here for convenience -->
     <propertydef class="org.esta.core.1/interface-selector" description="" data_type="enum-id" />
 
@@ -47,10 +47,10 @@
       <child class="org.esta.wheel.1/gobo" minimum="0" />
     </interfacedef>
 
-  </definitionlist>
+  </library>
 
-  <devicelist class="com.acme.devices.1" />
-    <device id="2409a1a5-a220-49ca-a674-2834c09bc58a">
+  <library class="com.acme.devices.1" />
+    <devicedef class="gobo-wheel-5000">
       <interface class="org.esta.device.1/device" id="device">
         <propertyvalue id="device-id">com.acme.mydevice.1</propertyvalue>
         <propertyvalue id="device-manufacturer">My Organization</propertyvalue>
@@ -77,7 +77,7 @@
         <interface class="org.esta.wheel.1/gobo" id="5" />
         <interface class="org.esta.wheel.1/gobo" id="6" />
       </interface>
-    </device>
-  </devicelist>
+    </devicedef>
+  </library>
 </estadl>
 

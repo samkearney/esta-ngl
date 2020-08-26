@@ -25,17 +25,16 @@ This follows the convention of `reverse domain name notation <https://en.wikiped
 Qualified Class
 ***************
 
-:ref:`Device Lists<concepts-general-device-list>` and :ref:`Definition Lists<concepts-general-definition-list>`
-are identified by a qualified class. A qualified class is a string that begins with an
-:ref:`concepts-identifiers-organization-id`.
+:ref:`Libraries<concepts-general-library>` are identified by a qualified class. A qualified class
+is a string that begins with an :ref:`concepts-identifiers-organization-id`.
 
-The organization identifier is followed by an identifying string for the device list or definition
-list, separated by a dot.
+The organization identifier is followed by an identifying string for the library, separated by a
+dot.
 
 The last part of the qualified class is a version number. This must be an integer in string
 representation.
 
-Putting it all together, version 1 of ACME's device list could have the qualified class
+Putting it all together, version 1 of ACME's device library could have the qualified class
 ``com.acme.devices.1``.
 
 .. _concepts-identifiers-qualified-device-id:

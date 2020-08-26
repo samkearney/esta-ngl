@@ -21,8 +21,7 @@ Class
 =====
 
 A property's **class** is a string identifying an individual property definition. This string
-must be unique within the :ref:`concepts-general-definition-list` that contains the property
-definition.
+must be unique within the :ref:`concepts-general-library` that contains the property definition.
 
 .. _concepts-property-definition-description:
 
