@@ -50,6 +50,21 @@ Class
 A library's **class** is a unique string identifying an individual library. This string must be a
 :ref:`concepts-identifiers-qualified-class`.
 
+Description
+-----------
+
+A string that describes the purpose of a library in human-readable language.
+
+Publish Date
+------------
+
+The date this version of the library was published, formatted as an ISO date string (``YYYY-MM-DD``).
+
+Author Name
+-----------
+
+The name of the individual or organization that created this library.
+
 Children
 ========
 
@@ -64,7 +79,7 @@ Markup Example
 
 .. code-block:: xml
 
-  <library class="com.acme.standarddefs.1">
+  <library class="com.acme.standarddefs.1" description="ACME Corp Standard Definitions" publishdate="2020-09-02" author="ACME Corp">
     <propertydef class="customproperty" data_type="string" />
     <interfacedef class="custominterface">
       <property class="org.esta.intensity.1/intensity" id="intensity-1" access="readwrite" lifetime="runtime" />
@@ -90,7 +105,7 @@ single model of equipment, and "device instance" refers to a single unit of that
 
 .. code-block:: xml
 
-  <library class="com.etcconnect.devices.1">
+  <library class="com.etcconnect.devices.1" description="ETC Devices" publishdate="2020-09-02" author="ETC Inc">
     <devicedef class="es1">
       <interface class="org.esta.device.1/device" id="device">
         <propertyvalue id="device-id">com.etcconnect.es1.1</propertyvalue>
