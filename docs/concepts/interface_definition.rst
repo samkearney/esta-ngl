@@ -20,6 +20,13 @@ Class
 An interface's **class** is a string identifying an individual interface definition. This string
 must be unique within the :ref:`concepts-general-library` that contains the interface definition.
 
+.. _concepts-interface-definition-name:
+
+Name
+====
+
+A string containing the human-readable name of the interface.
+
 .. _concepts-interface-definition-description:
 
 Description
@@ -55,6 +62,7 @@ Markup
     * Attributes:
 
       * ``class``: :ref:`concepts-interface-definition-class`
+      * ``name``: :ref:`concepts-interface-definition-name`
       * ``description`: :ref:`concepts-interface-definition-description`
     
     Example:
@@ -63,6 +71,7 @@ Markup
 
       <interfacedef
         class="binary-dimmer"
+        name="Binary Dimmer"
         description="Represents non-dimming control of a light source">
 
         <property class="org.esta.intensity.1/binary-intensity" id="intensity" />

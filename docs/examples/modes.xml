@@ -4,14 +4,14 @@
   <import name="org.esta.intensity.1" />
 
   <library class="com.acme.definitions.1">
-    <propertydef class="org.esta.core.1/mode-selector" description="" data_type="enum-id" />
+    <propertydef class="org.esta.core.1/mode-selector" data_type="enum-id" />
 
-    <interfacedef class="org.esta.core.1/operating-mode-group" description="A group of operation modes">
+    <interfacedef class="org.esta.core.1/operating-mode-group" name="Operating Mode Group" description="A group of operation modes">
       <property class="org.esta.core.1/mode-selector" id="mode-control" modeselector="mode-control" lifetime="runtime" access="readwrite" />
       <child class="org.esta.core.1/operating-mode" minimum="1" exclusivegroup="mode-control" />
     </interfacedef>
 
-    <interfacedef class="org.esta.core.1/operating-mode" description="A distinct mode for a device to operate in">
+    <interfacedef class="org.esta.core.1/operating-mode" name="Operating Mode" description="A distinct mode for a device to operate in">
       <child class="*" />
     </interfacedef>
   </library>
