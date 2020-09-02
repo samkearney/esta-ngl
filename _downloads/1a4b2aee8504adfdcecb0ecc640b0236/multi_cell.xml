@@ -4,11 +4,11 @@
   <import name="org.esta.intensity.1" />
 
   <library class="com.acme.definitions.1">
-    <interfacedef class="cell">
+    <interfacedef class="cell" name="Cell" description="A single addressable cell">
       <property class="org.esta.intensity.1/intensity" id="intensity" />
       <property class="org.esta.color.1/rgb" id="color" />
     </interfacedef>
-    <interfacedef class="cell-group">
+    <interfacedef class="cell-group" name="Cell Group" description="A group of addressable cells">
       <property class="org.esta.intensity.1/intensity" id="intensity-master" />
       <child class="cell" minimum="1" />
     </interfacedef>

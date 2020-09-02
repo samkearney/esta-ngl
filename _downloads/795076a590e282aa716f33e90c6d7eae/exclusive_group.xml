@@ -20,20 +20,20 @@
 
   <library class="com.acme.definitions.1">
     <!-- Standard ESTA definitions put here for convenience -->
-    <propertydef class="org.esta.core.1/interface-selector" description="" data_type="enum-id" />
+    <propertydef class="org.esta.core.1/interface-selector" data_type="enum-id" />
 
-    <interfacedef class="org.esta.wheel.1/wheel-velocity" description="The speed of a wheel">
+    <interfacedef class="org.esta.wheel.1/wheel-velocity" name="Wheel Velocity" description="The speed of a wheel">
       <property class="org.esta.something.1/angular-velocity" id="velocity" access="readwrite" lifetime="runtime" />
     </interfacedef>
-    <interfacedef class="org.esta.wheel.1/wheel-position" description="The angular position of a wheel">
+    <interfacedef class="org.esta.wheel.1/wheel-position" name="Wheel Position" description="The angular position of a wheel">
       <property class="org.esta.something.1/angular-position" id="position" access="readwrite" lifetime="runtime" />
     </interfacedef>
-    <interfacedef class="org.esta.wheel.1/wheel-position-indexed" description="The indexed position of a wheel">
+    <interfacedef class="org.esta.wheel.1/wheel-position-indexed" name="Wheel Position (Indexed)" description="The indexed position of a wheel">
       <property class="org.esta.something.1/index" id="max-index" lifetime="static" />
       <property class="org.esta.something.1/angular-position" id="index-offset" lifetime="static" />
       <property class="org.esta.something.1/index" id="index" access="readwrite" lifetime="runtime" />
     </interfacedef>
-    <interfacedef class="org.esta.wheel.1/wheel" description="A gobo wheel">
+    <interfacedef class="org.esta.wheel.1/wheel" name="Wheel" description="A gobo wheel">
       <property class="org.esta.core.1/interface-selector" id="wheel-control" modeselector="wheel-control" lifetime="runtime" access="readwrite" />
       <!-- Implied but not actually present
         <property class="org.esta.core.1/selected-interface" id="wheel-mode" lifetime="runtime" access="readonly" />

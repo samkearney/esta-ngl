@@ -190,11 +190,11 @@
   <span class="nt">&lt;import</span> <span class="na">name=</span><span class="s">&quot;org.esta.intensity.1&quot;</span> <span class="nt">/&gt;</span>
 
   <span class="nt">&lt;library</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;cell&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;cell&quot;</span> <span class="na">name=</span><span class="s">&quot;Cell&quot;</span> <span class="na">description=</span><span class="s">&quot;A single addressable cell&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;intensity&quot;</span> <span class="nt">/&gt;</span>
       <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.color.1/rgb&quot;</span> <span class="na">id=</span><span class="s">&quot;color&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/interfacedef&gt;</span>
-    <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;cell-group&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;cell-group&quot;</span> <span class="na">name=</span><span class="s">&quot;Cell Group&quot;</span> <span class="na">description=</span><span class="s">&quot;A group of addressable cells&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;intensity-master&quot;</span> <span class="nt">/&gt;</span>
       <span class="nt">&lt;child</span> <span class="na">class=</span><span class="s">&quot;cell&quot;</span> <span class="na">minimum=</span><span class="s">&quot;1&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/interfacedef&gt;</span>

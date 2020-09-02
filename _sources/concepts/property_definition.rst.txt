@@ -23,6 +23,13 @@ Class
 A property's **class** is a string identifying an individual property definition. This string
 must be unique within the :ref:`concepts-general-library` that contains the property definition.
 
+.. _concepts-property-definition-name:
+
+Name
+====
+
+A string containing the human-readable name of the property.
+
 .. _concepts-property-definition-description:
 
 Description
@@ -144,6 +151,7 @@ Markup
     * Attributes:
 
       * ``class``: :ref:`concepts-property-definition-class`
+      * ``name``: :ref:`concepts-property-definition-name`
       * ``description``: :ref:`concepts-property-definition-description`
       * ``data_type``: :ref:`concepts-property-definition-data-type`
       * ``unit``: :ref:`concepts-property-definition-unit`
@@ -156,7 +164,8 @@ Markup
 
       <propertydef 
         class="strobe-frequency"
-        description="Strobe frequency"
+        name="Strobe Frequency"
+        description="The frequency of a strobe shutter in Hertz"
         data_type="number"
         unit="hertz"
         minimum="0.1"
@@ -167,6 +176,7 @@ Markup
     * Object Keys:
 
       * ``class``: :ref:`concepts-property-definition-class`
+      * ``name``: :ref:`concepts-property-definition-name`
       * ``description``: :ref:`concepts-property-definition-description`
       * ``data_type``: :ref:`concepts-property-definition-data-type`
       * ``unit``: :ref:`concepts-property-definition-unit`
@@ -179,7 +189,8 @@ Markup
 
       {
         "class": "strobe-frequency",
-        "description": "Strobe frequency",
+        "name": "Strobe Frequency",
+        "description": "The frequency of a strobe shutter in Hertz",
         "data_type": "number",
         "unit": "hertz",
         "minimum": 0.1,
