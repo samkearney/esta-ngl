@@ -1,0 +1,40 @@
+############
+Introduction
+############
+
+UDR is composed of a series of libraries. A library can be published by ESTA or a third party, and
+contain information that helps represent devices made by various manufacturers in a standard way.
+
+UDR libraries are defined in *UDR documents*. UDR documents define an object model, similar to the
+`Document Object Model`__ used in web development. This object model can be translated to and from
+markup languages like XML or JSON for transmission and storage.
+
+__ https://en.wikipedia.org/wiki/Document_Object_Model
+
+**********
+Interfaces
+**********
+
+Interfaces define a contract of behavior for some portion of a device's functionality. They provide
+a standardized way of controlling and/or observing some atomic portion of functionality on a device.
+
+**********
+Properties
+**********
+
+A property is a single controllable and/or observable piece of data. Every interface consists of
+one or more properties. Properties standardize how data is interpreted, how data can be accessed,
+and any constraints on the value of data.
+
+**********************
+Definition vs Instance
+**********************
+
+Both interfaces and properties can appear in two ways in a UDR document: as a definition or as an
+instance. An interface or property *definition* provides an abstract description of that interface
+or property which applies to all *instances*.
+
+*********
+Libraries
+*********
+

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<estadl>
+<udr>
   <import name="org.esta.device.1" />
   <import name="org.esta.intensity.1" />
 
@@ -10,7 +10,7 @@
     </interfacedef>
     <interfacedef class="cell-group" name="Cell Group" description="A group of addressable cells">
       <property class="org.esta.intensity.1/intensity" id="intensity-master" />
-      <child class="cell" minimum="1" />
+      <interfaceconstraint class="cell" minimum="1" />
     </interfacedef>
   </library>
 
@@ -48,4 +48,4 @@
       </interface>
     </device>
   </library>
-</estadl>
+</udr>

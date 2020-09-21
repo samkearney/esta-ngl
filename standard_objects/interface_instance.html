@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Interface Instance &mdash; Universal Device Representation 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
+        <script src="../_static/sphinx_tabs/tabs.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Property Definition" href="property_definition.html" />
+    <link rel="prev" title="Interface Definition" href="interface_definition.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Universal Device Representation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/interface_hierarchy.html">The Interface Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/identifiers.html">Identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/mutual_exclusion.html">Mutual Exclusion</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standard Objects</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="udr_root_object.html">UDR Root Object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library.html">Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="import.html">Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface_definition.html">Interface Definition</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Interface Instance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#class">Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#standard-objects-interface-instance-id">Id</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#display-name">Display Name</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#children">Children</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#markup">Markup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="property_definition.html">Property Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property_instance.html">Property Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface_constraint.html">Interface Constraint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="override.html">Override</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../device_id_library/device_interface.html">Device Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device_id_library/identification_properties.html">Identification Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device_id_library/full_definition_list.html">Full Library Download</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ESTA Intensity Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/dimmer_interface.html">Dimmer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/intensity_properties.html">Intensity Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/full_definition_list.html">Full Library Download</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_group.html">Exclusive Group Device Example</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../other_resources/xml_tag_reference.html">XML Tag Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Universal Device Representation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Interface Instance</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/standard_objects/interface_instance.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="interface-instance">
+<span id="standard-objects-interface-instance"></span><h1>Interface Instance<a class="headerlink" href="#interface-instance" title="Permalink to this headline">¶</a></h1>
+<p>An <strong>interface instance</strong> is a single addressable instance of a <a class="reference internal" href="interface_definition.html"><span class="doc">Interface Definition</span></a>.</p>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<p>Instance attributes are per-interface-instance; they can vary between instances of the interface.</p>
+<div class="section" id="class">
+<span id="standard-objects-interface-instance-class"></span><h3>Class<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h3>
+<p>Indicates the <a class="reference internal" href="interface_definition.html#standard-objects-interface-definition-class"><span class="std std-ref">class</span></a> of the defined interface of which
+this is an instance.</p>
+</div>
+<div class="section" id="standard-objects-interface-instance-id">
+<span id="id"></span><h3>Id<a class="headerlink" href="#standard-objects-interface-instance-id" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>id</strong> is a unique string identifying this interface instance. The string must be unique within
+the definition containing the interface instance.</p>
+</div>
+<div class="section" id="display-name">
+<span id="standard-objects-interface-display-name"></span><h3>Display Name<a class="headerlink" href="#display-name" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>display name</strong> attribute provides a string that should be used to identify an interface in a
+software user interface.</p>
+</div>
+</div>
+<div class="section" id="children">
+<h2>Children<a class="headerlink" href="#children" title="Permalink to this headline">¶</a></h2>
+<p>Interface instances can have the following children:</p>
+<ul class="simple">
+<li><p><span class="xref std std-ref">standard-objects-property-value</span></p></li>
+<li><p><a class="reference internal" href="#standard-objects-interface-instance"><span class="std std-ref">Interface Instance</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="markup">
+<span id="standard-objects-interface-instance-markup"></span><h2>Markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h2>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-0-0 docutils container">
+<div class="docutils container">
+<p>XML</p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active docutils container">
+<ul class="simple">
+<li><p>Tag name: <code class="docutils literal notranslate"><span class="pre">interface</span></code></p></li>
+<li><p>Attributes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span></code>: <a class="reference internal" href="#standard-objects-interface-instance-class"><span class="std std-ref">Class</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: <a class="reference internal" href="#standard-objects-interface-instance-id"><span class="std std-ref">Id</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">displayname</span></code>: <a class="reference internal" href="#standard-objects-interface-display-name"><span class="std std-ref">Display Name</span></a></p></li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/binary-dimmer&quot;</span> <span class="na">id=</span><span class="s">&quot;primary-dimmer&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="property_definition.html" class="btn btn-neutral float-right" title="Property Definition" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="interface_definition.html" class="btn btn-neutral float-left" title="Interface Definition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, ESTA Next-Gen Library Study Group
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

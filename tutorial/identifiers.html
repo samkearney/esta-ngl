@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Dimmer Interface &mdash; Universal Device Representation 0.1.0 documentation</title>
+  <title>Identifiers &mdash; Universal Device Representation 0.1.0 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Intensity Properties" href="intensity_properties.html" />
-    <link rel="prev" title="Full Library Download" href="../device_id_library/full_definition_list.html" /> 
+    <link rel="next" title="Mutual Exclusion" href="mutual_exclusion.html" />
+    <link rel="prev" title="The Interface Hierarchy" href="interface_hierarchy.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,11 +88,17 @@
             
             
               <p class="caption"><span class="caption-text">Tutorial</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial/introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial/interface_hierarchy.html">The Interface Hierarchy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial/identifiers.html">Identifiers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial/mutual_exclusion.html">Mutual Exclusion</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface_hierarchy.html">The Interface Hierarchy</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Identifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#organization-identifier">Organization Identifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#qualified-class">Qualified Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#qualified-device-id">Qualified Device ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#qualified-id">Qualified ID</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mutual_exclusion.html">Mutual Exclusion</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Standard Objects</span></p>
 <ul>
@@ -113,16 +119,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../device_id_library/full_definition_list.html">Full Library Download</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Intensity Library</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Dimmer Interface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#definition">Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#required-properties">Required Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#markup">Markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#instance-example">Instance Example</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="intensity_properties.html">Intensity Properties</a></li>
-<li class="toctree-l1"><a class="reference internal" href="full_definition_list.html">Full Library Download</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/dimmer_interface.html">Dimmer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/intensity_properties.html">Intensity Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/full_definition_list.html">Full Library Download</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
@@ -179,13 +179,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Dimmer Interface</li>
+      <li>Identifiers</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/intensity_library/dimmer_interface.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/tutorial/identifiers.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -198,47 +198,42 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="dimmer-interface">
-<h1>Dimmer Interface<a class="headerlink" href="#dimmer-interface" title="Permalink to this headline">¶</a></h1>
-<p>The dimmer interface represents a simple dimmer controlling an intensity.</p>
-<div class="section" id="definition">
-<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 21%" />
-<col style="width: 79%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p>Class</p></td>
-<td><p>dimmer</p></td>
-</tr>
-<tr class="row-even"><td><p>Description</p></td>
-<td><p>A simple dimmer controlling an intensity.</p></td>
-</tr>
-</tbody>
-</table>
+  <div class="section" id="identifiers">
+<h1>Identifiers<a class="headerlink" href="#identifiers" title="Permalink to this headline">¶</a></h1>
+<p>Definitions and instances often need to be uniquely and globally identified. Definitions are
+identified by <strong>class</strong> and instances are identified by <strong>id</strong>. These identifiers are combined
+with the identifiers of parent elements to create a globally unique identifier.</p>
+<div class="section" id="organization-identifier">
+<span id="tutorial-identifiers-organization-id"></span><h2>Organization Identifier<a class="headerlink" href="#organization-identifier" title="Permalink to this headline">¶</a></h2>
+<p>An organization identifier namespaces other definitions, like class names and device IDs, under a
+given organization. By convention, an organization identifier is an organization’s registered
+domain name, reversed; for example, ACME corp headquartered at acme.com would begin a qualified
+class with <code class="docutils literal notranslate"><span class="pre">com.acme</span></code>.</p>
+<p>This follows the convention of <a class="reference external" href="https://en.wikipedia.org/wiki/Reverse_domain_name_notation">reverse domain name notation</a>.</p>
 </div>
-<div class="section" id="required-properties">
-<h2>Required Properties<a class="headerlink" href="#required-properties" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="intensity_properties.html#properties-intensity-intensity"><span class="std std-ref">Intensity</span></a></p></li>
-</ul>
+<div class="section" id="qualified-class">
+<span id="tutorial-identifiers-qualified-class"></span><h2>Qualified Class<a class="headerlink" href="#qualified-class" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../standard_objects/library.html#standard-objects-library"><span class="std std-ref">Libraries</span></a> are identified by a qualified class. A qualified class
+is a string that begins with an <a class="reference internal" href="#tutorial-identifiers-organization-id"><span class="std std-ref">Organization Identifier</span></a>.</p>
+<p>The organization identifier is followed by an identifying string for the library, separated by a
+dot.</p>
+<p>The last part of the qualified class is a version number. This must be an integer in string
+representation.</p>
+<p>Putting it all together, version 1 of ACME’s device library could have the qualified class
+<code class="docutils literal notranslate"><span class="pre">com.acme.devices.1</span></code>.</p>
 </div>
-<div class="section" id="markup">
-<h2>Markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interfacedef</span>
-    <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/dimmer&quot;</span>
-    <span class="na">description=</span><span class="s">&quot;A simple dimmer controlling an intensity.&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;intensity&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/interfacedef&gt;</span>
-</pre></div>
+<div class="section" id="qualified-device-id">
+<span id="tutorial-identifiers-qualified-device-id"></span><h2>Qualified Device ID<a class="headerlink" href="#qualified-device-id" title="Permalink to this headline">¶</a></h2>
+<p>The ESTA <a class="reference internal" href="../device_id_library/identification_properties.html#properties-identification-device-id"><span class="std std-ref">Device ID</span></a> property follows a similar qualification
+convention to qualified classes.</p>
+<p>It should follow the form <code class="docutils literal notranslate"><span class="pre">org-id.device-name.version</span></code> where org-id is the
+<a class="reference internal" href="#tutorial-identifiers-organization-id"><span class="std std-ref">Organization Identifier</span></a>, device-name is a string uniquely identifiying the
+device model within the organization, and version is a string-represented integer representing the
+version of the device for the purposes of the ESTA device library.</p>
+<p>This version number must change anytime the device’s definition changes.</p>
 </div>
-</div>
-<div class="section" id="instance-example">
-<h2>Instance Example<a class="headerlink" href="#instance-example" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/dimmer&quot;</span> <span class="na">id=</span><span class="s">&quot;primary-dimmer&quot;</span> <span class="nt">/&gt;</span>
-</pre></div>
-</div>
+<div class="section" id="qualified-id">
+<h2>Qualified ID<a class="headerlink" href="#qualified-id" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -250,10 +245,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="intensity_properties.html" class="btn btn-neutral float-right" title="Intensity Properties" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="mutual_exclusion.html" class="btn btn-neutral float-right" title="Mutual Exclusion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../device_id_library/full_definition_list.html" class="btn btn-neutral float-left" title="Full Library Download" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="interface_hierarchy.html" class="btn btn-neutral float-left" title="The Interface Hierarchy" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<estadl>
+<udr>
   <library class="org.esta.intensity.1">
     <!-- Properties -->
     <propertydef 
@@ -21,4 +21,4 @@
       <property class="intensity" id="intensity" access="readwrite" lifetime="runtime" />
     </interfacedef>
   </library>
-</estadl>
+</udr>

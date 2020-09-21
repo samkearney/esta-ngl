@@ -7,12 +7,16 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Full Library Download &mdash; Library Data Model 0.1.0 documentation</title>
+  <title>Full Library Download &mdash; Universal Device Representation 0.1.0 documentation</title>
   
 
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
 
   
@@ -52,7 +56,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Library Data Model
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Universal Device Representation
           
 
           
@@ -83,17 +87,24 @@
               
             
             
-              <p class="caption"><span class="caption-text">Concepts</span></p>
+              <p class="caption"><span class="caption-text">Tutorial</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/general.html">General Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/property_definition.html">Property Definition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/property_instance.html">Property Instance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/interface_definition.html">Interface Definition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/interface_instance.html">Interface Instance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/interface_hierarchy.html">Hierarchy of Interfaces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/exclusive_group.html">Exclusive Group</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/identifiers.html">Identifiers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/property_value.html">Property Value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/interface_hierarchy.html">The Interface Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/identifiers.html">Identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/mutual_exclusion.html">Mutual Exclusion</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standard Objects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/udr_root_object.html">UDR Root Object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/library.html">Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/import.html">Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/interface_definition.html">Interface Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/interface_instance.html">Interface Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/property_definition.html">Property Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/property_instance.html">Property Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/interface_constraint.html">Interface Constraint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/override.html">Override</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
 <ul>
@@ -131,7 +142,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Library Data Model</a>
+          <a href="../index.html">Universal Device Representation</a>
         
       </nav>
 
@@ -185,7 +196,7 @@
 <h1>Full Library Download<a class="headerlink" href="#full-library-download" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference download internal" download="" href="../_downloads/14ef0f9d7006f10b8fa45ffde2c79ad7/intensity_library.xml"><code class="xref download docutils literal notranslate"><span class="pre">Download</span></code></a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
-<span class="nt">&lt;estadl&gt;</span>
+<span class="nt">&lt;udr&gt;</span>
   <span class="nt">&lt;library</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1&quot;</span><span class="nt">&gt;</span>
     <span class="c">&lt;!-- Properties --&gt;</span>
     <span class="nt">&lt;propertydef</span> 
@@ -207,7 +218,7 @@
       <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;intensity&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/interfacedef&gt;</span>
   <span class="nt">&lt;/library&gt;</span>
-<span class="nt">&lt;/estadl&gt;</span>
+<span class="nt">&lt;/udr&gt;</span>
 </pre></div>
 </div>
 </div>

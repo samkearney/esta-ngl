@@ -7,12 +7,16 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ESTA Next-Gen Library Data Model &mdash; Library Data Model 0.1.0 documentation</title>
+  <title>ESTA Universal Device Representation (UDR) &mdash; Universal Device Representation 0.1.0 documentation</title>
   
 
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_tabs/tabs.css" type="text/css" />
   <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
 
   
@@ -37,7 +41,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="General Concepts" href="concepts/general.html" /> 
+    <link rel="next" title="Introduction" href="tutorial/introduction.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -51,7 +55,7 @@
           
 
           
-            <a href="#" class="icon icon-home" alt="Documentation Home"> Library Data Model
+            <a href="#" class="icon icon-home" alt="Documentation Home"> Universal Device Representation
           
 
           
@@ -82,17 +86,24 @@
               
             
             
-              <p class="caption"><span class="caption-text">Concepts</span></p>
+              <p class="caption"><span class="caption-text">Tutorial</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="concepts/general.html">General Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/property_definition.html">Property Definition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/property_instance.html">Property Instance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/interface_definition.html">Interface Definition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/interface_instance.html">Interface Instance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/interface_hierarchy.html">Hierarchy of Interfaces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/exclusive_group.html">Exclusive Group</a></li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/identifiers.html">Identifiers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/property_value.html">Property Value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/interface_hierarchy.html">The Interface Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/identifiers.html">Identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/mutual_exclusion.html">Mutual Exclusion</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standard Objects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="standard_objects/udr_root_object.html">UDR Root Object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standard_objects/library.html">Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standard_objects/import.html">Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standard_objects/interface_definition.html">Interface Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standard_objects/interface_instance.html">Interface Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standard_objects/property_definition.html">Property Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standard_objects/property_instance.html">Property Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standard_objects/interface_constraint.html">Interface Constraint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standard_objects/override.html">Override</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
 <ul>
@@ -130,7 +141,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">Library Data Model</a>
+          <a href="#">Universal Device Representation</a>
         
       </nav>
 
@@ -161,7 +172,7 @@
     
       <li><a href="#" class="icon icon-home"></a> &raquo;</li>
         
-      <li>ESTA Next-Gen Library Data Model</li>
+      <li>ESTA Universal Device Representation (UDR)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -180,62 +191,86 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="esta-next-gen-library-data-model">
-<h1>ESTA Next-Gen Library Data Model<a class="headerlink" href="#esta-next-gen-library-data-model" title="Permalink to this headline">¶</a></h1>
-<p>The <strong>Next-Gen Library Data Model</strong> describes a method for describing entertainment technology
-equipment in a machine-readable way.</p>
+  <div class="section" id="esta-universal-device-representation-udr">
+<h1>ESTA Universal Device Representation (UDR)<a class="headerlink" href="#esta-universal-device-representation-udr" title="Permalink to this headline">¶</a></h1>
+<p><strong>Universal Device Representation</strong> is a method for describing controllable devices in a
+machine-readable way. UDR is developed by the Entertainment Services and Technology Association
+(ESTA) and has applications in entertainment technology, architectural lighting and building
+automation, and the Internet of Things.</p>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Concepts</span></p>
+<p class="caption"><span class="caption-text">Tutorial</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="concepts/general.html">General Concepts</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="concepts/general.html#esta-device-library">ESTA Device Library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/general.html#library">Library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/general.html#device-definition">Device Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/general.html#import">Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/introduction.html#interfaces">Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/introduction.html#properties">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/introduction.html#definition-vs-instance">Definition vs Instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/introduction.html#libraries">Libraries</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/property_definition.html">Property Definition</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="concepts/property_definition.html#attributes">Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/property_definition.html#markup">Markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/interface_hierarchy.html">The Interface Hierarchy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/interface_hierarchy.html#order-is-meaningful">Order Is Meaningful</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/property_instance.html">Property Instance</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="concepts/property_instance.html#attributes">Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/property_instance.html#markup">Markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/identifiers.html">Identifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/identifiers.html#organization-identifier">Organization Identifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/identifiers.html#qualified-class">Qualified Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/identifiers.html#qualified-device-id">Qualified Device ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/identifiers.html#qualified-id">Qualified ID</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/interface_definition.html">Interface Definition</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="concepts/interface_definition.html#attributes">Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/interface_definition.html#children">Children</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/interface_definition.html#markup">Markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/mutual_exclusion.html">Mutual Exclusion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/mutual_exclusion.html#mode-selectors">Mode Selectors</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/interface_instance.html">Interface Instance</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="concepts/interface_instance.html#attributes">Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/interface_instance.html#children">Children</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/interface_instance.html#markup">Markup</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Standard Objects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="standard_objects/udr_root_object.html">UDR Root Object</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/udr_root_object.html#children">Children</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/udr_root_object.html#markup-example">Markup Example</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/interface_hierarchy.html">Hierarchy of Interfaces</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="concepts/interface_hierarchy.html#child">Child</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standard_objects/library.html">Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/library.html#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/library.html#children">Children</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/library.html#markup-example">Markup Example</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/exclusive_group.html">Exclusive Group</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="concepts/exclusive_group.html#mode-selectors">Mode Selectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standard_objects/import.html">Import</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/import.html#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/import.html#example">Example</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/identifiers.html">Identifiers</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="concepts/identifiers.html#organization-identifier">Organization Identifier</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/identifiers.html#qualified-class">Qualified Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/identifiers.html#qualified-device-id">Qualified Device ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/identifiers.html#qualified-id">Qualified ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standard_objects/interface_definition.html">Interface Definition</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/interface_definition.html#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/interface_definition.html#children">Children</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/interface_definition.html#markup">Markup</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="concepts/property_value.html">Property Value</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="concepts/property_value.html#attributes">Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts/property_value.html#markup">Markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standard_objects/interface_instance.html">Interface Instance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/interface_instance.html#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/interface_instance.html#children">Children</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/interface_instance.html#markup">Markup</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="standard_objects/property_definition.html">Property Definition</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/property_definition.html#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/property_definition.html#markup">Markup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="standard_objects/property_instance.html">Property Instance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/property_instance.html#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/property_instance.html#markup">Markup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="standard_objects/interface_constraint.html">Interface Constraint</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/interface_constraint.html#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard_objects/interface_constraint.html#markup">Markup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="standard_objects/override.html">Override</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -297,7 +332,7 @@ equipment in a machine-readable way.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="concepts/general.html" class="btn btn-neutral float-right" title="General Concepts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tutorial/introduction.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

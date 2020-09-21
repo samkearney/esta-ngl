@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Dimmer Interface &mdash; Universal Device Representation 0.1.0 documentation</title>
+  <title>Introduction &mdash; Universal Device Representation 0.1.0 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Intensity Properties" href="intensity_properties.html" />
-    <link rel="prev" title="Full Library Download" href="../device_id_library/full_definition_list.html" /> 
+    <link rel="next" title="The Interface Hierarchy" href="interface_hierarchy.html" />
+    <link rel="prev" title="ESTA Universal Device Representation (UDR)" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,11 +88,17 @@
             
             
               <p class="caption"><span class="caption-text">Tutorial</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial/introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial/interface_hierarchy.html">The Interface Hierarchy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial/identifiers.html">Identifiers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial/mutual_exclusion.html">Mutual Exclusion</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#interfaces">Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#definition-vs-instance">Definition vs Instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#libraries">Libraries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interface_hierarchy.html">The Interface Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="identifiers.html">Identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mutual_exclusion.html">Mutual Exclusion</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Standard Objects</span></p>
 <ul>
@@ -113,16 +119,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../device_id_library/full_definition_list.html">Full Library Download</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Intensity Library</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Dimmer Interface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#definition">Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#required-properties">Required Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#markup">Markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#instance-example">Instance Example</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="intensity_properties.html">Intensity Properties</a></li>
-<li class="toctree-l1"><a class="reference internal" href="full_definition_list.html">Full Library Download</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/dimmer_interface.html">Dimmer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/intensity_properties.html">Intensity Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/full_definition_list.html">Full Library Download</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
@@ -179,13 +179,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Dimmer Interface</li>
+      <li>Introduction</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/intensity_library/dimmer_interface.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/tutorial/introduction.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -198,47 +198,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="dimmer-interface">
-<h1>Dimmer Interface<a class="headerlink" href="#dimmer-interface" title="Permalink to this headline">¶</a></h1>
-<p>The dimmer interface represents a simple dimmer controlling an intensity.</p>
-<div class="section" id="definition">
-<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 21%" />
-<col style="width: 79%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p>Class</p></td>
-<td><p>dimmer</p></td>
-</tr>
-<tr class="row-even"><td><p>Description</p></td>
-<td><p>A simple dimmer controlling an intensity.</p></td>
-</tr>
-</tbody>
-</table>
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>UDR is composed of a series of libraries. A library can be published by ESTA or a third party, and
+contain information that helps represent devices made by various manufacturers in a standard way.</p>
+<p>UDR libraries are defined in <em>UDR documents</em>. UDR documents define an object model, similar to the
+<a class="reference external" href="https://en.wikipedia.org/wiki/Document_Object_Model">Document Object Model</a> used in web development. This object model can be translated to and from
+markup languages like XML or JSON for transmission and storage.</p>
+<div class="section" id="interfaces">
+<h2>Interfaces<a class="headerlink" href="#interfaces" title="Permalink to this headline">¶</a></h2>
+<p>Interfaces define a contract of behavior for some portion of a device’s functionality. They provide
+a standardized way of controlling and/or observing some atomic portion of functionality on a device.</p>
 </div>
-<div class="section" id="required-properties">
-<h2>Required Properties<a class="headerlink" href="#required-properties" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="intensity_properties.html#properties-intensity-intensity"><span class="std std-ref">Intensity</span></a></p></li>
-</ul>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<p>A property is a single controllable and/or observable piece of data. Every interface consists of
+one or more properties. Properties standardize how data is interpreted, how data can be accessed,
+and any constraints on the value of data.</p>
 </div>
-<div class="section" id="markup">
-<h2>Markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interfacedef</span>
-    <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/dimmer&quot;</span>
-    <span class="na">description=</span><span class="s">&quot;A simple dimmer controlling an intensity.&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;intensity&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/interfacedef&gt;</span>
-</pre></div>
+<div class="section" id="definition-vs-instance">
+<h2>Definition vs Instance<a class="headerlink" href="#definition-vs-instance" title="Permalink to this headline">¶</a></h2>
+<p>Both interfaces and properties can appear in two ways in a UDR document: as a definition or as an
+instance. An interface or property <em>definition</em> provides an abstract description of that interface
+or property which applies to all <em>instances</em>.</p>
 </div>
-</div>
-<div class="section" id="instance-example">
-<h2>Instance Example<a class="headerlink" href="#instance-example" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/dimmer&quot;</span> <span class="na">id=</span><span class="s">&quot;primary-dimmer&quot;</span> <span class="nt">/&gt;</span>
-</pre></div>
-</div>
+<div class="section" id="libraries">
+<h2>Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -250,10 +235,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="intensity_properties.html" class="btn btn-neutral float-right" title="Intensity Properties" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="interface_hierarchy.html" class="btn btn-neutral float-right" title="The Interface Hierarchy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../device_id_library/full_definition_list.html" class="btn btn-neutral float-left" title="Full Library Download" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="ESTA Universal Device Representation (UDR)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

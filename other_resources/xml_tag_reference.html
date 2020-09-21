@@ -7,12 +7,16 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>XML Tag Reference &mdash; Library Data Model 0.1.0 documentation</title>
+  <title>XML Tag Reference &mdash; Universal Device Representation 0.1.0 documentation</title>
   
 
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
 
   
@@ -51,7 +55,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Library Data Model
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Universal Device Representation
           
 
           
@@ -82,17 +86,24 @@
               
             
             
-              <p class="caption"><span class="caption-text">Concepts</span></p>
+              <p class="caption"><span class="caption-text">Tutorial</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/general.html">General Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/property_definition.html">Property Definition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/property_instance.html">Property Instance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/interface_definition.html">Interface Definition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/interface_instance.html">Interface Instance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/interface_hierarchy.html">Hierarchy of Interfaces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/exclusive_group.html">Exclusive Group</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/identifiers.html">Identifiers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/property_value.html">Property Value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/interface_hierarchy.html">The Interface Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/identifiers.html">Identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/mutual_exclusion.html">Mutual Exclusion</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standard Objects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/udr_root_object.html">UDR Root Object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/library.html">Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/import.html">Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/interface_definition.html">Interface Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/interface_instance.html">Interface Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/property_definition.html">Property Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/property_instance.html">Property Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/interface_constraint.html">Interface Constraint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/override.html">Override</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
 <ul>
@@ -130,7 +141,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Library Data Model</a>
+          <a href="../index.html">Universal Device Representation</a>
         
       </nav>
 
@@ -184,36 +195,36 @@
 <h1>XML Tag Reference<a class="headerlink" href="#xml-tag-reference" title="Permalink to this headline">¶</a></h1>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 19%" />
-<col style="width: 81%" />
+<col style="width: 17%" />
+<col style="width: 83%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p>estadl</p></td>
-<td><p>The root tag of an ESTA Device Library XML file.</p></td>
+<tr class="row-odd"><td><p>udr</p></td>
+<td><p><a class="reference internal" href="../standard_objects/udr_root_object.html#standard-objects-udr-root-object-markup"><span class="std std-ref">UDR Root Object</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>library</p></td>
-<td><p><a class="reference internal" href="../concepts/general.html#concepts-general-library"><span class="std std-ref">Library</span></a></p></td>
+<td><p><a class="reference internal" href="../standard_objects/library.html#standard-objects-library"><span class="std std-ref">Library</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>devicedef</p></td>
-<td><p><a class="reference internal" href="../concepts/general.html#concepts-general-device-definition"><span class="std std-ref">Device Definition</span></a></p></td>
+<td><p><a class="reference internal" href="../standard_objects/device_definition.html#standard-objects-device-definition"><span class="std std-ref">Device Definition</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>import</p></td>
-<td><p><a class="reference internal" href="../concepts/general.html#concepts-general-import"><span class="std std-ref">Import</span></a></p></td>
+<td><p><a class="reference internal" href="../standard_objects/import.html#standard-objects-import"><span class="std std-ref">Import</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>interface</p></td>
-<td><p><a class="reference internal" href="../concepts/interface_instance.html#concepts-interface-instance-markup"><span class="std std-ref">Interface Instance</span></a></p></td>
+<td><p><a class="reference internal" href="../standard_objects/interface_instance.html#standard-objects-interface-instance-markup"><span class="std std-ref">Interface Instance</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>interfacedef</p></td>
-<td><p><a class="reference internal" href="../concepts/interface_definition.html#concepts-interface-definition-markup"><span class="std std-ref">Interface Definition</span></a></p></td>
+<td><p><a class="reference internal" href="../standard_objects/interface_definition.html#standard-objects-interface-definition-markup"><span class="std std-ref">Interface Definition</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>property</p></td>
-<td><p><a class="reference internal" href="../concepts/property_instance.html#concepts-property-instance-markup"><span class="std std-ref">Property Instance</span></a></p></td>
+<td><p><a class="reference internal" href="../standard_objects/property_instance.html#standard-objects-property-instance-markup"><span class="std std-ref">Property Instance</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>propertydef</p></td>
-<td><p><a class="reference internal" href="../concepts/property_definition.html#concepts-property-definition-markup"><span class="std std-ref">Property Definition</span></a></p></td>
+<td><p><a class="reference internal" href="../standard_objects/property_definition.html#standard-objects-property-definition-markup"><span class="std std-ref">Property Definition</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p>propertyvalue</p></td>
-<td><p><a class="reference internal" href="../concepts/property_value.html#concepts-property-value-markup"><span class="std std-ref">Property Value</span></a></p></td>
+<tr class="row-odd"><td><p>override</p></td>
+<td><p><span class="xref std std-ref">Override</span></p></td>
 </tr>
 </tbody>
 </table>
