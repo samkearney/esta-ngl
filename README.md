@@ -1,8 +1,9 @@
-# Next-Gen Library Data Model
+# ESTA Universal Device Representation (UDR)
 
-This repository houses working documentation for ESTA's Next-Gen Library Study Group data model.
-The data model is currently an early work-in-progress and actively being worked on by the study
-group. Everything in this documentation is subject to change drastically.
+This repository houses working documentation for ESTA's Universal Device Representation (UDR),
+which is developed by the ESTA TSP's Next-Gen Library Study Group. UDR is currently an early
+work-in-progress and actively being worked on by the study group. Everything in this documentation
+is subject to change without notice.
 
 The Next-Gen Library study group is working toward defining a standardized method of describing
 entertainment equipment in a machine-readable way, such that it can automatically be discovered and

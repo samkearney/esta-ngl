@@ -1,4 +1,4 @@
-.. _concepts-property-definition:
+.. _standard-objects-property-definition:
 
 ###################
 Property Definition
@@ -15,29 +15,29 @@ Attributes
 Definition attributes are part of the property definition; they apply to all *instances* of the
 property.
 
-.. _concepts-property-definition-class:
+.. _standard-objects-property-definition-class:
 
 Class
 =====
 
 A property's **class** is a string identifying an individual property definition. This string
-must be unique within the :ref:`concepts-general-library` that contains the property definition.
+must be unique within the :ref:`standard-objects-library` that contains the property definition.
 
-.. _concepts-property-definition-name:
+.. _standard-objects-property-definition-name:
 
 Name
 ====
 
 A string containing the human-readable name of the property.
 
-.. _concepts-property-definition-description:
+.. _standard-objects-property-definition-description:
 
 Description
 ===========
 
 A string that describes the purpose of a property in human-readable language.
 
-.. _concepts-property-definition-data-type:
+.. _standard-objects-property-definition-data-type:
 
 Data Type
 =========
@@ -55,7 +55,7 @@ enum    A set of meaningful names assigned to numeric values.
 array   An array of values, all of which must be the same type.
 ======= =======================================================
 
-.. _concepts-property-definition-unit:
+.. _standard-objects-property-definition-unit:
 
 Unit
 ====
@@ -97,47 +97,7 @@ byte                     Data Size in Bytes
 percent                  Percentage of a Maximum Value
 ======================== ======================================================
 
-.. _concepts-property-definition-minimum:
-
-Minimum
-=======
-
-This attribute defines a minimum value for the property. It applies in different ways when combined
-with different data types:
-
-================== ===============================================
-When applied to... Minimum indicates...
-================== ===============================================
-number             The number's minimum value.
-string             The minimum length in characters of the string.
-binary             N/A
-boolean            N/A
-enum               N/A
-array              The minimum length of the array in elements.
-================== ===============================================
-
-.. _concepts-property-definition-maximum:
-
-Maximum
-=======
-
-This attribute defines a maximum value for the property. It applies in different ways when combined
-with different data types:
-
-Maximum when applied to...
-
-================== ===============================================
-When applied to... Maximum indicates...
-================== ===============================================
-number             The number's maximum value.
-string             The maximum length of the string in characters.
-binary             N/A
-boolean            N/A
-enum               N/A
-array              The maximum length of the array in elements.
-================== ===============================================
-
-.. _concepts-property-definition-markup:
+.. _standard-objects-property-definition-markup:
 
 ******
 Markup
@@ -150,13 +110,11 @@ Markup
     * Tag name: ``propertydef``
     * Attributes:
 
-      * ``class``: :ref:`concepts-property-definition-class`
-      * ``name``: :ref:`concepts-property-definition-name`
-      * ``description``: :ref:`concepts-property-definition-description`
-      * ``data_type``: :ref:`concepts-property-definition-data-type`
-      * ``unit``: :ref:`concepts-property-definition-unit`
-      * ``minimum``: :ref:`concepts-property-definition-minimum`
-      * ``maximum``: :ref:`concepts-property-definition-maximum`
+      * ``class``: :ref:`standard-objects-property-definition-class`
+      * ``name``: :ref:`standard-objects-property-definition-name`
+      * ``description``: :ref:`standard-objects-property-definition-description`
+      * ``data_type``: :ref:`standard-objects-property-definition-data-type`
+      * ``unit``: :ref:`standard-objects-property-definition-unit`
     
     Example:
 
@@ -167,32 +125,33 @@ Markup
         name="Strobe Frequency"
         description="The frequency of a strobe shutter in Hertz"
         data_type="number"
-        unit="hertz"
-        minimum="0.1"
-        maximum="1000" />
+        unit="hertz" />
 
   .. tab:: JSON
 
-    * Object Keys:
+    * Type: ``propertydef``
+    * Members:
 
-      * ``class``: :ref:`concepts-property-definition-class`
-      * ``name``: :ref:`concepts-property-definition-name`
-      * ``description``: :ref:`concepts-property-definition-description`
-      * ``data_type``: :ref:`concepts-property-definition-data-type`
-      * ``unit``: :ref:`concepts-property-definition-unit`
-      * ``minimum``: :ref:`concepts-property-definition-minimum`
-      * ``maximum``: :ref:`concepts-property-definition-maximum`
+      =========== ========== =======================================================
+      Key         Value Type Represents
+      =========== ========== =======================================================
+      class       string     :ref:`standard-objects-property-definition-class`
+      name        string     :ref:`standard-objects-property-definition-name`
+      description string     :ref:`standard-objects-property-definition-description`
+      data_type   string     :ref:`standard-objects-property-definition-data-type`
+      unit        string     :ref:`standard-objects-property-definition-unit`
+      =========== ========== =======================================================
+
 
     Example:
 
     .. code-block:: json
 
       {
+        "type": "propertydef",
         "class": "strobe-frequency",
         "name": "Strobe Frequency",
         "description": "The frequency of a strobe shutter in Hertz",
         "data_type": "number",
-        "unit": "hertz",
-        "minimum": 0.1,
-        "maximum": 1000
+        "unit": "hertz"
       }

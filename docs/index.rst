@@ -1,27 +1,38 @@
-.. Library Data Model documentation master file, created by
+.. Universal Device Representation documentation master file, created by
    sphinx-quickstart on Sat Jun  6 15:09:41 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-ESTA Next-Gen Library Data Model
-================================
+ESTA Universal Device Representation (UDR)
+==========================================
 
-The **Next-Gen Library Data Model** describes a method for describing entertainment technology
-equipment in a machine-readable way.
+**Universal Device Representation** is a method for describing controllable devices in a
+machine-readable way. UDR is developed by the Entertainment Services and Technology Association
+(ESTA) and has applications in entertainment technology, architectural lighting and building
+automation, and the Internet of Things.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Concepts
+   :caption: Tutorial
 
-   concepts/general
-   concepts/property_definition
-   concepts/property_instance
-   concepts/interface_definition
-   concepts/interface_instance
-   concepts/interface_hierarchy
-   concepts/exclusive_group
-   concepts/identifiers
-   concepts/property_value
+   tutorial/introduction
+   tutorial/interface_hierarchy
+   tutorial/identifiers
+   tutorial/mutual_exclusion
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Standard Objects
+
+   standard_objects/udr_root_object
+   standard_objects/library
+   standard_objects/import
+   standard_objects/interface_definition
+   standard_objects/interface_instance
+   standard_objects/property_definition
+   standard_objects/property_instance
+   standard_objects/interface_constraint
+   standard_objects/override
 
 .. toctree::
    :maxdepth: 2

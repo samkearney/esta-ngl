@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<estadl>
+<udr>
   <import name="org.esta.identification.1" />
   <import name="org.esta.intensity.1" />
   <library class="com.etcconnect.devices.1">
@@ -12,4 +12,4 @@
       <interface class="org.esta.intensity.1/dimmer" id="dimmer" />
     </devicedef>
   </library>
-</estadl>
+</udr>

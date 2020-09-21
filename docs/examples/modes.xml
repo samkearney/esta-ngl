@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<estadl>
+<udr>
   <import name="org.esta.device.1" />
   <import name="org.esta.intensity.1" />
 
@@ -8,11 +8,11 @@
 
     <interfacedef class="org.esta.core.1/operating-mode-group" name="Operating Mode Group" description="A group of operation modes">
       <property class="org.esta.core.1/mode-selector" id="mode-control" modeselector="mode-control" lifetime="runtime" access="readwrite" />
-      <child class="org.esta.core.1/operating-mode" minimum="1" exclusivegroup="mode-control" />
+      <interfaceconstraint class="org.esta.core.1/operating-mode" minimum="1" exclusivegroup="mode-control" />
     </interfacedef>
 
     <interfacedef class="org.esta.core.1/operating-mode" name="Operating Mode" description="A distinct mode for a device to operate in">
-      <child class="*" />
+      <interfaceconstraint class="*" />
     </interfacedef>
   </library>
 
@@ -37,5 +37,5 @@
 
     </device>
   </library>
-</estadl>
+</udr>
 

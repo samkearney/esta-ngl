@@ -1,4 +1,4 @@
-.. _concepts-interface-instance:
+.. _standard-objects-interface-instance:
 
 ##################
 Interface Instance
@@ -12,15 +12,15 @@ Attributes
 
 Instance attributes are per-interface-instance; they can vary between instances of the interface.
 
-.. _concepts-interface-instance-class:
+.. _standard-objects-interface-instance-class:
 
 Class
 =====
 
-Indicates the :ref:`class<concepts-interface-definition-class>` of the defined interface of which
+Indicates the :ref:`class<standard-objects-interface-definition-class>` of the defined interface of which
 this is an instance.
 
-.. _concepts-interface-instance-id:
+.. _standard-objects-interface-instance-id:
 
 Id
 ==
@@ -28,7 +28,7 @@ Id
 The **id** is a unique string identifying this interface instance. The string must be unique within
 the definition containing the interface instance.
 
-.. _concepts-interface-display-name:
+.. _standard-objects-interface-display-name:
 
 Display Name
 ============
@@ -42,10 +42,10 @@ Children
 
 Interface instances can have the following children:
 
-* :ref:`concepts-property-value`
-* :ref:`concepts-interface-instance`
+* :ref:`standard-objects-property-value`
+* :ref:`standard-objects-interface-instance`
 
-.. _concepts-interface-instance-markup:
+.. _standard-objects-interface-instance-markup:
 
 ******
 Markup
@@ -58,9 +58,9 @@ Markup
     * Tag name: ``interface``
     * Attributes:
 
-      * ``class``: :ref:`concepts-interface-instance-class`
-      * ``id``: :ref:`concepts-interface-instance-id`
-      * ``displayname``: :ref:`concepts-interface-display-name`
+      * ``class``: :ref:`standard-objects-interface-instance-class`
+      * ``id``: :ref:`standard-objects-interface-instance-id`
+      * ``displayname``: :ref:`standard-objects-interface-display-name`
     
     Example:
 

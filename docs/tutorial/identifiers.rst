@@ -6,7 +6,7 @@ Definitions and instances often need to be uniquely and globally identified. Def
 identified by **class** and instances are identified by **id**. These identifiers are combined
 with the identifiers of parent elements to create a globally unique identifier.
 
-.. _concepts-identifiers-organization-id:
+.. _tutorial-identifiers-organization-id:
 
 ***********************
 Organization Identifier
@@ -19,14 +19,14 @@ class with ``com.acme``.
 
 This follows the convention of `reverse domain name notation <https://en.wikipedia.org/wiki/Reverse_domain_name_notation>`_.
 
-.. _concepts-identifiers-qualified-class:
+.. _tutorial-identifiers-qualified-class:
 
 ***************
 Qualified Class
 ***************
 
-:ref:`Libraries<concepts-general-library>` are identified by a qualified class. A qualified class
-is a string that begins with an :ref:`concepts-identifiers-organization-id`.
+:ref:`Libraries<standard-objects-library>` are identified by a qualified class. A qualified class
+is a string that begins with an :ref:`tutorial-identifiers-organization-id`.
 
 The organization identifier is followed by an identifying string for the library, separated by a
 dot.
@@ -37,7 +37,7 @@ representation.
 Putting it all together, version 1 of ACME's device library could have the qualified class
 ``com.acme.devices.1``.
 
-.. _concepts-identifiers-qualified-device-id:
+.. _tutorial-identifiers-qualified-device-id:
 
 *******************
 Qualified Device ID
@@ -47,7 +47,7 @@ The ESTA :ref:`properties-identification-device-id` property follows a similar q
 convention to qualified classes.
 
 It should follow the form ``org-id.device-name.version`` where org-id is the
-:ref:`concepts-identifiers-organization-id`, device-name is a string uniquely identifiying the
+:ref:`tutorial-identifiers-organization-id`, device-name is a string uniquely identifiying the
 device model within the organization, and version is a string-represented integer representing the
 version of the device for the purposes of the ESTA device library.
 

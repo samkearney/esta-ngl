@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath('extensions'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'Library Data Model'
+project = 'Universal Device Representation'
 copyright = '2020, ESTA Next-Gen Library Study Group'
 author = 'ESTA Next-Gen Library Study Group'
 

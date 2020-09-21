@@ -14,7 +14,7 @@
   NOTE: Gobo is not yet defined - need an image solution
 -->
 <?xml version="1.0" encoding="UTF-8" ?>
-<estadl>
+<udr>
   <import name="org.esta.device.1" />
   <import name="org.esta.intensity.1" />
 
@@ -39,12 +39,11 @@
         <property class="org.esta.core.1/selected-interface" id="wheel-mode" lifetime="runtime" access="readonly" />
       -->
 
-      <child class="org.esta.wheel.1/wheel-velocity" minimum="0" maximum="1" exclusivegroup="wheel-control" />
-      <child class="org.esta.wheel.1/wheel-position" minimum="0" maximum="1" exclusivegroup="wheel-control" />
-      <child class="org.esta.wheel.1/wheel-position-indexed" minimum="0" maximum="1" exclusivegroup="wheel-control" />
-
-      <child class="org.esta.wheel.1/wheel" minimum="0" />
-      <child class="org.esta.wheel.1/gobo" minimum="0" />
+      <interfaceconstraint class="org.esta.wheel.1/wheel-velocity" minimum="0" maximum="1" exclusivegroup="wheel-control" />
+      <interfaceconstraint class="org.esta.wheel.1/wheel-position" minimum="0" maximum="1" exclusivegroup="wheel-control" />
+      <interfaceconstraint class="org.esta.wheel.1/wheel-position-indexed" minimum="0" maximum="1" exclusivegroup="wheel-control" />
+      <interfaceconstraint class="org.esta.wheel.1/wheel" minimum="0" />
+      <interfaceconstraint class="org.esta.wheel.1/gobo" minimum="0" />
     </interfacedef>
 
   </library>
@@ -79,5 +78,5 @@
       </interface>
     </devicedef>
   </library>
-</estadl>
+</udr>
 
