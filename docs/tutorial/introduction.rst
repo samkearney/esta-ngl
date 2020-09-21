@@ -22,8 +22,7 @@ a standardized way of controlling and/or observing some atomic portion of functi
 Properties
 **********
 
-A property is a single controllable and/or observable piece of data. Every interface consists of
-one or more properties. Properties standardize how data is interpreted, how data can be accessed,
+A property is a single controllable and/or observable piece of data. Properties standardize how data is interpreted, how data can be accessed,
 and any constraints on the value of data.
 
 **********************
@@ -38,3 +37,6 @@ or property which applies to all *instances*.
 Libraries
 *********
 
+A UDR library consists of a collection of related interface and property definitions, and/or device
+definitions. Examples of possible libraries are a collection of color control methods or a group new
+lighting devices from a specific manufacturer in 2020.

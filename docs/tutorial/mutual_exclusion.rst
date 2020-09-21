@@ -17,9 +17,9 @@ objects which have similar "Exclusive Group" attributes:
   .. code-tab:: xml
 
     <!-- Simplified... -->
-    <interfacedef class="org.esta.wheel.1/wheel" description="A gobo wheel">
-      <interfaceconstraint class="org.esta.wheel.1/wheel-velocity" minimum="0" maximum="1" exclusivegroup="wheel-control" />
-      <interfaceconstraint class="org.esta.wheel.1/wheel-position" minimum="0" maximum="1" exclusivegroup="wheel-control" />
+    <interfacedef class="org.esta.wheel.1/wheel" name="Wheel" description="An indexable, rotating wheel">
+      <interfaceconstraint class="org.esta.wheel.1/wheel-velocity" maximum="1" exclusivegroup="wheel-control" />
+      <interfaceconstraint class="org.esta.wheel.1/wheel-position" maximum="1" exclusivegroup="wheel-control" />
     </interfacedef>
 
   .. code-tab:: json
@@ -27,19 +27,18 @@ objects which have similar "Exclusive Group" attributes:
     {
       "type": "interfacedef",
       "class": "org.esta.wheel.1/wheel",
-      "description": "A gobo wheel",
+      "name": "Wheel",
+      "description": "An indexable, rotating wheel",
       "children": [
         {
           "type": "interfaceconstraint",
           "class": "org.esta.wheel.1/wheel-velocity",
-          "minimum": 0,
           "maximum": 1,
           "exclusivegroup": "wheel-control"
         },
         {
           "type": "interfaceconstraint",
           "class": "org.esta.wheel.1/wheel-position",
-          "minimum": 0,
           "maximum": 1,
           "exclusivegroup": "wheel-control"
         }
@@ -72,11 +71,11 @@ example from above:
   .. code-tab:: xml
 
     <!-- Simplified... -->
-    <interfacedef class="org.esta.wheel.1/wheel" description="A gobo wheel">
-      <property class="org.esta.core.1/interface-selector" id="wheel-control" modeselector="wheel-control" lifetime="runtime" access="readwrite" />
+    <interfacedef class="org.esta.wheel.1/wheel" name="Wheel" description="An indexable, rotating wheel">
+      <property class="org.esta.core.1/interface-selector" id="wheel-control" modeselector="wheel-control" access="readwrite" lifetime="runtime" />
 
-      <interfaceconstraint class="org.esta.wheel.1/wheel-velocity" minimum="0" maximum="1" exclusivegroup="wheel-control" />
-      <interfaceconstraint class="org.esta.wheel.1/wheel-position" minimum="0" maximum="1" exclusivegroup="wheel-control" />
+      <interfaceconstraint class="org.esta.wheel.1/wheel-velocity" maximum="1" exclusivegroup="wheel-control" />
+      <interfaceconstraint class="org.esta.wheel.1/wheel-position" maximum="1" exclusivegroup="wheel-control" />
     </interfacedef>
 
   .. code-tab:: json
@@ -84,33 +83,31 @@ example from above:
     {
       "type": "interfacedef",
       "class": "org.esta.wheel.1/wheel",
-      "description": "A gobo wheel",
+      "name": "Wheel",
+      "description": "An indexable, rotating wheel",
       "children": [
         {
           "type": "property",
           "class": "org.esta.core.1/interface-selector",
           "id": "wheel-control",
           "modeselector": "wheel-control",
-          "lifetime": "runtime",
           "access": "readwrite"
+          "lifetime": "runtime"
         },
         {
           "type": "interfaceconstraint",
           "class": "org.esta.wheel.1/wheel-velocity",
-          "minimum": 0,
           "maximum": 1,
           "exclusivegroup": "wheel-control"
         },
         {
           "type": "interfaceconstraint",
           "class": "org.esta.wheel.1/wheel-position",
-          "minimum": 0,
           "maximum": 1,
           "exclusivegroup": "wheel-control"
         }
       ]
     }
-
 
 The ``wheel-control`` property has a ``modeselector`` attribute which is identical to the
 ``exclusivegroup`` attributes for the two child elements. This means that this property is used to
