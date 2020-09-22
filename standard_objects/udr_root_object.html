@@ -35,6 +35,8 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
+        <script src="../_static/sphinx_tabs/tabs.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -210,16 +212,63 @@ libraries and imports, which are references to external libraries.</p>
 </div>
 <div class="section" id="markup-example">
 <span id="standard-objects-udr-root-object-markup"></span><h2>Markup Example<a class="headerlink" href="#markup-example" title="Permalink to this headline">¶</a></h2>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-WE1M docutils container">
+<div class="docutils container">
+<p>XML</p>
+</div>
+</div>
+<div class="item sphinx-data-tab-SlNPTg== docutils container">
+<div class="docutils container">
+<p>JSON</p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;udr&gt;</span>
-  <span class="nt">&lt;import</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;library</span> <span class="na">class=</span><span class="s">&quot;com.acme.standarddefs.1&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;import</span> <span class="na">name=</span><span class="s">&quot;org.esta.intensity.1&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;library</span> <span class="na">class=</span><span class="s">&quot;com.acme.standarddefs.1&quot;</span> <span class="na">description=</span><span class="s">&quot;ACME Corp Standard Definitions&quot;</span> <span class="na">publishdate=</span><span class="s">&quot;2020-09-02&quot;</span> <span class="na">author=</span><span class="s">&quot;ACME Corp&quot;</span><span class="nt">&gt;</span>
     <span class="c">&lt;!-- ... --&gt;</span>
   <span class="nt">&lt;/library&gt;</span>
-  <span class="nt">&lt;library</span> <span class="na">class=</span><span class="s">&quot;com.acme.devices.1&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;library</span> <span class="na">class=</span><span class="s">&quot;com.acme.devices.1&quot;</span> <span class="na">description=</span><span class="s">&quot;ACME Corp Standard Devices&quot;</span> <span class="na">publishdate=</span><span class="s">&quot;2020-09-02&quot;</span> <span class="na">author=</span><span class="s">&quot;ACME Corp&quot;</span><span class="nt">&gt;</span>
     <span class="c">&lt;!-- ... --&gt;</span>
   <span class="nt">&lt;/library&gt;</span>
 <span class="nt">&lt;/udr&gt;</span>
 </pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;udr&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;import&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.intensity.1&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;library&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;com.acme.standarddefs.1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;ACME Corp Standard Definitions&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;publishdate&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-09-02&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;ACME Corp&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;library&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;com.acme.devices.1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;ACME Corp Standard Devices&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;publishdate&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-09-02&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;ACME Corp&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>

@@ -27,8 +27,9 @@ Some examples of classes with glob patterns:
   allowed.
 * ``"org.esta.*/intensity"``: Indicates that any interface with a class starting with ``org.esta.``
   and ending with ``/intensity`` is allowed. For example, this would match:
-   * ``org.esta.foo.1/intensity``
-   * ``org.esta.bar.1/intensity``
+
+  * ``org.esta.foo.1/intensity``
+  * ``org.esta.bar.1/intensity``
 
 .. _standard-objects-interface-constraint-minimum:
 

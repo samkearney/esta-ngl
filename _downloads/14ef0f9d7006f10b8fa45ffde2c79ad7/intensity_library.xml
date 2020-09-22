@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <udr>
-  <library class="org.esta.intensity.1">
+  <library class="org.esta.intensity.1" description="ESTA intensity library" publishdate="2020-09-02" author="ESTA">
     <!-- Properties -->
     <propertydef 
         class="intensity"
+        name="Intensity"
         description="Represents an emitter intensity as a percentage of its maximum brightness"
         data_type="number"
-        unit="percent"
-        minimum="0"
-        maximum="100" />
+        unit="percent" />
     <propertydef 
         class="binary-intensity"
+        name="Binary Intensity"
         description="Represents an emitter intensity as an on/off state where 'true' indicates 'on'."
         data_type="boolean" />
 
     <!-- Interfaces -->
     <interfacedef 
         class="dimmer"
+        name="Dimmer"
         description="A simple dimmer controlling an intensity.">
-      <property class="intensity" id="intensity" access="readwrite" lifetime="runtime" />
+      <property class="intensity" id="intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
     </interfacedef>
   </library>
 </udr>

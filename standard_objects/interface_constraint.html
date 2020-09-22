@@ -217,18 +217,16 @@ interface instances are allowed as children of the defined interface.</p>
 <cite>glob pattern</cite>, using at most a single <code class="docutils literal notranslate"><span class="pre">*</span></code> character to represent any number of characters
 (including none).</p>
 <p>Some examples of classes with glob patterns:</p>
-<ul>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;*&quot;</span></code>: Indicates that any interface class is allowed.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;org.esta.*&quot;</span></code>: Indicates that any interface class with ESTA’s organization identifier is
 allowed.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;org.esta.*/intensity&quot;</span></code>: Indicates that any interface with a class starting with <code class="docutils literal notranslate"><span class="pre">org.esta.</span></code>
 and ending with <code class="docutils literal notranslate"><span class="pre">/intensity</span></code> is allowed. For example, this would match:</p>
-<blockquote>
-<div><ul class="simple">
+<ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">org.esta.foo.1/intensity</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">org.esta.bar.1/intensity</span></code></p></li>
 </ul>
-</div></blockquote>
 </li>
 </ul>
 </div>

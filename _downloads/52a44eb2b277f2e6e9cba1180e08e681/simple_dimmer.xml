@@ -2,12 +2,12 @@
 <udr>
   <import name="org.esta.identification.1" />
   <import name="org.esta.intensity.1" />
-  <library class="com.etcconnect.devices.1">
+  <library class="com.etcconnect.devices.1" description="ETC Devices" publishdate="2020-09-02" author="ETC Inc">
     <devicedef class="es1">
       <interface class="org.esta.identification.1/device" id="device">
-        <propertyvalue id="device-id">com.etcconnect.es1.1</propertyvalue>
-        <propertyvalue id="device-manufacturer">ETC Inc.</propertyvalue>
-        <propertyvalue id="device-model">ES1</propertyvalue>
+        <override refid="device-id" attribute="value">com.etcconnect.es1.1</override>
+        <override refid="device-manufacturer" attribute="value">ETC Inc.</override>
+        <override refid="device-model" attribute="value">ES1</override>
       </interface>
       <interface class="org.esta.intensity.1/dimmer" id="dimmer" />
     </devicedef>

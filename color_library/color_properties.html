@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Identification Properties &mdash; Universal Device Representation 0.1.0 documentation</title>
+  <title>Color Properties &mdash; Universal Device Representation 0.1.0 documentation</title>
   
 
   
@@ -42,9 +42,7 @@
 
     
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Full Library Download" href="full_definition_list.html" />
-    <link rel="prev" title="Device Interface" href="device_interface.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -109,30 +107,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/override.html">Override</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="device_interface.html">Device Interface</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Identification Properties</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#device-id">Device ID</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#definition">Definition</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#definition-markup">Definition Markup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#instance-example">Instance Example</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#manufacturer">Manufacturer</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Definition</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">Definition Markup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Instance Example</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#model">Model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id4">Definition</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">Definition Markup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">Instance Example</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="full_definition_list.html">Full Library Download</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../device_id_library/device_interface.html">Device Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device_id_library/identification_properties.html">Identification Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device_id_library/full_definition_list.html">Full Library Download</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Intensity Library</span></p>
 <ul>
@@ -195,13 +173,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Identification Properties</li>
+      <li>Color Properties</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/device_id_library/identification_properties.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/color_library/color_properties.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -214,37 +192,36 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="identification-properties">
-<h1>Identification Properties<a class="headerlink" href="#identification-properties" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="device-id">
-<span id="properties-identification-device-id"></span><h2>Device ID<a class="headerlink" href="#device-id" title="Permalink to this headline">¶</a></h2>
-<p>A globally unique identifier for a model of device. This identifier should follow a single device
-model for its lifetime and should not change with new firmware or hardware revisions of the device.</p>
+  <div class="section" id="color-properties">
+<h1>Color Properties<a class="headerlink" href="#color-properties" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="spectrum-data">
+<span id="properties-color-spectrum-data"></span><h2>Spectrum Data<a class="headerlink" href="#spectrum-data" title="Permalink to this headline">¶</a></h2>
+<p>The Spectral Power Distribution data of an emitter in normalized wavelength.</p>
 <div class="section" id="definition">
 <h3>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 19%" />
-<col style="width: 81%" />
+<col style="width: 16%" />
+<col style="width: 84%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>Class</p></td>
-<td><p>device-id</p></td>
+<td><p>spectrum-data</p></td>
 </tr>
 <tr class="row-even"><td><p>Qualified Class</p></td>
-<td><p>org.esta.identification.1/device-id</p></td>
+<td><p>org.esta.color.1/spectrum-data</p></td>
 </tr>
 <tr class="row-odd"><td><p>Name</p></td>
-<td><p>Device ID</p></td>
+<td><p>Spectrum Data</p></td>
 </tr>
 <tr class="row-even"><td><p>Description</p></td>
-<td><p>A globally unique identifier for a device model.</p></td>
+<td><p>The Spectral Power Distribution data of an emitter in normalized wavelength.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Data Type</p></td>
-<td><p>string</p></td>
+<td><p>array</p></td>
 </tr>
-<tr class="row-even"><td><p>String Constraints</p></td>
-<td><p>Follows the convention of a <a class="reference internal" href="../tutorial/identifiers.html#tutorial-identifiers-qualified-device-id"><span class="std std-ref">Qualified Device ID</span></a>.</p></td>
+<tr class="row-even"><td><p>Unit</p></td>
+<td><p>nanometers</p></td>
 </tr>
 </tbody>
 </table>
@@ -266,20 +243,22 @@ model for its lifetime and should not change with new firmware or hardware revis
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;propertydef</span>
-  <span class="na">class=</span><span class="s">&quot;device-id&quot;</span>
-  <span class="na">name=</span><span class="s">&quot;Device ID&quot;</span>
-  <span class="na">description=</span><span class="s">&quot;A globally unique identifier for a device model.&quot;</span>
-  <span class="na">data_type=</span><span class="s">&quot;string&quot;</span> <span class="nt">/&gt;</span>
+  <span class="na">class=</span><span class="s">&quot;spectrum-data&quot;</span>
+  <span class="na">name=</span><span class="s">&quot;Spectrum Data&quot;</span>
+  <span class="na">description=</span><span class="s">&quot;The Spectral Power Distribution data of an emitter in normalized wavelength.&quot;</span>
+  <span class="na">data_type=</span><span class="s">&quot;array&quot;</span>
+  <span class="na">unit=</span><span class="s">&quot;nanometers&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;propertydef&quot;</span>
-  <span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;device-id&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Device ID&quot;</span>
-  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A globally unique identifier for a device model.&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;data_type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+  <span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;spectrum-data&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Spectrum Data&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The Spectral Power Distribution data of an emitter in normalized wavelength.&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data_type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;nanometers&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -303,12 +282,10 @@ model for its lifetime and should not change with new firmware or hardware revis
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span>
-  <span class="na">class=</span><span class="s">&quot;org.esta.identification.1/device-id&quot;</span>
-  <span class="na">id=</span><span class="s">&quot;device-id&quot;</span>
+  <span class="na">class=</span><span class="s">&quot;org.esta.color.1/spectrum-data&quot;</span>
+  <span class="na">id=</span><span class="s">&quot;red-spectrum-data&quot;</span>
   <span class="na">access=</span><span class="s">&quot;readonly&quot;</span>
-  <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span>
-  <span class="na">minimum=</span><span class="s">&quot;0&quot;</span>
-  <span class="na">maximum=</span><span class="s">&quot;128&quot;</span> <span class="nt">/&gt;</span>
+  <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -316,12 +293,10 @@ model for its lifetime and should not change with new firmware or hardware revis
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.identification.1/device-id&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;device-id&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.color.1/spectrum-data&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;red-spectrum-data&quot;</span><span class="p">,</span>
       <span class="nt">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;readonly&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span> <span class="s2">&quot;static&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="nt">&quot;maximum&quot;</span><span class="p">:</span> <span class="mi">128</span>
+      <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span> <span class="s2">&quot;static&quot;</span>
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span>
@@ -331,31 +306,34 @@ model for its lifetime and should not change with new firmware or hardware revis
 </div>
 </div>
 </div>
-<div class="section" id="manufacturer">
-<span id="properties-identification-manufacturer"></span><h2>Manufacturer<a class="headerlink" href="#manufacturer" title="Permalink to this headline">¶</a></h2>
-<p>A string identifying a device’s manufacturer.</p>
+<div class="section" id="spectrum-wavelength-start">
+<span id="properties-color-spectrum-start"></span><h2>Spectrum Wavelength Start<a class="headerlink" href="#spectrum-wavelength-start" title="Permalink to this headline">¶</a></h2>
+<p>The Spectral Power Distribution wavelength start.</p>
 <div class="section" id="id1">
 <h3>Definition<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 19%" />
-<col style="width: 81%" />
+<col style="width: 23%" />
+<col style="width: 77%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>Class</p></td>
-<td><p>device-manufacturer</p></td>
+<td><p>spectrum-start</p></td>
 </tr>
 <tr class="row-even"><td><p>Qualified Class</p></td>
-<td><p>org.esta.identification.1/device-manufacturer</p></td>
+<td><p>org.esta.color.1/spectrum-start</p></td>
 </tr>
 <tr class="row-odd"><td><p>Name</p></td>
-<td><p>Manufacturer</p></td>
+<td><p>Spectrum Start</p></td>
 </tr>
 <tr class="row-even"><td><p>Description</p></td>
-<td><p>Identifies a device’s manufacturer.</p></td>
+<td><p>The Spectral Power Distribution wavelength start.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Data Type</p></td>
-<td><p>string</p></td>
+<td><p>number</p></td>
+</tr>
+<tr class="row-even"><td><p>Unit</p></td>
+<td><p>nanometers</p></td>
 </tr>
 </tbody>
 </table>
@@ -377,20 +355,22 @@ model for its lifetime and should not change with new firmware or hardware revis
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;propertydef</span>
-  <span class="na">class=</span><span class="s">&quot;device-manufacturer&quot;</span>
-  <span class="na">name=</span><span class="s">&quot;Manufacturer&quot;</span>
-  <span class="na">description=</span><span class="s">&quot;Identifies a device&#39;s manufacturer.&quot;</span>
-  <span class="na">data_type=</span><span class="s">&quot;string&quot;</span> <span class="nt">/&gt;</span>
+  <span class="na">class=</span><span class="s">&quot;spectrum-start&quot;</span>
+  <span class="na">name=</span><span class="s">&quot;Spectrum Start&quot;</span>
+  <span class="na">description=</span><span class="s">&quot;The Spectral Power Distribution wavelength start.&quot;</span>
+  <span class="na">data_type=</span><span class="s">&quot;number&quot;</span>
+  <span class="na">unit=</span><span class="s">&quot;nanometers&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;propertydef&quot;</span>
-  <span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;device-manufacturer&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Manufacturer&quot;</span>
-  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Identifies a device&#39;s manufacturer.&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;data_type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+  <span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;spectrum-start&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Spectrum Start&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The Spectral Power Distribution wavelength start.&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data_type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;nanometers&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -414,12 +394,10 @@ model for its lifetime and should not change with new firmware or hardware revis
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span>
-  <span class="na">class=</span><span class="s">&quot;org.esta.identification.1/device-manufacturer&quot;</span>
-  <span class="na">id=</span><span class="s">&quot;manufacturer&quot;</span>
+  <span class="na">class=</span><span class="s">&quot;org.esta.color.1/spectrum-start&quot;</span>
+  <span class="na">id=</span><span class="s">&quot;spectrum-start&quot;</span>
   <span class="na">access=</span><span class="s">&quot;readonly&quot;</span>
-  <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span>
-  <span class="na">minimum=</span><span class="s">&quot;0&quot;</span>
-  <span class="na">maximum=</span><span class="s">&quot;128&quot;</span> <span class="nt">/&gt;</span>
+  <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -427,12 +405,10 @@ model for its lifetime and should not change with new firmware or hardware revis
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.identification.1/device-manufacturer&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;manufacturer&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.color.1/spectrum-start&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;spectrum-start&quot;</span><span class="p">,</span>
       <span class="nt">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;readonly&quot;</span><span class="p">,</span>
       <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span> <span class="s2">&quot;static&quot;</span>
-      <span class="s2">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="nt">&quot;maximum&quot;</span><span class="p">:</span> <span class="mi">128</span>
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span>
@@ -442,31 +418,34 @@ model for its lifetime and should not change with new firmware or hardware revis
 </div>
 </div>
 </div>
-<div class="section" id="model">
-<span id="properties-identification-model"></span><h2>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h2>
-<p>A string identifying a device’s model name.</p>
+<div class="section" id="spectrum-wavelength-end">
+<span id="properties-color-spectrum-end"></span><h2>Spectrum Wavelength End<a class="headerlink" href="#spectrum-wavelength-end" title="Permalink to this headline">¶</a></h2>
+<p>The Spectral Power Distribution wavelength end.</p>
 <div class="section" id="id4">
 <h3>Definition<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 19%" />
-<col style="width: 81%" />
+<col style="width: 23%" />
+<col style="width: 77%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>Class</p></td>
-<td><p>device-model</p></td>
+<td><p>spectrum-end</p></td>
 </tr>
 <tr class="row-even"><td><p>Qualified Class</p></td>
-<td><p>org.esta.identification.1/device-model</p></td>
+<td><p>org.esta.color.1/spectrum-end</p></td>
 </tr>
 <tr class="row-odd"><td><p>Name</p></td>
-<td><p>Model</p></td>
+<td><p>Spectrum End</p></td>
 </tr>
 <tr class="row-even"><td><p>Description</p></td>
-<td><p>Identifies a device’s model name.</p></td>
+<td><p>The Spectral Power Distribution wavelength end.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Data Type</p></td>
-<td><p>string</p></td>
+<td><p>number</p></td>
+</tr>
+<tr class="row-even"><td><p>Unit</p></td>
+<td><p>nanometers</p></td>
 </tr>
 </tbody>
 </table>
@@ -488,20 +467,22 @@ model for its lifetime and should not change with new firmware or hardware revis
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;propertydef</span>
-  <span class="na">class=</span><span class="s">&quot;device-model&quot;</span>
-  <span class="na">name=</span><span class="s">&quot;Model&quot;</span>
-  <span class="na">description=</span><span class="s">&quot;Identifies a device&#39;s model name.&quot;</span>
-  <span class="na">data_type=</span><span class="s">&quot;string&quot;</span> <span class="nt">/&gt;</span>
+  <span class="na">class=</span><span class="s">&quot;spectrum-end&quot;</span>
+  <span class="na">name=</span><span class="s">&quot;Spectrum End&quot;</span>
+  <span class="na">description=</span><span class="s">&quot;The Spectral Power Distribution wavelength end.&quot;</span>
+  <span class="na">data_type=</span><span class="s">&quot;number&quot;</span>
+  <span class="na">unit=</span><span class="s">&quot;nanometers&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;propertydef&quot;</span>
-  <span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;device-model&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Model&quot;</span>
-  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Identifies a device&#39;s model name.&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;data_type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+  <span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;spectrum-end&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Spectrum End&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The Spectral Power Distribution wavelength end.&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data_type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;nanometers&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -525,12 +506,10 @@ model for its lifetime and should not change with new firmware or hardware revis
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span>
-  <span class="na">class=</span><span class="s">&quot;org.esta.identification.1/device-model&quot;</span>
-  <span class="na">id=</span><span class="s">&quot;model&quot;</span>
+  <span class="na">class=</span><span class="s">&quot;org.esta.color.1/spectrum-end&quot;</span>
+  <span class="na">id=</span><span class="s">&quot;spectrum-end&quot;</span>
   <span class="na">access=</span><span class="s">&quot;readonly&quot;</span>
-  <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span>
-  <span class="na">minimum=</span><span class="s">&quot;0&quot;</span>
-  <span class="na">maximum=</span><span class="s">&quot;128&quot;</span> <span class="nt">/&gt;</span>
+  <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -538,12 +517,122 @@ model for its lifetime and should not change with new firmware or hardware revis
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.identification.1/device-model&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;model&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.color.1/spectrum-end&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;spectrum-end&quot;</span><span class="p">,</span>
       <span class="nt">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;readonly&quot;</span><span class="p">,</span>
       <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span> <span class="s2">&quot;static&quot;</span>
-      <span class="s2">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="nt">&quot;maximum&quot;</span><span class="p">:</span> <span class="mi">128</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="spectrum-wavelength-step">
+<span id="properties-color-spectrum-step"></span><h2>Spectrum Wavelength Step<a class="headerlink" href="#spectrum-wavelength-step" title="Permalink to this headline">¶</a></h2>
+<p>The Spectral Power Distribution wavelength data step.</p>
+<div class="section" id="id7">
+<h3>Definition<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 77%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Class</p></td>
+<td><p>spectrum-step</p></td>
+</tr>
+<tr class="row-even"><td><p>Qualified Class</p></td>
+<td><p>org.esta.color.1/spectrum-step</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>Spectrum Step</p></td>
+</tr>
+<tr class="row-even"><td><p>Description</p></td>
+<td><p>The Spectral Power Distribution wavelength step.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data Type</p></td>
+<td><p>number</p></td>
+</tr>
+<tr class="row-even"><td><p>Unit</p></td>
+<td><p>nanometers</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id8">
+<h3>Definition Markup<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-WE1M docutils container">
+<div class="docutils container">
+<p>XML</p>
+</div>
+</div>
+<div class="item sphinx-data-tab-SlNPTg== docutils container">
+<div class="docutils container">
+<p>JSON</p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;propertydef</span>
+  <span class="na">class=</span><span class="s">&quot;spectrum-step&quot;</span>
+  <span class="na">name=</span><span class="s">&quot;Spectrum Step&quot;</span>
+  <span class="na">description=</span><span class="s">&quot;The Spectral Power Distribution wavelength step.&quot;</span>
+  <span class="na">data_type=</span><span class="s">&quot;number&quot;</span>
+  <span class="na">unit=</span><span class="s">&quot;nanometers&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;propertydef&quot;</span>
+  <span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;spectrum-step&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Spectrum Step&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The Spectral Power Distribution wavelength step.&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data_type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;nanometers&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h3>Instance Example<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-WE1M docutils container">
+<div class="docutils container">
+<p>XML</p>
+</div>
+</div>
+<div class="item sphinx-data-tab-SlNPTg== docutils container">
+<div class="docutils container">
+<p>JSON</p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span>
+  <span class="na">class=</span><span class="s">&quot;org.esta.color.1/spectrum-step&quot;</span>
+  <span class="na">id=</span><span class="s">&quot;spectrum-step&quot;</span>
+  <span class="na">access=</span><span class="s">&quot;readonly&quot;</span>
+  <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.color.1/spectrum-step&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;spectrum-step&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;readonly&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span> <span class="s2">&quot;static&quot;</span>
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span>
@@ -560,15 +649,6 @@ model for its lifetime and should not change with new firmware or hardware revis
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="full_definition_list.html" class="btn btn-neutral float-right" title="Full Library Download" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="device_interface.html" class="btn btn-neutral float-left" title="Device Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

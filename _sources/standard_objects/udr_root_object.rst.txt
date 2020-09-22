@@ -18,14 +18,46 @@ A UDR root object can have the following children:
 Markup Example
 ==============
 
-.. code-block:: xml
+.. tabs::
 
-  <udr>
-    <import class="org.esta.intensity.1" />
-    <library class="com.acme.standarddefs.1">
-      <!-- ... -->
-    </library>
-    <library class="com.acme.devices.1">
-      <!-- ... -->
-    </library>
-  </udr>
+  .. code-tab:: xml
+
+    <udr>
+      <import name="org.esta.intensity.1" />
+      <library class="com.acme.standarddefs.1" description="ACME Corp Standard Definitions" publishdate="2020-09-02" author="ACME Corp">
+        <!-- ... -->
+      </library>
+      <library class="com.acme.devices.1" description="ACME Corp Standard Devices" publishdate="2020-09-02" author="ACME Corp">
+        <!-- ... -->
+      </library>
+    </udr>
+
+  .. code-tab:: json
+
+    {
+      "type": "udr",
+      "children": [
+        {
+          "type": "import",
+          "name": "org.esta.intensity.1"
+        },
+        {
+          "type": "library",
+          "class": "com.acme.standarddefs.1",
+          "description": "ACME Corp Standard Definitions",
+          "publishdate": "2020-09-02",
+          "author": "ACME Corp",
+          "children": [
+          ]
+        },
+        {
+          "type": "library",
+          "class": "com.acme.devices.1",
+          "description": "ACME Corp Standard Devices",
+          "publishdate": "2020-09-02",
+          "author": "ACME Corp",
+          "children": [
+          ]
+        }
+      ]
+    }

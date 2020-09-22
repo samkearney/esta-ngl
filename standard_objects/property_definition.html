@@ -217,11 +217,12 @@ property.</p>
 <div class="section" id="class">
 <span id="standard-objects-property-definition-class"></span><h3>Class<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h3>
 <p>A property’s <strong>class</strong> is a string identifying an individual property definition. This string
-must be unique within the <a class="reference internal" href="library.html#standard-objects-library"><span class="std std-ref">Library</span></a> that contains the property definition.</p>
+must be unique within the <a class="reference internal" href="library.html#standard-objects-library"><span class="std std-ref">Library</span></a> or interface definition that contains the property definition.</p>
 </div>
 <div class="section" id="name">
 <span id="standard-objects-property-definition-name"></span><h3>Name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h3>
-<p>A string containing the human-readable name of the property.</p>
+<p>A string containing the human-readable name of the property. This attribute could be used as the translation
+key for properties of this class.</p>
 </div>
 <div class="section" id="description">
 <span id="standard-objects-property-definition-description"></span><h3>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
@@ -254,6 +255,9 @@ must be unique within the <a class="reference internal" href="library.html#stand
 </tr>
 <tr class="row-even"><td><p>array</p></td>
 <td><p>An array of values, all of which must be the same type.</p></td>
+</tr>
+<tr class="row-odd"><td><p>refid</p></td>
+<td><p>A reference interface or property <strong>id</strong>.</p></td>
 </tr>
 </tbody>
 </table>

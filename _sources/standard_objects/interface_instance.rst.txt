@@ -4,7 +4,7 @@
 Interface Instance
 ##################
 
-An **interface instance** is a single addressable instance of a :doc:`interface_definition`.
+An **interface instance** is a single addressable instance of an :doc:`interface_definition`.
 
 **********
 Attributes
@@ -42,8 +42,8 @@ Children
 
 Interface instances can have the following children:
 
-* :ref:`standard-objects-property-value`
 * :ref:`standard-objects-interface-instance`
+* :ref:`standard-objects-override`
 
 .. _standard-objects-interface-instance-markup:
 
@@ -67,3 +67,26 @@ Markup
     .. code-block:: xml
 
       <interface class="org.esta.intensity.1/binary-dimmer" id="primary-dimmer" />
+
+  .. tab:: JSON
+
+    * Type: ``interface``
+    * Members
+
+      =========== ========== =======================================================
+      Key         Value Type Represents
+      =========== ========== =======================================================
+      class       string     :ref:`standard-objects-interface-instance-class`
+      id          string     :ref:`standard-objects-interface-instance-id`
+      displayname string     :ref:`standard-objects-interface-display-name`
+      =========== ========== =======================================================
+    
+    Example:
+
+    .. code-block:: json
+
+      {
+        "type": "interface",
+        "class": "org.esta.intensity.1/binary-dimmer",
+        "id": "primary-dimmer"
+      }

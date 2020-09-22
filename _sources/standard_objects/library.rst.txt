@@ -43,18 +43,100 @@ A library can have the following children:
 Markup Example
 ==============
 
-.. code-block:: xml
+.. tabs::
 
-  <library class="com.acme.standarddefs.1" description="ACME Corp Standard Definitions" publishdate="2020-09-02" author="ACME Corp">
-    <propertydef class="customproperty" data_type="string" />
-    <interfacedef class="custominterface">
-      <property class="org.esta.intensity.1/intensity" id="intensity-1" access="readwrite" lifetime="runtime" />
-      <property class="org.esta.intensity.1/intensity" id="intensity-2" access="readwrite" lifetime="runtime" />
+  .. code-tab:: xml
 
-      <property class="customproperty" id="custom_property_1" access="readonly" lifetime="persistent" />
+    <library class="com.acme.standarddefs.1" description="ACME Corp Standard Definitions" publishdate="2020-09-02" author="ACME Corp">
+      <propertydef class="customproperty" name="Custom Property" description="My custom property" data_type="string" />
+      <interfacedef class="custominterface" name="Custom Interface" description="My custom interface">
+        <property class="org.esta.intensity.1/intensity" id="intensity-1" access="readwrite" lifetime="runtime" minimum="0", maximum="100" />
+        <property class="org.esta.intensity.1/intensity" id="intensity-2" access="readwrite" lifetime="runtime" minimum="0", maximum="100" />
 
-      <propertydef class="customproperty2" data_type="number" unit="rpm" minimum="1" maximum="100" />
-      <property class="customproperty2" id="customproperty2-1" access="readwrite" lifetime="runtime" />
-      <property class="customproperty2" id="customproperty2-2" access="readwrite" lifetime="runtime" />
-    </interfacedef>
-  </library>
+        <property class="customproperty" id="custom_property_1" access="readonly" lifetime="persistent" minimum="0" maximum="128" />
+
+        <propertydef class="customproperty2" name="Custom Property 2" description="My custom property 2" data_type="number" unit="rpm" />
+        <property class="customproperty2" id="customproperty2-1" access="readwrite" lifetime="runtime" minimum="-100" maximum="100" />
+        <property class="customproperty2" id="customproperty2-2" access="readwrite" lifetime="runtime" minimum="-100" maximum="100" />
+      </interfacedef>
+    </library>
+
+  .. code-tab:: json
+
+    {
+      "type": "library",
+      "class": "com.acme.standarddefs.1",
+      "description": "ACME Corp Standard Definitions",
+      "publishdate": "2020-09-02",
+      "author": "ACME Corp"
+      "children": [
+        {
+          "type": "propertydef",
+          "class": "customproperty",
+          "name": "Custom Property",
+          "description": "My custom property",
+          "data_type": "string"
+        },
+        {
+          "type": "interfacedef",
+          "class": "custominterface",
+          "name": "Custom Interface",
+          "description": "My custom interface",
+          "children": [
+            {
+              "type": "property",
+              "class": "org.esta.intensity.1/intensity",
+              "id": "intensity-1",
+              "access": "readwrite",
+              "lifetime": "runtime",
+              "minimum": 0,
+              "maximum": 100
+            },
+            {
+              "type": "property",
+              "class": "org.esta.intensity.1/intensity",
+              "id": "intensity-2",
+              "access": "readwrite",
+              "lifetime": "runtime",
+              "minimum": 0,
+              "maximum": 100
+            },
+            {
+              "type": "property",
+              "class": "customproperty",
+              "id": "custom_property_1",
+              "access": "readwrite",
+              "lifetime": "persistent",
+              "minimum": 0,
+              "maximum": 128
+            },
+            {
+              "type": "propertydef",
+              "class": "customproperty2",
+              "name": "Custom Property 2",
+              "description": "My custom property 2",
+              "data_type": "number",
+              "unit": "rpm"
+            },
+            {
+              "type": "property",
+              "class": "customproperty2",
+              "id": "customproperty2-1",
+              "access": "readwrite",
+              "lifetime": "runtime",
+              "minimum": -100,
+              "maximum": 100
+            },
+            {
+              "type": "property",
+              "class": "customproperty2",
+              "id": "customproperty2-2",
+              "access": "readwrite",
+              "lifetime": "runtime",
+              "minimum": -100,
+              "maximum": 100
+            }
+          ]
+        }
+      ]
+    }

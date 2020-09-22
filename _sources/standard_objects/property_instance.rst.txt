@@ -26,7 +26,7 @@ Id
 ==
 
 The **id** is a unique string identifying this property instance. The string must be unique within
-a device definition.
+the interface containing the property instance.
 
 .. _standard-objects-property-instance-access-and-lifetime:
 
