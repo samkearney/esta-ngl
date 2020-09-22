@@ -8,33 +8,62 @@ The dimmer interface represents a simple dimmer controlling an intensity.
 Definition
 **********
 
-=========== =========================================
-Class       dimmer
-Description A simple dimmer controlling an intensity.
-=========== =========================================
+=============== =================================================
+Class           dimmer
+Qualified Class org.esta.intensity.1/dimmer
+Name            Dimmer
+Description     A simple dimmer controlling an intensity.
+=============== =================================================
 
-*******************
-Required Properties
-*******************
+**********
+Properties
+**********
 
-* :ref:`properties-intensity-intensity`
+.. tabs::
 
-******
-Markup
-******
+  .. code-tab:: xml
 
-.. code-block:: xml
+    <interfacedef
+        class="dimmer"
+        name="Dimmer"
+        description="A simple dimmer controlling an intensity.">
+      <property class="intensity" id="intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+    </interfacedef>
 
-  <interfacedef
-      class="org.esta.intensity.1/dimmer"
-      description="A simple dimmer controlling an intensity.">
-    <property class="intensity" id="intensity" access="readwrite" lifetime="runtime" />
-  </interfacedef>
+  .. code-tab:: json
+
+  {
+    "type": "interfacedef",
+    "class": "dimmer",
+    "name": "Dimmer",
+    "description": "A simple dimmer controlling an intensity.",
+    "children": [
+      {
+        "type": "property",
+        "class": "intensity",
+        "id": "intensity",
+        "access": "readwrite",
+        "lifetime": "runtime",
+        "minimum": 0,
+        "maximum": 100
+      }
+    ]
+  }
 
 ****************
 Instance Example
 ****************
 
-.. code-block:: xml
+.. tabs::
 
-  <interface class="org.esta.intensity.1/dimmer" id="primary-dimmer" />
+  .. code-tab:: xml
+
+    <interface class="org.esta.intensity.1/dimmer" id="primary-dimmer" />
+
+  .. code-tab:: json
+
+    {
+      "type": "interface",
+      "class": "org.esta.intensity.1/dimmer",
+      "id": "primary-dimmer",
+    }

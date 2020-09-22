@@ -43,13 +43,13 @@ Putting it all together, version 1 of ACME's device library could have the quali
 Qualified Device ID
 *******************
 
-The ESTA :ref:`properties-identification-device-id` property follows a similar qualification
+The UDR :ref:`properties-identification-device-id` property follows a similar qualification
 convention to qualified classes.
 
 It should follow the form ``org-id.device-name.version`` where org-id is the
-:ref:`tutorial-identifiers-organization-id`, device-name is a string uniquely identifiying the
+:ref:`tutorial-identifiers-organization-id`, device-name is a string uniquely identifying the
 device model within the organization, and version is a string-represented integer representing the
-version of the device for the purposes of the ESTA device library.
+version of the device for the purposes of the UDR library.
 
 This version number must change anytime the device's definition changes.
 

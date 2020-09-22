@@ -2,49 +2,90 @@
 <udr>
   <import name="org.esta.device.1" />
   <import name="org.esta.intensity.1" />
+  <import name="org.esta.color.1" />
 
-  <library class="com.acme.definitions.1">
+  <library class="com.acme.definitions.1" description="ACME General Definitions" publishdate="2020-09-02" author="ACME Corp">
     <interfacedef class="cell" name="Cell" description="A single addressable cell">
-      <property class="org.esta.intensity.1/intensity" id="intensity" />
-      <property class="org.esta.color.1/rgb" id="color" />
+      <property class="org.esta.intensity.1/intensity" id="intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+      <interfaceconstraint class="org.esta.color.1/rgb" minimum="1" maximum="1" />
     </interfacedef>
     <interfacedef class="cell-group" name="Cell Group" description="A group of addressable cells">
-      <property class="org.esta.intensity.1/intensity" id="intensity-master" />
+      <property class="org.esta.intensity.1/intensity" id="intensity-master" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
       <interfaceconstraint class="cell" minimum="1" />
     </interfacedef>
   </library>
 
-  <library class="com.acme.devices.1" />
+  <library class="com.acme.devices.1" description="ACME Device Definitions" publishdate="2020-09-02" author="ACME Corp"/>
     <devicedef class="multi-cell-5000">
       <interface class="org.esta.device.1/device" id="device">
-        <propertyvalue id="device-id">com.acme.mymulticelldevice.1</propertyvalue>
-        <propertyvalue id="device-manufacturer">My Organization</propertyvalue>
-        <propertyvalue id="device-model">Multi-Cell 5000</propertyvalue>
+        <override refid="device-id" attribute="value">com.acme.mymulticelldevice.1</override>
+        <override refid="device-manufacturer" attribute="value">My Organization</override>
+        <override refid="device-model" attribute="value">Multi-Cell 5000</override>
       </interface>
 
       <interface class="com.acme.definitions.1/cell-group" id="cell-group-1">
-        <interface class="com.acme.definitions.1/cell" id="1" />
-        <interface class="com.acme.definitions.1/cell" id="2" />
-        <interface class="com.acme.definitions.1/cell" id="3" />
-        <interface class="com.acme.definitions.1/cell" id="4" />
-        <interface class="com.acme.definitions.1/cell" id="5" />
-        <interface class="com.acme.definitions.1/cell" id="6" />
-        <interface class="com.acme.definitions.1/cell" id="7" />
-        <interface class="com.acme.definitions.1/cell" id="8" />
-        <interface class="com.acme.definitions.1/cell" id="9" />
-        <interface class="com.acme.definitions.1/cell" id="10" />
+        <interface class="com.acme.definitions.1/cell" id="1">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="com.acme.definitions.1/cell" id="2">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="com.acme.definitions.1/cell" id="3">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="com.acme.definitions.1/cell" id="4">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="com.acme.definitions.1/cell" id="5">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="com.acme.definitions.1/cell" id="6">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="com.acme.definitions.1/cell" id="7">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="com.acme.definitions.1/cell" id="8">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="com.acme.definitions.1/cell" id="9">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="com.acme.definitions.1/cell" id="10">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
       </interface>
       <interface class="com.acme.definitions.1/cell-group" id="cell-group-2">
-        <interface class="com.acme.definitions.1/cell" id="1" />
-        <interface class="com.acme.definitions.1/cell" id="2" />
-        <interface class="com.acme.definitions.1/cell" id="3" />
-        <interface class="com.acme.definitions.1/cell" id="4" />
-        <interface class="com.acme.definitions.1/cell" id="5" />
-        <interface class="com.acme.definitions.1/cell" id="6" />
-        <interface class="com.acme.definitions.1/cell" id="7" />
-        <interface class="com.acme.definitions.1/cell" id="8" />
-        <interface class="com.acme.definitions.1/cell" id="9" />
-        <interface class="com.acme.definitions.1/cell" id="10" />
+        <interface class="com.acme.definitions.1/cell" id="1">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="com.acme.definitions.1/cell" id="2">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="com.acme.definitions.1/cell" id="3">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="com.acme.definitions.1/cell" id="4">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="com.acme.definitions.1/cell" id="5">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="com.acme.definitions.1/cell" id="6">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="com.acme.definitions.1/cell" id="7">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="com.acme.definitions.1/cell" id="8">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="com.acme.definitions.1/cell" id="9">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
+        <interface class="com.acme.definitions.1/cell" id="10">
+          <interface class="org.esta.color.1/rgb" id="rgb" />
+        </interface>
       </interface>
     </device>
   </library>

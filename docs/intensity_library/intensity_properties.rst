@@ -13,27 +13,39 @@ A continuous intensity value represented in percent of maximum brightness.
 Definition
 ==========
 
-=========== ===================================================================================
-Class       intensity
-Description Represents an emitter intensity as a percentage of its maximum brightness.
-Data Type   number
-Unit        percent
-Minimum     0
-Maximum     100
-=========== ===================================================================================
+=============== =================================================
+Class           intensity
+Qualified Class org.esta.intensity.1/intensity
+Name            Intensity
+Description     Represents an emitter intensity as a percentage of its maximum brightness.
+Data Type       number
+Unit            percent
+=============== =================================================
 
 Definition Markup
 =================
 
-.. code-block:: xml
+.. tabs::
 
-  <propertydef 
-    class="intensity"
-    description="Represents an emitter intensity as a percentage of its maximum brightness"
-    data_type="number"
-    unit="percent"
-    minimum="0"
-    maximum="100" />
+  .. code-tab:: xml
+
+    <propertydef 
+      class="intensity"
+      name="Intensity"
+      description="Represents an emitter intensity as a percentage of its maximum brightness"
+      data_type="number"
+      unit="percent" />
+    
+  .. code-tab:: json
+
+    {
+      "type": "propertydef"
+      "class": "intensity",
+      "name": "Name",
+      "description": "Represents an emitter intensity as a percentage of its maximum brightness",
+      "data_type": "number",
+      "unit": "percent"
+    }
 
 Instance Example
 ================
@@ -42,21 +54,25 @@ Instance Example
 
   .. code-tab:: xml
 
-    <property
-      type="org.esta.intensity.1/intensity"
-      id="primary-emitter-intensity"
+    <property 
+      class="org.esta.intensity.1/intensity"
+      id="intensity"
       access="readwrite"
-      lifetime="runtime" />
+      lifetime="runtime"
+      minimum="0"
+      maximum="100" />
     
   .. code-tab:: json
 
     {
       "properties": [
         {
-          "type": "org.esta.intensity.1/intensity",
-          "id": "primary-emitter-intensity",
+          "class": "org.esta.intensity.1/intensity",
+          "id": "intensity",
           "access": "readwrite",
-          "lifetime": "runtime"
+          "lifetime": "runtime",
+          "minimum": 0,
+          "maximum": 100
         }
       ]
     }
@@ -72,21 +88,36 @@ Definition
 
 Intensity properties control the light intensity of a light-emitting device.
 
-=========== ===================================================================================
-Class       binary-intensity
-Description Represents an emitter intensity as an on/off state where "true" indicates "on".
-Data Type   boolean
-=========== ===================================================================================
+=============== =================================================
+Class           binary-intensity
+Qualified Class org.esta.intensity.1/binary-intensity
+Name            Binary Intensity
+Description     Represents an emitter intensity as an on/off state where "true" indicates "on".
+Data Type       boolean
+=============== =================================================
 
 Definition Markup
 =================
 
-.. code-block:: xml
+.. tabs::
 
-  <propertydef 
-    class="binary-intensity"
-    description="Represents an emitter intensity as an on/off state where 'true' indicates 'on'."
-    data_type="boolean" />
+  .. code-tab:: xml
+
+    <propertydef 
+      class="binary-intensity"
+      name="Binary Intensity"
+      description="Represents an emitter intensity as an on/off state where "true" indicates "on"."
+      data_type="boolean" />
+    
+  .. code-tab:: json
+
+    {
+      "type": "propertydef"
+      "class": "binary-intensity",
+      "name": "Binary Intensity"
+      "description": "Represents an emitter intensity as an on/off state where "true" indicates "on"",
+      "data_type": "boolean"
+    }
 
 Instance Example
 ================

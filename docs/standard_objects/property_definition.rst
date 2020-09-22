@@ -21,14 +21,15 @@ Class
 =====
 
 A property's **class** is a string identifying an individual property definition. This string
-must be unique within the :ref:`standard-objects-library` that contains the property definition.
+must be unique within the :ref:`standard-objects-library` or interface definition that contains the property definition.
 
 .. _standard-objects-property-definition-name:
 
 Name
 ====
 
-A string containing the human-readable name of the property.
+A string containing the human-readable name of the property. This attribute could be used as the translation
+key for properties of this class.
 
 .. _standard-objects-property-definition-description:
 
@@ -53,6 +54,7 @@ binary  Opaque binary data.
 boolean A boolean value (true or false).
 enum    A set of meaningful names assigned to numeric values.
 array   An array of values, all of which must be the same type.
+refid   A reference interface or property **id**.
 ======= =======================================================
 
 .. _standard-objects-property-definition-unit:
@@ -141,7 +143,6 @@ Markup
       data_type   string     :ref:`standard-objects-property-definition-data-type`
       unit        string     :ref:`standard-objects-property-definition-unit`
       =========== ========== =======================================================
-
 
     Example:
 

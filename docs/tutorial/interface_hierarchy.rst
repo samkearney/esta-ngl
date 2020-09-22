@@ -11,12 +11,39 @@ For example, consider the definition for a lighting fixture with a few individua
 cells. The fixture may organize its cells into cell groups, each containing a master intensity that
 controls all of the cells:
 
-.. code-block:: xml
+.. tabs::
 
-  <interfacedef class="cell-group">
-    <property class="org.esta.intensity.1/intensity" id="intensity-master" />
-    <interfaceconstraint class="cell" minimum="1" />
-  </interfacedef>
+  .. code-tab:: xml
+
+    <interfacedef class="cell-group" name="Cell Group" description="A group of cells">
+      <property class="org.esta.intensity.1/intensity" id="intensity-master" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+      <interfaceconstraint class="cell" minimum="1" />
+    </interfacedef>
+
+  .. code-tab:: json
+
+    {
+      "type": "interfacedef",
+      "class": "cell-group",
+      "name": "Cell Group",
+      "description": "A group of cells",
+      "children": [
+        {
+          "type": "property",
+          "class": "org.esta.intensity.1/intensity",
+          "id": "intensity-master",
+          "access": "readwrite",
+          "lifetime": "runtime",
+          "minimum": 0,
+          "maximum": 100
+        },
+        {
+          "type": "interfaceconstraint",
+          "class": "cell",
+          "minimum": 1
+        }
+      ]
+    }
 
 Note the :ref:`standard-objects-interface-constraint` element here. This element's job is to set rules for what
 children are allowed when the interface is instantiated. This particular one says that a cell-group
@@ -24,28 +51,94 @@ interface instance must have at least one cell child.
 
 The cell interface might look like:
 
-.. code-block:: xml
+.. tabs::
 
-  <interfacedef class="cell">
-    <property class="org.esta.intensity.1/intensity" id="intensity" />
-    <property class="org.esta.color.1/rgb" id="color" />
-  </interfacedef>
+  .. code-tab:: xml
+
+    <interfacedef class="cell" name="Cell" description="An intensity and RGB cell">
+      <property class="org.esta.intensity.1/intensity" id="intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100"/>
+      <property class="org.esta.color.1/rgb" id="color" access="readwrite" lifetime="runtime" minimum="0" maximum="100"/>
+    </interfacedef>
+
+  .. code-tab:: json
+
+    {
+      "type": "interfacedef",
+      "class": "cell",
+      "name": "Cell",
+      "description": "An intensity and RGB cell",
+      "children": [
+        {
+          "type": "property",
+          "class": "org.esta.intensity.1/intensity",
+          "id": "intensity",
+          "access": "readwrite",
+          "lifetime": "runtime",
+          "minimum": 0,
+          "maximum": 100
+        },
+        {
+          "type": "property",
+          "class": "org.esta.color.1/rgb",
+          "id": "color",
+          "access": "readwrite",
+          "lifetime": "runtime",
+          "minimum": 0,
+          "maximum": 100
+        }
+      ]
+    }
 
 The cell has individual intensity and color properties.
+
+Note that interface and property definitions within the same :ref:`standard-objects-library` do not require
+the fully qualified class ID which includes the :ref:`tutorial-identifiers-organization-id`.
 
 These interface definitions give this device the tools to communicate information about its cell
 layout. Assuming the definitions above appear in a library with the class ``com.acme.definitions.1``,
 the device might contain:
 
-.. code-block:: xml
+.. tabs::
 
-  <!-- A group of 4 cells -->
-  <interface class="com.acme.definitions.1/cell-group" id="cell-group-1">
-    <interface class="com.acme.definitions.1/cell" id="1" />
-    <interface class="com.acme.definitions.1/cell" id="2" />
-    <interface class="com.acme.definitions.1/cell" id="3" />
-    <interface class="com.acme.definitions.1/cell" id="4" />
-  </interface>
+  .. code-tab:: xml
+
+    <!-- A group of 4 cells -->
+    <interface class="com.acme.definitions.1/cell-group" id="cell-group-1">
+      <interface class="com.acme.definitions.1/cell" id="1" />
+      <interface class="com.acme.definitions.1/cell" id="2" />
+      <interface class="com.acme.definitions.1/cell" id="3" />
+      <interface class="com.acme.definitions.1/cell" id="4" />
+    </interface>
+
+  .. code-tab:: json
+
+    {
+      "type": "interface",
+      "class": "com.acme.definitions.1/cell-group",
+      "id": "cell-group-1",
+      "children": [
+        {
+          "type": "interface",
+          "class": "com.acme.definitions.1/cell",
+          "id": "1"
+        },
+        {
+          "type": "interface",
+          "class": "com.acme.definitions.1/cell",
+          "id": "2"
+        },
+        {
+          "type": "interface",
+          "class": "com.acme.definitions.1/cell",
+          "id": "3"
+        },
+        {
+          "type": "interface",
+          "class": "com.acme.definitions.1/cell",
+          "id": "4"
+        },
+      ]
+    }
 
 To address the intensity property of cell 2, you would use the qualified ID
 ``cell-group-1/2/intensity``.
@@ -60,15 +153,47 @@ same order in any corresponding user interface elements. By contrast, text conta
 :ref:`standard-objects-interface-instance-id` attribute of an interface instance has no meaning attached to
 it. To modify the above example:
 
-.. code-block:: xml
+.. tabs::
 
-  <!-- A group of 4 cells -->
-  <interface class="com.acme.definitions.1/cell-group" id="cell-group-1">
-    <interface class="com.acme.definitions.1/cell" id="4" />
-    <interface class="com.acme.definitions.1/cell" id="1" />
-    <interface class="com.acme.definitions.1/cell" id="3" />
-    <interface class="com.acme.definitions.1/cell" id="2" />
-  </interface>
+  .. code-tab:: xml
+
+    <!-- A group of 4 cells -->
+    <interface class="com.acme.definitions.1/cell-group" id="cell-group-1">
+      <interface class="com.acme.definitions.1/cell" id="4" />
+      <interface class="com.acme.definitions.1/cell" id="1" />
+      <interface class="com.acme.definitions.1/cell" id="3" />
+      <interface class="com.acme.definitions.1/cell" id="2" />
+    </interface>
+
+  .. code-tab:: json
+
+    {
+      "type": "interface",
+      "class": "com.acme.definitions.1/cell-group",
+      "id": "cell-group-1",
+      "children": [
+        {
+          "type": "interface",
+          "class": "com.acme.definitions.1/cell",
+          "id": "4"
+        },
+        {
+          "type": "interface",
+          "class": "com.acme.definitions.1/cell",
+          "id": "1"
+        },
+        {
+          "type": "interface",
+          "class": "com.acme.definitions.1/cell",
+          "id": "3"
+        },
+        {
+          "type": "interface",
+          "class": "com.acme.definitions.1/cell",
+          "id": "2"
+        },
+      ]
+    }
 
 Notice that the ID strings contain numbers that are out of order. In this example, the first
 interface that appears in the markup should always be considered the first cell, and
