@@ -54,6 +54,7 @@ binary  Opaque binary data.
 boolean A boolean value (true or false).
 enum    A set of meaningful names assigned to numeric values.
 array   An array of values, all of which must be the same type.
+refid   A reference interface or property **id**.
 ======= =======================================================
 
 .. _standard-objects-property-definition-unit:
