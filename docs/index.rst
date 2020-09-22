@@ -52,6 +52,13 @@ automation, and the Internet of Things.
 
 .. toctree::
    :maxdepth: 2
+   :caption: ESTA Color Library
+
+   color_library/spectrum_interface
+   color_library/color_properties
+
+.. toctree::
+   :maxdepth: 2
    :caption: Examples
 
    examples/simple_dimmer
