@@ -18,7 +18,7 @@ A UDR root object can have the following children:
 Markup Example
 ==============
 
-  .. tabs::
+.. tabs::
 
   .. code-tab:: xml
 

@@ -53,6 +53,8 @@ version of the device for the purposes of the UDR library.
 
 This version number must change anytime the device's definition changes.
 
+.. _tutorial-identifiers-qualified-id:
+
 ************
 Qualified ID
 ************

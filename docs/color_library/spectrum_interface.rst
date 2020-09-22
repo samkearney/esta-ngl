@@ -1,6 +1,6 @@
-################
+##################
 Spectrum Interface
-################
+##################
 
 The Spectral Power Distribution of an emitter in normalized wavelength.
 
@@ -35,42 +35,42 @@ Properties
 
   .. code-tab:: json
 
-  {
-    "type": "interfacedef",
-    "class": "spectrum",
-    "name": "Spectrum",
-    "description": "The Spectral Power Distribution data of an emitter in normalized wavelength.",
-    "children": [
-      {
-        "type": "property",
-        "class": "spectrum-data",
-        "id": "spectrum-data",
-        "access": "readonly",
-        "lifetime": "static"
-      },
-      {
-        "type": "property",
-        "class": "spectrum-start",
-        "id": "spectrum-start",
-        "access": "readonly",
-        "lifetime": "static"
-      },
-      {
-        "type": "property",
-        "class": "spectrum-end",
-        "id": "spectrum-end",
-        "access": "readonly",
-        "lifetime": "static"
-      },
-      {
-        "type": "property",
-        "class": "spectrum-step",
-        "id": "spectrum-step",
-        "access": "readonly",
-        "lifetime": "static"
-      }
-    ]
-  }
+    {
+      "type": "interfacedef",
+      "class": "spectrum",
+      "name": "Spectrum",
+      "description": "The Spectral Power Distribution data of an emitter in normalized wavelength.",
+      "children": [
+        {
+          "type": "property",
+          "class": "spectrum-data",
+          "id": "spectrum-data",
+          "access": "readonly",
+          "lifetime": "static"
+        },
+        {
+          "type": "property",
+          "class": "spectrum-start",
+          "id": "spectrum-start",
+          "access": "readonly",
+          "lifetime": "static"
+        },
+        {
+          "type": "property",
+          "class": "spectrum-end",
+          "id": "spectrum-end",
+          "access": "readonly",
+          "lifetime": "static"
+        },
+        {
+          "type": "property",
+          "class": "spectrum-step",
+          "id": "spectrum-step",
+          "access": "readonly",
+          "lifetime": "static"
+        }
+      ]
+    }
 
 ****************
 Instance Example

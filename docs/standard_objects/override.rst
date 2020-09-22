@@ -64,16 +64,16 @@ Markup
 
     .. code-block:: xml
 
-    <!-- simplified example -->
-    <interface class="org.esta.identification.1/device" id="device">
-        <override refid="device-id" attribute="value">com.acme.device-model.1</override>
-    </interface>
+      <!-- simplified example -->
+      <interface class="org.esta.identification.1/device" id="device">
+          <override refid="device-id" attribute="value">com.acme.device-model.1</override>
+      </interface>
 
-    <!-- simplified example -->
-    <interface class="org.esta.wheel.1/wheel-velocity" id="velocity">
-        <override refid="angular-velocity" attribute="minimum">-720</override>
-        <override refid="angular-velocity" attribute="maximum">720</override>
-    </interface>
+      <!-- simplified example -->
+      <interface class="org.esta.wheel.1/wheel-velocity" id="velocity">
+          <override refid="angular-velocity" attribute="minimum">-720</override>
+          <override refid="angular-velocity" attribute="maximum">720</override>
+      </interface>
 
   .. tab:: JSON
 

@@ -32,23 +32,23 @@ Properties
 
   .. code-tab:: json
 
-  {
-    "type": "interfacedef",
-    "class": "dimmer",
-    "name": "Dimmer",
-    "description": "A simple dimmer controlling an intensity.",
-    "children": [
-      {
-        "type": "property",
-        "class": "intensity",
-        "id": "intensity",
-        "access": "readwrite",
-        "lifetime": "runtime",
-        "minimum": 0,
-        "maximum": 100
-      }
-    ]
-  }
+    {
+      "type": "interfacedef",
+      "class": "dimmer",
+      "name": "Dimmer",
+      "description": "A simple dimmer controlling an intensity.",
+      "children": [
+        {
+          "type": "property",
+          "class": "intensity",
+          "id": "intensity",
+          "access": "readwrite",
+          "lifetime": "runtime",
+          "minimum": 0,
+          "maximum": 100
+        }
+      ]
+    }
 
 ****************
 Instance Example
