@@ -55,7 +55,7 @@ Instance Example
 
     <property
       class="org.esta.identification.1/device-id"
-      id="device-id"
+      alias="device-id"
       access="readonly"
       lifetime="static"
       minimum="0"
@@ -67,7 +67,7 @@ Instance Example
       "properties": [
         {
           "class": "org.esta.identification.1/device-id",
-          "id": "device-id",
+          "alias": "device-id",
           "access": "readonly",
           "lifetime": "static",
           "minimum": 0,
@@ -127,7 +127,7 @@ Instance Example
 
     <property
       class="org.esta.identification.1/device-manufacturer"
-      id="manufacturer"
+      alias="manufacturer"
       access="readonly"
       lifetime="static"
       minimum="0"
@@ -139,7 +139,7 @@ Instance Example
       "properties": [
         {
           "class": "org.esta.identification.1/device-manufacturer",
-          "id": "manufacturer",
+          "alias": "manufacturer",
           "access": "readonly",
           "lifetime": "static"
           "minimum": 0,
@@ -199,7 +199,7 @@ Instance Example
 
     <property
       class="org.esta.identification.1/device-model"
-      id="model"
+      alias="model"
       access="readonly"
       lifetime="static"
       minimum="0"
@@ -211,7 +211,7 @@ Instance Example
       "properties": [
         {
           "class": "org.esta.identification.1/device-model",
-          "id": "model",
+          "alias": "model",
           "access": "readonly",
           "lifetime": "static"
           "minimum": 0,

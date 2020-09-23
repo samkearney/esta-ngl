@@ -20,21 +20,21 @@ Class
 Indicates the :ref:`class<standard-objects-interface-definition-class>` of the defined interface of which
 this is an instance.
 
-.. _standard-objects-interface-instance-id:
+.. _standard-objects-interface-instance-alias:
 
-Id
-==
+Alias
+=====
 
-The **id** is a unique string identifying this interface instance. The string must be unique within
+The **alias** is a unique string identifying this interface instance. The string must be unique within
 the definition containing the interface instance.
 
-.. _standard-objects-interface-display-name:
+.. _standard-objects-interface-friendly-name:
 
-Display Name
-============
+Friendly Name
+=============
 
-The **display name** attribute provides a string that should be used to identify an interface in a
-software user interface.
+The **friendly name** attribute provides a string that could be used to identify a particular instance
+of an interface in a software user interface, in order to provide more context to a user.
 
 ********
 Children
@@ -59,27 +59,27 @@ Markup
     * Attributes:
 
       * ``class``: :ref:`standard-objects-interface-instance-class`
-      * ``id``: :ref:`standard-objects-interface-instance-id`
-      * ``displayname``: :ref:`standard-objects-interface-display-name`
+      * ``alias``: :ref:`standard-objects-interface-instance-alias`
+      * ``friendlyname``: :ref:`standard-objects-interface-friendly-name`
     
     Example:
 
     .. code-block:: xml
 
-      <interface class="org.esta.intensity.1/binary-dimmer" id="primary-dimmer" />
+      <interface class="org.esta.intensity.1/binary-dimmer" alias="primary-dimmer" friendlyname="Primary Dimmer" />
 
   .. tab:: JSON
 
     * Type: ``interface``
     * Members
 
-      =========== ========== =======================================================
-      Key         Value Type Represents
-      =========== ========== =======================================================
-      class       string     :ref:`standard-objects-interface-instance-class`
-      id          string     :ref:`standard-objects-interface-instance-id`
-      displayname string     :ref:`standard-objects-interface-display-name`
-      =========== ========== =======================================================
+      ============= ========== =======================================================
+      Key           Value Type Represents
+      ============= ========== =======================================================
+      class         string     :ref:`standard-objects-interface-instance-class`
+      alias         string     :ref:`standard-objects-interface-instance-alias`
+      friendlyname  string     :ref:`standard-objects-interface-friendly-name`
+      ============= ========== =======================================================
     
     Example:
 
@@ -88,5 +88,6 @@ Markup
       {
         "type": "interface",
         "class": "org.esta.intensity.1/binary-dimmer",
-        "id": "primary-dimmer"
+        "alias": "primary-dimmer",
+        "friendlyname": "Primary Dimmer"
       }

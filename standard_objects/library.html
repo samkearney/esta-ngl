@@ -112,6 +112,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="import.html">Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device_definition.html">Device Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface_definition.html">Interface Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface_instance.html">Interface Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="property_definition.html">Property Definition</a></li>
@@ -141,6 +142,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_group.html">Exclusive Group Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/mac_encore.html">MAC Encore Performance WRM Device Example</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Other Resources</span></p>
 <ul>
@@ -262,14 +264,14 @@ usable by anything that imports the library.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>&lt;library class=&quot;com.acme.standarddefs.1&quot; description=&quot;ACME Corp Standard Definitions&quot; publishdate=&quot;2020-09-02&quot; author=&quot;ACME Corp&quot;&gt;
   &lt;propertydef class=&quot;customproperty&quot; name=&quot;Custom Property&quot; description=&quot;My custom property&quot; data_type=&quot;string&quot; /&gt;
   &lt;interfacedef class=&quot;custominterface&quot; name=&quot;Custom Interface&quot; description=&quot;My custom interface&quot;&gt;
-    &lt;property class=&quot;org.esta.intensity.1/intensity&quot; id=&quot;intensity-1&quot; access=&quot;readwrite&quot; lifetime=&quot;runtime&quot; minimum=&quot;0&quot;, maximum=&quot;100&quot; /&gt;
-    &lt;property class=&quot;org.esta.intensity.1/intensity&quot; id=&quot;intensity-2&quot; access=&quot;readwrite&quot; lifetime=&quot;runtime&quot; minimum=&quot;0&quot;, maximum=&quot;100&quot; /&gt;
+    &lt;property class=&quot;org.esta.intensity.1/intensity&quot; alias=&quot;intensity-1&quot; access=&quot;readwrite&quot; lifetime=&quot;runtime&quot; minimum=&quot;0&quot;, maximum=&quot;100&quot; /&gt;
+    &lt;property class=&quot;org.esta.intensity.1/intensity&quot; alias=&quot;intensity-2&quot; access=&quot;readwrite&quot; lifetime=&quot;runtime&quot; minimum=&quot;0&quot;, maximum=&quot;100&quot; /&gt;
 
-    &lt;property class=&quot;customproperty&quot; id=&quot;custom_property_1&quot; access=&quot;readonly&quot; lifetime=&quot;persistent&quot; minimum=&quot;0&quot; maximum=&quot;128&quot; /&gt;
+    &lt;property class=&quot;customproperty&quot; alias=&quot;custom_property_1&quot; access=&quot;readonly&quot; lifetime=&quot;persistent&quot; minimum=&quot;0&quot; maximum=&quot;128&quot; /&gt;
 
     &lt;propertydef class=&quot;customproperty2&quot; name=&quot;Custom Property 2&quot; description=&quot;My custom property 2&quot; data_type=&quot;number&quot; unit=&quot;rpm&quot; /&gt;
-    &lt;property class=&quot;customproperty2&quot; id=&quot;customproperty2-1&quot; access=&quot;readwrite&quot; lifetime=&quot;runtime&quot; minimum=&quot;-100&quot; maximum=&quot;100&quot; /&gt;
-    &lt;property class=&quot;customproperty2&quot; id=&quot;customproperty2-2&quot; access=&quot;readwrite&quot; lifetime=&quot;runtime&quot; minimum=&quot;-100&quot; maximum=&quot;100&quot; /&gt;
+    &lt;property class=&quot;customproperty2&quot; alias=&quot;customproperty2-1&quot; access=&quot;readwrite&quot; lifetime=&quot;runtime&quot; minimum=&quot;-100&quot; maximum=&quot;100&quot; /&gt;
+    &lt;property class=&quot;customproperty2&quot; alias=&quot;customproperty2-2&quot; access=&quot;readwrite&quot; lifetime=&quot;runtime&quot; minimum=&quot;-100&quot; maximum=&quot;100&quot; /&gt;
   &lt;/interfacedef&gt;
 &lt;/library&gt;
 </pre></div>
@@ -299,7 +301,7 @@ usable by anything that imports the library.</p>
         <span class="p">{</span>
           <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
           <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.intensity.1/intensity&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;intensity-1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;intensity-1&quot;</span><span class="p">,</span>
           <span class="nt">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;readwrite&quot;</span><span class="p">,</span>
           <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span> <span class="s2">&quot;runtime&quot;</span><span class="p">,</span>
           <span class="nt">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -308,7 +310,7 @@ usable by anything that imports the library.</p>
         <span class="p">{</span>
           <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
           <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.intensity.1/intensity&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;intensity-2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;intensity-2&quot;</span><span class="p">,</span>
           <span class="nt">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;readwrite&quot;</span><span class="p">,</span>
           <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span> <span class="s2">&quot;runtime&quot;</span><span class="p">,</span>
           <span class="nt">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -317,7 +319,7 @@ usable by anything that imports the library.</p>
         <span class="p">{</span>
           <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
           <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;customproperty&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;custom_property_1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;custom_property_1&quot;</span><span class="p">,</span>
           <span class="nt">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;readwrite&quot;</span><span class="p">,</span>
           <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span> <span class="s2">&quot;persistent&quot;</span><span class="p">,</span>
           <span class="nt">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -334,7 +336,7 @@ usable by anything that imports the library.</p>
         <span class="p">{</span>
           <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
           <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;customproperty2&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;customproperty2-1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;customproperty2-1&quot;</span><span class="p">,</span>
           <span class="nt">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;readwrite&quot;</span><span class="p">,</span>
           <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span> <span class="s2">&quot;runtime&quot;</span><span class="p">,</span>
           <span class="nt">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">-100</span><span class="p">,</span>
@@ -343,7 +345,7 @@ usable by anything that imports the library.</p>
         <span class="p">{</span>
           <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
           <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;customproperty2&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;customproperty2-2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;customproperty2-2&quot;</span><span class="p">,</span>
           <span class="nt">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;readwrite&quot;</span><span class="p">,</span>
           <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span> <span class="s2">&quot;runtime&quot;</span><span class="p">,</span>
           <span class="nt">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">-100</span><span class="p">,</span>

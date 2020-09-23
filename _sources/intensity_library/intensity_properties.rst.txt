@@ -56,7 +56,7 @@ Instance Example
 
     <property 
       class="org.esta.intensity.1/intensity"
-      id="intensity"
+      alias="intensity"
       access="readwrite"
       lifetime="runtime"
       minimum="0"
@@ -68,7 +68,7 @@ Instance Example
       "properties": [
         {
           "class": "org.esta.intensity.1/intensity",
-          "id": "intensity",
+          "alias": "intensity",
           "access": "readwrite",
           "lifetime": "runtime",
           "minimum": 0,
@@ -128,7 +128,7 @@ Instance Example
 
     <property
       class="org.esta.intensity.1/binary-intensity"
-      id="primary-emitter-intensity"
+      alias="primary-emitter-intensity"
       access="readwrite"
       lifetime="runtime" />
     
@@ -138,7 +138,7 @@ Instance Example
       "properties": [
         {
           "class": "org.esta.intensity.1/binary-intensity",
-          "id": "primary-emitter-intensity",
+          "alias": "primary-emitter-intensity",
           "access": "readwrite",
           "lifetime": "runtime"
         }

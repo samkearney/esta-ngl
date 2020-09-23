@@ -101,13 +101,15 @@
 <li class="toctree-l1"><a class="reference internal" href="udr_root_object.html">UDR Root Object</a></li>
 <li class="toctree-l1"><a class="reference internal" href="library.html">Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="import.html">Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device_definition.html">Device Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface_definition.html">Interface Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface_instance.html">Interface Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="property_definition.html">Property Definition</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Property Instance</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#class">Class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#standard-objects-property-instance-id">Id</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alias">Alias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#friendly-name">Friendly Name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#access-and-lifetime">Access and Lifetime</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#minimum">Minimum</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#maximum">Maximum</a></li>
@@ -142,6 +144,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_group.html">Exclusive Group Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/mac_encore.html">MAC Encore Performance WRM Device Example</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Other Resources</span></p>
 <ul>
@@ -223,10 +226,15 @@ instances must be children of interface defintions.</p>
 <p>Indicates the <a class="reference internal" href="property_definition.html#standard-objects-property-definition-class"><span class="std std-ref">class</span></a> of the defined property of which
 this is an instance.</p>
 </div>
-<div class="section" id="standard-objects-property-instance-id">
-<span id="id"></span><h3>Id<a class="headerlink" href="#standard-objects-property-instance-id" title="Permalink to this headline">¶</a></h3>
-<p>The <strong>id</strong> is a unique string identifying this property instance. The string must be unique within
+<div class="section" id="alias">
+<span id="standard-objects-property-instance-alias"></span><h3>Alias<a class="headerlink" href="#alias" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>alias</strong> is a unique string identifying this property instance. The string must be unique within
 the interface containing the property instance.</p>
+</div>
+<div class="section" id="friendly-name">
+<span id="standard-objects-property-instance-friendly-name"></span><h3>Friendly Name<a class="headerlink" href="#friendly-name" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>friendly name</strong> attribute provides a string that could be used to identify a particular instance
+of a property in a software user interface, in order to provide more context to a user.</p>
 </div>
 <div class="section" id="access-and-lifetime">
 <span id="standard-objects-property-instance-access-and-lifetime"></span><h3>Access and Lifetime<a class="headerlink" href="#access-and-lifetime" title="Permalink to this headline">¶</a></h3>
@@ -386,7 +394,8 @@ selector.</p>
 <li><p>Attributes:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">class</span></code>: <a class="reference internal" href="#standard-objects-property-instance-class"><span class="std std-ref">Class</span></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: <a class="reference internal" href="#standard-objects-property-instance-id"><span class="std std-ref">Id</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alias</span></code>: <a class="reference internal" href="#standard-objects-property-instance-alias"><span class="std std-ref">Alias</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">friendlyname</span></code>: <span class="xref std std-ref">standard-objects-property-instance-friendlyname</span></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">access</span></code>: <a class="reference internal" href="#standard-objects-property-instance-access-and-lifetime"><span class="std std-ref">Access</span></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">lifetime</span></code>: <a class="reference internal" href="#standard-objects-property-instance-access-and-lifetime"><span class="std std-ref">Lifetime</span></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minimum</span></code>: <a class="reference internal" href="#standard-objects-property-instance-minimum"><span class="std std-ref">Minimum</span></a></p></li>
@@ -398,7 +407,8 @@ selector.</p>
 <p>Example:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span>
   <span class="na">class=</span><span class="s">&quot;org.esta.identification.1/firmware-version&quot;</span>
-  <span class="na">id=</span><span class="s">&quot;my-firmware-version&quot;</span>
+  <span class="na">alias=</span><span class="s">&quot;my-firmware-version&quot;</span>
+  <span class="na">friendlyname=</span><span class="s">&quot;Firmware Version&quot;</span>
   <span class="na">access=</span><span class="s">&quot;readonly&quot;</span>
   <span class="na">lifetime=</span><span class="s">&quot;persistent&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
@@ -425,27 +435,31 @@ selector.</p>
 <td><p>string</p></td>
 <td><p><a class="reference internal" href="property_definition.html#standard-objects-property-definition-class"><span class="std std-ref">Class</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p>id</p></td>
+<tr class="row-odd"><td><p>alias</p></td>
 <td><p>string</p></td>
-<td><p><a class="reference internal" href="property_definition.html#standard-objects-property-definition-name"><span class="std std-ref">Name</span></a></p></td>
+<td><p><span class="xref std std-ref">standard-objects-property-definition-alias</span></p></td>
 </tr>
-<tr class="row-even"><td><p>access</p></td>
+<tr class="row-even"><td><p>friendlyname</p></td>
+<td><p>string</p></td>
+<td><p><span class="xref std std-ref">standard-objects-property-definition-friendlyname</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>access</p></td>
 <td><p>string</p></td>
 <td><p><a class="reference internal" href="property_definition.html#standard-objects-property-definition-description"><span class="std std-ref">Description</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p>lifetime</p></td>
+<tr class="row-even"><td><p>lifetime</p></td>
 <td><p>string</p></td>
 <td><p><a class="reference internal" href="property_definition.html#standard-objects-property-definition-data-type"><span class="std std-ref">Data Type</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p>minimum</p></td>
+<tr class="row-odd"><td><p>minimum</p></td>
 <td><p>number</p></td>
 <td><p><a class="reference internal" href="#standard-objects-property-instance-minimum"><span class="std std-ref">Minimum</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p>maximum</p></td>
+<tr class="row-even"><td><p>maximum</p></td>
 <td><p>number</p></td>
 <td><p><a class="reference internal" href="#standard-objects-property-instance-maximum"><span class="std std-ref">Maximum</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p>modeselector</p></td>
+<tr class="row-odd"><td><p>modeselector</p></td>
 <td><p>string</p></td>
 <td><p><a class="reference internal" href="#standard-objects-property-instance-mode-selector"><span class="std std-ref">Mode Selector</span></a></p></td>
 </tr>
@@ -457,7 +471,8 @@ selector.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.identification.1/firmware-version&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;my-firmware-version&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;my-firmware-version&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Firmware Version&quot;</span><span class="p">,</span>
   <span class="nt">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;readonly&quot;</span><span class="p">,</span>
   <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span> <span class="s2">&quot;persistent&quot;</span>
 <span class="p">}</span>

@@ -1,0 +1,598 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>MAC Encore Performance WRM Device Example &mdash; Universal Device Representation 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="XML Tag Reference" href="../other_resources/xml_tag_reference.html" />
+    <link rel="prev" title="Exclusive Group Device Example" href="exclusive_group.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Universal Device Representation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/interface_hierarchy.html">The Interface Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/identifiers.html">Identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/mutual_exclusion.html">Mutual Exclusion</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standard Objects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/udr_root_object.html">UDR Root Object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/library.html">Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/import.html">Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/device_definition.html">Device Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/interface_definition.html">Interface Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/interface_instance.html">Interface Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/property_definition.html">Property Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/property_instance.html">Property Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/interface_constraint.html">Interface Constraint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/override.html">Override</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../device_id_library/device_interface.html">Device Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device_id_library/identification_properties.html">Identification Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device_id_library/full_definition_list.html">Full Library Download</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ESTA Intensity Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/dimmer_interface.html">Dimmer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/intensity_properties.html">Intensity Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intensity_library/full_definition_list.html">Full Library Download</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ESTA Color Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../color_library/spectrum_interface.html">Spectrum Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../color_library/color_properties.html">Color Properties</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="simple_dimmer.html">Simple Dimmer Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi_cell.html">Multi-Cell Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exclusive_group.html">Exclusive Group Device Example</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">MAC Encore Performance WRM Device Example</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../other_resources/xml_tag_reference.html">XML Tag Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Universal Device Representation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>MAC Encore Performance WRM Device Example</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/examples/mac_encore.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mac-encore-performance-wrm-device-example">
+<h1>MAC Encore Performance WRM Device Example<a class="headerlink" href="#mac-encore-performance-wrm-device-example" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference download internal" download="" href="../_downloads/4ac1b6b62b8d0e40e32d488ae40791fc/mac_encore.xml"><code class="xref download docutils literal notranslate"><span class="pre">Download</span></code></a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;estadl&gt;</span>
+    <span class="nt">&lt;import</span> <span class="na">name=</span><span class="s">&quot;org.esta.identification.1&quot;</span> <span class="nt">/&gt;</span>
+
+    <span class="c">&lt;!-- ESTA Intensity --&gt;</span>
+    <span class="nt">&lt;library</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1&quot;</span> <span class="na">description=</span><span class="s">&quot;ESTA Intensity Definitions&quot;</span> <span class="na">publishdate=</span><span class="s">&quot;2020-09-02&quot;</span> <span class="na">author=</span><span class="s">&quot;ESTA&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;intensity&quot;</span> <span class="na">name=</span><span class="s">&quot;Intensity&quot;</span> <span class="na">description=</span><span class="s">&quot;Represents an emitter intensity as a percentage of its maximum brightness&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;percent&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;intensity-binary&quot;</span> <span class="na">name=</span><span class="s">&quot;Binary Intensity&quot;</span> <span class="na">description=</span><span class="s">&quot;Represents an emitter intensity as either on or off&quot;</span> <span class="na">data_type=</span><span class="s">&quot;boolean&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;strobe-frequency&quot;</span> <span class="na">name=</span><span class="s">&quot;Strobe Frequency&quot;</span> <span class="na">description=</span><span class="s">&quot;The frequency of a strobe shutter in Hertz&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;hertz&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;strobe-random&quot;</span> <span class="na">name=</span><span class="s">&quot;Strobe Frequency&quot;</span> <span class="na">description=</span><span class="s">&quot;The random frequency of a strobe shutter&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;none&quot;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;intensity&quot;</span> <span class="na">name=</span><span class="s">&quot;Intensity&quot;</span> <span class="na">description=</span><span class="s">&quot;Represents an emitter intensity as a percentage of its maximum brightness&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;intensity&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;100&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;strobe-frequency&quot;</span> <span class="na">name=</span><span class="s">&quot;Strobe Frequency&quot;</span> <span class="na">description=</span><span class="s">&quot;The frequency of a strobe shutter in Hertz&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;strobe-frequency&quot;</span> <span class="na">id=</span><span class="s">&quot;strobe-frequency&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0.1&quot;</span> <span class="na">maximum=</span><span class="s">&quot;1000&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+    <span class="nt">&lt;/library&gt;</span>
+
+    <span class="c">&lt;!-- ESTA Color --&gt;</span>
+    <span class="nt">&lt;library</span> <span class="na">class=</span><span class="s">&quot;org.esta.color.1&quot;</span> <span class="na">description=</span><span class="s">&quot;ESTA Color Definitions&quot;</span> <span class="na">publishdate=</span><span class="s">&quot;2020-09-02&quot;</span> <span class="na">author=</span><span class="s">&quot;ESTA&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;cyan&quot;</span> <span class="na">name=</span><span class="s">&quot;Cyan&quot;</span> <span class="na">description=</span><span class="s">&quot;Cyan color&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;percent&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;magenta&quot;</span> <span class="na">name=</span><span class="s">&quot;Magenta&quot;</span> <span class="na">description=</span><span class="s">&quot;Magenta color&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;percent&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;yellow&quot;</span> <span class="na">name=</span><span class="s">&quot;Yellow&quot;</span> <span class="na">description=</span><span class="s">&quot;Yellow color&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;percent&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;ctb&quot;</span> <span class="na">name=</span><span class="s">&quot;CTB&quot;</span> <span class="na">description=</span><span class="s">&quot;Color temperature blue correction&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;percent&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;color-description&quot;</span> <span class="na">name=</span><span class="s">&quot;Color&quot;</span> <span class="na">description=</span><span class="s">&quot;The description of the color, such as manufacturer and number&quot;</span> <span class="na">data_type=</span><span class="s">&quot;string&quot;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;cmy&quot;</span> <span class="na">name=</span><span class="s">&quot;CMY&quot;</span> <span class="na">description=</span><span class="s">&quot;Represents CMY color control of a light source&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;cyan&quot;</span> <span class="na">id=</span><span class="s">&quot;cyan&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;100&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;magenta&quot;</span> <span class="na">id=</span><span class="s">&quot;magenta&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;100&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;yellow&quot;</span> <span class="na">id=</span><span class="s">&quot;yellow&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;100&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;ctb&quot;</span> <span class="na">name=</span><span class="s">&quot;CTB&quot;</span> <span class="na">description=</span><span class="s">&quot;Represents CTB color control of a light source&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;ctb&quot;</span> <span class="na">id=</span><span class="s">&quot;ctb&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;100&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;color-description&quot;</span> <span class="na">name=</span><span class="s">&quot;Color Description&quot;</span> <span class="na">description=</span><span class="s">&quot;The description of the color, such as manufacturer and number&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;color-description&quot;</span> <span class="na">id=</span><span class="s">&quot;description&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;128&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;color-wheel&quot;</span> <span class="na">name=</span><span class="s">&quot;Color Wheel&quot;</span> <span class="na">extends=</span><span class="s">&quot;org.esta.wheel.1/wheel&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;interfaceconstraint</span> <span class="na">class=</span><span class="s">&quot;color-description&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+    <span class="nt">&lt;/library&gt;</span>
+
+    <span class="c">&lt;!-- ESTA Wheel --&gt;</span>
+    <span class="nt">&lt;library</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1&quot;</span> <span class="na">description=</span><span class="s">&quot;ESTA Wheel Definitions&quot;</span> <span class="na">publishdate=</span><span class="s">&quot;2020-09-02&quot;</span> <span class="na">author=</span><span class="s">&quot;ESTA&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;angular-velocity&quot;</span> <span class="na">name=</span><span class="s">&quot;Angular Velocity&quot;</span> <span class="na">description=</span><span class="s">&quot;The angular velocity of a wheel&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;degree-per-second&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;index&quot;</span> <span class="na">name=</span><span class="s">&quot;Index&quot;</span> <span class="na">description=</span><span class="s">&quot;The selected index of a wheel&quot;</span> <span class="na">data_type=</span><span class="s">&quot;enum&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;angular-position&quot;</span> <span class="na">name=</span><span class="s">&quot;Angular Position&quot;</span> <span class="na">description=</span><span class="s">&quot;The angular position of a wheel&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;degree&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;velocity-indexed&quot;</span> <span class="na">name=</span><span class="s">&quot;Velocity Index&quot;</span> <span class="na">description=</span><span class="s">&quot;The indexed velocity of a wheel&quot;</span> <span class="na">data_type=</span><span class="s">&quot;enum&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;case&gt;</span>Slow<span class="nt">&lt;/case&gt;</span>
+            <span class="nt">&lt;case&gt;</span>Medium<span class="nt">&lt;/case&gt;</span>
+            <span class="nt">&lt;case&gt;</span>Fast<span class="nt">&lt;/case&gt;</span>
+        <span class="nt">&lt;/propertydef&gt;</span>
+
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;wheel-velocity-indexed&quot;</span> <span class="na">name=</span><span class="s">&quot;Wheel Velocity Indexed&quot;</span> <span class="na">description=</span><span class="s">&quot;The indexed velocity of a wheel&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;velocity-indexed&quot;</span> <span class="na">id=</span><span class="s">&quot;velocity&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;wheel-velocity&quot;</span> <span class="na">name=</span><span class="s">&quot;Wheel Velocity&quot;</span> <span class="na">description=</span><span class="s">&quot;The speed of a wheel&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;angular-velocity&quot;</span> <span class="na">id=</span><span class="s">&quot;velocity&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;wheel-position-indexed&quot;</span> <span class="na">name=</span><span class="s">&quot;Wheel Position Index&quot;</span> <span class="na">description=</span><span class="s">&quot;The indexed position of a wheel&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;index&quot;</span> <span class="na">id=</span><span class="s">&quot;index&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;wheel-position&quot;</span> <span class="na">name=</span><span class="s">&quot;Wheel Position&quot;</span> <span class="na">description=</span><span class="s">&quot;The angular position of a wheel&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;angular-position&quot;</span> <span class="na">id=</span><span class="s">&quot;position&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;360&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;wheel-shake&quot;</span> <span class="na">name=</span><span class="s">&quot;Wheel Shake&quot;</span> <span class="na">description=</span><span class="s">&quot;The shake of a wheel&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;angular-position&quot;</span> <span class="na">id=</span><span class="s">&quot;position&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;360&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;wheel-random-indexed&quot;</span> <span class="na">name=</span><span class="s">&quot;Random&quot;</span> <span class="na">description=</span><span class="s">&quot;The random selection of indexed positions of a wheel&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;interfaceconstraint</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-velocity-indexed&quot;</span> <span class="na">maximum=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel&quot;</span> <span class="na">name=</span><span class="s">&quot;Wheel&quot;</span> <span class="na">description=</span><span class="s">&quot;A wheel&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;interfaceconstraint</span> <span class="na">class=</span><span class="s">&quot;wheel-random-indexed&quot;</span> <span class="na">maximum=</span><span class="s">&quot;1&quot;</span> <span class="na">exclusivegroup=</span><span class="s">&quot;wheel-control&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;interfaceconstraint</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-velocity&quot;</span> <span class="na">maximum=</span><span class="s">&quot;1&quot;</span> <span class="na">exclusivegroup=</span><span class="s">&quot;wheel-control&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;interfaceconstraint</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-position-indexed&quot;</span> <span class="na">maximum=</span><span class="s">&quot;1&quot;</span> <span class="na">exclusivegroup=</span><span class="s">&quot;wheel-control&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;interfaceconstraint</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-position&quot;</span> <span class="na">maximum=</span><span class="s">&quot;1&quot;</span> <span class="na">exclusivegroup=</span><span class="s">&quot;wheel-control&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;interfaceconstraint</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-shake&quot;</span> <span class="na">maximum=</span><span class="s">&quot;1&quot;</span> <span class="na">exclusivegroup=</span><span class="s">&quot;wheel-control&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;interfaceconstraint</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel&quot;</span> <span class="na">maximum=</span><span class="s">&quot;1&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+    <span class="nt">&lt;/library&gt;</span>
+
+    <span class="c">&lt;!-- ESTA Framing--&gt;</span>
+    <span class="nt">&lt;library</span> <span class="na">class=</span><span class="s">&quot;org.esta.framing.1&quot;</span> <span class="na">description=</span><span class="s">&quot;ESTA Framing Definitions&quot;</span> <span class="na">publishdate=</span><span class="s">&quot;2020-09-02&quot;</span> <span class="na">author=</span><span class="s">&quot;ESTA&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;frame-position&quot;</span> <span class="na">name=</span><span class="s">&quot;Frame Position&quot;</span> <span class="na">description=</span><span class="s">&quot;The position of a framing shutter from the edge of the beam&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;frame-angle&quot;</span> <span class="na">name=</span><span class="s">&quot;Frame Angle&quot;</span> <span class="na">description=</span><span class="s">&quot;The angle of a framing shutter&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;degrees&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;frame-location&quot;</span> <span class="na">name=</span><span class="s">&quot;Frame Location&quot;</span> <span class="na">description=</span><span class="s">&quot;The frame location&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;degrees&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;framing-angle&quot;</span> <span class="na">name=</span><span class="s">&quot;Framing Angle&quot;</span> <span class="na">description=</span><span class="s">&quot;The angle of a framing module&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;degrees&quot;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;frame&quot;</span> <span class="na">name=</span><span class="s">&quot;Frame&quot;</span> <span class="na">description=</span><span class="s">&quot;A framing shutter&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;frame-position&quot;</span> <span class="na">id=</span><span class="s">&quot;position&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;100&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;frame-angle&quot;</span> <span class="na">id=</span><span class="s">&quot;angle&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;-45&quot;</span> <span class="na">maximum=</span><span class="s">&quot;45&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;frame-location&quot;</span> <span class="na">id=</span><span class="s">&quot;location&quot;</span> <span class="na">access=</span><span class="s">&quot;readonly&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;360&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;framing-rotating&quot;</span> <span class="na">name=</span><span class="s">&quot;Framing Rotation&quot;</span> <span class="na">description=</span><span class="s">&quot;A framing shutter module&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;framing-angle&quot;</span> <span class="na">id=</span><span class="s">&quot;framing-angle&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;-360&quot;</span> <span class="na">maximum=</span><span class="s">&quot;360&quot;</span> <span class="nt">/&gt;</span>
+
+            <span class="nt">&lt;interfaceconstraint</span> <span class="na">class=</span><span class="s">&quot;org.esta.framing.1/frame&quot;</span> <span class="na">minimum=</span><span class="s">&quot;1&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+    <span class="nt">&lt;/library&gt;</span>
+
+    <span class="c">&lt;!-- ESTA Gobo --&gt;</span>
+    <span class="nt">&lt;library</span> <span class="na">class=</span><span class="s">&quot;org.esta.gobo.1&quot;</span> <span class="na">description=</span><span class="s">&quot;ESTA Gobo Definitions&quot;</span> <span class="na">publishdate=</span><span class="s">&quot;2020-09-02&quot;</span> <span class="na">author=</span><span class="s">&quot;ESTA&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;gobo-description&quot;</span> <span class="na">name=</span><span class="s">&quot;Gobo Description&quot;</span> <span class="na">description=</span><span class="s">&quot;The description of the gobo, such as manufacturer and number&quot;</span> <span class="na">data_type=</span><span class="s">&quot;string&quot;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;gobo-description&quot;</span> <span class="na">name=</span><span class="s">&quot;Gobo Description&quot;</span> <span class="na">description=</span><span class="s">&quot;The description of the gobo, such as manufacturer and number&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;gobo-description&quot;</span> <span class="na">id=</span><span class="s">&quot;description&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;128&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;gobo-wheel&quot;</span> <span class="na">name=</span><span class="s">&quot;Gobo Wheel&quot;</span> <span class="na">extends=</span><span class="s">&quot;org.esta.wheel.1/wheel&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;interfaceconstraint</span> <span class="na">class=</span><span class="s">&quot;gobo-description&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+    <span class="nt">&lt;/library&gt;</span>
+
+    <span class="c">&lt;!-- ESTA Beam --&gt;</span>
+    <span class="nt">&lt;library</span> <span class="na">class=</span><span class="s">&quot;org.esta.beam.1&quot;</span> <span class="na">description=</span><span class="s">&quot;ESTA Beam Definitions&quot;</span> <span class="na">publishdate=</span><span class="s">&quot;2020-09-02&quot;</span> <span class="na">author=</span><span class="s">&quot;ESTA&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;frost&quot;</span> <span class="na">name=</span><span class="s">&quot;Frost&quot;</span> <span class="na">description=</span><span class="s">&quot;The diffusion of a beam of light&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;percent&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;iris&quot;</span> <span class="na">name=</span><span class="s">&quot;Iris&quot;</span> <span class="na">description=</span><span class="s">&quot;The percentage of the beam radius that is masked by the iris&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;percent&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;zoom-angle&quot;</span> <span class="na">name=</span><span class="s">&quot;Zoom&quot;</span> <span class="na">description=</span><span class="s">&quot;The angle of the beam&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;degrees&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;edge&quot;</span> <span class="na">name=</span><span class="s">&quot;Edge&quot;</span> <span class="na">description=</span><span class="s">&quot;The focus of the beam&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;someunit&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/library&gt;</span>
+
+    <span class="c">&lt;!-- ESTA Focus --&gt;</span>
+    <span class="nt">&lt;library</span> <span class="na">class=</span><span class="s">&quot;org.esta.focus.1&quot;</span> <span class="na">description=</span><span class="s">&quot;ESTA Focus Definitions&quot;</span> <span class="na">publishdate=</span><span class="s">&quot;2020-09-02&quot;</span> <span class="na">author=</span><span class="s">&quot;ESTA&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;pan&quot;</span> <span class="na">name=</span><span class="s">&quot;Pan&quot;</span> <span class="na">description=</span><span class="s">&quot;The pan angle of a device&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;degrees&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;tilt&quot;</span> <span class="na">name=</span><span class="s">&quot;Tilt&quot;</span> <span class="na">description=</span><span class="s">&quot;The tilt angle of a device&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;degrees&quot;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;pan-tilt&quot;</span> <span class="na">name=</span><span class="s">&quot;Pan/Tilt&quot;</span> <span class="na">description=</span><span class="s">&quot;The pan/tilt of a device&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;pan&quot;</span> <span class="na">id=</span><span class="s">&quot;pan&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;-1440&quot;</span> <span class="na">maximum=</span><span class="s">&quot;1440&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;tilt&quot;</span> <span class="na">id=</span><span class="s">&quot;tilt&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;-1440&quot;</span> <span class="na">maximum=</span><span class="s">&quot;1440&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+    <span class="nt">&lt;/library&gt;</span>
+
+    <span class="c">&lt;!-- ESTA Effects --&gt;</span>
+    <span class="nt">&lt;library</span> <span class="na">class=</span><span class="s">&quot;org.esta.effects.1&quot;</span> <span class="na">description=</span><span class="s">&quot;ESTA Effects Definitions&quot;</span> <span class="na">publishdate=</span><span class="s">&quot;2020-09-02&quot;</span> <span class="na">author=</span><span class="s">&quot;ESTA&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;effect&quot;</span> <span class="na">name=</span><span class="s">&quot;Effect Selection&quot;</span> <span class="na">description=</span><span class="s">&quot;The selected effect&quot;</span> <span class="na">data_type=</span><span class="s">&quot;boolen&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;effect-speed&quot;</span> <span class="na">name=</span><span class="s">&quot;Effect Speed&quot;</span> <span class="na">description=</span><span class="s">&quot;The speed of an effect&quot;</span> <span class="na">data_type=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;someunit&quot;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;effect-velocity&quot;</span> <span class="na">name=</span><span class="s">&quot;Effect Velocity&quot;</span> <span class="na">description=</span><span class="s">&quot;The effect selection and velocity&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;effect&quot;</span> <span class="na">id=</span><span class="s">&quot;effect&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;effect-speed&quot;</span> <span class="na">id=</span><span class="s">&quot;effect-speed&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;-100&quot;</span> <span class="na">maximum=</span><span class="s">&quot;100&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/interfacedef&gt;</span>
+    <span class="nt">&lt;/library&gt;</span>
+
+    <span class="c">&lt;!-- Martin General --&gt;</span>
+    <span class="nt">&lt;library</span> <span class="na">class=</span><span class="s">&quot;com.martin.general.1&quot;</span> <span class="na">description=</span><span class="s">&quot;Martin General Definitions&quot;</span> <span class="na">publishdate=</span><span class="s">&quot;2020-09-02&quot;</span> <span class="na">author=</span><span class="s">&quot;HARMAN International&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;stepped-shake&quot;</span> <span class="na">name=</span><span class="s">&quot;Shake&quot;</span> <span class="na">description=</span><span class="s">&quot;Stepped shake&quot;</span> <span class="na">data_type=</span><span class="s">&quot;enum&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;case&gt;</span>5 deg<span class="nt">&lt;/case&gt;</span>
+            <span class="nt">&lt;case&gt;</span>15 deg<span class="nt">&lt;/case&gt;</span>
+            <span class="nt">&lt;case&gt;</span>30 deg<span class="nt">&lt;/case&gt;</span>
+            <span class="nt">&lt;case&gt;</span>45 deg<span class="nt">&lt;/case&gt;</span>
+            <span class="nt">&lt;case&gt;</span>60 deg<span class="nt">&lt;/case&gt;</span>
+            <span class="nt">&lt;case&gt;</span>90 deg<span class="nt">&lt;/case&gt;</span>
+            <span class="nt">&lt;case&gt;</span>135 deg<span class="nt">&lt;/case&gt;</span>
+            <span class="nt">&lt;case&gt;</span>180 deg<span class="nt">&lt;/case&gt;</span>
+            <span class="nt">&lt;case&gt;</span>270 deg<span class="nt">&lt;/case&gt;</span>
+            <span class="nt">&lt;case&gt;</span>360 deg<span class="nt">&lt;/case&gt;</span>
+        <span class="nt">&lt;/propertydef&gt;</span>
+    <span class="nt">&lt;/library&gt;</span>
+
+    <span class="c">&lt;!-- Martin MAC Encore Performance WRM --&gt;</span>
+    <span class="nt">&lt;library</span> <span class="na">class=</span><span class="s">&quot;com.martin.devices.1&quot;</span> <span class="na">description=</span><span class="s">&quot;Martin Device Definitions&quot;</span> <span class="na">publishdate=</span><span class="s">&quot;2020-09-02&quot;</span> <span class="na">author=</span><span class="s">&quot;HARMAN International&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;devicedef</span> <span class="na">class=</span><span class="s">&quot;encore-performance-wrm&quot;</span><span class="nt">&gt;</span>
+
+            <span class="c">&lt;!-- device definitions --&gt;</span>
+            <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;shutter&quot;</span> <span class="na">name=</span><span class="s">&quot;Shutter&quot;</span> <span class="na">description=</span><span class="s">&quot;Intensity shutter controls&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/intensity-binary&quot;</span> <span class="na">id=</span><span class="s">&quot;shutter&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/strobe-random&quot;</span> <span class="na">id=</span><span class="s">&quot;strobe-random&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;100&quot;</span> <span class="nt">/&gt;</span>
+
+                <span class="nt">&lt;interfaceconstraint</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/strobe-frequency&quot;</span> <span class="na">minimum=</span><span class="s">&quot;1&quot;</span> <span class="na">maximum=</span><span class="s">&quot;1&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/interfacedef&gt;</span>
+
+            <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;beam&quot;</span> <span class="na">name=</span><span class="s">&quot;Beam&quot;</span> <span class="na">description=</span><span class="s">&quot;Beam controls&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.beam.1/frost&quot;</span> <span class="na">id=</span><span class="s">&quot;frost&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;100&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.beam.1/iris&quot;</span> <span class="na">id=</span><span class="s">&quot;tris&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;100&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.beam.1/zoom-angle&quot;</span> <span class="na">id=</span><span class="s">&quot;zoom&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;15&quot;</span> <span class="na">maximum=</span><span class="s">&quot;65&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.beam.1/edge&quot;</span> <span class="na">id=</span><span class="s">&quot;edge&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="na">minimum=</span><span class="s">&quot;-100&quot;</span> <span class="na">maximum=</span><span class="s">&quot;100&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/interfacedef&gt;</span>
+
+            <span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;custom-wheel-shake&quot;</span> <span class="na">name=</span><span class="s">&quot;Wheel Shake&quot;</span> <span class="na">extends=</span><span class="s">&quot;org.esta.wheel.1/wheel-shake&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;com.martin.general.1/stepped-shake&quot;</span> <span class="na">id=</span><span class="s">&quot;shake&quot;</span> <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/interface&gt;</span>
+
+            <span class="c">&lt;!-- rules - dmx translation?? - work in progress --&gt;</span>
+            <span class="nt">&lt;rules&gt;</span>
+                <span class="nt">&lt;rule&gt;</span>
+                    <span class="nt">&lt;condition</span> <span class="na">type=</span><span class="s">&quot;exclusivegroup&quot;</span> <span class="na">condition=</span><span class="s">&quot;gobo-wheel/wheel-control:wheel-velocity&quot;</span> <span class="nt">/&gt;</span>
+                    <span class="nt">&lt;disable</span> <span class="na">refid=</span><span class="s">&quot;gobo-rotator/position&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;/rule&gt;</span> 
+                <span class="nt">&lt;rule&gt;</span>
+                    <span class="nt">&lt;condition</span> <span class="na">type=</span><span class="s">&quot;exclusivegroup&quot;</span> <span class="na">condition=</span><span class="s">&quot;gobo-wheel/wheel-control:wheel-velocity&quot;</span> <span class="nt">/&gt;</span>
+                    <span class="nt">&lt;disable</span> <span class="na">refid=</span><span class="s">&quot;gobo-rotator/shake&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;/rule&gt;</span> 
+                <span class="nt">&lt;rule&gt;</span>
+                    <span class="nt">&lt;condition</span> <span class="na">type=</span><span class="s">&quot;exclusivegroup&quot;</span> <span class="na">condition=</span><span class="s">&quot;gobo-wheel/wheel-control:wheel-velocity&quot;</span> <span class="nt">/&gt;</span>
+                    <span class="nt">&lt;range</span> <span class="na">refid=</span><span class="s">&quot;theidoftheproperty&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;100&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;/rule&gt;</span>
+            <span class="nt">&lt;/rules&gt;</span>
+
+            <span class="c">&lt;!-- device --&gt;</span>
+            <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.identification.1/device&quot;</span> <span class="na">id=</span><span class="s">&quot;device&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;device-id&quot;</span> <span class="na">attribute=</span><span class="s">&quot;value&quot;</span><span class="nt">&gt;</span>com.martin.encore-performance-wrm.1<span class="nt">&lt;/override&gt;</span>
+                <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;device-manufacturer&quot;</span> <span class="na">attribute=</span><span class="s">&quot;value&quot;</span><span class="nt">&gt;</span>HARMAN International<span class="nt">&lt;/override&gt;</span>
+                <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;device-model&quot;</span> <span class="na">attribute=</span><span class="s">&quot;value&quot;</span><span class="nt">&gt;</span>MAC Encore Performance WRM<span class="nt">&lt;/override&gt;</span>
+            <span class="nt">&lt;/interface&gt;</span>
+
+            <span class="c">&lt;!-- color | cmy --&gt;</span>
+            <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.color.1/cmy&quot;</span> <span class="na">id=</span><span class="s">&quot;color-cmy&quot;</span> <span class="nt">/&gt;</span>
+
+            <span class="c">&lt;!-- gobo wheel --&gt;</span>
+            <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.org.gobo.1/gobo-wheel&quot;</span> <span class="na">id=</span><span class="s">&quot;gobo-wheel&quot;</span><span class="nt">&gt;</span>
+                <span class="c">&lt;!-- wheel indexed --&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-position-indexed&quot;</span> <span class="na">id=</span><span class="s">&quot;wheel-position-indexed&quot;</span> <span class="nt">/&gt;</span>
+
+                <span class="c">&lt;!-- wheel continuous rotation--&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-velocity&quot;</span> <span class="na">id=</span><span class="s">&quot;wheel-velocity&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;angular-velocity&quot;</span> <span class="na">attribute=</span><span class="s">&quot;minimum&quot;</span><span class="nt">&gt;</span>-45<span class="nt">&lt;/override&gt;</span>
+                    <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;angular-velocity&quot;</span> <span class="na">attribute=</span><span class="s">&quot;maximum&quot;</span><span class="nt">&gt;</span>45<span class="nt">&lt;/override&gt;</span>
+                <span class="nt">&lt;/interface&gt;</span>
+
+                <span class="c">&lt;!-- gobo rotator --&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel&quot;</span> <span class="na">id=</span><span class="s">&quot;gobo-rotator&quot;</span><span class="nt">&gt;</span>
+                    <span class="c">&lt;!-- indexing --&gt;</span>
+                    <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-position&quot;</span> <span class="na">id=</span><span class="s">&quot;position&quot;</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;allowed</span> <span class="na">exclusivegroup=</span><span class="s">&quot;#/gobo-wheel/wheel-control&quot;</span> <span class="na">interfaceid=</span><span class="s">&quot;wheel-position-indexed&quot;</span> <span class="nt">/&gt;</span> <span class="c">&lt;!-- work in progress (see rules for alt) --&gt;</span>
+                    <span class="nt">&lt;/interface&gt;</span>
+
+                    <span class="c">&lt;!-- continuous rotation --&gt;</span>
+                    <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-velocity&quot;</span> <span class="na">id=</span><span class="s">&quot;velocity&quot;</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;allowed</span> <span class="na">exclusivegroup=</span><span class="s">&quot;#/gobo-wheel/wheel-control&quot;</span> <span class="na">interfaceid=</span><span class="s">&quot;wheel-position-indexed&quot;</span> <span class="nt">/&gt;</span> <span class="c">&lt;!-- work in progress (see rules for alt) --&gt;</span>
+                        <span class="nt">&lt;allowed</span> <span class="na">exclusivegroup=</span><span class="s">&quot;#/gobo-wheel/wheel-control&quot;</span> <span class="na">interfaceid=</span><span class="s">&quot;wheel-velocity&quot;</span> <span class="nt">/&gt;</span> <span class="c">&lt;!-- work in progress (see rules for alt) --&gt;</span>
+                        <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;angular-velocity&quot;</span> <span class="na">attribute=</span><span class="s">&quot;minimum&quot;</span><span class="nt">&gt;</span>-720<span class="nt">&lt;/override&gt;</span>
+                        <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;angular-velocity&quot;</span> <span class="na">attribute=</span><span class="s">&quot;maximum&quot;</span><span class="nt">&gt;</span>720<span class="nt">&lt;/override&gt;</span>
+                    <span class="nt">&lt;/interface&gt;</span>
+
+                    <span class="c">&lt;!-- shake--&gt;</span>
+                    <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;custom-wheel-shake&quot;</span> <span class="na">id=</span><span class="s">&quot;shake&quot;</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;allowed</span> <span class="na">exclusivegroup=</span><span class="s">&quot;#/gobo-wheel/wheel-control&quot;</span> <span class="na">interfaceid=</span><span class="s">&quot;wheel-position-indexed&quot;</span> <span class="nt">/&gt;</span> <span class="c">&lt;!-- work in progress (see rules for alt) --&gt;</span>
+                    <span class="nt">&lt;/interface&gt;</span>
+                <span class="nt">&lt;/interface&gt;</span>
+
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.gobo.1/gobo-description&quot;</span> <span class="na">id=</span><span class="s">&quot;gobo-1&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.gobo.1/gobo-description&quot;</span> <span class="na">id=</span><span class="s">&quot;gobo-2&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.gobo.1/gobo-description&quot;</span> <span class="na">id=</span><span class="s">&quot;gobo-3&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.gobo.1/gobo-description&quot;</span> <span class="na">id=</span><span class="s">&quot;gobo-4&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.gobo.1/gobo-description&quot;</span> <span class="na">id=</span><span class="s">&quot;gobo-5&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.gobo.1/gobo-description&quot;</span> <span class="na">id=</span><span class="s">&quot;gobo-6&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/interface&gt;</span>
+
+            <span class="c">&lt;!-- color wheel --&gt;</span>
+            <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.org.color.1/color-wheel&quot;</span> <span class="na">id=</span><span class="s">&quot;color-wheel&quot;</span><span class="nt">&gt;</span>
+
+                <span class="c">&lt;!-- wheel indexed continuous --&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-position&quot;</span> <span class="na">id=</span><span class="s">&quot;position&quot;</span> <span class="nt">/&gt;</span>
+
+                <span class="c">&lt;!-- wheel indexed --&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-position-indexed&quot;</span> <span class="na">id=</span><span class="s">&quot;wheel-position-indexed&quot;</span> <span class="nt">/&gt;</span>
+
+                <span class="c">&lt;!-- wheel continuous rotation--&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-velocity&quot;</span> <span class="na">id=</span><span class="s">&quot;wheel-velocity&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;angular-velocity&quot;</span> <span class="na">attribute=</span><span class="s">&quot;minimum&quot;</span><span class="nt">&gt;</span>-45<span class="nt">&lt;/override&gt;</span>
+                    <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;angular-velocity&quot;</span> <span class="na">attribute=</span><span class="s">&quot;maximum&quot;</span><span class="nt">&gt;</span>45<span class="nt">&lt;/override&gt;</span>
+                <span class="nt">&lt;/interface&gt;</span>
+
+                <span class="c">&lt;!-- wheel random --&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-random-indexed&quot;</span> <span class="na">id=</span><span class="s">&quot;wheel-random-indexed&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-velocity-indexed&quot;</span> <span class="na">id=</span><span class="s">&quot;wheel-velocity-indexed&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;/interface&gt;</span>
+
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.color.1/color-description&quot;</span> <span class="na">id=</span><span class="s">&quot;color-1&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.color.1/color-description&quot;</span> <span class="na">id=</span><span class="s">&quot;color-2&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.color.1/color-description&quot;</span> <span class="na">id=</span><span class="s">&quot;color-3&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.color.1/color-description&quot;</span> <span class="na">id=</span><span class="s">&quot;color-4&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.color.1/color-description&quot;</span> <span class="na">id=</span><span class="s">&quot;color-5&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.color.1/color-description&quot;</span> <span class="na">id=</span><span class="s">&quot;color-6&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/interface&gt;</span>
+
+            <span class="c">&lt;!-- framing --&gt;</span>
+            <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.framing.1/framing-rotating&quot;</span> <span class="na">id=</span><span class="s">&quot;framing&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;frame&quot;</span> <span class="na">id=</span><span class="s">&quot;frame-top&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;frame-location&quot;</span> <span class="na">attribute=</span><span class="s">&quot;value&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/override&gt;</span>
+                <span class="nt">&lt;/interface&gt;</span>
+
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;frame&quot;</span> <span class="na">id=</span><span class="s">&quot;frame-right&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;frame-location&quot;</span> <span class="na">attribute=</span><span class="s">&quot;value&quot;</span><span class="nt">&gt;</span>90<span class="nt">&lt;/override&gt;</span>
+                <span class="nt">&lt;/interface&gt;</span>
+
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;frame&quot;</span> <span class="na">id=</span><span class="s">&quot;frame-bottom&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;frame-location&quot;</span> <span class="na">attribute=</span><span class="s">&quot;value&quot;</span><span class="nt">&gt;</span>180<span class="nt">&lt;/override&gt;</span>
+                <span class="nt">&lt;/interface&gt;</span>
+
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;frame&quot;</span> <span class="na">id=</span><span class="s">&quot;frame-left&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;frame-location&quot;</span> <span class="na">attribute=</span><span class="s">&quot;value&quot;</span><span class="nt">&gt;</span>270<span class="nt">&lt;/override&gt;</span>
+                <span class="nt">&lt;/interface&gt;</span>
+
+                <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;framing-angle&quot;</span> <span class="na">attribute=</span><span class="s">&quot;minimum&quot;</span><span class="nt">&gt;</span>-180<span class="nt">&lt;/override&gt;</span>
+                <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;framing-angle&quot;</span> <span class="na">attribute=</span><span class="s">&quot;maximum&quot;</span><span class="nt">&gt;</span>180<span class="nt">&lt;/override&gt;</span>
+            <span class="nt">&lt;/interface&gt;</span>
+
+            <span class="c">&lt;!-- pan/tilt --&gt;</span>
+            <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.focus.1/pan-tilt&quot;</span> <span class="na">id=</span><span class="s">&quot;pan-tilt&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;pan&quot;</span> <span class="na">attribute=</span><span class="s">&quot;minimum&quot;</span><span class="nt">&gt;</span>-270<span class="nt">&lt;/override&gt;</span>
+                <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;pan&quot;</span> <span class="na">attribute=</span><span class="s">&quot;maximum&quot;</span><span class="nt">&gt;</span>270<span class="nt">&lt;/override&gt;</span>
+                <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;tilt&quot;</span> <span class="na">attribute=</span><span class="s">&quot;minimum&quot;</span><span class="nt">&gt;</span>-138.5<span class="nt">&lt;/override&gt;</span>
+                <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;tilt&quot;</span> <span class="na">attribute=</span><span class="s">&quot;maximum&quot;</span><span class="nt">&gt;</span>139.5<span class="nt">&lt;/override&gt;</span>
+            <span class="nt">&lt;/interface&gt;</span>
+
+            <span class="c">&lt;!-- strobe --&gt;</span>
+            <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;shutter&quot;</span> <span class="na">id=</span><span class="s">&quot;shutter&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;strobe-frequency&quot;</span> <span class="na">id=</span><span class="s">&quot;strobe-frequency&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;strobe-frequency&quot;</span> <span class="na">attribute=</span><span class="s">&quot;minimum&quot;</span><span class="nt">&gt;</span>0.5<span class="nt">&lt;/override&gt;</span>
+                    <span class="nt">&lt;override</span> <span class="na">refid=</span><span class="s">&quot;strobe-frequency&quot;</span> <span class="na">attribute=</span><span class="s">&quot;maximum&quot;</span><span class="nt">&gt;</span>100<span class="nt">&lt;/override&gt;</span>
+                <span class="nt">&lt;/interface&gt;</span>
+            <span class="nt">&lt;/interface&gt;</span>
+
+            <span class="c">&lt;!-- effect --&gt;</span>
+            <span class="c">&lt;!-- NOTE: From a DMX translation point of view, this uses the iris address to control the speed --&gt;</span>
+            <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.effect.1/effect-velocity&quot;</span> <span class="na">id=</span><span class="s">&quot;effect-1&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.effect.1/effect-velocity&quot;</span> <span class="na">id=</span><span class="s">&quot;effect-2&quot;</span> <span class="nt">/&gt;</span>
+
+            <span class="c">&lt;!-- intensity --&gt;</span>
+            <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/intensity&quot;</span> <span class="na">id=</span><span class="s">&quot;intensity&quot;</span> <span class="nt">/&gt;</span>
+            
+            <span class="c">&lt;!-- color | ctb --&gt;</span>
+            <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.color.1/ctb&quot;</span> <span class="na">id=</span><span class="s">&quot;ctb&quot;</span> <span class="nt">/&gt;</span>
+
+            <span class="c">&lt;!-- beam (frost, iris, zoom, edge) --&gt;</span>
+            <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;beam&quot;</span> <span class="na">id=</span><span class="s">&quot;beam&quot;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;/devicedef&gt;</span>
+    <span class="nt">&lt;/library&gt;</span>
+
+<span class="nt">&lt;/estadl&gt;</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../other_resources/xml_tag_reference.html" class="btn btn-neutral float-right" title="XML Tag Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="exclusive_group.html" class="btn btn-neutral float-left" title="Exclusive Group Device Example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, ESTA Next-Gen Library Study Group
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -29,9 +29,9 @@ Properties
   .. code-tab:: xml
 
     <interfacedef class="device" name="Device" description="The root-level interface that describes a device.">
-      <property class="org.esta.identification.1/device-id" id="device-id" access="readonly" lifetime="static" minimum="0" maximum="128" />
-      <property class="org.esta.identification.1/manufacturer" id="device-manufacturer" access="readonly" lifetime="static" minimum="0" maximum="128" />
-      <property class="org.esta.identification.1/model" id="device-model" access="readonly" lifetime="static" minimum="0" maximum="128" />
+      <property class="org.esta.identification.1/device-id" alias="device-id" access="readonly" lifetime="static" minimum="0" maximum="128" />
+      <property class="org.esta.identification.1/manufacturer" alias="device-manufacturer" access="readonly" lifetime="static" minimum="0" maximum="128" />
+      <property class="org.esta.identification.1/model" alias="device-model" access="readonly" lifetime="static" minimum="0" maximum="128" />
     </interfacedef>
 
   .. code-tab:: json
@@ -45,7 +45,7 @@ Properties
         {
           "type": "property",
           "class": "org.esta.identification.1/device-id",
-          "id": "device-id",
+          "alias": "device-id",
           "access": "readonly",
           "lifetime": "static",
           "minimum": 0,
@@ -54,7 +54,7 @@ Properties
         {
           "type": "property",
           "class": "org.esta.identification.1/manufacturer",
-          "id": "device-manufacturer",
+          "alias": "device-manufacturer",
           "access": "readonly",
           "lifetime": "static",
           "minimum": 0,
@@ -63,7 +63,7 @@ Properties
         {
           "type": "property",
           "class": "org.esta.identification.1/model",
-          "id": "device-model",
+          "alias": "device-model",
           "access": "readonly",
           "lifetime": "static",
           "minimum": 0,
@@ -80,10 +80,10 @@ Instance Example
 
   .. code-tab:: xml
 
-    <interface class="org.esta.identification.1/device" id="device">
-      <override refid="device-id" attribute="value">com.acme.device-model.1</override>
-      <override refid="device-manufacturer" attribute="value">ACME Corp</override>
-      <override refid="device-model" attribute="value">New Device Model</override>
+    <interface class="org.esta.identification.1/device" alias="device">
+      <override refalias="device-id" attribute="value">com.acme.device-model.1</override>
+      <override refalias="device-manufacturer" attribute="value">ACME Corp</override>
+      <override refalias="device-model" attribute="value">New Device Model</override>
     </interface>
 
   .. code-tab:: json
@@ -91,23 +91,23 @@ Instance Example
     {
       "type": "interface",
       "class": "org.esta.identification.1/device",
-      "id": "device",
+      "alias": "device",
       "children": [
         {
           "type": "override",
-          "refid": "device-id"
+          "refalias": "device-id"
           "attribute": "value",
           "value": "com.acme.device-model.1"
         },
         {
           "type": "override",
-          "refid": "device-manufacturer"
+          "refalias": "device-manufacturer"
           "attribute": "value",
           "value": "ACME Corp"
         },
         {
           "type": "override",
-          "refid": "device-model"
+          "refalias": "device-model"
           "attribute": "value",
           "value": "New Device Model"
         }

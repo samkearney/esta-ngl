@@ -27,6 +27,7 @@ automation, and the Internet of Things.
    standard_objects/udr_root_object
    standard_objects/library
    standard_objects/import
+   standard_objects/device_definition
    standard_objects/interface_definition
    standard_objects/interface_instance
    standard_objects/property_definition
@@ -64,6 +65,7 @@ automation, and the Internet of Things.
    examples/simple_dimmer
    examples/multi_cell
    examples/exclusive_group
+   examples/mac_encore
 
 .. toctree::
    :maxdepth: 2

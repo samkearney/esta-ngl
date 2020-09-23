@@ -95,7 +95,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#organization-identifier">Organization Identifier</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#qualified-class">Qualified Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#qualified-device-id">Qualified Device ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#qualified-id">Qualified ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#qualified-alias">Qualified Alias</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="mutual_exclusion.html">Mutual Exclusion</a></li>
@@ -105,6 +105,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/udr_root_object.html">UDR Root Object</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/library.html">Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/import.html">Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/device_definition.html">Device Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/interface_definition.html">Interface Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/interface_instance.html">Interface Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/property_definition.html">Property Definition</a></li>
@@ -134,6 +135,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_group.html">Exclusive Group Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/mac_encore.html">MAC Encore Performance WRM Device Example</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Other Resources</span></p>
 <ul>
@@ -206,7 +208,7 @@
   <div class="section" id="identifiers">
 <h1>Identifiers<a class="headerlink" href="#identifiers" title="Permalink to this headline">¶</a></h1>
 <p>Definitions and instances often need to be uniquely and globally identified. Definitions are
-identified by <strong>class</strong> and instances are identified by <strong>id</strong>. These identifiers are combined
+identified by <strong>class</strong> and instances are identified by <strong>alias</strong>. These identifiers are combined
 with the identifiers of parent elements to create a globally unique identifier.</p>
 <div class="section" id="organization-identifier">
 <span id="tutorial-identifiers-organization-id"></span><h2>Organization Identifier<a class="headerlink" href="#organization-identifier" title="Permalink to this headline">¶</a></h2>
@@ -232,13 +234,13 @@ representation.</p>
 <p>The UDR <a class="reference internal" href="../device_id_library/identification_properties.html#properties-identification-device-id"><span class="std std-ref">Device ID</span></a> property follows a similar qualification
 convention to qualified classes.</p>
 <p>It should follow the form <code class="docutils literal notranslate"><span class="pre">org-id.device-name.version</span></code> where org-id is the
-<a class="reference internal" href="#tutorial-identifiers-organization-id"><span class="std std-ref">Organization Identifier</span></a>, device-name is a string uniquely identifying the
+<span class="xref std std-ref">tutorial-identifiers-organization-alias</span>, device-name is a string uniquely identifying the
 device model within the organization, and version is a string-represented integer representing the
 version of the device for the purposes of the UDR library.</p>
 <p>This version number must change anytime the device’s definition changes.</p>
 </div>
-<div class="section" id="qualified-id">
-<span id="tutorial-identifiers-qualified-id"></span><h2>Qualified ID<a class="headerlink" href="#qualified-id" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="qualified-alias">
+<span id="tutorial-identifiers-qualified-alias"></span><h2>Qualified Alias<a class="headerlink" href="#qualified-alias" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

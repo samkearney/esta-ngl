@@ -72,7 +72,7 @@ example from above:
 
     <!-- Simplified... -->
     <interfacedef class="org.esta.wheel.1/wheel" name="Wheel" description="An indexable, rotating wheel">
-      <property class="org.esta.core.1/interface-selector" id="wheel-control" modeselector="wheel-control" access="readwrite" lifetime="runtime" />
+      <property class="org.esta.core.1/interface-selector" alias="wheel-control" modeselector="wheel-control" access="readwrite" lifetime="runtime" />
 
       <interfaceconstraint class="org.esta.wheel.1/wheel-velocity" maximum="1" exclusivegroup="wheel-control" />
       <interfaceconstraint class="org.esta.wheel.1/wheel-position" maximum="1" exclusivegroup="wheel-control" />
@@ -89,7 +89,7 @@ example from above:
         {
           "type": "property",
           "class": "org.esta.core.1/interface-selector",
-          "id": "wheel-control",
+          "alias": "wheel-control",
           "modeselector": "wheel-control",
           "access": "readwrite"
           "lifetime": "runtime"
