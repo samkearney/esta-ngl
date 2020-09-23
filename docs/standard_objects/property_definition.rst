@@ -47,15 +47,15 @@ A property's **data type** specifies how to interpret the data stored with the p
 
 The possible data types are:
 
-======= =======================================================
-number  A numeric value, either integral or floating point.
-string  A UTF-8 string.
-binary  Opaque binary data.
-boolean A boolean value (true or false).
-enum    A set of meaningful names assigned to numeric values.
-array   An array of values, all of which must be the same type.
-refid   A reference interface or property **id**.
-======= =======================================================
+========= =======================================================
+number    A numeric value, either integral or floating point.
+string    A UTF-8 string.
+binary    Opaque binary data.
+boolean   A boolean value (true or false).
+enum      A set of meaningful names assigned to numeric values.
+array     An array of values, all of which must be the same type.
+refalias  A reference interface or property **alias**.
+========= =======================================================
 
 .. _standard-objects-property-definition-unit:
 

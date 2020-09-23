@@ -16,7 +16,7 @@ controls all of the cells:
   .. code-tab:: xml
 
     <interfacedef class="cell-group" name="Cell Group" description="A group of cells">
-      <property class="org.esta.intensity.1/intensity" id="intensity-master" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+      <property class="org.esta.intensity.1/intensity" alias="intensity-master" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
       <interfaceconstraint class="cell" minimum="1" />
     </interfacedef>
 
@@ -31,7 +31,7 @@ controls all of the cells:
         {
           "type": "property",
           "class": "org.esta.intensity.1/intensity",
-          "id": "intensity-master",
+          "alias": "intensity-master",
           "access": "readwrite",
           "lifetime": "runtime",
           "minimum": 0,
@@ -56,8 +56,8 @@ The cell interface might look like:
   .. code-tab:: xml
 
     <interfacedef class="cell" name="Cell" description="An intensity and RGB cell">
-      <property class="org.esta.intensity.1/intensity" id="intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100"/>
-      <property class="org.esta.color.1/rgb" id="color" access="readwrite" lifetime="runtime" minimum="0" maximum="100"/>
+      <property class="org.esta.intensity.1/intensity" alias="intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100"/>
+      <property class="org.esta.color.1/rgb" alias="color" access="readwrite" lifetime="runtime" minimum="0" maximum="100"/>
     </interfacedef>
 
   .. code-tab:: json
@@ -71,7 +71,7 @@ The cell interface might look like:
         {
           "type": "property",
           "class": "org.esta.intensity.1/intensity",
-          "id": "intensity",
+          "alias": "intensity",
           "access": "readwrite",
           "lifetime": "runtime",
           "minimum": 0,
@@ -80,7 +80,7 @@ The cell interface might look like:
         {
           "type": "property",
           "class": "org.esta.color.1/rgb",
-          "id": "color",
+          "alias": "color",
           "access": "readwrite",
           "lifetime": "runtime",
           "minimum": 0,
@@ -92,7 +92,7 @@ The cell interface might look like:
 The cell has individual intensity and color properties.
 
 Note that interface and property definitions within the same :ref:`standard-objects-library` do not require
-the fully qualified class ID which includes the :ref:`tutorial-identifiers-organization-id`.
+the fully qualified class id which includes the :ref:`tutorial-identifiers-organization-id`.
 
 These interface definitions give this device the tools to communicate information about its cell
 layout. Assuming the definitions above appear in a library with the class ``com.acme.definitions.1``,
@@ -103,11 +103,11 @@ the device might contain:
   .. code-tab:: xml
 
     <!-- A group of 4 cells -->
-    <interface class="com.acme.definitions.1/cell-group" id="cell-group-1">
-      <interface class="com.acme.definitions.1/cell" id="1" />
-      <interface class="com.acme.definitions.1/cell" id="2" />
-      <interface class="com.acme.definitions.1/cell" id="3" />
-      <interface class="com.acme.definitions.1/cell" id="4" />
+    <interface class="com.acme.definitions.1/cell-group" alias="cell-group-1">
+      <interface class="com.acme.definitions.1/cell" alias="1" />
+      <interface class="com.acme.definitions.1/cell" alias="2" />
+      <interface class="com.acme.definitions.1/cell" alias="3" />
+      <interface class="com.acme.definitions.1/cell" alias="4" />
     </interface>
 
   .. code-tab:: json
@@ -115,27 +115,27 @@ the device might contain:
     {
       "type": "interface",
       "class": "com.acme.definitions.1/cell-group",
-      "id": "cell-group-1",
+      "alias": "cell-group-1",
       "children": [
         {
           "type": "interface",
           "class": "com.acme.definitions.1/cell",
-          "id": "1"
+          "alias": "1"
         },
         {
           "type": "interface",
           "class": "com.acme.definitions.1/cell",
-          "id": "2"
+          "alias": "2"
         },
         {
           "type": "interface",
           "class": "com.acme.definitions.1/cell",
-          "id": "3"
+          "alias": "3"
         },
         {
           "type": "interface",
           "class": "com.acme.definitions.1/cell",
-          "id": "4"
+          "alias": "4"
         },
       ]
     }
@@ -150,7 +150,7 @@ Order Is Meaningful
 The order in which interfaces appear at the same level in the hierarchy is meaningful; similar or
 identical items that appear in a certain order in an interface hierarchy should be presented in the
 same order in any corresponding user interface elements. By contrast, text contained in the 
-:ref:`standard-objects-interface-instance-id` attribute of an interface instance has no meaning attached to
+:ref:`standard-objects-interface-instance-alias` attribute of an interface instance has no meaning attached to
 it. To modify the above example:
 
 .. tabs::
@@ -158,11 +158,11 @@ it. To modify the above example:
   .. code-tab:: xml
 
     <!-- A group of 4 cells -->
-    <interface class="com.acme.definitions.1/cell-group" id="cell-group-1">
-      <interface class="com.acme.definitions.1/cell" id="4" />
-      <interface class="com.acme.definitions.1/cell" id="1" />
-      <interface class="com.acme.definitions.1/cell" id="3" />
-      <interface class="com.acme.definitions.1/cell" id="2" />
+    <interface class="com.acme.definitions.1/cell-group" alias="cell-group-1">
+      <interface class="com.acme.definitions.1/cell" alias="4" />
+      <interface class="com.acme.definitions.1/cell" alias="1" />
+      <interface class="com.acme.definitions.1/cell" alias="3" />
+      <interface class="com.acme.definitions.1/cell" alias="2" />
     </interface>
 
   .. code-tab:: json
@@ -170,31 +170,31 @@ it. To modify the above example:
     {
       "type": "interface",
       "class": "com.acme.definitions.1/cell-group",
-      "id": "cell-group-1",
+      "alias": "cell-group-1",
       "children": [
         {
           "type": "interface",
           "class": "com.acme.definitions.1/cell",
-          "id": "4"
+          "alias": "4"
         },
         {
           "type": "interface",
           "class": "com.acme.definitions.1/cell",
-          "id": "1"
+          "alias": "1"
         },
         {
           "type": "interface",
           "class": "com.acme.definitions.1/cell",
-          "id": "3"
+          "alias": "3"
         },
         {
           "type": "interface",
           "class": "com.acme.definitions.1/cell",
-          "id": "2"
+          "alias": "2"
         },
       ]
     }
 
-Notice that the ID strings contain numbers that are out of order. In this example, the first
+Notice that the alias strings contain numbers that are out of order. In this example, the first
 interface that appears in the markup should always be considered the first cell, and
-implementations should not parse or attempt to assign meaning to the ID strings.
+implementations should not parse or attempt to assign meaning to the alias strings.

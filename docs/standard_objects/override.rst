@@ -18,14 +18,14 @@ Attributes
 Overrides are per-property-instance; they can vary between instances of
 the property.
 
-.. _standard-objects-override-refid:
+.. _standard-objects-override-refalias:
 
-Ref Id
-======
+Ref Alias
+=========
 
-Indicates the **id** ** of the property instance which this object is
-providing new values for. This can be a :ref:`tutorial-identifiers-qualified-id`
-or a relative id.
+Indicates the **alias** ** of the property instance which this object is
+providing new values for. This can be a :ref:`tutorial-identifiers-qualified-alias`
+or a relative alias.
 
 .. _standard-objects-override-attribute:
 
@@ -57,7 +57,7 @@ Markup
     * Tag name: ``override``
     * Attributes:
 
-      * ``refid``: :ref:`standard-objects-override-refid`
+      * ``refalias``: :ref:`standard-objects-override-refalias`
       * ``attribute``: :ref:`standard-objects-override-attribute`
 
     Example:
@@ -65,14 +65,14 @@ Markup
     .. code-block:: xml
 
       <!-- simplified example -->
-      <interface class="org.esta.identification.1/device" id="device">
-          <override refid="device-id" attribute="value">com.acme.device-model.1</override>
+      <interface class="org.esta.identification.1/device" alias="device">
+          <override refalias="device-id" attribute="value">com.acme.device-model.1</override>
       </interface>
 
       <!-- simplified example -->
-      <interface class="org.esta.wheel.1/wheel-velocity" id="velocity">
-          <override refid="angular-velocity" attribute="minimum">-720</override>
-          <override refid="angular-velocity" attribute="maximum">720</override>
+      <interface class="org.esta.wheel.1/wheel-velocity" alias="velocity">
+          <override refalias="angular-velocity" attribute="minimum">-720</override>
+          <override refalias="angular-velocity" attribute="maximum">720</override>
       </interface>
 
   .. tab:: JSON
@@ -83,7 +83,7 @@ Markup
       ============== ========== ============================================================
       Key            Value Type Represents
       ============== ========== ============================================================
-      refid          string     :ref:`standard-objects-override-refid`
+      refalias       string     :ref:`standard-objects-override-refalias`
       attribute      string     :ref:`standard-objects-override-attribute`
       value          various    :ref:`standard-objects-override-value`
       ============== ========== ============================================================
@@ -95,11 +95,11 @@ Markup
       {
         "type": "interface",
         "class": "org.esta.identification.1/device",
-        "id": "device",
+        "alias": "device",
         "children": [
           {
             "type": "override",
-            "refid": "device-id"
+            "refalias": "device-id"
             "attribute": "value",
             "value": "com.acme.device-model.1"
           }
@@ -109,17 +109,17 @@ Markup
       {
         "type": "interface",
         "class": "org.esta.wheel.1/wheel-velocity",
-        "id": "velocity",
+        "alias": "velocity",
         "children": [
           {
             "type": "override",
-            "refid": "angular-velocity"
+            "refalias": "angular-velocity"
             "attribute": "minimum",
             "value": -720
           },
           {
             "type": "override",
-            "refid": "angular-velocity"
+            "refalias": "angular-velocity"
             "attribute": "maximum",
             "value": 720
           }

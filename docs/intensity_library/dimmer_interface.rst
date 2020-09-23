@@ -27,7 +27,7 @@ Properties
         class="dimmer"
         name="Dimmer"
         description="A simple dimmer controlling an intensity.">
-      <property class="intensity" id="intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+      <property class="intensity" alias="intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
     </interfacedef>
 
   .. code-tab:: json
@@ -41,7 +41,7 @@ Properties
         {
           "type": "property",
           "class": "intensity",
-          "id": "intensity",
+          "alias": "intensity",
           "access": "readwrite",
           "lifetime": "runtime",
           "minimum": 0,
@@ -58,12 +58,12 @@ Instance Example
 
   .. code-tab:: xml
 
-    <interface class="org.esta.intensity.1/dimmer" id="primary-dimmer" />
+    <interface class="org.esta.intensity.1/dimmer" alias="primary-dimmer" />
 
   .. code-tab:: json
 
     {
       "type": "interface",
       "class": "org.esta.intensity.1/dimmer",
-      "id": "primary-dimmer",
+      "alias": "primary-dimmer",
     }

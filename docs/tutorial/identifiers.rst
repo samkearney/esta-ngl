@@ -3,7 +3,7 @@ Identifiers
 ###########
 
 Definitions and instances often need to be uniquely and globally identified. Definitions are
-identified by **class** and instances are identified by **id**. These identifiers are combined
+identified by **class** and instances are identified by **alias**. These identifiers are combined
 with the identifiers of parent elements to create a globally unique identifier.
 
 .. _tutorial-identifiers-organization-id:
@@ -47,14 +47,14 @@ The UDR :ref:`properties-identification-device-id` property follows a similar qu
 convention to qualified classes.
 
 It should follow the form ``org-id.device-name.version`` where org-id is the
-:ref:`tutorial-identifiers-organization-id`, device-name is a string uniquely identifying the
+:ref:`tutorial-identifiers-organization-alias`, device-name is a string uniquely identifying the
 device model within the organization, and version is a string-represented integer representing the
 version of the device for the purposes of the UDR library.
 
 This version number must change anytime the device's definition changes.
 
-.. _tutorial-identifiers-qualified-id:
+.. _tutorial-identifiers-qualified-alias:
 
-************
-Qualified ID
-************
+***************
+Qualified Alias
+***************

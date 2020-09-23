@@ -7,7 +7,7 @@
     <propertydef class="org.esta.core.1/mode-selector" data_type="enum-id" />
 
     <interfacedef class="org.esta.core.1/operating-mode-group" name="Operating Mode Group" description="A group of operation modes">
-      <property class="org.esta.core.1/mode-selector" id="mode-control" modeselector="mode-control" lifetime="runtime" access="readwrite" />
+      <property class="org.esta.core.1/mode-selector" alias="mode-control" modeselector="mode-control" lifetime="runtime" access="readwrite" />
       <interfaceconstraint class="org.esta.core.1/operating-mode" minimum="1" exclusivegroup="mode-control" />
     </interfacedef>
 
@@ -18,20 +18,20 @@
 
   <library class="com.acme.devices.1" />
     <devicedef class="led-5000">
-      <interface class="org.esta.device.1/device" id="device">
-        <propertyvalue id="device-id">com.acme.mydevice.1</propertyvalue>
-        <propertyvalue id="device-manufacturer">My Organization</propertyvalue>
-        <propertyvalue id="device-model">LED 5000</propertyvalue>
+      <interface class="org.esta.device.1/device" alias="device">
+        <propertyvalue alias="device-id">com.acme.mydevice.1</propertyvalue>
+        <propertyvalue alias="device-manufacturer">My Organization</propertyvalue>
+        <propertyvalue alias="device-model">LED 5000</propertyvalue>
       </interface>
 
-      <interface class="org.esta.intensity.1/intensity" id="master-intensity" />
+      <interface class="org.esta.intensity.1/intensity" alias="master-intensity" />
 
-      <interface class="org.esta.core.1/operating-mode-group" id="modes">
-        <interface class="org.esta.core.1/operating-mode" id="rgb-mode" displayname="RGB Mode">
-          <interface class="org.esta.color.1/rgb" id="rgb" />
+      <interface class="org.esta.core.1/operating-mode-group" alias="modes">
+        <interface class="org.esta.core.1/operating-mode" alias="rgb-mode" displayname="RGB Mode">
+          <interface class="org.esta.color.1/rgb" alias="rgb" />
         </interface>
-        <interface class="org.esta.core.1/operating-mode" id="hsi-mode" displayname="HSI Mode">
-          <interface class="org.esta.color.1/hsi" id="hsi" />
+        <interface class="org.esta.core.1/operating-mode" alias="hsi-mode" displayname="HSI Mode">
+          <interface class="org.esta.color.1/hsi" alias="hsi" />
         </interface>
       </interface>
 
