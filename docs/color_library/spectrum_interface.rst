@@ -8,12 +8,12 @@ The Spectral Power Distribution of an emitter in normalized wavelength.
 Definition
 **********
 
-=============== =================================================
-Class           spectrum
-Qualified Class org.esta.color.1/spectrum
-Name            Spectrum
-Description     The Spectral Power Distribution data of an emitter in normalized wavelength.
-=============== =================================================
+================= =================================================
+Class             spectrum
+Qualified Class   org.esta.color.1/spectrum
+Name              Spectrum
+Description       The Spectral Power Distribution data of an emitter in normalized wavelength.
+================ =================================================
 
 **********
 Properties
