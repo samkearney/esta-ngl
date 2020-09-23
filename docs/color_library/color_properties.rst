@@ -56,7 +56,7 @@ Instance Example
 
     <property 
       class="org.esta.color.1/spectrum-data"
-      id="red-spectrum-data"
+      alias="red-spectrum-data"
       access="readonly"
       lifetime="static" />
     
@@ -66,7 +66,7 @@ Instance Example
       "properties": [
         {
           "class": "org.esta.color.1/spectrum-data",
-          "id": "red-spectrum-data",
+          "alias": "red-spectrum-data",
           "access": "readonly",
           "lifetime": "static"
         }
@@ -127,7 +127,7 @@ Instance Example
 
     <property 
       class="org.esta.color.1/spectrum-start"
-      id="spectrum-start"
+      alias="spectrum-start"
       access="readonly"
       lifetime="static" />
     
@@ -137,7 +137,7 @@ Instance Example
       "properties": [
         {
           "class": "org.esta.color.1/spectrum-start",
-          "id": "spectrum-start",
+          "alias": "spectrum-start",
           "access": "readonly",
           "lifetime": "static"
         }
@@ -198,7 +198,7 @@ Instance Example
 
     <property 
       class="org.esta.color.1/spectrum-end"
-      id="spectrum-end"
+      alias="spectrum-end"
       access="readonly"
       lifetime="static" />
     
@@ -208,7 +208,7 @@ Instance Example
       "properties": [
         {
           "class": "org.esta.color.1/spectrum-end",
-          "id": "spectrum-end",
+          "alias": "spectrum-end",
           "access": "readonly",
           "lifetime": "static"
         }
@@ -269,7 +269,7 @@ Instance Example
 
     <property 
       class="org.esta.color.1/spectrum-step"
-      id="spectrum-step"
+      alias="spectrum-step"
       access="readonly"
       lifetime="static" />
     
@@ -279,7 +279,7 @@ Instance Example
       "properties": [
         {
           "class": "org.esta.color.1/spectrum-step",
-          "id": "spectrum-step",
+          "alias": "spectrum-step",
           "access": "readonly",
           "lifetime": "static"
         }

@@ -21,13 +21,21 @@ Class
 Indicates the :ref:`class<standard-objects-property-definition-class>` of the defined property of which
 this is an instance.
 
-.. _standard-objects-property-instance-id:
+.. _standard-objects-property-instance-alias:
 
-Id
-==
+Alias
+=====
 
-The **id** is a unique string identifying this property instance. The string must be unique within
+The **alias** is a unique string identifying this property instance. The string must be unique within
 the interface containing the property instance.
+
+.. _standard-objects-property-instance-friendly-name:
+
+Friendly Name
+=============
+
+The **friendly name** attribute provides a string that could be used to identify a particular instance
+of a property in a software user interface, in order to provide more context to a user.
 
 .. _standard-objects-property-instance-access-and-lifetime:
 
@@ -147,7 +155,8 @@ Markup
     * Attributes:
 
       * ``class``: :ref:`standard-objects-property-instance-class`
-      * ``id``: :ref:`standard-objects-property-instance-id`
+      * ``alias``: :ref:`standard-objects-property-instance-alias`
+      * ``friendlyname``: :ref:`standard-objects-property-instance-friendlyname`
       * ``access``: :ref:`Access<standard-objects-property-instance-access-and-lifetime>`
       * ``lifetime``: :ref:`Lifetime<standard-objects-property-instance-access-and-lifetime>`
       * ``minimum``: :ref:`standard-objects-property-instance-minimum`
@@ -160,7 +169,8 @@ Markup
 
       <property
         class="org.esta.identification.1/firmware-version"
-        id="my-firmware-version"
+        alias="my-firmware-version"
+        friendlyname="Firmware Version"
         access="readonly"
         lifetime="persistent" />
 
@@ -169,17 +179,18 @@ Markup
     * Type: ``property``
     * Members:
 
-      ============ ========== =======================================================
-      Key          Value Type Represents
-      ============ ========== =======================================================
-      class        string     :ref:`standard-objects-property-definition-class`
-      id           string     :ref:`standard-objects-property-definition-name`
-      access       string     :ref:`standard-objects-property-definition-description`
-      lifetime     string     :ref:`standard-objects-property-definition-data-type`
-      minimum      number     :ref:`standard-objects-property-instance-minimum`
-      maximum      number     :ref:`standard-objects-property-instance-maximum`
-      modeselector string     :ref:`standard-objects-property-instance-mode-selector`
-      ============ ========== =======================================================
+      ============= ========== =======================================================
+      Key           Value Type Represents
+      ============= ========== =======================================================
+      class         string     :ref:`standard-objects-property-definition-class`
+      alias         string     :ref:`standard-objects-property-definition-alias`
+      friendlyname  string     :ref:`standard-objects-property-definition-friendlyname`
+      access        string     :ref:`standard-objects-property-definition-description`
+      lifetime      string     :ref:`standard-objects-property-definition-data-type`
+      minimum       number     :ref:`standard-objects-property-instance-minimum`
+      maximum       number     :ref:`standard-objects-property-instance-maximum`
+      modeselector  string     :ref:`standard-objects-property-instance-mode-selector`
+      ============= ========== =======================================================
 
     Example:
 
@@ -188,7 +199,8 @@ Markup
       {
         "type": "property",
         "class": "org.esta.identification.1/firmware-version",
-        "id": "my-firmware-version",
+        "alias": "my-firmware-version",
+        "friendlyname": "Firmware Version",
         "access": "readonly",
         "lifetime": "persistent"
       }
