@@ -4,7 +4,8 @@
 Property Instance
 #################
 
-A **property instance** is a single addressable instance of a :doc:`property_definition`.
+A **property instance** is a single addressable instance of a :doc:`property_definition`. Property
+instances must be children of interface defintions.
 
 **********
 Attributes

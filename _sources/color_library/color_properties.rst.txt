@@ -13,14 +13,14 @@ The Spectral Power Distribution data of an emitter in normalized wavelength.
 Definition
 ==========
 
-=============== =================================================
-Class           spectrum-data
-Qualified Class org.esta.color.1/spectrum-data
-Name            Spectrum Data
-Description     The Spectral Power Distribution data of an emitter in normalized wavelength.
-Data Type       array
-Unit            nanometers
-=============== =================================================
+================= =================================================
+Class             spectrum-data
+Qualified Class   org.esta.color.1/spectrum-data
+Name              Spectrum Data
+Description       The Spectral Power Distribution data of an emitter in normalized wavelength.
+Data Type         array
+Unit              nanometers
+================= =================================================
 
 Definition Markup
 =================
@@ -84,14 +84,14 @@ The Spectral Power Distribution wavelength start.
 Definition
 ==========
 
-=============== =================================================
-Class           spectrum-start
-Qualified Class org.esta.color.1/spectrum-start
-Name            Spectrum Start
-Description     The Spectral Power Distribution wavelength start.
-Data Type       number
-Unit            nanometers
-=============== =================================================
+================= =================================================
+Class             spectrum-start
+Qualified Class   org.esta.color.1/spectrum-start
+Name              Spectrum Start
+Description       The Spectral Power Distribution wavelength start.
+Data Type         number
+Unit              nanometers
+================= =================================================
 
 Definition Markup
 =================
@@ -155,14 +155,14 @@ The Spectral Power Distribution wavelength end.
 Definition
 ==========
 
-=============== =================================================
-Class           spectrum-end
-Qualified Class org.esta.color.1/spectrum-end
-Name            Spectrum End
-Description     The Spectral Power Distribution wavelength end.
-Data Type       number
-Unit            nanometers
-=============== =================================================
+================= =================================================
+Class             spectrum-end
+Qualified Class   org.esta.color.1/spectrum-end
+Name              Spectrum End
+Description       The Spectral Power Distribution wavelength end.
+Data Type         number
+Unit              nanometers
+================= =================================================
 
 Definition Markup
 =================
@@ -226,14 +226,14 @@ The Spectral Power Distribution wavelength data step.
 Definition
 ==========
 
-=============== =================================================
-Class           spectrum-step
-Qualified Class org.esta.color.1/spectrum-step
-Name            Spectrum Step
-Description     The Spectral Power Distribution wavelength step.
-Data Type       number
-Unit            nanometers
-=============== =================================================
+================= =================================================
+Class             spectrum-step
+Qualified Class   org.esta.color.1/spectrum-step
+Name              Spectrum Step
+Description       The Spectral Power Distribution wavelength step.
+Data Type         number
+Unit              nanometers
+================= =================================================
 
 Definition Markup
 =================
