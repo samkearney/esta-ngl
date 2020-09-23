@@ -20,7 +20,7 @@ Qualified Class    org.esta.identification.1/device-id
 Name               Device ID
 Description        A globally unique identifier for a device model.
 Data Type          string
-String Constraints Follows the convention of a :ref:`tutorial-identifiers-qualified-device-alias`.
+String Constraints Follows the convention of a :ref:`tutorial-identifiers-qualified-device-id`.
 ================== ============================================================================
 
 Definition Markup

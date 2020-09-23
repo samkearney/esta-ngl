@@ -99,7 +99,7 @@ Markup
         "children": [
           {
             "type": "override",
-            "refalias": "device-id"
+            "refalias": "device-id",
             "attribute": "value",
             "value": "com.acme.device-model.1"
           }
@@ -113,13 +113,13 @@ Markup
         "children": [
           {
             "type": "override",
-            "refalias": "angular-velocity"
+            "refalias": "angular-velocity",
             "attribute": "minimum",
             "value": -720
           },
           {
             "type": "override",
-            "refalias": "angular-velocity"
+            "refalias": "angular-velocity",
             "attribute": "maximum",
             "value": 720
           }
