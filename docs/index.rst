@@ -19,6 +19,7 @@ automation, and the Internet of Things.
    tutorial/interface_hierarchy
    tutorial/identifiers
    tutorial/mutual_exclusion
+   tutorial/extension
 
 .. toctree::
    :maxdepth: 2

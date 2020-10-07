@@ -35,7 +35,8 @@ Friendly Name
 =============
 
 The **friendly name** attribute provides a string that could be used to identify a particular instance
-of a property in a software user interface, in order to provide more context to a user.
+of a property in a software user interface, in order to provide more context to a user. It is not
+intended to uniquely identify the property in a database.
 
 .. _standard-objects-property-instance-access-and-lifetime:
 

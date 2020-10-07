@@ -19,7 +19,7 @@
         class="dimmer"
         name="Dimmer"
         description="A simple dimmer controlling an intensity.">
-      <property class="intensity" alias="intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+      <property class="intensity" alias="intensity" friendlyname="Primary Dimmer" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
     </interfacedef>
   </library>
 </udr>

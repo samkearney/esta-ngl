@@ -23,9 +23,9 @@
         class="device"
         name="Device"
         description="The root-level interface that describes a device.">
-      <property class="device-id" alias="device-id" access="readonly" lifetime="static" minimum="0" maximum="128" />
-      <property class="device-manufacturer" alias="device-manufacturer" access="readonly" lifetime="static" minimum="0" maximum="128" />
-      <property class="device-model" alias="device-model" access="readonly" lifetime="static" minimum="0" maximum="128" />
+      <property class="device-id" alias="device-id" friendlyname="Device ID" access="readonly" lifetime="static" minimum="0" maximum="128" />
+      <property class="device-manufacturer" friendlyname="Manufacturer" alias="device-manufacturer" access="readonly" lifetime="static" minimum="0" maximum="128" />
+      <property class="device-model" alias="device-model" friendlyname="Model" access="readonly" lifetime="static" minimum="0" maximum="128" />
     </interfacedef>
   </library>
 </udr>
