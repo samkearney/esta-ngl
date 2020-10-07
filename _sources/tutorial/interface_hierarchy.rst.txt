@@ -16,7 +16,7 @@ controls all of the cells:
   .. code-tab:: xml
 
     <interfacedef class="cell-group" name="Cell Group" description="A group of cells">
-      <property class="org.esta.intensity.1/intensity" alias="intensity-master" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+      <property class="org.esta.intensity.1/intensity" alias="intensity-master" friendlyname="Intensity Master" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
       <interfaceconstraint class="cell" minimum="1" />
     </interfacedef>
 
@@ -32,6 +32,7 @@ controls all of the cells:
           "type": "property",
           "class": "org.esta.intensity.1/intensity",
           "alias": "intensity-master",
+          "friendlyname": "Intensity Master",
           "access": "readwrite",
           "lifetime": "runtime",
           "minimum": 0,
@@ -56,8 +57,8 @@ The cell interface might look like:
   .. code-tab:: xml
 
     <interfacedef class="cell" name="Cell" description="An intensity and RGB cell">
-      <property class="org.esta.intensity.1/intensity" alias="intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100"/>
-      <property class="org.esta.color.1/rgb" alias="color" access="readwrite" lifetime="runtime" minimum="0" maximum="100"/>
+      <property class="org.esta.intensity.1/intensity" alias="intensity" friendlyname="Cell Intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100"/>
+      <property class="org.esta.color.1/rgb" alias="color" friendlyname="Cell Color" access="readwrite" lifetime="runtime" minimum="0" maximum="100"/>
     </interfacedef>
 
   .. code-tab:: json
@@ -72,6 +73,7 @@ The cell interface might look like:
           "type": "property",
           "class": "org.esta.intensity.1/intensity",
           "alias": "intensity",
+          "friendlyname": "Cell Intensity",
           "access": "readwrite",
           "lifetime": "runtime",
           "minimum": 0,
@@ -81,6 +83,7 @@ The cell interface might look like:
           "type": "property",
           "class": "org.esta.color.1/rgb",
           "alias": "color",
+          "friendlyname": "Cell Color",
           "access": "readwrite",
           "lifetime": "runtime",
           "minimum": 0,
@@ -103,11 +106,11 @@ the device might contain:
   .. code-tab:: xml
 
     <!-- A group of 4 cells -->
-    <interface class="com.acme.definitions.1/cell-group" alias="cell-group-1">
-      <interface class="com.acme.definitions.1/cell" alias="1" />
-      <interface class="com.acme.definitions.1/cell" alias="2" />
-      <interface class="com.acme.definitions.1/cell" alias="3" />
-      <interface class="com.acme.definitions.1/cell" alias="4" />
+    <interface class="com.acme.definitions.1/cell-group" alias="cell-group-1" friendlyname="4x Cells">
+      <interface class="com.acme.definitions.1/cell" alias="1" friendlyname="Top Cell" />
+      <interface class="com.acme.definitions.1/cell" alias="2" friendlyname="Right Cell" />
+      <interface class="com.acme.definitions.1/cell" alias="3" friendlyname="Bottom Cell" />
+      <interface class="com.acme.definitions.1/cell" alias="4" friendlyname="Left Cell" />
     </interface>
 
   .. code-tab:: json
@@ -116,32 +119,39 @@ the device might contain:
       "type": "interface",
       "class": "com.acme.definitions.1/cell-group",
       "alias": "cell-group-1",
+      "friendlyname": "4x Cells",
       "children": [
         {
           "type": "interface",
           "class": "com.acme.definitions.1/cell",
-          "alias": "1"
+          "alias": "1",
+          "friendlyname": "Top Cell"
         },
         {
           "type": "interface",
           "class": "com.acme.definitions.1/cell",
-          "alias": "2"
+          "alias": "2",
+          "friendlyname": "Right Cell"
         },
         {
           "type": "interface",
           "class": "com.acme.definitions.1/cell",
-          "alias": "3"
+          "alias": "3",
+          "friendlyname": "Bottom Cell"
         },
         {
           "type": "interface",
           "class": "com.acme.definitions.1/cell",
-          "alias": "4"
+          "alias": "4",
+          "friendlyname": "Left Cell"
         },
       ]
     }
 
 To address the intensity property of cell 2, you would use the qualified ID
 ``cell-group-1/2/intensity``.
+
+.. _tutorial-interface-hierarchy-ordering:
 
 *******************
 Order Is Meaningful
@@ -158,11 +168,11 @@ it. To modify the above example:
   .. code-tab:: xml
 
     <!-- A group of 4 cells -->
-    <interface class="com.acme.definitions.1/cell-group" alias="cell-group-1">
-      <interface class="com.acme.definitions.1/cell" alias="4" />
-      <interface class="com.acme.definitions.1/cell" alias="1" />
-      <interface class="com.acme.definitions.1/cell" alias="3" />
-      <interface class="com.acme.definitions.1/cell" alias="2" />
+    <interface class="com.acme.definitions.1/cell-group" alias="cell-group-1" friendlyname="4x Cells">
+      <interface class="com.acme.definitions.1/cell" alias="4" friendlyname="Left Cell" />
+      <interface class="com.acme.definitions.1/cell" alias="1" friendlyname="Top Cell" />
+      <interface class="com.acme.definitions.1/cell" alias="3" friendlyname="Bottom Cell" />
+      <interface class="com.acme.definitions.1/cell" alias="2" friendlyname="Right Cell" />
     </interface>
 
   .. code-tab:: json
@@ -171,26 +181,31 @@ it. To modify the above example:
       "type": "interface",
       "class": "com.acme.definitions.1/cell-group",
       "alias": "cell-group-1",
+      "friendlyname": "4x Cells",
       "children": [
         {
           "type": "interface",
           "class": "com.acme.definitions.1/cell",
-          "alias": "4"
+          "alias": "4",
+          "friendlyname": "Left Cell"
         },
         {
           "type": "interface",
           "class": "com.acme.definitions.1/cell",
-          "alias": "1"
+          "alias": "1",
+          "friendlyname": "Top Cell"
         },
         {
           "type": "interface",
           "class": "com.acme.definitions.1/cell",
-          "alias": "3"
+          "alias": "3",
+          "friendlyname": "Bottom Cell"
         },
         {
           "type": "interface",
           "class": "com.acme.definitions.1/cell",
-          "alias": "2"
+          "alias": "2",
+          "friendlyname": "Right Cell"
         },
       ]
     }
