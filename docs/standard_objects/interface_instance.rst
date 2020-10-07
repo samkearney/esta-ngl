@@ -34,7 +34,8 @@ Friendly Name
 =============
 
 The **friendly name** attribute provides a string that could be used to identify a particular instance
-of an interface in a software user interface, in order to provide more context to a user.
+of an interface in a software user interface, in order to provide more context to a user. It is not
+intended to uniquely identify the interface in a database.
 
 ********
 Children
@@ -66,7 +67,7 @@ Markup
 
     .. code-block:: xml
 
-      <interface class="org.esta.intensity.1/binary-dimmer" alias="primary-dimmer" friendlyname="Primary Dimmer" />
+      <interface class="org.esta.intensity.1/binary-dimmer" alias="primary-dimmer" friendlyname="Primary Dimmer" friendlyname="Primary Dimmer" />
 
   .. tab:: JSON
 

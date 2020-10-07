@@ -65,12 +65,12 @@ Markup
     .. code-block:: xml
 
       <!-- simplified example -->
-      <interface class="org.esta.identification.1/device" alias="device">
+      <interface class="org.esta.identification.1/device" alias="device" friendlyname="Device">
           <override refalias="device-id" attribute="value">com.acme.device-model.1</override>
       </interface>
 
       <!-- simplified example -->
-      <interface class="org.esta.wheel.1/wheel-velocity" alias="velocity">
+      <interface class="org.esta.wheel.1/wheel-velocity" alias="velocity" friendlyname="Wheel Speed">
           <override refalias="angular-velocity" attribute="minimum">-720</override>
           <override refalias="angular-velocity" attribute="maximum">720</override>
       </interface>
@@ -96,6 +96,7 @@ Markup
         "type": "interface",
         "class": "org.esta.identification.1/device",
         "alias": "device",
+        "friendlyname": "Device"
         "children": [
           {
             "type": "override",
@@ -110,6 +111,7 @@ Markup
         "type": "interface",
         "class": "org.esta.wheel.1/wheel-velocity",
         "alias": "velocity",
+        "friendlyname": "Wheel Speed",
         "children": [
           {
             "type": "override",

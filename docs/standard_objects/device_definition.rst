@@ -26,7 +26,7 @@ Markup
     .. code-block:: xml
 
       <devicedef class="es1">
-        <interface class="org.esta.device.1/device" alias="device">
+        <interface class="org.esta.device.1/device" alias="device" friendlyname="Device">
           <override refalias="device-id" attribute="value">com.etcconnect.es1.1</override>
           <override refalias="device-manufacturer" attribute="value">ETC Inc.</override>
           <override refalias="device-model" attribute="value">ES1</override>
@@ -56,6 +56,7 @@ Markup
             "type": "interface",
             "class": "org.esta.device.1/device",
             "alias": "device",
+            "friendlyname": "Device",
             "children": [
               {
                 "type": "override",

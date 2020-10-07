@@ -87,7 +87,7 @@ Markup
         name="Binary Dimmer"
         description="Represents non-dimming control of a light source">
 
-        <property class="org.esta.intensity.1/binary-intensity" alias="intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+        <property class="org.esta.intensity.1/binary-intensity" alias="intensity" friendlyname="Intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
 
       </interfacedef>
 
@@ -116,8 +116,9 @@ Markup
         "children": [
           {
             "type": "property",
-            "class": "org.esta.intensity.1/intensity",
+            "class": "org.esta.intensity.1/binary-intensity",
             "alias": "intensity",
+            "friendlyname": "Intensity"
             "access": "readwrite",
             "lifetime": "runtime",
             "minimum": 0,
