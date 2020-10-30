@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>UDR Root Object &mdash; Universal Device Representation 0.1.0 documentation</title>
+  <title>Case &mdash; Universal Device Representation 0.1.0 documentation</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Library" href="library.html" />
-    <link rel="prev" title="Extension" href="../tutorial/extension.html" /> 
+    <link rel="next" title="Interface Definition" href="interface_definition.html" />
+    <link rel="prev" title="Device Definition" href="device_definition.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -99,15 +99,17 @@
 </ul>
 <p class="caption"><span class="caption-text">Standard Objects</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">UDR Root Object</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#children">Children</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#markup-example">Markup Example</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="udr_root_object.html">UDR Root Object</a></li>
 <li class="toctree-l1"><a class="reference internal" href="library.html">Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="import.html">Import</a></li>
 <li class="toctree-l1"><a class="reference internal" href="device_definition.html">Device Definition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="case.html">Case</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Case</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#value">Value</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#markup">Markup</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="interface_definition.html">Interface Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface_instance.html">Interface Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface_constraint.html">Interface Constraint</a></li>
@@ -188,13 +190,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>UDR Root Object</li>
+      <li>Case</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/standard_objects/udr_root_object.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/standard_objects/case.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -207,75 +209,94 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="udr-root-object">
-<h1>UDR Root Object<a class="headerlink" href="#udr-root-object" title="Permalink to this headline">¶</a></h1>
-<p>A UDR root object forms the root of an object model that is built from a UDR document. It contains
-libraries and imports, which are references to external libraries.</p>
-<div class="section" id="children">
-<h2>Children<a class="headerlink" href="#children" title="Permalink to this headline">¶</a></h2>
-<p>A UDR root object can have the following children:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="library.html#standard-objects-library"><span class="std std-ref">Library</span></a></p></li>
-<li><p><a class="reference internal" href="import.html#standard-objects-import"><span class="std std-ref">Import</span></a></p></li>
-</ul>
-</div>
-<div class="section" id="markup-example">
-<span id="standard-objects-udr-root-object-markup"></span><h2>Markup Example<a class="headerlink" href="#markup-example" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="case">
+<span id="standard-objects-case"></span><h1>Case<a class="headerlink" href="#case" title="Permalink to this headline">¶</a></h1>
+<p><span class="xref std std-ref">&lt;Property Definitions&gt;standard-objects-property-definition</span> using
+certain enumerated data types can contain <em>case</em> objects which provide
+human-readable values describing each of the potential cases.</p>
+<p>Cases are available for <em>Boolean</em> and <em>Enum</em>
+<span class="xref std std-ref">&lt;data types&gt;standard-objects-property-definition-data-type</span>.</p>
+<div class="section" id="value">
+<span id="standard-objects-case-value"></span><h2>Value<a class="headerlink" href="#value" title="Permalink to this headline">¶</a></h2>
+<p>The value of the string describing this case.</p>
+<div class="section" id="markup">
+<span id="standard-objects-case-markup"></span><h3>Markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h3>
 <div class="sphinx-tabs docutils container">
 <div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-WE1M docutils container">
+<div class="active item sphinx-data-tab-0-0 docutils container">
 <div class="docutils container">
 <p>XML</p>
 </div>
 </div>
-<div class="item sphinx-data-tab-SlNPTg== docutils container">
+<div class="item sphinx-data-tab-0-1 docutils container">
 <div class="docutils container">
 <p>JSON</p>
 </div>
 </div>
 </div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;udr&gt;</span>
-  <span class="nt">&lt;import</span> <span class="na">name=</span><span class="s">&quot;org.esta.intensity.1&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;library</span> <span class="na">class=</span><span class="s">&quot;com.acme.standarddefs.1&quot;</span> <span class="na">description=</span><span class="s">&quot;ACME Corp Standard Definitions&quot;</span> <span class="na">publishdate=</span><span class="s">&quot;2020-09-02&quot;</span> <span class="na">author=</span><span class="s">&quot;ACME Corp&quot;</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!-- ... --&gt;</span>
-  <span class="nt">&lt;/library&gt;</span>
-  <span class="nt">&lt;library</span> <span class="na">class=</span><span class="s">&quot;com.acme.devices.1&quot;</span> <span class="na">description=</span><span class="s">&quot;ACME Corp Standard Devices&quot;</span> <span class="na">publishdate=</span><span class="s">&quot;2020-09-02&quot;</span> <span class="na">author=</span><span class="s">&quot;ACME Corp&quot;</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!-- ... --&gt;</span>
-  <span class="nt">&lt;/library&gt;</span>
-<span class="nt">&lt;/udr&gt;</span>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active docutils container">
+<ul class="simple">
+<li><p>Tag name: <code class="docutils literal notranslate"><span class="pre">case</span></code></p></li>
+</ul>
+<p>Example:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- simplified example --&gt;</span>
+<span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;velocity-indexed&quot;</span> <span class="na">name=</span><span class="s">&quot;Velocity Index&quot;</span> <span class="na">description=</span><span class="s">&quot;The indexed velocity of a wheel&quot;</span> <span class="na">data_type=</span><span class="s">&quot;enum&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;case&gt;</span>Slow<span class="nt">&lt;/case&gt;</span>
+    <span class="nt">&lt;case&gt;</span>Medium<span class="nt">&lt;/case&gt;</span>
+    <span class="nt">&lt;case&gt;</span>Fast<span class="nt">&lt;/case&gt;</span>
+<span class="nt">&lt;/propertydef&gt;</span>
 </pre></div>
 </div>
 </div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-1 docutils container">
+<ul>
+<li><p>Type: <code class="docutils literal notranslate"><span class="pre">case</span></code></p></li>
+<li><p>Members:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 12%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Value Type</p></th>
+<th class="head"><p>Represents</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>value</p></td>
+<td><p>various</p></td>
+<td><p><a class="reference internal" href="#standard-objects-case-value"><span class="std std-ref">Value</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p>Example:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;udr&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;propertydef&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;velocity-indexed&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Velocity Index&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The indexed velocity of a wheel&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data_type&quot;</span><span class="p">:</span> <span class="s2">&quot;enum&quot;</span><span class="p">,</span>
   <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;import&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.intensity.1&quot;</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;case&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Slow&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;library&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;com.acme.standarddefs.1&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;ACME Corp Standard Definitions&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;publishdate&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-09-02&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;ACME Corp&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">]</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;case&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Medium&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;library&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;com.acme.devices.1&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;ACME Corp Standard Devices&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;publishdate&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-09-02&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;ACME Corp&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">]</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;case&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Fast&quot;</span>
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -290,10 +311,10 @@ libraries and imports, which are references to external libraries.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="library.html" class="btn btn-neutral float-right" title="Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="interface_definition.html" class="btn btn-neutral float-right" title="Interface Definition" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../tutorial/extension.html" class="btn btn-neutral float-left" title="Extension" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="device_definition.html" class="btn btn-neutral float-left" title="Device Definition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

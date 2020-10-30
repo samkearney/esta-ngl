@@ -44,7 +44,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Property Instance" href="property_instance.html" />
-    <link rel="prev" title="Interface Instance" href="interface_instance.html" /> 
+    <link rel="prev" title="Interface Constraint" href="interface_constraint.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,22 +103,23 @@
 <li class="toctree-l1"><a class="reference internal" href="library.html">Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="import.html">Import</a></li>
 <li class="toctree-l1"><a class="reference internal" href="device_definition.html">Device Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="case.html">Case</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface_definition.html">Interface Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface_instance.html">Interface Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface_constraint.html">Interface Constraint</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Property Definition</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#class">Class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#name">Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#class-required">Class (Required)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#name-required">Name (Required)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#data-type">Data Type</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#unit">Unit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-type-required">Data Type (Required)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unit-required">Unit (Required)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#markup">Markup</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="property_instance.html">Property Instance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interface_constraint.html">Interface Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="override.html">Override</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
@@ -222,13 +223,13 @@ property definition defines several attributes about a property.</p>
 <h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
 <p>Definition attributes are part of the property definition; they apply to all <em>instances</em> of the
 property.</p>
-<div class="section" id="class">
-<span id="standard-objects-property-definition-class"></span><h3>Class<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="class-required">
+<span id="standard-objects-property-definition-class"></span><h3>Class (Required)<a class="headerlink" href="#class-required" title="Permalink to this headline">¶</a></h3>
 <p>A property’s <strong>class</strong> is a string identifying an individual property definition. This string
 must be unique within the <a class="reference internal" href="library.html#standard-objects-library"><span class="std std-ref">Library</span></a> or interface definition that contains the property definition.</p>
 </div>
-<div class="section" id="name">
-<span id="standard-objects-property-definition-name"></span><h3>Name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="name-required">
+<span id="standard-objects-property-definition-name"></span><h3>Name (Required)<a class="headerlink" href="#name-required" title="Permalink to this headline">¶</a></h3>
 <p>A string containing the human-readable name of the property. This attribute could be used as the translation
 key for properties of this class.</p>
 </div>
@@ -236,8 +237,8 @@ key for properties of this class.</p>
 <span id="standard-objects-property-definition-description"></span><h3>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
 <p>A string that describes the purpose of a property in human-readable language.</p>
 </div>
-<div class="section" id="data-type">
-<span id="standard-objects-property-definition-data-type"></span><h3>Data Type<a class="headerlink" href="#data-type" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="data-type-required">
+<span id="standard-objects-property-definition-data-type"></span><h3>Data Type (Required)<a class="headerlink" href="#data-type-required" title="Permalink to this headline">¶</a></h3>
 <p>A property’s <strong>data type</strong> specifies how to interpret the data stored with the property.</p>
 <p>The possible data types are:</p>
 <table class="docutils align-default">
@@ -264,14 +265,11 @@ key for properties of this class.</p>
 <tr class="row-even"><td><p>array</p></td>
 <td><p>An array of values, all of which must be the same type.</p></td>
 </tr>
-<tr class="row-odd"><td><p>refalias</p></td>
-<td><p>A reference interface or property <strong>alias</strong>.</p></td>
-</tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="unit">
-<span id="standard-objects-property-definition-unit"></span><h3>Unit<a class="headerlink" href="#unit" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="unit-required">
+<span id="standard-objects-property-definition-unit"></span><h3>Unit (Required)<a class="headerlink" href="#unit-required" title="Permalink to this headline">¶</a></h3>
 <p>A property’s <strong>unit</strong> defines how the property’s value should be interpreted. Units are only
 well-defined for properties with data type <em>number</em>.</p>
 <table class="docutils align-default">
@@ -396,11 +394,11 @@ well-defined for properties with data type <em>number</em>.</p>
 <li><p>Tag name: <code class="docutils literal notranslate"><span class="pre">propertydef</span></code></p></li>
 <li><p>Attributes:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">class</span></code>: <a class="reference internal" href="#standard-objects-property-definition-class"><span class="std std-ref">Class</span></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: <a class="reference internal" href="#standard-objects-property-definition-name"><span class="std std-ref">Name</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span></code>: <a class="reference internal" href="#standard-objects-property-definition-class"><span class="std std-ref">Class (Required)</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: <a class="reference internal" href="#standard-objects-property-definition-name"><span class="std std-ref">Name (Required)</span></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: <a class="reference internal" href="#standard-objects-property-definition-description"><span class="std std-ref">Description</span></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">data_type</span></code>: <a class="reference internal" href="#standard-objects-property-definition-data-type"><span class="std std-ref">Data Type</span></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code>: <a class="reference internal" href="#standard-objects-property-definition-unit"><span class="std std-ref">Unit</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data_type</span></code>: <a class="reference internal" href="#standard-objects-property-definition-data-type"><span class="std std-ref">Data Type (Required)</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code>: <a class="reference internal" href="#standard-objects-property-definition-unit"><span class="std std-ref">Unit (Required)</span></a></p></li>
 </ul>
 </li>
 </ul>
@@ -433,11 +431,11 @@ well-defined for properties with data type <em>number</em>.</p>
 <tbody>
 <tr class="row-even"><td><p>class</p></td>
 <td><p>string</p></td>
-<td><p><a class="reference internal" href="#standard-objects-property-definition-class"><span class="std std-ref">Class</span></a></p></td>
+<td><p><a class="reference internal" href="#standard-objects-property-definition-class"><span class="std std-ref">Class (Required)</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>name</p></td>
 <td><p>string</p></td>
-<td><p><a class="reference internal" href="#standard-objects-property-definition-name"><span class="std std-ref">Name</span></a></p></td>
+<td><p><a class="reference internal" href="#standard-objects-property-definition-name"><span class="std std-ref">Name (Required)</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>description</p></td>
 <td><p>string</p></td>
@@ -445,11 +443,11 @@ well-defined for properties with data type <em>number</em>.</p>
 </tr>
 <tr class="row-odd"><td><p>data_type</p></td>
 <td><p>string</p></td>
-<td><p><a class="reference internal" href="#standard-objects-property-definition-data-type"><span class="std std-ref">Data Type</span></a></p></td>
+<td><p><a class="reference internal" href="#standard-objects-property-definition-data-type"><span class="std std-ref">Data Type (Required)</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>unit</p></td>
 <td><p>string</p></td>
-<td><p><a class="reference internal" href="#standard-objects-property-definition-unit"><span class="std std-ref">Unit</span></a></p></td>
+<td><p><a class="reference internal" href="#standard-objects-property-definition-unit"><span class="std std-ref">Unit (Required)</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -482,7 +480,7 @@ well-defined for properties with data type <em>number</em>.</p>
         <a href="property_instance.html" class="btn btn-neutral float-right" title="Property Instance" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="interface_instance.html" class="btn btn-neutral float-left" title="Interface Instance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="interface_constraint.html" class="btn btn-neutral float-left" title="Interface Constraint" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

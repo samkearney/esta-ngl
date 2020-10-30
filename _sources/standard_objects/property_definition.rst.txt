@@ -17,16 +17,16 @@ property.
 
 .. _standard-objects-property-definition-class:
 
-Class
-=====
+Class (Required)
+================
 
 A property's **class** is a string identifying an individual property definition. This string
 must be unique within the :ref:`standard-objects-library` or interface definition that contains the property definition.
 
 .. _standard-objects-property-definition-name:
 
-Name
-====
+Name (Required)
+===============
 
 A string containing the human-readable name of the property. This attribute could be used as the translation
 key for properties of this class.
@@ -40,8 +40,8 @@ A string that describes the purpose of a property in human-readable language.
 
 .. _standard-objects-property-definition-data-type:
 
-Data Type
-=========
+Data Type (Required)
+====================
 
 A property's **data type** specifies how to interpret the data stored with the property.
 
@@ -54,13 +54,12 @@ binary    Opaque binary data.
 boolean   A boolean value (true or false).
 enum      A set of meaningful names assigned to numeric values.
 array     An array of values, all of which must be the same type.
-refalias  A reference interface or property **alias**.
 ========= =======================================================
 
 .. _standard-objects-property-definition-unit:
 
-Unit
-====
+Unit (Required)
+========================================
 
 A property's **unit** defines how the property's value should be interpreted. Units are only
 well-defined for properties with data type *number*.
