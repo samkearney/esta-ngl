@@ -4,12 +4,12 @@
 Case
 ####
 
-:ref:`<Property Definitions>standard-objects-property-definition` using
+:ref:`Property Definitions<standard-objects-property-definition>` using
 certain enumerated data types can contain *case* objects which provide
 human-readable values describing each of the potential cases.
 
 Cases are available for *Boolean* and *Enum*
-:ref:`<data types>standard-objects-property-definition-data-type`. 
+:ref:`data types<standard-objects-property-definition-data-type>`.
 
 .. _standard-objects-case-value:
 
