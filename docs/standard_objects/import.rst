@@ -11,8 +11,8 @@ in the current context.
 Attributes
 **********
 
-Name
-====
+Name (Required)
+===============
 
 The **name** of an import is the class of the library that is being imported.
 

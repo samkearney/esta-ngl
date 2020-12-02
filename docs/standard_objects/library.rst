@@ -10,24 +10,24 @@ usable by anything that imports the library.
 Attributes
 ==========
 
-Class
------
+Class (Required)
+----------------
 
 A library's **class** is a unique string identifying an individual library. This string must be a
 :ref:`tutorial-identifiers-qualified-class`.
 
-Description
------------
+Description (Required)
+----------------------
 
 A string that describes the purpose of a library in human-readable language.
 
-Publish Date
-------------
+Publish Date (Required)
+-----------------------
 
 The date this version of the library was published, formatted as an ISO date string (``YYYY-MM-DD``).
 
-Author Name
------------
+Author Name (Required)
+----------------------
 
 The name of the individual or organization that created this library.
 
