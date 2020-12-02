@@ -103,6 +103,10 @@
 <li class="toctree-l1"><a class="reference internal" href="library.html">Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="import.html">Import</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Device Definition</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#class-required">Class (Required)</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#markup">Markup</a></li>
 </ul>
 </li>
@@ -211,6 +215,14 @@
 <p>A <strong>device definition</strong> defines the behavior of a <strong>device</strong>, which is some type of equipment that
 is configurable. The term “device” in this standard is typically used to refer to a single model of
 equipment, and “device instance” refers to a single unit of that model.</p>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="class-required">
+<span id="standard-objects-device-definition-class"></span><h3>Class (Required)<a class="headerlink" href="#class-required" title="Permalink to this headline">¶</a></h3>
+<p>A device definition’s <strong>class</strong> is a string identifying an individual interface definition. This string
+must be unique within the <a class="reference internal" href="library.html#standard-objects-library"><span class="std std-ref">Library</span></a>.</p>
+</div>
+</div>
 <div class="section" id="markup">
 <h2>Markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h2>
 <div class="sphinx-tabs docutils container">
@@ -231,7 +243,7 @@ equipment, and “device instance” refers to a single unit of that model.</p>
 <li><p>Tag name: <code class="docutils literal notranslate"><span class="pre">devicedef</span></code></p></li>
 <li><p>Attributes:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">class</span></code>: <span class="xref std std-ref">standard-objects-device-definition-class</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span></code>: <a class="reference internal" href="#standard-objects-device-definition-class"><span class="std std-ref">Class (Required)</span></a></p></li>
 </ul>
 </li>
 </ul>
@@ -265,7 +277,7 @@ equipment, and “device instance” refers to a single unit of that model.</p>
 <tbody>
 <tr class="row-even"><td><p>class</p></td>
 <td><p>string</p></td>
-<td><p><span class="xref std std-ref">standard-objects-device-definition-class</span></p></td>
+<td><p><a class="reference internal" href="#standard-objects-device-definition-class"><span class="std std-ref">Class (Required)</span></a></p></td>
 </tr>
 </tbody>
 </table>

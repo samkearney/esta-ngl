@@ -12,8 +12,8 @@ Attributes
 
 .. _standard-objects-interface-constraint-class:
 
-Class
------
+Class (Required)
+----------------
 
 The class of an interface that is allowed as a child to this interface. This can be a
 :ref:`tutorial-identifiers-qualified-class` or a relative class. Classes can also be specified by a

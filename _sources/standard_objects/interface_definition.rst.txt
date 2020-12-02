@@ -18,16 +18,17 @@ Attributes
 
 .. _standard-objects-interface-definition-class:
 
-Class
-=====
+Class (Required)
+================
 
 An interface's **class** is a string identifying an individual interface definition. This string
-must be unique within the :ref:`standard-objects-library` or interface defition that contains the interface definition.
+must be unique within the :ref:`standard-objects-library` or interface definition that contains the
+interface definition.
 
 .. _standard-objects-interface-definition-name:
 
-Name
-====
+Name (Required)
+===============
 
 A string containing the human-readable name of the interface. This attribute could be used as the translation
 key for interfaces of this class.
