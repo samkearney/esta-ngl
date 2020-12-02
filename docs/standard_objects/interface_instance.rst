@@ -14,16 +14,16 @@ Instance attributes are per-interface-instance; they can vary between instances 
 
 .. _standard-objects-interface-instance-class:
 
-Class
-=====
+Class (Required)
+================
 
 Indicates the :ref:`class<standard-objects-interface-definition-class>` of the defined interface of which
 this is an instance.
 
 .. _standard-objects-interface-instance-alias:
 
-Alias
-=====
+Alias (Required)
+================
 
 The **alias** is a unique string identifying this interface instance. The string must be unique within
 the definition containing the interface instance.

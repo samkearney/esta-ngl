@@ -15,16 +15,16 @@ Instance attributes are per-property-instance; they can vary between instances o
 
 .. _standard-objects-property-instance-class:
 
-Class
-=====
+Class (Required)
+================
 
 Indicates the :ref:`class<standard-objects-property-definition-class>` of the defined property of which
 this is an instance.
 
 .. _standard-objects-property-instance-alias:
 
-Alias
-=====
+Alias (Required)
+================
 
 The **alias** is a unique string identifying this property instance. The string must be unique within
 the interface containing the property instance.
@@ -40,8 +40,8 @@ intended to uniquely identify the property in a database.
 
 .. _standard-objects-property-instance-access-and-lifetime:
 
-Access and Lifetime
-===================
+Access and Lifetime (Required)
+==============================
 
 Access and Lifetime define how the data associated with a property is stored, how it can be
 changed, and when it is invalidated.
@@ -97,7 +97,7 @@ Minimum
 =======
 
 This attribute defines a minimum value for the property. It applies in different ways when combined
-with different data types:
+with different data types. If this attribute is absent, the minimum is assumed to be 0:
 
 ================== ===============================================
 When applied to... Minimum indicates...
@@ -116,7 +116,7 @@ Maximum
 =======
 
 This attribute defines a maximum value for the property. It applies in different ways when combined
-with different data types:
+with different data types. If this attribute is absent, the maximum is assumed to be 0:
 
 Maximum when applied to...
 

@@ -8,6 +8,18 @@ A **device definition** defines the behavior of a **device**, which is some type
 is configurable. The term "device" in this standard is typically used to refer to a single model of
 equipment, and "device instance" refers to a single unit of that model.
 
+**********
+Attributes
+**********
+
+.. _standard-objects-device-definition-class:
+
+Class (Required)
+===============
+
+A device definition's **class** is a string identifying an individual interface definition. This string
+must be unique within the :ref:`standard-objects-library`.
+
 ******
 Markup
 ******
