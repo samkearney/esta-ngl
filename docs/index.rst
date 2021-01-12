@@ -1,15 +1,15 @@
-.. Universal Device Representation documentation master file, created by
+.. Uniform Device Representation documentation master file, created by
    sphinx-quickstart on Sat Jun  6 15:09:41 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-ESTA Universal Device Representation (UDR)
+ESTA Uniform Device Representation (UDR)
 ==========================================
 
-**Universal Device Representation** is a method for describing controllable devices in a
-machine-readable way. UDR is developed by the Entertainment Services and Technology Association
-(ESTA) and has applications in entertainment technology, architectural lighting and building
-automation, and the Internet of Things.
+**Next Generation Entertainment Control Model: Uniform Device Representation** is a method for
+describing controllable devices in a machine-readable way. UDR is developed by the Entertainment
+Services and Technology Association (ESTA) and has applications in entertainment technology,
+architectural lighting and building automation, and the Internet of Things.
 
 .. toctree::
    :maxdepth: 2
