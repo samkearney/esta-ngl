@@ -19,9 +19,9 @@ sys.path.insert(0, os.path.abspath('extensions'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'Universal Device Representation'
-copyright = '2020, ESTA Next-Gen Library Study Group'
-author = 'ESTA Next-Gen Library Study Group'
+project = 'Uniform Device Representation'
+copyright = '2021, ESTA Next Generation Entertainment Control Model: Uniform Device Representation (UDR) Task Group'
+author = 'ESTA Next Generation Entertainment Control Model: Uniform Device Representation (UDR) Task Group'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1.0'

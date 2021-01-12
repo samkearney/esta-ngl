@@ -1,6 +1,6 @@
-# ESTA Universal Device Representation (UDR)
+# ESTA Next Generation Entertainment Control Model: Uniform Device Representation (UDR)
 
-This repository houses working documentation for ESTA's Universal Device Representation (UDR),
+This repository houses working documentation for ESTA's Next Generation Entertainment Control Model: Uniform Device Representation (UDR),
 which is developed by the ESTA TSP's Next-Gen Library Study Group. UDR is currently an early
 work-in-progress and actively being worked on by the study group. Everything in this documentation
 is subject to change without notice.
