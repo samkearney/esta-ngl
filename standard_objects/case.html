@@ -45,8 +45,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Interface Definition" href="interface_definition.html" />
-    <link rel="prev" title="Device Definition" href="device_definition.html" /> 
+    <link rel="next" title="Condition" href="condition.html" />
+    <link rel="prev" title="Override" href="override.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -105,6 +105,12 @@
 <li class="toctree-l1"><a class="reference internal" href="library.html">Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="import.html">Import</a></li>
 <li class="toctree-l1"><a class="reference internal" href="device_definition.html">Device Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface_definition.html">Interface Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface_instance.html">Interface Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface_constraint.html">Interface Constraint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property_definition.html">Property Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property_instance.html">Property Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="override.html">Override</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Case</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#value">Value</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#markup">Markup</a></li>
@@ -112,12 +118,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="interface_definition.html">Interface Definition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interface_instance.html">Interface Instance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interface_constraint.html">Interface Constraint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="property_definition.html">Property Definition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="property_instance.html">Property Instance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="override.html">Override</a></li>
+<li class="toctree-l1"><a class="reference internal" href="condition.html">Condition</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
 <ul>
@@ -215,11 +216,16 @@
             
   <div class="section" id="case">
 <span id="standard-objects-case"></span><h1>Case<a class="headerlink" href="#case" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="property_definition.html#standard-objects-property-definition"><span class="std std-ref">Property Definitions</span></a> using
-certain enumerated data types can contain <em>case</em> objects which provide
-human-readable values describing each of the potential cases.</p>
+<p><a class="reference internal" href="property_definition.html#standard-objects-property-definition"><span class="std std-ref">Property Definitions</span></a> and
+<a class="reference internal" href="property_instance.html#standard-objects-property-instance"><span class="std std-ref">Property Instances</span></a>, using
+certain enumerated data types can contain child <em>case</em> objects which provide
+human-readable values describing each of the potential cases. These values
+are considered the key for any localization.</p>
 <p>Cases are available for <em>Boolean</em> and <em>Enum</em>
 <a class="reference internal" href="property_definition.html#standard-objects-property-definition-data-type"><span class="std std-ref">data types</span></a>.</p>
+<p>The number of cases should match the number of enumerated items. In the
+case of <em>Boolean</em> data types, this is always 2. When new cases are provided
+they replace all previously defined cases.</p>
 <div class="section" id="value">
 <span id="standard-objects-case-value"></span><h2>Value<a class="headerlink" href="#value" title="Permalink to this headline">¶</a></h2>
 <p>The value of the string describing this case.</p>
@@ -313,8 +319,8 @@ human-readable values describing each of the potential cases.</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="interface_definition.html" class="btn btn-neutral float-right" title="Interface Definition" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="device_definition.html" class="btn btn-neutral float-left" title="Device Definition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="condition.html" class="btn btn-neutral float-right" title="Condition" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="override.html" class="btn btn-neutral float-left" title="Override" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

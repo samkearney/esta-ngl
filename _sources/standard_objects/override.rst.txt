@@ -8,8 +8,7 @@ Interface instances can contain *override* objects, which provide new
 values for defined property attributes or change property values.
 
 When overriding property instance minimum and maximum attribute values,
-the new range must be a subrange of any previously defined range for
-that property.
+the new range can be any valid number for that data type.
 
 **********
 Attributes
@@ -24,8 +23,7 @@ Ref Alias (Required)
 ====================
 
 Indicates the **alias** of the property instance which this object is
-providing new values for. This can be a :ref:`tutorial-identifiers-qualified-alias`
-or a relative alias.
+providing new values for. This must be a valid :ref:`tutorial-identifiers-alias`.
 
 .. _standard-objects-override-kind:
 
@@ -34,7 +32,7 @@ Kind (Required)
 
 Indicates the **kind** of this override.
 
-For properties with a :ref:`standard-objects-property-definition-data-type` of number
+For properties with a :ref:`standard-objects-property-definition-data-type` of *number*
 this can be any of the following:
 
 ============= ===============================================================
@@ -52,7 +50,10 @@ Attribute (Required)
 
 The property attribute for which new values are being provided. **value** is
 a special attribute identifier which indicates this object relates to the
-value of a property rather than one of its attributes.
+value of a property rather than one of its attributes. **case** is
+a special attribute identifier which indicates this object contains child
+:ref:`standard-objects-case` objects for this property instance rather than
+one of its attributes.
 
 .. _standard-objects-override-valuealias:
 
@@ -60,9 +61,9 @@ Value Alias
 ===========
 
 Indicates the **alias** of the property instance which this object should
-observe for new values. This can be a :ref:`tutorial-identifiers-qualified-alias`
-or a relative alias. When this attribute is defined and the **kind** is absolute,
-any discrete value provided will be ignored.
+observe for new values. This must be a valid :ref:`tutorial-identifiers-alias`.
+When this attribute is defined and the **kind** is absolute, any discrete value
+provided will be ignored.
 
 .. _standard-objects-override-value:
 

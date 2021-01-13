@@ -45,7 +45,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Device Interface" href="../device_id_library/device_interface.html" />
+    <link rel="next" title="Case" href="case.html" />
     <link rel="prev" title="Property Instance" href="property_instance.html" /> 
 </head>
 
@@ -105,7 +105,6 @@
 <li class="toctree-l1"><a class="reference internal" href="library.html">Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="import.html">Import</a></li>
 <li class="toctree-l1"><a class="reference internal" href="device_definition.html">Device Definition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="case.html">Case</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface_definition.html">Interface Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface_instance.html">Interface Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface_constraint.html">Interface Constraint</a></li>
@@ -125,6 +124,8 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="case.html">Case</a></li>
+<li class="toctree-l1"><a class="reference internal" href="condition.html">Condition</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
 <ul>
@@ -225,8 +226,7 @@
 <p>Interface instances can contain <em>override</em> objects, which provide new
 values for defined property attributes or change property values.</p>
 <p>When overriding property instance minimum and maximum attribute values,
-the new range must be a subrange of any previously defined range for
-that property.</p>
+the new range can be any valid number for that data type.</p>
 <div class="section" id="attributes">
 <h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
 <p>Overrides are per-property-instance; they can vary between instances of
@@ -234,13 +234,12 @@ the property.</p>
 <div class="section" id="ref-alias-required">
 <span id="standard-objects-override-refalias"></span><h3>Ref Alias (Required)<a class="headerlink" href="#ref-alias-required" title="Permalink to this headline">¶</a></h3>
 <p>Indicates the <strong>alias</strong> of the property instance which this object is
-providing new values for. This can be a <a class="reference internal" href="../tutorial/identifiers.html#tutorial-identifiers-qualified-alias"><span class="std std-ref">Qualified Alias</span></a>
-or a relative alias.</p>
+providing new values for. This must be a valid <a class="reference internal" href="../tutorial/identifiers.html#tutorial-identifiers-alias"><span class="std std-ref">Alias</span></a>.</p>
 </div>
 <div class="section" id="kind-required">
 <span id="standard-objects-override-kind"></span><h3>Kind (Required)<a class="headerlink" href="#kind-required" title="Permalink to this headline">¶</a></h3>
 <p>Indicates the <strong>kind</strong> of this override.</p>
-<p>For properties with a <a class="reference internal" href="property_definition.html#standard-objects-property-definition-data-type"><span class="std std-ref">Data Type (Required)</span></a> of number
+<p>For properties with a <a class="reference internal" href="property_definition.html#standard-objects-property-definition-data-type"><span class="std std-ref">Data Type (Required*)</span></a> of <em>number</em>
 this can be any of the following:</p>
 <table class="docutils align-default">
 <colgroup>
@@ -265,14 +264,17 @@ this can be any of the following:</p>
 <span id="standard-objects-override-attribute"></span><h3>Attribute (Required)<a class="headerlink" href="#attribute-required" title="Permalink to this headline">¶</a></h3>
 <p>The property attribute for which new values are being provided. <strong>value</strong> is
 a special attribute identifier which indicates this object relates to the
-value of a property rather than one of its attributes.</p>
+value of a property rather than one of its attributes. <strong>case</strong> is
+a special attribute identifier which indicates this object contains child
+<a class="reference internal" href="case.html#standard-objects-case"><span class="std std-ref">Case</span></a> objects for this property instance rather than
+one of its attributes.</p>
 </div>
 <div class="section" id="value-alias">
 <span id="standard-objects-override-valuealias"></span><h3>Value Alias<a class="headerlink" href="#value-alias" title="Permalink to this headline">¶</a></h3>
 <p>Indicates the <strong>alias</strong> of the property instance which this object should
-observe for new values. This can be a <a class="reference internal" href="../tutorial/identifiers.html#tutorial-identifiers-qualified-alias"><span class="std std-ref">Qualified Alias</span></a>
-or a relative alias. When this attribute is defined and the <strong>kind</strong> is absolute,
-any discrete value provided will be ignored.</p>
+observe for new values. This must be a valid <a class="reference internal" href="../tutorial/identifiers.html#tutorial-identifiers-alias"><span class="std std-ref">Alias</span></a>.
+When this attribute is defined and the <strong>kind</strong> is absolute, any discrete value
+provided will be ignored.</p>
 </div>
 </div>
 <div class="section" id="value">
@@ -437,7 +439,7 @@ be ignored if a <strong>valuealias</strong> is included with a <strong>kind</str
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../device_id_library/device_interface.html" class="btn btn-neutral float-right" title="Device Interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="case.html" class="btn btn-neutral float-right" title="Case" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="property_instance.html" class="btn btn-neutral float-left" title="Property Instance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

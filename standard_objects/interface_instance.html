@@ -105,13 +105,13 @@
 <li class="toctree-l1"><a class="reference internal" href="library.html">Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="import.html">Import</a></li>
 <li class="toctree-l1"><a class="reference internal" href="device_definition.html">Device Definition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="case.html">Case</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface_definition.html">Interface Definition</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Interface Instance</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#class-required">Class (Required)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#alias-required">Alias (Required)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#friendly-name">Friendly Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#count">Count</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#children">Children</a></li>
@@ -122,6 +122,8 @@
 <li class="toctree-l1"><a class="reference internal" href="property_definition.html">Property Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="property_instance.html">Property Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="override.html">Override</a></li>
+<li class="toctree-l1"><a class="reference internal" href="case.html">Case</a></li>
+<li class="toctree-l1"><a class="reference internal" href="condition.html">Condition</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
 <ul>
@@ -227,17 +229,29 @@
 <span id="standard-objects-interface-instance-class"></span><h3>Class (Required)<a class="headerlink" href="#class-required" title="Permalink to this headline">¶</a></h3>
 <p>Indicates the <a class="reference internal" href="interface_definition.html#standard-objects-interface-definition-class"><span class="std std-ref">class</span></a> of the defined interface of which
 this is an instance.</p>
+<p>When more than one instance of the same class is used within a fixture definition, each instance must be
+identified by including the <code class="docutils literal notranslate"><span class="pre">!</span></code> delimiter followed by a unique instance number. If multiple interface
+instances are instantiated using the <em>count</em> attribute, each instance will be identified starting with
+the initial instance number and incrementing by 1 for each instance.</p>
 </div>
 <div class="section" id="alias-required">
 <span id="standard-objects-interface-instance-alias"></span><h3>Alias (Required)<a class="headerlink" href="#alias-required" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>alias</strong> is a unique string identifying this interface instance. The string must be unique within
-the definition containing the interface instance.</p>
+the definition containing the interface instance. When an interface instance has been instatiated using the
+count mechnisim, each instance will be identified with a unique alias followed by the <code class="docutils literal notranslate"><span class="pre">!</span></code> delimiter
+and a unique instance number.</p>
 </div>
 <div class="section" id="friendly-name">
 <span id="standard-objects-interface-friendly-name"></span><h3>Friendly Name<a class="headerlink" href="#friendly-name" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>friendly name</strong> attribute provides a string that could be used to identify a particular instance
 of an interface in a software user interface, in order to provide more context to a user. It is not
 intended to uniquely identify the interface in a database.</p>
+</div>
+<div class="section" id="count">
+<span id="standard-objects-interface-instance-count"></span><h3>Count<a class="headerlink" href="#count" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>count</strong> attribute provides a mechanism for instantiating multiple interface instances of the same
+type. When multiple instances are instantiated in this way, each instance is given an alias of that
+provided followed by the <code class="docutils literal notranslate"><span class="pre">!</span></code> delimiter and an incrementing instance number (starting from 1).</p>
 </div>
 </div>
 <div class="section" id="children">
@@ -271,11 +285,12 @@ intended to uniquely identify the interface in a database.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">class</span></code>: <a class="reference internal" href="#standard-objects-interface-instance-class"><span class="std std-ref">Class (Required)</span></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">alias</span></code>: <a class="reference internal" href="#standard-objects-interface-instance-alias"><span class="std std-ref">Alias (Required)</span></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">friendlyname</span></code>: <a class="reference internal" href="#standard-objects-interface-friendly-name"><span class="std std-ref">Friendly Name</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code>: <span class="xref std std-ref">standard-objects-interface-count</span></p></li>
 </ul>
 </li>
 </ul>
 <p>Example:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/binary-dimmer&quot;</span> <span class="na">alias=</span><span class="s">&quot;primary-dimmer&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Primary Dimmer&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Primary Dimmer&quot;</span> <span class="nt">/&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/binary-dimmer&quot;</span> <span class="na">alias=</span><span class="s">&quot;primary-dimmer&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Primary Dimmer&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -307,6 +322,10 @@ intended to uniquely identify the interface in a database.</p>
 <tr class="row-even"><td><p>friendlyname</p></td>
 <td><p>string</p></td>
 <td><p><a class="reference internal" href="#standard-objects-interface-friendly-name"><span class="std std-ref">Friendly Name</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>count</p></td>
+<td><p>string</p></td>
+<td><p><span class="xref std std-ref">standard-objects-interface-count</span></p></td>
 </tr>
 </tbody>
 </table>

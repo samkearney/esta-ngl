@@ -6,6 +6,43 @@ Definitions and instances often need to be uniquely and globally identified. Def
 identified by **class** and instances are identified by **alias**. These identifiers are combined
 with the identifiers of parent elements to create a globally unique identifier.
 
+.. _tutorial-identifiers-uri:
+
+URI
+===
+
+UDR uses the *scheme* and *path* components of the 
+`Uniform Resource Identifier <https://en.wikipedia.org/wiki/Uniform_Resource_Identifier>`_ (URI)
+specification to identify all objects using **class** and **alias** identifiers.
+
+All UDR identifiers should begin with the scheme ``udr://``. The scheme is then followed by the path
+component, which may either be qualified or relative. UDR uses a subset of the standard URI resolution:
+
+Starting at udr://org.esta.gobo.1/gobo-wheel/gobo-rotator/speed, the following resolutions apply:
+
+==============  ===============================================
+"."             udr://org.esta.gobo.1/gobo-wheel/gobo-rotator/
+"./"            udr://org.esta.gobo.1/gobo-wheel/gobo-rotator/
+".."            udr://org.esta.gobo.1/gobo-wheel/
+"../"           udr://org.esta.gobo.1/gobo-wheel/
+"../speed"      udr://org.esta.gobo.1/gobo-wheel/speed
+"../.."         udr://org.esta.gobo.1/
+"../../"        udr://org.esta.gobo.1/
+"../../slots"   udr://org.esta.gobo.1/slots
+==============  ===============================================
+
+Some characters are reserved by the URI specification. UDR also uses a special ``$`` character as
+a shortcut to refer to the root identifier for example:
+
+udr://$/gobo-wheel is replaced with udr://org.esta.gobo.1/gobo-wheel/
+
+=========== ==================== =============================================================
+Reserved    : / ? # [ ] @        These characters are standard delimiters and may not be used
+Permitted   & ' ( ) * + , ; =    These characters may be used in the path component
+Root ID     $                    Shortcut for the root of the current library or device
+Instance    !                    Delimiter for the instance of a repeating interface
+=========== ==================== =============================================================
+
 .. _tutorial-identifiers-organization-id:
 
 ***********************
@@ -47,14 +84,19 @@ The UDR :ref:`properties-identification-device-id` property follows a similar qu
 convention to qualified classes.
 
 It should follow the form ``org-id.device-name.version`` where org-id is the
-:ref:`tutorial-identifiers-organization-alias`, device-name is a string uniquely identifying the
+:ref:`tutorial-identifiers-organization-id`, device-name is a string uniquely identifying the
 device model within the organization, and version is a string-represented integer representing the
 version of the device for the purposes of the UDR library.
 
 This version number must change anytime the device's definition changes.
 
-.. _tutorial-identifiers-qualified-alias:
+.. _tutorial-identifiers-alias:
 
-***************
-Qualified Alias
-***************
+*****
+Alias
+*****
+
+:ref:`standard-objects-interface-instance`, :ref:`standard-objects-property-instance` and
+:ref:`standard-objects-condition` are identified by an alias.
+
+An alias is a string uniquely identifying the object within its parent object.

@@ -113,13 +113,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/library.html">Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/import.html">Import</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/device_definition.html">Device Definition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../standard_objects/case.html">Case</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/interface_definition.html">Interface Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/interface_instance.html">Interface Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/interface_constraint.html">Interface Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/property_definition.html">Property Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/property_instance.html">Property Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/override.html">Override</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/case.html">Case</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/condition.html">Condition</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
 <ul>
@@ -217,9 +218,11 @@
             
   <div class="section" id="extension">
 <span id="tutorial-extension"></span><h1>Extension<a class="headerlink" href="#extension" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="../standard_objects/interface_definition.html#standard-objects-interface-definition"><span class="std std-ref">Interface Definition</span></a> objects can be extended to add additional functionality
-Interface definitions using the <strong>extends</strong> attribute adopt all of the child interfaces and properties
-of the definition being extended.</p>
+<p><a class="reference internal" href="../standard_objects/interface_definition.html#standard-objects-interface-definition"><span class="std std-ref">Interface Definition</span></a> and <a class="reference internal" href="../standard_objects/property_definition.html#standard-objects-property-definition"><span class="std std-ref">Property Definition</span></a> objects can
+be extended to add additional functionality. Interface and property definitions using the <strong>extends</strong> attribute
+adopt all of the child interfaces (and properties) of the definition being extended.</p>
+<p>Interfaces are extended for the purpose of renaming and/or adding additional children, while properties
+are extended for the purpose of renaming.</p>
 <div class="section" id="rules">
 <h2>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="order">

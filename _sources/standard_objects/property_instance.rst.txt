@@ -21,6 +21,11 @@ Class (Required)
 Indicates the :ref:`class<standard-objects-property-definition-class>` of the defined property of which
 this is an instance.
 
+When more than one instance of the same class is used within a fixture definition, each instance must be
+identified by including the ``!`` delimiter followed by a unique instance number. If multiple property
+instances are instantiated using the *count* attribute, each instance will be identified starting with
+the initial instance number and incrementing by 1 for each instance.
+
 .. _standard-objects-property-instance-alias:
 
 Alias (Required)
@@ -31,17 +36,26 @@ the interface containing the property instance.
 
 .. _standard-objects-property-instance-friendly-name:
 
-Friendly Name
-=============
+Friendly Name (Overridable)
+===========================
 
 The **friendly name** attribute provides a string that could be used to identify a particular instance
 of a property in a software user interface, in order to provide more context to a user. It is not
 intended to uniquely identify the property in a database.
 
+.. _standard-objects-property-instance-count:
+
+Count
+=====
+
+The **count** attribute provides a mechanism for instantiating multiple property instances of the same
+type. When multiple instances are instantiated in this way, each instance is given an alias of that
+provided followed by the ``!`` delimiter and an incrementing instance number (starting from 1).
+
 .. _standard-objects-property-instance-access-and-lifetime:
 
-Access and Lifetime (Required)
-==============================
+Access and Lifetime (Required, Overridable)
+===========================================
 
 Access and Lifetime define how the data associated with a property is stored, how it can be
 changed, and when it is invalidated.
@@ -93,8 +107,8 @@ changed, and when it is invalidated.
 
 .. _standard-objects-property-instance-minimum:
 
-Minimum
-=======
+Minimum (Overridable)
+=====================
 
 This attribute defines a minimum value for the property. It applies in different ways when combined
 with different data types. If this attribute is absent, the minimum is assumed to be 0:
@@ -112,8 +126,8 @@ array              The minimum length of the array in elements.
 
 .. _standard-objects-property-instance-maximum:
 
-Maximum
-=======
+Maximum (Overridable)
+=====================
 
 This attribute defines a maximum value for the property. It applies in different ways when combined
 with different data types. If this attribute is absent, the maximum is assumed to be 0:
@@ -127,20 +141,9 @@ number             The number's maximum value.
 string             The maximum length of the string in characters.
 binary             N/A
 boolean            N/A
-enum               N/A
+enum               The maximum enumerated index.
 array              The maximum length of the array in elements.
 ================== ===============================================
-
-.. _standard-objects-property-instance-mode-selector:
-
-Mode Selector
-=============
-
-Indicates that this property is a *mode selector* for a group of exclusive child interfaces. See
-:ref:`tutorial-mutual-exclusion` for more information.
-
-The value of this attribute is the name of the exclusive group for which the property is a mode
-selector.
 
 .. _standard-objects-property-instance-markup:       
 
@@ -158,11 +161,11 @@ Markup
       * ``class``: :ref:`standard-objects-property-instance-class`
       * ``alias``: :ref:`standard-objects-property-instance-alias`
       * ``friendlyname``: :ref:`standard-objects-property-instance-friendlyname`
+      * ``count``: :ref:`standard-objects-property-instance-count`
       * ``access``: :ref:`Access<standard-objects-property-instance-access-and-lifetime>`
       * ``lifetime``: :ref:`Lifetime<standard-objects-property-instance-access-and-lifetime>`
       * ``minimum``: :ref:`standard-objects-property-instance-minimum`
       * ``maximum``: :ref:`standard-objects-property-instance-maximum`
-      * ``modeselector``: :ref:`standard-objects-property-instance-mode-selector`
     
     Example:
 
@@ -186,11 +189,11 @@ Markup
       class         string     :ref:`standard-objects-property-definition-class`
       alias         string     :ref:`standard-objects-property-definition-alias`
       friendlyname  string     :ref:`standard-objects-property-definition-friendlyname`
+      count         string     :ref:`standard-objects-property-definition-count`
       access        string     :ref:`standard-objects-property-definition-description`
       lifetime      string     :ref:`standard-objects-property-definition-data-type`
       minimum       number     :ref:`standard-objects-property-instance-minimum`
       maximum       number     :ref:`standard-objects-property-instance-maximum`
-      modeselector  string     :ref:`standard-objects-property-instance-mode-selector`
       ============= ========== =======================================================
 
     Example:

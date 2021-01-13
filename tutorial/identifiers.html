@@ -94,10 +94,13 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface_hierarchy.html">The Interface Hierarchy</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Identifiers</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#organization-identifier">Organization Identifier</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#qualified-class">Qualified Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#qualified-device-id">Qualified Device ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#qualified-alias">Qualified Alias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uri">URI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#organization-identifier">Organization Identifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qualified-class">Qualified Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qualified-device-id">Qualified Device ID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alias">Alias</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="mutual_exclusion.html">Mutual Exclusion</a></li>
@@ -109,13 +112,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/library.html">Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/import.html">Import</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/device_definition.html">Device Definition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../standard_objects/case.html">Case</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/interface_definition.html">Interface Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/interface_instance.html">Interface Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/interface_constraint.html">Interface Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/property_definition.html">Property Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/property_instance.html">Property Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/override.html">Override</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/case.html">Case</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/condition.html">Condition</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
 <ul>
@@ -216,8 +220,76 @@
 <p>Definitions and instances often need to be uniquely and globally identified. Definitions are
 identified by <strong>class</strong> and instances are identified by <strong>alias</strong>. These identifiers are combined
 with the identifiers of parent elements to create a globally unique identifier.</p>
+<div class="section" id="uri">
+<span id="tutorial-identifiers-uri"></span><h2>URI<a class="headerlink" href="#uri" title="Permalink to this headline">¶</a></h2>
+<p>UDR uses the <em>scheme</em> and <em>path</em> components of the
+<a class="reference external" href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">Uniform Resource Identifier</a> (URI)
+specification to identify all objects using <strong>class</strong> and <strong>alias</strong> identifiers.</p>
+<p>All UDR identifiers should begin with the scheme <code class="docutils literal notranslate"><span class="pre">udr://</span></code>. The scheme is then followed by the path
+component, which may either be qualified or relative. UDR uses a subset of the standard URI resolution:</p>
+<p>Starting at udr://org.esta.gobo.1/gobo-wheel/gobo-rotator/speed, the following resolutions apply:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 77%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>“.”</p></td>
+<td><p>udr://org.esta.gobo.1/gobo-wheel/gobo-rotator/</p></td>
+</tr>
+<tr class="row-even"><td><p>“./”</p></td>
+<td><p>udr://org.esta.gobo.1/gobo-wheel/gobo-rotator/</p></td>
+</tr>
+<tr class="row-odd"><td><p>“..”</p></td>
+<td><p>udr://org.esta.gobo.1/gobo-wheel/</p></td>
+</tr>
+<tr class="row-even"><td><p>“../”</p></td>
+<td><p>udr://org.esta.gobo.1/gobo-wheel/</p></td>
+</tr>
+<tr class="row-odd"><td><p>“../speed”</p></td>
+<td><p>udr://org.esta.gobo.1/gobo-wheel/speed</p></td>
+</tr>
+<tr class="row-even"><td><p>“../..”</p></td>
+<td><p>udr://org.esta.gobo.1/</p></td>
+</tr>
+<tr class="row-odd"><td><p>“../../”</p></td>
+<td><p>udr://org.esta.gobo.1/</p></td>
+</tr>
+<tr class="row-even"><td><p>“../../slots”</p></td>
+<td><p>udr://org.esta.gobo.1/slots</p></td>
+</tr>
+</tbody>
+</table>
+<p>Some characters are reserved by the URI specification. UDR also uses a special <code class="docutils literal notranslate"><span class="pre">$</span></code> character as
+a shortcut to refer to the root identifier for example:</p>
+<p>udr://$/gobo-wheel is replaced with udr://org.esta.gobo.1/gobo-wheel/</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 22%" />
+<col style="width: 66%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Reserved</p></td>
+<td><p>: / ? # [ ] &#64;</p></td>
+<td><p>These characters are standard delimiters and may not be used</p></td>
+</tr>
+<tr class="row-even"><td><p>Permitted</p></td>
+<td><p>&amp; ‘ ( ) * + , ; =</p></td>
+<td><p>These characters may be used in the path component</p></td>
+</tr>
+<tr class="row-odd"><td><p>Root ID</p></td>
+<td><p>$</p></td>
+<td><p>Shortcut for the root of the current library or device</p></td>
+</tr>
+<tr class="row-even"><td><p>Instance</p></td>
+<td><p>!</p></td>
+<td><p>Delimiter for the instance of a repeating interface</p></td>
+</tr>
+</tbody>
+</table>
 <div class="section" id="organization-identifier">
-<span id="tutorial-identifiers-organization-id"></span><h2>Organization Identifier<a class="headerlink" href="#organization-identifier" title="Permalink to this headline">¶</a></h2>
+<span id="tutorial-identifiers-organization-id"></span><h3>Organization Identifier<a class="headerlink" href="#organization-identifier" title="Permalink to this headline">¶</a></h3>
 <p>An organization identifier namespaces other definitions, like class names and device IDs, under a
 given organization. By convention, an organization identifier is an organization’s registered
 domain name, reversed; for example, ACME corp headquartered at acme.com would begin a qualified
@@ -225,7 +297,7 @@ class with <code class="docutils literal notranslate"><span class="pre">com.acme
 <p>This follows the convention of <a class="reference external" href="https://en.wikipedia.org/wiki/Reverse_domain_name_notation">reverse domain name notation</a>.</p>
 </div>
 <div class="section" id="qualified-class">
-<span id="tutorial-identifiers-qualified-class"></span><h2>Qualified Class<a class="headerlink" href="#qualified-class" title="Permalink to this headline">¶</a></h2>
+<span id="tutorial-identifiers-qualified-class"></span><h3>Qualified Class<a class="headerlink" href="#qualified-class" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference internal" href="../standard_objects/library.html#standard-objects-library"><span class="std std-ref">Libraries</span></a> are identified by a qualified class. A qualified class
 is a string that begins with an <a class="reference internal" href="#tutorial-identifiers-organization-id"><span class="std std-ref">Organization Identifier</span></a>.</p>
 <p>The organization identifier is followed by an identifying string for the library, separated by a
@@ -236,17 +308,21 @@ representation.</p>
 <code class="docutils literal notranslate"><span class="pre">com.acme.devices.1</span></code>.</p>
 </div>
 <div class="section" id="qualified-device-id">
-<span id="tutorial-identifiers-qualified-device-id"></span><h2>Qualified Device ID<a class="headerlink" href="#qualified-device-id" title="Permalink to this headline">¶</a></h2>
+<span id="tutorial-identifiers-qualified-device-id"></span><h3>Qualified Device ID<a class="headerlink" href="#qualified-device-id" title="Permalink to this headline">¶</a></h3>
 <p>The UDR <a class="reference internal" href="../device_id_library/identification_properties.html#properties-identification-device-id"><span class="std std-ref">Device ID</span></a> property follows a similar qualification
 convention to qualified classes.</p>
 <p>It should follow the form <code class="docutils literal notranslate"><span class="pre">org-id.device-name.version</span></code> where org-id is the
-<span class="xref std std-ref">tutorial-identifiers-organization-alias</span>, device-name is a string uniquely identifying the
+<a class="reference internal" href="#tutorial-identifiers-organization-id"><span class="std std-ref">Organization Identifier</span></a>, device-name is a string uniquely identifying the
 device model within the organization, and version is a string-represented integer representing the
 version of the device for the purposes of the UDR library.</p>
 <p>This version number must change anytime the device’s definition changes.</p>
 </div>
-<div class="section" id="qualified-alias">
-<span id="tutorial-identifiers-qualified-alias"></span><h2>Qualified Alias<a class="headerlink" href="#qualified-alias" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="alias">
+<span id="tutorial-identifiers-alias"></span><h3>Alias<a class="headerlink" href="#alias" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="../standard_objects/interface_instance.html#standard-objects-interface-instance"><span class="std std-ref">Interface Instance</span></a>, <a class="reference internal" href="../standard_objects/property_instance.html#standard-objects-property-instance"><span class="std std-ref">Property Instance</span></a> and
+<a class="reference internal" href="../standard_objects/condition.html#standard-objects-condition"><span class="std std-ref">Condition</span></a> are identified by an alias.</p>
+<p>An alias is a string uniquely identifying the object within its parent object.</p>
+</div>
 </div>
 </div>
 

@@ -4,12 +4,18 @@
 Case
 ####
 
-:ref:`Property Definitions<standard-objects-property-definition>` using
-certain enumerated data types can contain *case* objects which provide
-human-readable values describing each of the potential cases.
+:ref:`Property Definitions<standard-objects-property-definition>` and
+:ref:`Property Instances<standard-objects-property-instance>`, using
+certain enumerated data types can contain child *case* objects which provide
+human-readable values describing each of the potential cases. These values
+are considered the key for any localization.
 
 Cases are available for *Boolean* and *Enum*
 :ref:`data types<standard-objects-property-definition-data-type>`.
+
+The number of cases should match the number of enumerated items. In the
+case of *Boolean* data types, this is always 2. When new cases are provided
+they replace all previously defined cases.
 
 .. _standard-objects-case-value:
 
