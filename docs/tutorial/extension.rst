@@ -4,13 +4,16 @@
 Extension
 #########
 
-:ref:`standard-objects-interface-definition` objects can be extended to add additional functionality
-Interface definitions using the **extends** attribute adopt all of the child interfaces and properties
-of the definition being extended.
+:ref:`standard-objects-interface-definition` and :ref:`standard-objects-property-definition` objects can
+be extended to add additional functionality. Interface and property definitions using the **extends** attribute
+adopt all of the child interfaces (and properties) of the definition being extended.
 
-******
+Interfaces are extended for the purpose of renaming and/or adding additional children, while properties
+are extended for the purpose of renaming.
+
+*****
 Rules
-******
+*****
 
 .. _tutorial-extension-order:
 

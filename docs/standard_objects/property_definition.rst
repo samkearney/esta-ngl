@@ -40,10 +40,13 @@ A string that describes the purpose of a property in human-readable language.
 
 .. _standard-objects-property-definition-data-type:
 
-Data Type (Required)
+Data Type (Required*)
 ====================
 
 A property's **data type** specifies how to interpret the data stored with the property.
+
+\*Data Type is not required when the property definition includes the *extend* attribute.
+This attribute should be excluded, and will be ignored if **extends** is included.
 
 The possible data types are:
 
@@ -58,11 +61,14 @@ array     An array of values, all of which must be the same type.
 
 .. _standard-objects-property-definition-unit:
 
-Unit (Required)
+Unit (Required*)
 ========================================
 
 A property's **unit** defines how the property's value should be interpreted. Units are only
 well-defined for properties with data type *number*.
+
+\*Unit is only required when the Data Type attribute is included, and is defined as *number*.
+This attribute should be excluded, and will be ignored if **extends** is included. 
 
 ======================== ======================================================
 Unit Identifier          Description
@@ -98,6 +104,12 @@ byte                     Data Size in Bytes
 percent                  Percentage of a Maximum Value
 ======================== ======================================================
 
+Extends
+=======
+
+Indicates the :ref:`class<standard-objects-property-definition-class>` of the property definition
+this definition extends.
+
 .. _standard-objects-property-definition-markup:
 
 ******
@@ -116,6 +128,7 @@ Markup
       * ``description``: :ref:`standard-objects-property-definition-description`
       * ``data_type``: :ref:`standard-objects-property-definition-data-type`
       * ``unit``: :ref:`standard-objects-property-definition-unit`
+      * ``extends``: :ref:`standard-objects-property-definition-extends`
     
     Example:
 
@@ -141,6 +154,7 @@ Markup
       description string     :ref:`standard-objects-property-definition-description`
       data_type   string     :ref:`standard-objects-property-definition-data-type`
       unit        string     :ref:`standard-objects-property-definition-unit`
+      extends     string     :ref:`standard-objects-property-definition-extends`
       =========== ========== =======================================================
 
     Example:
