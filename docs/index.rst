@@ -29,13 +29,14 @@ architectural lighting and building automation, and the Internet of Things.
    standard_objects/library
    standard_objects/import
    standard_objects/device_definition
-   standard_objects/case
    standard_objects/interface_definition
    standard_objects/interface_instance
    standard_objects/interface_constraint
    standard_objects/property_definition
    standard_objects/property_instance
    standard_objects/override
+   standard_objects/case
+   standard_objects/condition
 
 .. toctree::
    :maxdepth: 2

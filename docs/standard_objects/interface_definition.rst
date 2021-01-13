@@ -78,6 +78,7 @@ Markup
       * ``class``: :ref:`standard-objects-interface-definition-class`
       * ``name``: :ref:`standard-objects-interface-definition-name`
       * ``description``: :ref:`standard-objects-interface-definition-description`
+      * ``extends``: :ref:`standard-objects-interface-definition-extends`
     
     Example:
 
@@ -103,6 +104,7 @@ Markup
       class       string     :ref:`standard-objects-interface-definition-class`
       name        string     :ref:`standard-objects-interface-definition-name`
       description string     :ref:`standard-objects-interface-definition-description`
+      extends     string     :ref:`standard-objects-interface-definition-extends`
       =========== ========== =======================================================
     
     Example:
