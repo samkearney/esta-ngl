@@ -32,7 +32,9 @@ Alias (Required)
 ================
 
 The **alias** is a unique string identifying this property instance. The string must be unique within
-the interface containing the property instance.
+the interface containing the property instance. When a property instance has been instatiated using the
+count mechnisim, each instance will be identified with a unique alias followed by the ``!`` delimiter
+and a unique instance number.
 
 .. _standard-objects-property-instance-friendly-name:
 
@@ -160,7 +162,7 @@ Markup
 
       * ``class``: :ref:`standard-objects-property-instance-class`
       * ``alias``: :ref:`standard-objects-property-instance-alias`
-      * ``friendlyname``: :ref:`standard-objects-property-instance-friendlyname`
+      * ``friendlyname``: :ref:`standard-objects-property-instance-friendly-name`
       * ``count``: :ref:`standard-objects-property-instance-count`
       * ``access``: :ref:`Access<standard-objects-property-instance-access-and-lifetime>`
       * ``lifetime``: :ref:`Lifetime<standard-objects-property-instance-access-and-lifetime>`
@@ -188,7 +190,7 @@ Markup
       ============= ========== =======================================================
       class         string     :ref:`standard-objects-property-definition-class`
       alias         string     :ref:`standard-objects-property-definition-alias`
-      friendlyname  string     :ref:`standard-objects-property-definition-friendlyname`
+      friendlyname  string     :ref:`standard-objects-property-definition-friendly-name`
       count         string     :ref:`standard-objects-property-definition-count`
       access        string     :ref:`standard-objects-property-definition-description`
       lifetime      string     :ref:`standard-objects-property-definition-data-type`
