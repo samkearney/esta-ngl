@@ -54,10 +54,10 @@ Markup Example
       <library class="com.acme.standarddefs.1" description="ACME Corp Standard Definitions" publishdate="2020-09-02" author="ACME Corp">
         <propertydef class="customproperty" name="Custom Property" description="My custom property" datatype="string" />
         <interfacedef class="custominterface" name="Custom Interface" description="My custom interface">
-          <property class="org.esta.intensity.1/intensity" alias="intensity-1" friendlyname="Trim LED Intensity" access="readwrite" lifetime="runtime" minimum="0", maximum="100" />
-          <property class="org.esta.intensity.1/intensity" alias="intensity-2" friendlyname="Yoke Logo Intensity" access="readwrite" lifetime="runtime" minimum="0", maximum="100" />
+          <property class="udr://org.esta.intensity.1/intensity" alias="intensity-1" friendlyname="Trim LED Intensity" access="readwrite" lifetime="runtime" minimum="0", maximum="100" />
+          <property class="udr://org.esta.intensity.1/intensity" alias="intensity-2" friendlyname="Yoke Logo Intensity" access="readwrite" lifetime="runtime" minimum="0", maximum="100" />
 
-          <property class="$/customproperty" alias="custom_property_1" friendlyname="Custom Property" access="readonly" lifetime="persistent" minimum="0" maximum="128" />
+          <property class="udr://$/customproperty" alias="custom_property_1" friendlyname="Custom Property" access="readonly" lifetime="persistent" minimum="0" maximum="128" />
 
           <propertydef class="customproperty2" name="Custom Property 2" description="My custom property 2" datatype="number" unit="rpm" />
           <property class="customproperty2" alias="customproperty2-1" friendlyname="Some Custom Property" access="readwrite" lifetime="runtime" minimum="-100" maximum="100" />
@@ -78,7 +78,7 @@ Markup Example
         "children": [
           {
             "type": "propertydef",
-            "class": "$/customproperty",
+            "class": "udr://$/customproperty",
             "name": "Custom Property",
             "description": "My custom property",
             "datatype": "string"
@@ -91,7 +91,7 @@ Markup Example
             "children": [
               {
                 "type": "property",
-                "class": "org.esta.intensity.1/intensity",
+                "class": "udr://org.esta.intensity.1/intensity",
                 "alias": "intensity-1",
                 "friendlyname": "Trim LED Intensity",
                 "access": "readwrite",
@@ -101,7 +101,7 @@ Markup Example
               },
               {
                 "type": "property",
-                "class": "org.esta.intensity.1/intensity",
+                "class": "udr://org.esta.intensity.1/intensity",
                 "alias": "intensity-2",
                 "friendlyname": "Yoke Logo Intensity",
                 "access": "readwrite",

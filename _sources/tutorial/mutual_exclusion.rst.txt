@@ -29,10 +29,10 @@ by a controller to generate a virtual selector.
     .. code-block:: xml
 
       <!-- simplified example -->
-      <interface class="org.esta.wheel.1/wheel" alias="wheel">
+      <interface class="udr://org.esta.wheel.1/wheel" alias="wheel">
         <condition style="exclusive" alias="wheel-control">
-          <interface class="org.esta.wheel.1/wheel-velocity" alias="velocity" friendlyname="Wheel Speed">
-          <interface class="org.esta.wheel.1/wheel-index" alias="index" friendlyname="Wheel Index">
+          <interface class="../wheel-velocity" alias="velocity" friendlyname="Wheel Speed">
+          <interface class="../wheel-index" alias="index" friendlyname="Wheel Index">
         </condition>
       </interface>
 
@@ -42,7 +42,8 @@ by a controller to generate a virtual selector.
 
       {
         "type": "interface",
-        "alias": "org.esta.wheel.1/wheel",
+        "class": "udr://org.esta.wheel.1/wheel",
+        "alias": "wheel",
         "children": [
           {
             "type": "condition",
@@ -51,13 +52,13 @@ by a controller to generate a virtual selector.
             "children": [
               {
                 "type": "interface",
-                "class": "org.esta.wheel.1/wheel-velocity",
+                "class": "../wheel-velocity",
                 "alias": "velocity",
                 "friendlyname": "Wheel Speed"
               },
               {
                 "type": "interface",
-                "class": "org.esta.wheel.1/wheel-index",
+                "class": "../wheel-index",
                 "alias": "index",
                 "friendlyname": "Wheel Index"
               }
@@ -84,18 +85,18 @@ To expand on the example from above:
     .. code-block:: xml
 
       <!-- simplified definition  -->
-      <interfacedef class="org.esta.wheel.1/wheel" name="Wheel">
-        <property class="org.esta.core.1/interface-selector" alias="interface-selector" access="readwrite" lifetime="runtime" />
+      <interfacedef class="udr://org.esta.wheel.1/wheel" name="Wheel">
+        <property class="udr://org.esta.core.1/interface-selector" alias="interface-selector" access="readwrite" lifetime="runtime" />
 
-        <interfaceconstraint class="org.esta.wheel.1/wheel-velocity" maximum="1" />
-        <interfaceconstraint class="org.esta.wheel.1/wheel-index" maximum="1" />
+        <interfaceconstraint class="../wheel-velocity" maximum="1" />
+        <interfaceconstraint class="../wheel-index" maximum="1" />
       </interfacedef>
 
       <!-- simplified example (note the condition references the property) -->
-      <interface class="org.esta.wheel.1/wheel" alias="wheel">
+      <interface class="udr://org.esta.wheel.1/wheel" alias="wheel">
         <condition style="exclusive" refalias="../interface-selector">
-          <interface class="org.esta.wheel.1/wheel-velocity" alias="velocity" friendlyname="Wheel Speed">
-          <interface class="org.esta.wheel.1/wheel-index" alias="index" friendlyname="Wheel Index">
+          <interface class="../wheel-velocity" alias="velocity" friendlyname="Wheel Speed">
+          <interface class="../wheel-index" alias="index" friendlyname="Wheel Index">
         </condition>
       </interface>
 
@@ -105,24 +106,24 @@ To expand on the example from above:
 
       {
         "type": "interfacedef",
-        "class": "org.esta.wheel.1/wheel",
+        "class": "udr://org.esta.wheel.1/wheel",
         "name": "Wheel",
         "children": [
           {
             "type": "property",
-            "class": "org.esta.core.1/interface-selector",
+            "class": "udr://org.esta.core.1/interface-selector",
             "alias": "interface-selector",
             "access": "readwrite"
             "lifetime": "runtime"
           },
           {
             "type": "interfaceconstraint",
-            "class": "org.esta.wheel.1/wheel-velocity",
+            "class": "../wheel-velocity",
             "maximum": 1
           },
           {
             "type": "interfaceconstraint",
-            "class": "org.esta.wheel.1/wheel-index",
+            "class": "../wheel-index",
             "maximum": 1
           }
         ]
@@ -130,7 +131,8 @@ To expand on the example from above:
 
       {
         "type": "interface",
-        "alias": "org.esta.wheel.1/wheel",
+        "class": "udr://org.esta.wheel.1/wheel",
+        "alias": "wheel",
         "children": [
           {
             "type": "condition",
@@ -139,13 +141,13 @@ To expand on the example from above:
             "children": [
               {
                 "type": "interface",
-                "class": "org.esta.wheel.1/wheel-velocity",
+                "class": "../wheel-velocity",
                 "alias": "velocity",
                 "friendlyname": "Wheel Speed"
               },
               {
                 "type": "interface",
-                "class": "org.esta.wheel.1/wheel-index",
+                "class": "../wheel-index",
                 "alias": "index",
                 "friendlyname": "Wheel Index"
               }

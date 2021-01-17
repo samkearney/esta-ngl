@@ -1,5 +1,4 @@
 <udr>
-
     <import name="org.esta.identification.1" />
 
     <!-- ESTA Intensity -->
@@ -10,10 +9,10 @@
         <propertydef class="strobe-random" name="Strobe Frequency" description="The random frequency of a strobe shutter" datatype="number" unit="none" />
 
         <interfacedef class="intensity" name="Intensity" description="Represents an emitter intensity as a percentage of its maximum brightness">
-            <property class="intensity" id="intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100"/>
+            <property class="udr://$/intensity" alias="intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100"/>
         </interfacedef>
         <interfacedef class="strobe-frequency" name="Strobe Frequency" description="The frequency of a strobe shutter in Hertz">
-            <property class="strobe-frequency" id="strobe-frequency" access="readwrite" lifetime="runtime" minimum="0.1" maximum="1000"/>
+            <property class="udr://$/strobe-frequency" alias="strobe-frequency" access="readwrite" lifetime="runtime" minimum="0.1" maximum="1000"/>
         </interfacedef>
     </library>
 
@@ -26,18 +25,18 @@
         <propertydef class="color-description" name="Color" description="The description of the color, such as manufacturer and number" datatype="string" />
 
         <interfacedef class="cmy" name="CMY" description="Represents CMY color control of a light source">
-            <property class="cyan" id="cyan" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
-            <property class="magenta" id="magenta" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
-            <property class="yellow" id="yellow" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+            <property class="udr://$/cyan" alias="cyan" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+            <property class="udr://$/magenta" alias="magenta" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+            <property class="udr://$/yellow" alias="yellow" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
         </interfacedef>
         <interfacedef class="ctb" name="CTB" description="Represents CTB color control of a light source">
-            <property class="ctb" id="ctb" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+            <property class="udr://$/ctb" alias="ctb" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
         </interfacedef>
         <interfacedef class="color-description" name="Color Description" description="The description of the color, such as manufacturer and number">
-            <property class="color-description" id="description" access="readwrite" lifetime="runtime" minimum="0" maximum="128" />
+            <property class="udr://$/color-description" alias="description" access="readwrite" lifetime="runtime" minimum="0" maximum="128" />
         </interfacedef>
-        <interfacedef class="color-wheel" name="Color Wheel" extends="org.esta.wheel.1/wheel">
-            <interfaceconstraint class="color-description" />
+        <interfacedef class="color-wheel" name="Color Wheel" extends="udr://org.esta.wheel.1/wheel">
+            <interfaceconstraint class="udr://$/color-description" />
         </interfacedef>
     </library>
 
@@ -53,31 +52,31 @@
         </propertydef>
 
         <interfacedef class="wheel-velocity-indexed" name="Wheel Velocity Indexed" description="The indexed velocity of a wheel">
-            <property class="velocity-indexed" id="velocity" access="readwrite" lifetime="runtime" />
+            <property class="udr://$/velocity-indexed" alias="velocity" access="readwrite" lifetime="runtime" />
         </interfacedef>
         <interfacedef class="wheel-velocity" name="Wheel Velocity" description="The speed of a wheel">
-            <property class="angular-velocity" id="velocity" access="readwrite" lifetime="runtime" />
+            <property class="udr://$/angular-velocity" alias="velocity" access="readwrite" lifetime="runtime" />
         </interfacedef>
         <interfacedef class="wheel-position-indexed" name="Wheel Position Index" description="The indexed position of a wheel">
-            <property class="index" id="index" access="readwrite" lifetime="runtime" />
+            <property class="udr://$/index" alias="index" access="readwrite" lifetime="runtime" />
         </interfacedef>
         <interfacedef class="wheel-position" name="Wheel Position" description="The angular position of a wheel">
-            <property class="angular-position" id="position" access="readwrite" lifetime="runtime" minimum="0" maximum="360" />
+            <property class="udr://$/angular-position" alias="position" access="readwrite" lifetime="runtime" minimum="0" maximum="360" />
         </interfacedef>
         <interfacedef class="wheel-shake" name="Wheel Shake" description="The shake of a wheel">
-            <property class="angular-position" id="position" access="readwrite" lifetime="runtime" minimum="0" maximum="360" />
+            <property class="udr://$/angular-position" alias="position" access="readwrite" lifetime="runtime" minimum="0" maximum="360" />
         </interfacedef>
         <interfacedef class="wheel-random-indexed" name="Random" description="The random selection of indexed positions of a wheel">
-            <interfaceconstraint class="org.esta.wheel.1/wheel-velocity-indexed" maximum="1"/>
+            <interfaceconstraint class="udr://$/wheel-velocity-indexed" maximum="1"/>
         </interfacedef>
 
-        <interfacedef class="org.esta.wheel.1/wheel" name="Wheel" description="A wheel">
-            <interfaceconstraint class="wheel-random-indexed" maximum="1" exclusivegroup="wheel-control" />
-            <interfaceconstraint class="org.esta.wheel.1/wheel-velocity" maximum="1" exclusivegroup="wheel-control" />
-            <interfaceconstraint class="org.esta.wheel.1/wheel-position-indexed" maximum="1" exclusivegroup="wheel-control" />
-            <interfaceconstraint class="org.esta.wheel.1/wheel-position" maximum="1" exclusivegroup="wheel-control" />
-            <interfaceconstraint class="org.esta.wheel.1/wheel-shake" maximum="1" exclusivegroup="wheel-control" />
-            <interfaceconstraint class="org.esta.wheel.1/wheel" maximum="1" />
+        <interfacedef class="wheel" name="Wheel" description="A wheel">
+            <interfaceconstraint class="udr://$/wheel-random-indexed" maximum="1" />
+            <interfaceconstraint class="udr://$/wheel-velocity" maximum="1" />
+            <interfaceconstraint class="udr://$/wheel-position-indexed" maximum="1" />
+            <interfaceconstraint class="udr://$/wheel-position" maximum="1"  />
+            <interfaceconstraint class="udr://$/wheel-shake" maximum="1" />
+            <interfaceconstraint class="udr://$/wheel" maximum="1" />
         </interfacedef>
     </library>
 
@@ -89,15 +88,15 @@
         <propertydef class="framing-angle" name="Framing Angle" description="The angle of a framing module" datatype="number" unit="degrees" />
 
         <interfacedef class="frame" name="Frame" description="A framing shutter">
-            <property class="frame-position" id="position" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
-            <property class="frame-angle" id="angle" access="readwrite" lifetime="runtime" minimum="-45" maximum="45" />
-            <property class="frame-location" id="location" access="readonly" lifetime="static" minimum="0" maximum="360" />
+            <property class="udr://$/frame-position" alias="position" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+            <property class="udr://$/frame-angle" alias="angle" access="readwrite" lifetime="runtime" minimum="-45" maximum="45" />
+            <property class="udr://$/frame-location" alias="location" access="readonly" lifetime="static" minimum="0" maximum="360" />
         </interfacedef>
 
         <interfacedef class="framing-rotating" name="Framing Rotation" description="A framing shutter module">
-            <property class="framing-angle" id="framing-angle" access="readwrite" lifetime="runtime" minimum="-360" maximum="360" />
+            <property class="udr://$/framing-angle" alias="framing-angle" access="readwrite" lifetime="runtime" minimum="-360" maximum="360" />
 
-            <interfaceconstraint class="org.esta.framing.1/frame" minimum="1" />
+            <interfaceconstraint class="udr://$/frame" minimum="1" />
         </interfacedef>
     </library>
 
@@ -106,10 +105,10 @@
         <propertydef class="gobo-description" name="Gobo Description" description="The description of the gobo, such as manufacturer and number" datatype="string" />
 
         <interfacedef class="gobo-description" name="Gobo Description" description="The description of the gobo, such as manufacturer and number">
-            <property class="gobo-description" id="description" access="readwrite" lifetime="runtime" minimum="0" maximum="128"/>
+            <property class="udr://$/gobo-description" alias="description" access="readwrite" lifetime="runtime" minimum="0" maximum="128"/>
         </interfacedef>
-        <interfacedef class="gobo-wheel" name="Gobo Wheel" extends="org.esta.wheel.1/wheel">
-            <interfaceconstraint class="gobo-description" />
+        <interfacedef class="gobo-wheel" name="Gobo Wheel" extends="udr://org.esta.wheel.1/wheel">
+            <interfaceconstraint class="udr://$/gobo-description" />
         </interfacedef>
     </library>
 
@@ -127,8 +126,8 @@
         <propertydef class="tilt" name="Tilt" description="The tilt angle of a device" datatype="number" unit="degrees" />
 
         <interfacedef class="pan-tilt" name="Pan/Tilt" description="The pan/tilt of a device">
-            <property class="pan" id="pan" access="readwrite" lifetime="runtime" minimum="-1440" maximum="1440"/>
-            <property class="tilt" id="tilt" access="readwrite" lifetime="runtime" minimum="-1440" maximum="1440"/>
+            <property class="udr://$/pan" alias="pan" access="readwrite" lifetime="runtime" minimum="-1440" maximum="1440"/>
+            <property class="udr://$/tilt" alias="tilt" access="readwrite" lifetime="runtime" minimum="-1440" maximum="1440"/>
         </interfacedef>
     </library>
 
@@ -138,8 +137,8 @@
         <propertydef class="effect-speed" name="Effect Speed" description="The speed of an effect" datatype="number" unit="someunit" />
 
         <interfacedef class="effect-velocity" name="Effect Velocity" description="The effect selection and velocity">
-            <property class="effect" id="effect" access="readwrite" lifetime="runtime" />
-            <property class="effect-speed" id="effect-speed" access="readwrite" lifetime="runtime" minimum="-100" maximum="100" />
+            <property class="udr://$/effect" alias="effect" access="readwrite" lifetime="runtime" />
+            <property class="udr://$/effect-speed" alias="effect-speed" access="readwrite" lifetime="runtime" minimum="-100" maximum="100" />
         </interfacedef>
     </library>
 
@@ -165,168 +164,159 @@
 
             <!-- device definitions -->
             <interfacedef class="shutter" name="Shutter" description="Intensity shutter controls">
-                <property class="org.esta.intensity.1/intensity-binary" id="shutter" access="readwrite" lifetime="runtime" />
-                <property class="org.esta.intensity.1/strobe-random" id="strobe-random" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+                <property class="udr://org.esta.intensity.1/intensity-binary" alias="shutter" access="readwrite" lifetime="runtime" />
+                <property class="udr://org.esta.intensity.1/strobe-random" alias="strobe-random" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
 
-                <interfaceconstraint class="org.esta.intensity.1/strobe-frequency" minimum="1" maximum="1" />
+                <interfaceconstraint class="udr://org.esta.intensity.1/strobe-frequency" minimum="1" maximum="1" />
             </interfacedef>
 
             <interfacedef class="beam" name="Beam" description="Beam controls">
-                <property class="org.esta.beam.1/frost" id="frost" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
-                <property class="org.esta.beam.1/iris" id="tris" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
-                <property class="org.esta.beam.1/zoom-angle" id="zoom" access="readwrite" lifetime="runtime" minimum="15" maximum="65" />
-                <property class="org.esta.beam.1/edge" id="edge" access="readwrite" lifetime="runtime" minimum="-100" maximum="100" />
+                <property class="udr://org.esta.beam.1/frost" alias="frost" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+                <property class="udr://org.esta.beam.1/iris" alias="tris" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+                <property class="udr://org.esta.beam.1/zoom-angle" alias="zoom" access="readwrite" lifetime="runtime" minimum="15" maximum="65" />
+                <property class="udr://org.esta.beam.1/edge" alias="edge" access="readwrite" lifetime="runtime" minimum="-100" maximum="100" />
             </interfacedef>
 
-            <interfacedef class="custom-wheel-shake" name="Wheel Shake" extends="org.esta.wheel.1/wheel-shake">
-                <property class="com.martin.general.1/stepped-shake" id="shake" access="readwrite" lifetime="runtime" />
-            </interface>
+            <interfacedef class="custom-gobo-wheel" extends="udr://org.esta.org.gobo.1/gobo-wheel">
+                <interfacedef class="wheel-shake" name="Wheel Shake" extends="udr://org.esta.wheel.1/wheel-shake">
+                    <property class="udr://com.martin.general.1/stepped-shake" alias="shake" access="readwrite" lifetime="runtime" />
+                </interface>
 
-            <!-- rules - dmx translation?? - work in progress -->
-            <rules>
-                <rule>
-                    <condition type="exclusivegroup" condition="gobo-wheel/wheel-control:wheel-velocity" />
-                    <disable refid="gobo-rotator/position" />
-                </rule> 
-                <rule>
-                    <condition type="exclusivegroup" condition="gobo-wheel/wheel-control:wheel-velocity" />
-                    <disable refid="gobo-rotator/shake" />
-                </rule> 
-                <rule>
-                    <condition type="exclusivegroup" condition="gobo-wheel/wheel-control:wheel-velocity" />
-                    <range refid="theidoftheproperty" minimum="0" maximum="100" />
-                </rule>
-            </rules>
+                <interfaceconstraint class="wheel-shake" maximum="1" />
+                <interfaceconstraint class="udr://$/custom-gobo-wheel" maximum="1" />
+            </interfacedef>
 
             <!-- device -->
-            <interface class="org.esta.identification.1/device" id="device">
-                <override refid="device-id" attribute="value">com.martin.encore-performance-wrm.1</override>
-                <override refid="device-manufacturer" attribute="value">HARMAN International</override>
-                <override refid="device-model" attribute="value">MAC Encore Performance WRM</override>
+            <interface class="udr://org.esta.identification.1/device" alias="device">
+                <override refalias="device-id" style="absolute" attribute="value">com.martin.encore-performance-wrm.1</override>
+                <override refalias="device-manufacturer" style="absolute" attribute="value">HARMAN International</override>
+                <override refalias="device-model" style="absolute" attribute="value">MAC Encore Performance WRM</override>
             </interface>
 
             <!-- color | cmy -->
-            <interface class="org.esta.color.1/cmy" id="color-cmy" />
+            <interface class="udr://org.esta.color.1/cmy" alias="color-cmy" />
 
             <!-- gobo wheel -->
-            <interface class="org.esta.org.gobo.1/gobo-wheel" id="gobo-wheel">
-                <!-- wheel indexed -->
-                <interface class="org.esta.wheel.1/wheel-position-indexed" id="wheel-position-indexed" />
+            <interface class="udr://$/custom-gobo-wheel" alias="gobo-wheel">
 
-                <!-- wheel continuous rotation-->
-                <interface class="org.esta.wheel.1/wheel-velocity" id="wheel-velocity">
-                    <override refid="angular-velocity" attribute="minimum">-45</override>
-                    <override refid="angular-velocity" attribute="maximum">45</override>
-                </interface>
+                <condition style="exclusive" alias="wheel-control">
+
+                    <!-- wheel indexed -->
+                    <interface class="../wheel-position-indexed" alias="wheel-position-indexed" />
+
+                    <!-- wheel continuous rotation-->
+                    <interface class="../wheel-velocity" alias="wheel-velocity">
+                        <override refalias="angular-velocity" style="absolute" attribute="minimum">-45</override>
+                        <override refalias="angular-velocity" style="absolute" attribute="maximum">45</override>
+                    </interface>
+
+                </condition>
 
                 <!-- gobo rotator -->
-                <interface class="org.esta.wheel.1/wheel" id="gobo-rotator">
-                    <!-- indexing -->
-                    <interface class="org.esta.wheel.1/wheel-position" id="position">
-                        <allowed exclusivegroup="#/gobo-wheel/wheel-control" interfaceid="wheel-position-indexed" /> <!-- work in progress (see rules for alt) -->
-                    </interface>
+                <interface class="udr://$/custom-gobo-wheel" alias="gobo-rotator">
 
-                    <!-- continuous rotation -->
-                    <interface class="org.esta.wheel.1/wheel-velocity" id="velocity">
-                        <allowed exclusivegroup="#/gobo-wheel/wheel-control" interfaceid="wheel-position-indexed" /> <!-- work in progress (see rules for alt) -->
-                        <allowed exclusivegroup="#/gobo-wheel/wheel-control" interfaceid="wheel-velocity" /> <!-- work in progress (see rules for alt) -->
-                        <override refid="angular-velocity" attribute="minimum">-720</override>
-                        <override refid="angular-velocity" attribute="maximum">720</override>
-                    </interface>
+                    <condition style="exclusive" alias="gobo-rotator-control">
 
-                    <!-- shake-->
-                    <interface class="custom-wheel-shake" id="shake">
-                        <allowed exclusivegroup="#/gobo-wheel/wheel-control" interfaceid="wheel-position-indexed" /> <!-- work in progress (see rules for alt) -->
-                    </interface>
+                        <!-- indexing -->
+                        <condition style="available" refalias="udr://$/gobo-wheel/wheel-control/wheel-position-indexed">
+                            <interface class="../wheel-position" alias="position" />
+                        </condition>
+
+                        <!-- continuous rotation -->
+                        <interface class="../wheel-velocity" alias="velocity">
+                            <override refalias="angular-velocity" style="absolute" attribute="minimum">-720</override>
+                            <override refalias="angular-velocity" style="absolute" attribute="maximum">720</override>
+                        </interface>
+
+                        <!-- shake-->
+                        <condition style="available" refalias="udr://$/gobo-wheel/wheel-control/wheel-position-indexed">
+                            <interface class="custom-wheel-shake" alias="shake" />
+                        </condition>
+
+                    </condition>
                 </interface>
 
-                <interface class="org.esta.gobo.1/gobo-description" id="gobo-1" />
-                <interface class="org.esta.gobo.1/gobo-description" id="gobo-2" />
-                <interface class="org.esta.gobo.1/gobo-description" id="gobo-3" />
-                <interface class="org.esta.gobo.1/gobo-description" id="gobo-4" />
-                <interface class="org.esta.gobo.1/gobo-description" id="gobo-5" />
-                <interface class="org.esta.gobo.1/gobo-description" id="gobo-6" />
+                <interface class="../gobo-description" alias="gobo" count="6" />
             </interface>
 
             <!-- color wheel -->
-            <interface class="org.esta.org.color.1/color-wheel" id="color-wheel">
+            <interface class="udr://org.esta.org.color.1/color-wheel" alias="color-wheel">
 
-                <!-- wheel indexed continuous -->
-                <interface class="org.esta.wheel.1/wheel-position" id="position" />
+                <condition style="exclusive" alias="wheel-control">
 
-                <!-- wheel indexed -->
-                <interface class="org.esta.wheel.1/wheel-position-indexed" id="wheel-position-indexed" />
+                    <!-- wheel indexed continuous -->
+                    <interface class="../wheel-position" alias="position" />
 
-                <!-- wheel continuous rotation-->
-                <interface class="org.esta.wheel.1/wheel-velocity" id="wheel-velocity">
-                    <override refid="angular-velocity" attribute="minimum">-45</override>
-                    <override refid="angular-velocity" attribute="maximum">45</override>
-                </interface>
+                    <!-- wheel indexed -->
+                    <interface class="../wheel-position-indexed" alias="wheel-position-indexed" />
 
-                <!-- wheel random -->
-                <interface class="org.esta.wheel.1/wheel-random-indexed" id="wheel-random-indexed">
-                    <interface class="org.esta.wheel.1/wheel-velocity-indexed" id="wheel-velocity-indexed" />
-                </interface>
+                    <!-- wheel continuous rotation-->
+                    <interface class="../wheel-velocity" alias="wheel-velocity">
+                        <override refalias="angular-velocity" style="absolute" attribute="minimum">-45</override>
+                        <override refalias="angular-velocity" style="absolute" attribute="maximum">45</override>
+                    </interface>
 
-                <interface class="org.esta.color.1/color-description" id="color-1"/>
-                <interface class="org.esta.color.1/color-description" id="color-2"/>
-                <interface class="org.esta.color.1/color-description" id="color-3"/>
-                <interface class="org.esta.color.1/color-description" id="color-4"/>
-                <interface class="org.esta.color.1/color-description" id="color-5"/>
-                <interface class="org.esta.color.1/color-description" id="color-6"/>
+                    <!-- wheel random -->
+                    <interface class="../wheel-random-indexed" alias="wheel-random-indexed">
+                        <interface class="org.esta.wheel.1/wheel-velocity-indexed" alias="wheel-velocity-indexed" />
+                    </interface>
+
+                </condition>
+
+                <interface class="../color-description" alias="color" count="6" />
             </interface>
 
             <!-- framing -->
-            <interface class="org.esta.framing.1/framing-rotating" id="framing">
-                <interface class="frame" id="frame-top">
-                    <override refid="frame-location" attribute="value">0</override>
+            <interface class="udr://org.esta.framing.1/framing-rotating" alias="framing">
+                <interface class="../frame" alias="frame-top">
+                    <override refalias="frame-location" style="absolute" attribute="value">0</override>
                 </interface>
 
-                <interface class="frame" id="frame-right">
-                    <override refid="frame-location" attribute="value">90</override>
+                <interface class="../frame" alias="frame-right">
+                    <override refalias="frame-location" style="absolute" attribute="value">90</override>
                 </interface>
 
-                <interface class="frame" id="frame-bottom">
-                    <override refid="frame-location" attribute="value">180</override>
+                <interface class="../frame" alias="frame-bottom">
+                    <override refalias="frame-location" style="absolute" attribute="value">180</override>
                 </interface>
 
-                <interface class="frame" id="frame-left">
-                    <override refid="frame-location" attribute="value">270</override>
+                <interface class="../frame" alias="frame-left">
+                    <override refalias="frame-location" style="absolute" attribute="value">270</override>
                 </interface>
 
-                <override refid="framing-angle" attribute="minimum">-180</override>
-                <override refid="framing-angle" attribute="maximum">180</override>
+                <override refalias="framing-angle" style="absolute" attribute="minimum">-180</override>
+                <override refalias="framing-angle" style="absolute" attribute="maximum">180</override>
             </interface>
 
             <!-- pan/tilt -->
-            <interface class="org.esta.focus.1/pan-tilt" id="pan-tilt">
-                <override refid="pan" attribute="minimum">-270</override>
-                <override refid="pan" attribute="maximum">270</override>
-                <override refid="tilt" attribute="minimum">-138.5</override>
-                <override refid="tilt" attribute="maximum">139.5</override>
+            <interface class="udr://org.esta.focus.1/pan-tilt" alias="pan-tilt">
+                <override refalias="pan" style="absolute" attribute="minimum">-270</override>
+                <override refalias="pan" style="absolute" attribute="maximum">270</override>
+                <override refalias="tilt" style="absolute" attribute="minimum">-138.5</override>
+                <override refalias="tilt" style="absolute" attribute="maximum">139.5</override>
             </interface>
 
             <!-- strobe -->
-            <interface class="shutter" id="shutter">
-                <interface class="strobe-frequency" id="strobe-frequency">
-                    <override refid="strobe-frequency" attribute="minimum">0.5</override>
-                    <override refid="strobe-frequency" attribute="maximum">100</override>
+            <interface class="udr://$/shutter" alias="shutter">
+                <interface class="strobe-frequency" alias="strobe-frequency">
+                    <override refalias="strobe-frequency" style="absolute" attribute="minimum">0.5</override>
+                    <override refalias="strobe-frequency" style="absolute" attribute="maximum">100</override>
                 </interface>
             </interface>
 
             <!-- effect -->
             <!-- NOTE: From a DMX translation point of view, this uses the iris address to control the speed -->
-            <interface class="org.esta.effect.1/effect-velocity" id="effect-1" />
-            <interface class="org.esta.effect.1/effect-velocity" id="effect-2" />
+            <interface class="udr://org.esta.effect.1/effect-velocity" alias="effect-1" />
+            <interface class="udr://org.esta.effect.1/effect-velocity" alias="effect-2" />
 
             <!-- intensity -->
-            <interface class="org.esta.intensity.1/intensity" id="intensity" />
+            <interface class="udr://org.esta.intensity.1/intensity" alias="intensity" />
             
             <!-- color | ctb -->
-            <interface class="org.esta.color.1/ctb" id="ctb" />
+            <interface class="udr://org.esta.color.1/ctb" alias="ctb" />
 
             <!-- beam (frost, iris, zoom, edge) -->
-            <interface class="beam" id="beam" />
+            <interface class="udr://$/beam" alias="beam" />
 
         </devicedef>
     </library>

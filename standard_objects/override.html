@@ -311,18 +311,18 @@ be ignored if a <strong>valuealias</strong> is included with a <strong>style</st
 </ul>
 <p>Example:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- simplified example --&gt;</span>
-<span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.identification.1/device&quot;</span> <span class="na">alias=</span><span class="s">&quot;device&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Device&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;udr://org.esta.identification.1/device&quot;</span> <span class="na">alias=</span><span class="s">&quot;device&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Device&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;override</span> <span class="na">refalias=</span><span class="s">&quot;device-id&quot;</span> <span class="na">style=</span><span class="s">&quot;absolute&quot;</span> <span class="na">attribute=</span><span class="s">&quot;value&quot;</span><span class="nt">&gt;</span>com.acme.device-model.1<span class="nt">&lt;/override&gt;</span>
 <span class="nt">&lt;/interface&gt;</span>
 
 <span class="c">&lt;!-- simplified example --&gt;</span>
-<span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-velocity&quot;</span> <span class="na">alias=</span><span class="s">&quot;velocity&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Wheel Speed&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;udr://org.esta.wheel.1/wheel-velocity&quot;</span> <span class="na">alias=</span><span class="s">&quot;velocity&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Wheel Speed&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;override</span> <span class="na">refalias=</span><span class="s">&quot;angular-velocity&quot;</span> <span class="na">style=</span><span class="s">&quot;absolute&quot;</span> <span class="na">attribute=</span><span class="s">&quot;minimum&quot;</span><span class="nt">&gt;</span>-720<span class="nt">&lt;/override&gt;</span>
     <span class="nt">&lt;override</span> <span class="na">refalias=</span><span class="s">&quot;angular-velocity&quot;</span> <span class="na">style=</span><span class="s">&quot;absolute&quot;</span> <span class="na">attribute=</span><span class="s">&quot;maximum&quot;</span><span class="nt">&gt;</span>720<span class="nt">&lt;/override&gt;</span>
 <span class="nt">&lt;/interface&gt;</span>
 
 <span class="c">&lt;!-- simplified example --&gt;</span>
-<span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.beam.1/optics&quot;</span> <span class="na">alias=</span><span class="s">&quot;optics&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Optics&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;udr://org.esta.beam.1/optics&quot;</span> <span class="na">alias=</span><span class="s">&quot;optics&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Optics&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;override</span> <span class="na">refalias=</span><span class="s">&quot;zoom&quot;</span> <span class="na">style=</span><span class="s">&quot;multiplier&quot;</span> <span class="na">attribute=</span><span class="s">&quot;maximum&quot;</span> <span class="na">valuealias=</span><span class="s">&quot;edge&quot;</span><span class="nt">&gt;</span>1.2<span class="nt">&lt;override&gt;</span>
 <span class="nt">&lt;/interface&gt;</span>
 </pre></div>
@@ -372,7 +372,7 @@ be ignored if a <strong>valuealias</strong> is included with a <strong>style</st
 <p>Example:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.identification.1/device&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;udr://org.esta.identification.1/device&quot;</span><span class="p">,</span>
   <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;device&quot;</span><span class="p">,</span>
   <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="nt">&quot;Device&quot;</span>
   <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -388,7 +388,7 @@ be ignored if a <strong>valuealias</strong> is included with a <strong>style</st
 
 <span class="p">{</span>
   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.wheel.1/wheel-velocity&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;udr://org.esta.wheel.1/wheel-velocity&quot;</span><span class="p">,</span>
   <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;velocity&quot;</span><span class="p">,</span>
   <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Wheel Speed&quot;</span><span class="p">,</span>
   <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -411,7 +411,7 @@ be ignored if a <strong>valuealias</strong> is included with a <strong>style</st
 
 <span class="p">{</span>
   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.beam.1/optics&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;udr://org.esta.beam.1/optics&quot;</span><span class="p">,</span>
   <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;optics&quot;</span><span class="p">,</span>
   <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Optics&quot;</span><span class="p">,</span>
   <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>

@@ -47,8 +47,8 @@ a unique alias.
 
   .. code-tab:: xml
 
-    <interfacedef class="my-dimmer" name="My Dimmer" extends="org.esta.intensity.1/dimmer" description="A simple dimmer with status LED intensity control.">
-      <property class="org.esta.intensity.1/intensity" alias="led-intensity" friendlyname="Status LED" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+    <interfacedef class="my-dimmer" name="My Dimmer" extends="udr://org.esta.intensity.1/dimmer" description="A simple dimmer with status LED intensity control.">
+      <property class="udr://org.esta.intensity.1/intensity" alias="led-intensity" friendlyname="Status LED" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
     </interfacedef>
 
   .. code-tab:: json
@@ -57,11 +57,12 @@ a unique alias.
       "type": "interfacedef",
       "class": "my-dimmer",
       "name": "My Dimmer",
+      "extends": "udr://org.esta.intensity.1/dimmer",
       "description": "A simple dimmer with status LED intensity control.",
       "children": [
         {
           "type": "property",
-          "class": "org.esta.intensity.1/intensity",
+          "class": "udr://org.esta.intensity.1/intensity",
           "alias": "led-interface",
           "friendlyname": "Status LED",
           "access": "readwrite",

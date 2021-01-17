@@ -85,7 +85,7 @@ Markup
     .. code-block:: xml
 
       <interfacedef class="binary-dimmer" name="Binary Dimmer" description="Represents non-dimming control of a light source">
-        <property class="org.esta.intensity.1/binary-intensity" alias="intensity" friendlyname="Intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+        <property class="udr://org.esta.intensity.1/binary-intensity" alias="intensity" friendlyname="Intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
       </interfacedef>
 
   .. tab:: JSON
@@ -114,7 +114,7 @@ Markup
         "children": [
           {
             "type": "property",
-            "class": "org.esta.intensity.1/binary-intensity",
+            "class": "udr://org.esta.intensity.1/binary-intensity",
             "alias": "intensity",
             "friendlyname": "Intensity",
             "access": "readwrite",
