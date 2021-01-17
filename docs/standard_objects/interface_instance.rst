@@ -32,6 +32,9 @@ If multiple interface instances are instantiated using the *count* attribute, ea
 starting with the unique alias followed by the ``!`` delimiter and initial instance number, and incrementing by
 1 for each instance. For example "alias!2" would be followed by "alias!3".
 
+The alias must remain consistent through revisions of a :ref:`standard-objects-device-definition`, as this will
+assist controllers with making sense of hierarchy changes.
+
 .. _standard-objects-interface-instance-friendly-name:
 
 Friendly Name

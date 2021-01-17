@@ -27,7 +27,7 @@ providing new values for. This must be a valid :ref:`tutorial-identifiers-alias`
 
 .. _standard-objects-override-style:
 
-Kind (Required)
+Style (Required)
 ===============
 
 Indicates the **style** of this override.
@@ -121,7 +121,7 @@ Markup
       Key            Value Type Represents
       ============== ========== ============================================================
       refalias       string     :ref:`standard-objects-override-refalias`
-      kind           string     :ref:`standard-objects-override-style`
+      style          string     :ref:`standard-objects-override-style`
       attribute      string     :ref:`standard-objects-override-attribute`
       valuealias     string     :ref:`standard-objects-override-valuealias`
       value          various    :ref:`standard-objects-override-value`

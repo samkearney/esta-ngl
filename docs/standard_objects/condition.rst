@@ -27,7 +27,7 @@ unavailable   All child interfaces and properties are unavailable when the **ref
 ============= ==================================================================================
 
 Validility may be either a valid value within a range, or the selection of an alias of
-from within another condition with the Kind *exclusive*.
+from within another condition with the Style *exclusive*.
 
 .. _standard-objects-condition-refalias:
 
@@ -37,11 +37,11 @@ Ref Alias (Required*)
 Indicates the **alias** of the interface or property instance of which this condition
 is observing the state. This must be a valid :ref:`tutorial-identifiers-alias`.
 
-When the Kind attribute is defined as *exclusive*, the Ref Alias must be a property
+When the Style attribute is defined as *exclusive*, the Ref Alias must be a property
 instance with the data type enum. The 'selected' child index is defined by the
 current value of this property instance.
 
-\* Ref Alias is not required when the Kind attribute is defined as *exclusive*, and
+\* Ref Alias is not required when the Style attribute is defined as *exclusive*, and
 should only be included when not including Alias.
 
 .. _standard-objects-condition-alias:
@@ -52,7 +52,7 @@ Alias (Required*)
 The **alias** is a unique string identifying this condition. The string must be unique
 within the definition containing the condition.
 
-\* Alias is required (and must be included) only when the Kind attribute is defined as
+\* Alias is required (and must be included) only when the Style attribute is defined as
 *exclusive*, and the Ref Alias attribute is not included.
 
 To support cross-tree conditions, the alias may be followed by a global identification
@@ -87,7 +87,7 @@ Minimum
 Indicates the minimum value of a referenced property instance for which this condition
 is considered valid.
 
-This attribute should be excluded, and will be ignored when the Kind attribute is
+This attribute should be excluded, and will be ignored when the Style attribute is
 defined as *exclusive*.
 
 .. _standard-objects-condition-max:
@@ -98,7 +98,7 @@ Maximum
 Indicates the maximum value of a referenced property instance for which this condition
 is considered valid.
 
-This attribute should be excluded, and will be ignored when the Kind attribute is
+This attribute should be excluded, and will be ignored when the Style attribute is
 defined as *exclusive*.
 
 .. _standard-objects-condition-markup:
@@ -113,7 +113,7 @@ Markup
     * Tag name: ``condition``
     * Attributes:
 
-      * ``kind``: :ref:`standard-objects-condition-style`
+      * ``style``: :ref:`standard-objects-condition-style`
       * ``refalias``: :ref:`standard-objects-condition-refalias`
       * ``alias``: :ref:`standard-objects-condition-alias`
       * ``min``: :ref:`standard-objects-condition-min`
@@ -142,7 +142,7 @@ Markup
       ============== ========== ============================================================
       Key            Value Type Represents
       ============== ========== ============================================================
-      kind           string     :ref:`standard-objects-condition-style`
+      style          string     :ref:`standard-objects-condition-style`
       refalias       string     :ref:`standard-objects-condition-refalias`
       alias          string     :ref:`standard-objects-condition-alias`
       min            string     :ref:`standard-objects-condition-min`
@@ -155,7 +155,7 @@ Markup
 
       {
         "type": "condition",
-        "kind": "exclusive",
+        "style": "exclusive",
         "alias": "wheel-control",
         "children": [
           {
@@ -175,7 +175,7 @@ Markup
 
       {
         "type": "condition",
-        "kind": "unavailable",
+        "style": "unavailable",
         "refalias": "wheel-control/index",
         "children": [
           {
