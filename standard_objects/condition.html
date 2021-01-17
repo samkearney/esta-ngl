@@ -114,7 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="case.html">Case</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Condition</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#kind-required">Kind (Required)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#style-required">Style (Required)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ref-alias-required">Ref Alias (Required*)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#alias-required">Alias (Required*)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#minimum">Minimum</a></li>
@@ -146,7 +146,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_group.html">Exclusive Group Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_condition.html">Exclusive Condition Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/mac_encore.html">MAC Encore Performance WRM Device Example</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Other Resources</span></p>
@@ -225,9 +225,9 @@
 availability or selection of child interfaces and properties.</p>
 <div class="section" id="attributes">
 <h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="kind-required">
-<span id="standard-objects-condition-kind"></span><h3>Kind (Required)<a class="headerlink" href="#kind-required" title="Permalink to this headline">¶</a></h3>
-<p>Indicates the <strong>kind</strong> of this condition.</p>
+<div class="section" id="style-required">
+<span id="standard-objects-condition-style"></span><h3>Style (Required)<a class="headerlink" href="#style-required" title="Permalink to this headline">¶</a></h3>
+<p>Indicates the <strong>style</strong> of this condition.</p>
 <p>This can be any of the following:</p>
 <table class="docutils align-default">
 <colgroup>
@@ -247,37 +247,60 @@ availability or selection of child interfaces and properties.</p>
 </tbody>
 </table>
 <p>Validility may be either a valid value within a range, or the selection of an alias of
-from within another condition with the Kind <em>exclusive</em>.</p>
+from within another condition with the Style <em>exclusive</em>.</p>
 </div>
 <div class="section" id="ref-alias-required">
 <span id="standard-objects-condition-refalias"></span><h3>Ref Alias (Required*)<a class="headerlink" href="#ref-alias-required" title="Permalink to this headline">¶</a></h3>
 <p>Indicates the <strong>alias</strong> of the interface or property instance of which this condition
 is observing the state. This must be a valid <a class="reference internal" href="../tutorial/identifiers.html#tutorial-identifiers-alias"><span class="std std-ref">Alias</span></a>.</p>
-<p>When the Kind attribute is defined as <em>exclusive</em>, the Ref Alias must be a property
+<p>When the Style attribute is defined as <em>exclusive</em>, the Ref Alias must be a property
 instance with the data type enum. The ‘selected’ child index is defined by the
 current value of this property instance.</p>
-<p>* Ref Alias is not required when the Kind attribute is defined as <em>exclusive</em>, and
+<p>* Ref Alias is not required when the Style attribute is defined as <em>exclusive</em>, and
 should only be included when not including Alias.</p>
 </div>
 <div class="section" id="alias-required">
 <span id="standard-objects-condition-alias"></span><h3>Alias (Required*)<a class="headerlink" href="#alias-required" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>alias</strong> is a unique string identifying this condition. The string must be unique
 within the definition containing the condition.</p>
-<p>* Alias is required, and must be included only when the Kind attribute is defined as
+<p>* Alias is required (and must be included) only when the Style attribute is defined as
 <em>exclusive</em>, and the Ref Alias attribute is not included.</p>
+<p>To support cross-tree conditions, the alias may be followed by a global identification
+delimiter <code class="docutils literal notranslate"><span class="pre">+</span></code>, and then a global alias. The global alias string following this
+delimiter must be unique within the <a class="reference internal" href="library.html#standard-objects-library"><span class="std std-ref">Library</span></a>: or
+<a class="reference internal" href="device_definition.html#standard-objects-device-definition"><span class="std std-ref">Device Definition</span></a>. When a global alias is provided, any other
+conditions using the same global alias are treated as the same condition.</p>
+<p>Example:</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;an-interface&quot;</span> <span class="na">alias=</span><span class="s">&quot;root-interface&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;another-interface&quot;</span> <span class="na">alias=</span><span class="s">&quot;interface-a-alias&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;condition</span> <span class="na">style=</span><span class="s">&quot;exclusive&quot;</span> <span class="na">alias=</span><span class="s">&quot;wheel-control+global-wheel-control&quot;</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!-- &quot;global-wheel-control&quot; exclusive children interfaces --&gt;</span>
+    <span class="nt">&lt;/condition&gt;</span>
+  <span class="nt">&lt;/interface&gt;</span>
+
+  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;another-interface&quot;</span> <span class="na">alias=</span><span class="s">&quot;interface-b-alias&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;condition</span> <span class="na">style=</span><span class="s">&quot;exclusive&quot;</span> <span class="na">alias=</span><span class="s">&quot;wheel-control+global-wheel-control&quot;</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!-- &quot;global-wheel-control&quot; exclusive children interfaces --&gt;</span>
+    <span class="nt">&lt;/condition&gt;</span>
+  <span class="nt">&lt;/interface&gt;</span>
+<span class="nt">&lt;/interface&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
 </div>
 <div class="section" id="minimum">
 <span id="standard-objects-condition-min"></span><h3>Minimum<a class="headerlink" href="#minimum" title="Permalink to this headline">¶</a></h3>
 <p>Indicates the minimum value of a referenced property instance for which this condition
 is considered valid.</p>
-<p>This attribute should be excluded, and will be ignored when the Kind attribute is
+<p>This attribute should be excluded, and will be ignored when the Style attribute is
 defined as <em>exclusive</em>.</p>
 </div>
 <div class="section" id="maximum">
 <span id="standard-objects-condition-max"></span><h3>Maximum<a class="headerlink" href="#maximum" title="Permalink to this headline">¶</a></h3>
 <p>Indicates the maximum value of a referenced property instance for which this condition
 is considered valid.</p>
-<p>This attribute should be excluded, and will be ignored when the Kind attribute is
+<p>This attribute should be excluded, and will be ignored when the Style attribute is
 defined as <em>exclusive</em>.</p>
 </div>
 <div class="section" id="markup">
@@ -300,7 +323,7 @@ defined as <em>exclusive</em>.</p>
 <li><p>Tag name: <code class="docutils literal notranslate"><span class="pre">condition</span></code></p></li>
 <li><p>Attributes:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code>: <a class="reference internal" href="#standard-objects-condition-kind"><span class="std std-ref">Kind (Required)</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">style</span></code>: <a class="reference internal" href="#standard-objects-condition-style"><span class="std std-ref">Style (Required)</span></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">refalias</span></code>: <a class="reference internal" href="#standard-objects-condition-refalias"><span class="std std-ref">Ref Alias (Required*)</span></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">alias</span></code>: <a class="reference internal" href="#standard-objects-condition-alias"><span class="std std-ref">Alias (Required*)</span></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">min</span></code>: <a class="reference internal" href="#standard-objects-condition-min"><span class="std std-ref">Minimum</span></a></p></li>
@@ -310,13 +333,13 @@ defined as <em>exclusive</em>.</p>
 </ul>
 <p>Example:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- simplified example --&gt;</span>
-<span class="nt">&lt;condition</span> <span class="na">kind=</span><span class="s">&quot;exclusive&quot;</span> <span class="na">alias=</span><span class="s">&quot;wheel-control&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;condition</span> <span class="na">style=</span><span class="s">&quot;exclusive&quot;</span> <span class="na">alias=</span><span class="s">&quot;wheel-control&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-velocity&quot;</span> <span class="na">alias=</span><span class="s">&quot;velocity&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Wheel Speed&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.wheel.1/wheel-index&quot;</span> <span class="na">alias=</span><span class="s">&quot;index&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Wheel Index&quot;</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/condition&gt;</span>
 
 <span class="c">&lt;!-- simplified example --&gt;</span>
-<span class="nt">&lt;condition</span> <span class="na">kind=</span><span class="s">&quot;unavailable&quot;</span> <span class="na">refalias=</span><span class="s">&quot;wheel-control/index&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;condition</span> <span class="na">style=</span><span class="s">&quot;unavailable&quot;</span> <span class="na">refalias=</span><span class="s">&quot;wheel-control/index&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;org.esta.gobo.1/gobo-shake&quot;</span> <span class="na">alias=</span><span class="s">&quot;gobo-shake&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Gobo Shake&quot;</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/condition&gt;</span>
 </pre></div>
@@ -339,9 +362,9 @@ defined as <em>exclusive</em>.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>kind</p></td>
+<tr class="row-even"><td><p>style</p></td>
 <td><p>string</p></td>
-<td><p><a class="reference internal" href="#standard-objects-condition-kind"><span class="std std-ref">Kind (Required)</span></a></p></td>
+<td><p><a class="reference internal" href="#standard-objects-condition-style"><span class="std std-ref">Style (Required)</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>refalias</p></td>
 <td><p>string</p></td>
@@ -366,7 +389,7 @@ defined as <em>exclusive</em>.</p>
 <p>Example:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;condition&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;exclusive&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;style&quot;</span><span class="p">:</span> <span class="s2">&quot;exclusive&quot;</span><span class="p">,</span>
   <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;wheel-control&quot;</span><span class="p">,</span>
   <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
@@ -386,7 +409,7 @@ defined as <em>exclusive</em>.</p>
 
 <span class="p">{</span>
   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;condition&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;unavailable&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;style&quot;</span><span class="p">:</span> <span class="s2">&quot;unavailable&quot;</span><span class="p">,</span>
   <span class="nt">&quot;refalias&quot;</span><span class="p">:</span> <span class="s2">&quot;wheel-control/index&quot;</span><span class="p">,</span>
   <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>

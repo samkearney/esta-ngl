@@ -149,7 +149,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_group.html">Exclusive Group Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_condition.html">Exclusive Condition Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/mac_encore.html">MAC Encore Performance WRM Device Example</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Other Resources</span></p>
@@ -276,7 +276,7 @@
   <span class="na">class=</span><span class="s">&quot;intensity&quot;</span>
   <span class="na">name=</span><span class="s">&quot;Intensity&quot;</span>
   <span class="na">description=</span><span class="s">&quot;Represents an emitter intensity as a percentage of its maximum brightness&quot;</span>
-  <span class="na">data_type=</span><span class="s">&quot;number&quot;</span>
+  <span class="na">datatype=</span><span class="s">&quot;number&quot;</span>
   <span class="na">unit=</span><span class="s">&quot;percent&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
@@ -287,7 +287,7 @@
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;intensity&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name&quot;</span><span class="p">,</span>
   <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Represents an emitter intensity as a percentage of its maximum brightness&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;data_type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;datatype&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
   <span class="nt">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;percent&quot;</span>
 <span class="p">}</span>
 </pre></div>
@@ -314,7 +314,6 @@
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span>
   <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/intensity&quot;</span>
   <span class="na">alias=</span><span class="s">&quot;intensity&quot;</span>
-  <span class="na">friendlyname=</span><span class="s">&quot;Intensity&quot;</span>
   <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span>
   <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span>
   <span class="na">minimum=</span><span class="s">&quot;0&quot;</span>
@@ -328,7 +327,6 @@
     <span class="p">{</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.intensity.1/intensity&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;intensity&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Intensity&quot;</span><span class="p">,</span>
       <span class="nt">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;readwrite&quot;</span><span class="p">,</span>
       <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span> <span class="s2">&quot;runtime&quot;</span><span class="p">,</span>
       <span class="nt">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -388,22 +386,22 @@
 </div>
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>&lt;propertydef
-  class=&quot;binary-intensity&quot;
-  name=&quot;Binary Intensity&quot;
-  description=&quot;Represents an emitter intensity as an on/off state where &quot;true&quot; indicates &quot;on&quot;.&quot;
-  data_type=&quot;boolean&quot; /&gt;
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;propertydef</span>
+  <span class="na">class=</span><span class="s">&quot;binary-intensity&quot;</span>
+  <span class="na">name=</span><span class="s">&quot;Binary Intensity&quot;</span>
+  <span class="na">description=</span><span class="s">&quot;Represents an emitter intensity as an on/off state where &#39;true&#39; indicates &#39;on&#39;&quot;</span>
+  <span class="na">datatype=</span><span class="s">&quot;boolean&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
-  &quot;type&quot;: &quot;propertydef&quot;
-  &quot;class&quot;: &quot;binary-intensity&quot;,
-  &quot;name&quot;: &quot;Binary Intensity&quot;
-  &quot;description&quot;: &quot;Represents an emitter intensity as an on/off state where &quot;true&quot; indicates &quot;on&quot;&quot;,
-  &quot;data_type&quot;: &quot;boolean&quot;
-}
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="nt">&quot;propertydef&quot;</span>
+  <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;binary-intensity&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="nt">&quot;Binary Intensity&quot;</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Represents an emitter intensity as an on/off state where \&quot;true\&quot; indicates \&quot;on\&quot;&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;datatype&quot;</span><span class="p">:</span> <span class="s2">&quot;boolean&quot;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -428,7 +426,6 @@
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span>
   <span class="na">class=</span><span class="s">&quot;org.esta.intensity.1/binary-intensity&quot;</span>
   <span class="na">alias=</span><span class="s">&quot;primary-emitter-intensity&quot;</span>
-  <span class="na">friendlyname=</span><span class="s">&quot;Primary Emitter Intensity&quot;</span>
   <span class="na">access=</span><span class="s">&quot;readwrite&quot;</span>
   <span class="na">lifetime=</span><span class="s">&quot;runtime&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
@@ -440,7 +437,6 @@
     <span class="p">{</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.intensity.1/binary-intensity&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;primary-emitter-intensity&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Primary Emitter Intensity&quot;</span><span class="p">,</span>
       <span class="nt">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;readwrite&quot;</span><span class="p">,</span>
       <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span> <span class="s2">&quot;runtime&quot;</span>
     <span class="p">}</span>

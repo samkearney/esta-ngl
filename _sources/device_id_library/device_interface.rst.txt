@@ -3,7 +3,7 @@ Device Interface
 ################
 
 There can be only one instance of the device interface, which must be present at the root level of
-every device description.
+every :ref:`device definiton<standard-objects-device-definition>`.
 
 **********
 Definition
@@ -29,9 +29,9 @@ Properties
   .. code-tab:: xml
 
     <interfacedef class="device" name="Device" description="The root-level interface that describes a device.">
-      <property class="org.esta.identification.1/device-id" alias="device-id" friendlyname="Device ID" access="readonly" lifetime="static" minimum="0" maximum="128" />
-      <property class="org.esta.identification.1/manufacturer" alias="device-manufacturer" friendlyname="Manufacturer" access="readonly" lifetime="static" minimum="0" maximum="128" />
-      <property class="org.esta.identification.1/model" alias="device-model" friendlyname="Model" access="readonly" lifetime="static" minimum="0" maximum="128" />
+      <property class="$/device-id" alias="device-id" access="readonly" lifetime="static" minimum="0" maximum="128" />
+      <property class="$/manufacturer" alias="device-manufacturer" access="readonly" lifetime="static" minimum="0" maximum="128" />
+      <property class="$/model" alias="device-model" access="readonly" lifetime="static" minimum="0" maximum="128" />
     </interfacedef>
 
   .. code-tab:: json
@@ -44,9 +44,8 @@ Properties
       "children": [
         {
           "type": "property",
-          "class": "org.esta.identification.1/device-id",
+          "class": "$/device-id",
           "alias": "device-id",
-          "friendlyname": "Device ID",
           "access": "readonly",
           "lifetime": "static",
           "minimum": 0,
@@ -54,9 +53,8 @@ Properties
         },
         {
           "type": "property",
-          "class": "org.esta.identification.1/manufacturer",
+          "class": "$/manufacturer",
           "alias": "device-manufacturer",
-          "friendlyname": "Manufacturer",
           "access": "readonly",
           "lifetime": "static",
           "minimum": 0,
@@ -64,9 +62,8 @@ Properties
         },
         {
           "type": "property",
-          "class": "org.esta.identification.1/model",
+          "class": "$/model",
           "alias": "device-model",
-          "friendlyname": "Model",
           "access": "readonly",
           "lifetime": "static",
           "minimum": 0,

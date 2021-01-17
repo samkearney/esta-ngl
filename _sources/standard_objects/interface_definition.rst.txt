@@ -40,7 +40,7 @@ Description
 
 A string that describes the purpose of an interface in human-readable language.
 
-.. _standard-objects-interface-extends:
+.. _standard-objects-interface-definition-extends:
 
 Extends
 =======
@@ -84,13 +84,8 @@ Markup
 
     .. code-block:: xml
 
-      <interfacedef
-        class="binary-dimmer"
-        name="Binary Dimmer"
-        description="Represents non-dimming control of a light source">
-
+      <interfacedef class="binary-dimmer" name="Binary Dimmer" description="Represents non-dimming control of a light source">
         <property class="org.esta.intensity.1/binary-intensity" alias="intensity" friendlyname="Intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
-
       </interfacedef>
 
   .. tab:: JSON
@@ -121,7 +116,7 @@ Markup
             "type": "property",
             "class": "org.esta.intensity.1/binary-intensity",
             "alias": "intensity",
-            "friendlyname": "Intensity"
+            "friendlyname": "Intensity",
             "access": "readwrite",
             "lifetime": "runtime",
             "minimum": 0,

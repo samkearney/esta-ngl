@@ -27,10 +27,10 @@ Properties
         class="spectrum"
         name="Spectrum"
         description="The Spectral Power Distribution data of an emitter in normalized wavelength.">
-      <property class="spectrum-data" alias="spectrum-data" friendlyname="Spectrum Data" access="readonly" lifetime="static" />
-      <property class="spectrum-start" alias="spectrum-start" friendlyname="Spectrum Start" access="readonly" lifetime="static" />
-      <property class="spectrum-end" alias="spectrum-end" friendlyname="Spectrum End" access="readonly" lifetime="static" />
-      <property class="spectrum-step" alias="spectrum-step" friendlyname="Spectrum Step" access="readonly" lifetime="static" />
+      <property class="$/spectrum-data" alias="spectrum-data" access="readonly" lifetime="static" />
+      <property class="$/spectrum-start" alias="spectrum-start" access="readonly" lifetime="static" />
+      <property class="$/spectrum-end" alias="spectrum-end" access="readonly" lifetime="static" />
+      <property class="$/spectrum-step" alias="spectrum-step" access="readonly" lifetime="static" />
     </interfacedef>
 
   .. code-tab:: json
@@ -43,33 +43,29 @@ Properties
       "children": [
         {
           "type": "property",
-          "class": "spectrum-data",
+          "class": "$/spectrum-data",
           "alias": "spectrum-data",
-          "friendlyname": "Spectrum Data",
           "access": "readonly",
           "lifetime": "static"
         },
         {
           "type": "property",
-          "class": "spectrum-start",
+          "class": "$/spectrum-start",
           "alias": "spectrum-start",
-          "friendlyname": "Spectrum Start",
           "access": "readonly",
           "lifetime": "static"
         },
         {
           "type": "property",
-          "class": "spectrum-end",
+          "class": "$/spectrum-end",
           "alias": "spectrum-end",
-          "friendlyname": "Spectrum End",
           "access": "readonly",
           "lifetime": "static"
         },
         {
           "type": "property",
-          "class": "spectrum-step",
+          "class": "$/spectrum-step",
           "alias": "spectrum-step",
-          "friendlyname": "Spectrum Step",
           "access": "readonly",
           "lifetime": "static"
         }

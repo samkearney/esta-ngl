@@ -142,7 +142,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_group.html">Exclusive Group Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_condition.html">Exclusive Condition Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/mac_encore.html">MAC Encore Performance WRM Device Example</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Other Resources</span></p>
@@ -225,37 +225,44 @@ with the identifiers of parent elements to create a globally unique identifier.<
 <p>UDR uses the <em>scheme</em> and <em>path</em> components of the
 <a class="reference external" href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">Uniform Resource Identifier</a> (URI)
 specification to identify all objects using <strong>class</strong> and <strong>alias</strong> identifiers.</p>
-<p>All UDR identifiers should begin with the scheme <code class="docutils literal notranslate"><span class="pre">udr://</span></code>. The scheme is then followed by the path
-component, which may either be qualified or relative. UDR uses a subset of the standard URI resolution:</p>
-<p>Starting at udr://org.esta.gobo.1/gobo-wheel/gobo-rotator/speed, the following resolutions apply:</p>
+<p>All fully qualified UDR identifiers should begin with the scheme <code class="docutils literal notranslate"><span class="pre">udr://</span></code>. The scheme is then followed
+by the path component, which may either be qualified or relative. UDR uses a subset of the standard URI
+resolution:</p>
+<p>For the purpose of URI identification, <em>Interfaces</em> are considered to be a directory. Therefore, all
+children are assumed to be at the same level as the parent.</p>
+<p>Starting at <em>property</em> udr://org.esta.gobo.1/gobo-wheel/gobo-rotator/speed, the following resolutions
+apply:</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 23%" />
-<col style="width: 77%" />
+<col style="width: 21%" />
+<col style="width: 79%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p>“.”</p></td>
+<tr class="row-odd"><td><p>“position”</p></td>
+<td><p>udr://org.esta.gobo.1/gobo-wheel/gobo-rotator/position</p></td>
+</tr>
+<tr class="row-even"><td><p>“.”</p></td>
 <td><p>udr://org.esta.gobo.1/gobo-wheel/gobo-rotator/</p></td>
 </tr>
-<tr class="row-even"><td><p>“./”</p></td>
+<tr class="row-odd"><td><p>“./”</p></td>
 <td><p>udr://org.esta.gobo.1/gobo-wheel/gobo-rotator/</p></td>
 </tr>
-<tr class="row-odd"><td><p>“..”</p></td>
+<tr class="row-even"><td><p>“..”</p></td>
 <td><p>udr://org.esta.gobo.1/gobo-wheel/</p></td>
 </tr>
-<tr class="row-even"><td><p>“../”</p></td>
+<tr class="row-odd"><td><p>“../”</p></td>
 <td><p>udr://org.esta.gobo.1/gobo-wheel/</p></td>
 </tr>
-<tr class="row-odd"><td><p>“../speed”</p></td>
+<tr class="row-even"><td><p>“../speed”</p></td>
 <td><p>udr://org.esta.gobo.1/gobo-wheel/speed</p></td>
 </tr>
-<tr class="row-even"><td><p>“../..”</p></td>
+<tr class="row-odd"><td><p>“../..”</p></td>
 <td><p>udr://org.esta.gobo.1/</p></td>
 </tr>
-<tr class="row-odd"><td><p>“../../”</p></td>
+<tr class="row-even"><td><p>“../../”</p></td>
 <td><p>udr://org.esta.gobo.1/</p></td>
 </tr>
-<tr class="row-even"><td><p>“../../slots”</p></td>
+<tr class="row-odd"><td><p>“../../slots”</p></td>
 <td><p>udr://org.esta.gobo.1/slots</p></td>
 </tr>
 </tbody>
@@ -265,9 +272,9 @@ a shortcut to refer to the root identifier for example:</p>
 <p>udr://$/gobo-wheel is replaced with udr://org.esta.gobo.1/gobo-wheel/</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 12%" />
-<col style="width: 22%" />
-<col style="width: 66%" />
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 70%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>Reserved</p></td>
@@ -275,7 +282,7 @@ a shortcut to refer to the root identifier for example:</p>
 <td><p>These characters are standard delimiters and may not be used</p></td>
 </tr>
 <tr class="row-even"><td><p>Permitted</p></td>
-<td><p>&amp; ‘ ( ) * + , ; =</p></td>
+<td><p>&amp; ‘ ( ) * , ; =</p></td>
 <td><p>These characters may be used in the path component</p></td>
 </tr>
 <tr class="row-odd"><td><p>Root ID</p></td>
@@ -284,7 +291,14 @@ a shortcut to refer to the root identifier for example:</p>
 </tr>
 <tr class="row-even"><td><p>Instance</p></td>
 <td><p>!</p></td>
-<td><p>Delimiter for the instance of a repeating interface</p></td>
+<td><p>Delimiter for the instance number of a repeating interface or property</p></td>
+</tr>
+<tr class="row-odd"><td><p>Global</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Delimiter for a global alias (see <a class="reference internal" href="../standard_objects/condition.html#standard-objects-condition-alias"><span class="std std-ref">Alias (Required*)</span></a>)</p></td>
 </tr>
 </tbody>
 </table>
@@ -322,6 +336,8 @@ version of the device for the purposes of the UDR library.</p>
 <p><a class="reference internal" href="../standard_objects/interface_instance.html#standard-objects-interface-instance"><span class="std std-ref">Interface Instance</span></a>, <a class="reference internal" href="../standard_objects/property_instance.html#standard-objects-property-instance"><span class="std std-ref">Property Instance</span></a> and
 <a class="reference internal" href="../standard_objects/condition.html#standard-objects-condition"><span class="std std-ref">Condition</span></a> are identified by an alias.</p>
 <p>An alias is a string uniquely identifying the object within its parent object.</p>
+<p>Instantiated objects are addressed using the alias which may be qualified or relative (see
+<a class="reference internal" href="#tutorial-identifiers-uri"><span class="std std-ref">URI</span></a>).</p>
 </div>
 </div>
 </div>

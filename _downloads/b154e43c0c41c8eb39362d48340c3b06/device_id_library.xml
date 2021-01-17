@@ -6,26 +6,26 @@
         class="device-id"
         name="Device ID"
         description="A globally unique identifier for a device model."
-        data_type="string" />
+        datatype="string" />
     <propertydef 
         class="device-manufacturer"
         name="Manufacturer"
         description="Identifies a device's manufacturer."
-        data_type="string" />
+        datatype="string" />
     <propertydef 
         class="device-model"
         name="Model"
         description="Identifies a device's model name."
-        data_type="string" />
+        datatype="string" />
 
     <!-- Interfaces -->
     <interfacedef 
         class="device"
         name="Device"
         description="The root-level interface that describes a device.">
-      <property class="device-id" alias="device-id" friendlyname="Device ID" access="readonly" lifetime="static" minimum="0" maximum="128" />
-      <property class="device-manufacturer" friendlyname="Manufacturer" alias="device-manufacturer" access="readonly" lifetime="static" minimum="0" maximum="128" />
-      <property class="device-model" alias="device-model" friendlyname="Model" access="readonly" lifetime="static" minimum="0" maximum="128" />
+      <property class="$/device-id" alias="device-id" access="readonly" lifetime="static" minimum="0" maximum="128" />
+      <property class="$/device-manufacturer" alias="device-manufacturer" access="readonly" lifetime="static" minimum="0" maximum="128" />
+      <property class="$/device-model" alias="device-model" access="readonly" lifetime="static" minimum="0" maximum="128" />
     </interfacedef>
   </library>
 </udr>

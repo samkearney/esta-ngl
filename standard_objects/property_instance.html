@@ -148,7 +148,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_group.html">Exclusive Group Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_condition.html">Exclusive Condition Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/mac_encore.html">MAC Encore Performance WRM Device Example</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Other Resources</span></p>
@@ -224,7 +224,7 @@
   <div class="section" id="property-instance">
 <span id="standard-objects-property-instance"></span><h1>Property Instance<a class="headerlink" href="#property-instance" title="Permalink to this headline">¶</a></h1>
 <p>A <strong>property instance</strong> is a single addressable instance of a <a class="reference internal" href="property_definition.html"><span class="doc">Property Definition</span></a>. Property
-instances must be children of interface defintions.</p>
+instances must be children of interface definitions.</p>
 <div class="section" id="attributes">
 <h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
 <p>Instance attributes are per-property-instance; they can vary between instances of the property.</p>
@@ -232,10 +232,6 @@ instances must be children of interface defintions.</p>
 <span id="standard-objects-property-instance-class"></span><h3>Class (Required)<a class="headerlink" href="#class-required" title="Permalink to this headline">¶</a></h3>
 <p>Indicates the <a class="reference internal" href="property_definition.html#standard-objects-property-definition-class"><span class="std std-ref">class</span></a> of the defined property of which
 this is an instance.</p>
-<p>When more than one instance of the same class is used within a fixture definition, each instance must be
-identified by including the <code class="docutils literal notranslate"><span class="pre">!</span></code> delimiter followed by a unique instance number. If multiple property
-instances are instantiated using the <em>count</em> attribute, each instance will be identified starting with
-the initial instance number and incrementing by 1 for each instance.</p>
 </div>
 <div class="section" id="alias-required">
 <span id="standard-objects-property-instance-alias"></span><h3>Alias (Required)<a class="headerlink" href="#alias-required" title="Permalink to this headline">¶</a></h3>
@@ -243,6 +239,8 @@ the initial instance number and incrementing by 1 for each instance.</p>
 the interface containing the property instance. When a property instance has been instatiated using the
 count mechnisim, each instance will be identified with a unique alias followed by the <code class="docutils literal notranslate"><span class="pre">!</span></code> delimiter
 and a unique instance number.</p>
+<p>The alias must remain consistent through revisions of a <a class="reference internal" href="device_definition.html#standard-objects-device-definition"><span class="std std-ref">Device Definition</span></a>, as
+this will assist controllers with making sense of hierarchy changes.</p>
 </div>
 <div class="section" id="friendly-name-overridable">
 <span id="standard-objects-property-instance-friendly-name"></span><h3>Friendly Name (Overridable)<a class="headerlink" href="#friendly-name-overridable" title="Permalink to this headline">¶</a></h3>
@@ -253,8 +251,10 @@ intended to uniquely identify the property in a database.</p>
 <div class="section" id="count">
 <span id="standard-objects-property-instance-count"></span><h3>Count<a class="headerlink" href="#count" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>count</strong> attribute provides a mechanism for instantiating multiple property instances of the same
-type. When multiple instances are instantiated in this way, each instance is given an alias of that
-provided followed by the <code class="docutils literal notranslate"><span class="pre">!</span></code> delimiter and an incrementing instance number (starting from 1).</p>
+type.</p>
+<p>If multiple property instances are instantiated using the <em>count</em> attribute, each instance will be identified
+starting with the unique alias followed by the <code class="docutils literal notranslate"><span class="pre">!</span></code> delimiter and initial instance number, and incrementing by
+1 for each instance. For example “alias!2” would be followed by “alias!3”.</p>
 </div>
 <div class="section" id="access-and-lifetime-required-overridable">
 <span id="standard-objects-property-instance-access-and-lifetime"></span><h3>Access and Lifetime (Required, Overridable)<a class="headerlink" href="#access-and-lifetime-required-overridable" title="Permalink to this headline">¶</a></h3>
@@ -433,9 +433,9 @@ with different data types. If this attribute is absent, the maximum is assumed t
 <li><p>Members:</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 16%" />
-<col style="width: 13%" />
-<col style="width: 71%" />
+<col style="width: 14%" />
+<col style="width: 11%" />
+<col style="width: 76%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Key</p></th>
@@ -446,27 +446,27 @@ with different data types. If this attribute is absent, the maximum is assumed t
 <tbody>
 <tr class="row-even"><td><p>class</p></td>
 <td><p>string</p></td>
-<td><p><a class="reference internal" href="property_definition.html#standard-objects-property-definition-class"><span class="std std-ref">Class (Required)</span></a></p></td>
+<td><p><a class="reference internal" href="#standard-objects-property-instance-class"><span class="std std-ref">Class (Required)</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>alias</p></td>
 <td><p>string</p></td>
-<td><p><span class="xref std std-ref">standard-objects-property-definition-alias</span></p></td>
+<td><p><a class="reference internal" href="#standard-objects-property-instance-alias"><span class="std std-ref">Alias (Required)</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>friendlyname</p></td>
 <td><p>string</p></td>
-<td><p><span class="xref std std-ref">standard-objects-property-definition-friendly-name</span></p></td>
+<td><p><a class="reference internal" href="#standard-objects-property-instance-friendly-name"><span class="std std-ref">Friendly Name (Overridable)</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>count</p></td>
 <td><p>string</p></td>
-<td><p><span class="xref std std-ref">standard-objects-property-definition-count</span></p></td>
+<td><p><a class="reference internal" href="#standard-objects-property-instance-count"><span class="std std-ref">Count</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>access</p></td>
 <td><p>string</p></td>
-<td><p><a class="reference internal" href="property_definition.html#standard-objects-property-definition-description"><span class="std std-ref">Description</span></a></p></td>
+<td><p><a class="reference internal" href="#standard-objects-property-instance-access-and-lifetime"><span class="std std-ref">Access</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>lifetime</p></td>
 <td><p>string</p></td>
-<td><p><a class="reference internal" href="property_definition.html#standard-objects-property-definition-data-type"><span class="std std-ref">Data Type (Required*)</span></a></p></td>
+<td><p><a class="reference internal" href="#standard-objects-property-instance-access-and-lifetime"><span class="std std-ref">Lifetime</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>minimum</p></td>
 <td><p>number</p></td>

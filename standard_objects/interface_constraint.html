@@ -112,7 +112,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#class-required">Class (Required)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#minimum">Minimum</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#maximum">Maximum</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#exclusive-group">Exclusive Group</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#markup">Markup</a></li>
@@ -145,7 +144,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_group.html">Exclusive Group Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_condition.html">Exclusive Condition Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/mac_encore.html">MAC Encore Performance WRM Device Example</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Other Resources</span></p>
@@ -222,6 +221,8 @@
 <span id="standard-objects-interface-constraint"></span><h1>Interface Constraint<a class="headerlink" href="#interface-constraint" title="Permalink to this headline">¶</a></h1>
 <p>Interface definitions can contain <em>interface constraint</em> objects, which set rules for which
 interface instances are allowed as children of the defined interface.</p>
+<p>When multiple conflicting contraints are present within an interface definition, the most
+permissive constraints are considered correct.</p>
 <div class="section" id="attributes">
 <h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="class-required">
@@ -254,14 +255,9 @@ absent, the minimum is assumed to be 0.</p>
 <p>The maximum number of instances of the child interface that are allowed. If this attribute is
 absent, the maximum is assumed to be infinite.</p>
 </div>
-<div class="section" id="exclusive-group">
-<span id="standard-objects-interface-constraint-exclusive-group"></span><h3>Exclusive Group<a class="headerlink" href="#exclusive-group" title="Permalink to this headline">¶</a></h3>
-<p>The name of an exclusive group that this child is a member of, if instantiated. See
-<a class="reference internal" href="../tutorial/mutual_exclusion.html#tutorial-mutual-exclusion"><span class="std std-ref">Mutual Exclusion</span></a>.</p>
-</div>
 </div>
 <div class="section" id="markup">
-<h2>Markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h2>
+<span id="standard-objects-interface-constraint-markup"></span><h2>Markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h2>
 <div class="sphinx-tabs docutils container">
 <div class="ui top attached tabular menu sphinx-menu docutils container">
 <div class="active item sphinx-data-tab-0-0 docutils container">
@@ -283,7 +279,6 @@ absent, the maximum is assumed to be infinite.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">class</span></code>: <a class="reference internal" href="#standard-objects-interface-constraint-class"><span class="std std-ref">Class (Required)</span></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minimum</span></code>: <a class="reference internal" href="#standard-objects-interface-constraint-minimum"><span class="std std-ref">Minimum</span></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maximum</span></code>: <a class="reference internal" href="#standard-objects-interface-constraint-maximum"><span class="std std-ref">Maximum</span></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">exclusivegroup</span></code>: <a class="reference internal" href="#standard-objects-interface-constraint-exclusive-group"><span class="std std-ref">Exclusive Group</span></a></p></li>
 </ul>
 </li>
 </ul>
@@ -298,9 +293,9 @@ absent, the maximum is assumed to be infinite.</p>
 <li><p>Members:</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 12%" />
-<col style="width: 71%" />
+<col style="width: 18%" />
+<col style="width: 13%" />
+<col style="width: 68%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Key</p></th>
@@ -320,10 +315,6 @@ absent, the maximum is assumed to be infinite.</p>
 <tr class="row-even"><td><p>maximum</p></td>
 <td><p>number</p></td>
 <td><p><a class="reference internal" href="#standard-objects-interface-constraint-maximum"><span class="std std-ref">Maximum</span></a></p></td>
-</tr>
-<tr class="row-odd"><td><p>exclusivegroup</p></td>
-<td><p>string</p></td>
-<td><p><a class="reference internal" href="#standard-objects-interface-constraint-exclusive-group"><span class="std std-ref">Exclusive Group</span></a></p></td>
 </tr>
 </tbody>
 </table>

@@ -147,7 +147,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_group.html">Exclusive Group Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_condition.html">Exclusive Condition Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/mac_encore.html">MAC Encore Performance WRM Device Example</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Other Resources</span></p>
@@ -384,7 +384,7 @@ This attribute should be excluded, and will be ignored if <strong>extends</stron
 </table>
 </div>
 <div class="section" id="extends">
-<h3>Extends<a class="headerlink" href="#extends" title="Permalink to this headline">¶</a></h3>
+<span id="standard-objects-property-definition-extends"></span><h3>Extends<a class="headerlink" href="#extends" title="Permalink to this headline">¶</a></h3>
 <p>Indicates the <a class="reference internal" href="#standard-objects-property-definition-class"><span class="std std-ref">class</span></a> of the property definition
 this definition extends.</p>
 </div>
@@ -412,9 +412,9 @@ this definition extends.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">class</span></code>: <a class="reference internal" href="#standard-objects-property-definition-class"><span class="std std-ref">Class (Required)</span></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: <a class="reference internal" href="#standard-objects-property-definition-name"><span class="std std-ref">Name (Required)</span></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: <a class="reference internal" href="#standard-objects-property-definition-description"><span class="std std-ref">Description</span></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">data_type</span></code>: <a class="reference internal" href="#standard-objects-property-definition-data-type"><span class="std std-ref">Data Type (Required*)</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datatype</span></code>: <a class="reference internal" href="#standard-objects-property-definition-data-type"><span class="std std-ref">Data Type (Required*)</span></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code>: <a class="reference internal" href="#standard-objects-property-definition-unit"><span class="std std-ref">Unit (Required*)</span></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">extends</span></code>: <span class="xref std std-ref">standard-objects-property-definition-extends</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extends</span></code>: <a class="reference internal" href="#standard-objects-property-definition-extends"><span class="std std-ref">Extends</span></a></p></li>
 </ul>
 </li>
 </ul>
@@ -423,7 +423,7 @@ this definition extends.</p>
   <span class="na">class=</span><span class="s">&quot;strobe-frequency&quot;</span>
   <span class="na">name=</span><span class="s">&quot;Strobe Frequency&quot;</span>
   <span class="na">description=</span><span class="s">&quot;The frequency of a strobe shutter in Hertz&quot;</span>
-  <span class="na">data_type=</span><span class="s">&quot;number&quot;</span>
+  <span class="na">datatype=</span><span class="s">&quot;number&quot;</span>
   <span class="na">unit=</span><span class="s">&quot;hertz&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
@@ -457,7 +457,7 @@ this definition extends.</p>
 <td><p>string</p></td>
 <td><p><a class="reference internal" href="#standard-objects-property-definition-description"><span class="std std-ref">Description</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p>data_type</p></td>
+<tr class="row-odd"><td><p>datatype</p></td>
 <td><p>string</p></td>
 <td><p><a class="reference internal" href="#standard-objects-property-definition-data-type"><span class="std std-ref">Data Type (Required*)</span></a></p></td>
 </tr>
@@ -467,7 +467,7 @@ this definition extends.</p>
 </tr>
 <tr class="row-odd"><td><p>extends</p></td>
 <td><p>string</p></td>
-<td><p><span class="xref std std-ref">standard-objects-property-definition-extends</span></p></td>
+<td><p><a class="reference internal" href="#standard-objects-property-definition-extends"><span class="std std-ref">Extends</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -479,7 +479,7 @@ this definition extends.</p>
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;strobe-frequency&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Strobe Frequency&quot;</span><span class="p">,</span>
   <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The frequency of a strobe shutter in Hertz&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;data_type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;datatype&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
   <span class="nt">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;hertz&quot;</span>
 <span class="p">}</span>
 </pre></div>

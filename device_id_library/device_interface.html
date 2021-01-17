@@ -140,7 +140,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_group.html">Exclusive Group Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_condition.html">Exclusive Condition Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/mac_encore.html">MAC Encore Performance WRM Device Example</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Other Resources</span></p>
@@ -216,7 +216,7 @@
   <div class="section" id="device-interface">
 <h1>Device Interface<a class="headerlink" href="#device-interface" title="Permalink to this headline">¶</a></h1>
 <p>There can be only one instance of the device interface, which must be present at the root level of
-every device description.</p>
+every <a class="reference internal" href="../standard_objects/device_definition.html#standard-objects-device-definition"><span class="std std-ref">device definiton</span></a>.</p>
 <div class="section" id="definition">
 <h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-default">
@@ -262,9 +262,9 @@ every device description.</p>
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;device&quot;</span> <span class="na">name=</span><span class="s">&quot;Device&quot;</span> <span class="na">description=</span><span class="s">&quot;The root-level interface that describes a device.&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.identification.1/device-id&quot;</span> <span class="na">alias=</span><span class="s">&quot;device-id&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Device ID&quot;</span> <span class="na">access=</span><span class="s">&quot;readonly&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;128&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.identification.1/manufacturer&quot;</span> <span class="na">alias=</span><span class="s">&quot;device-manufacturer&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Manufacturer&quot;</span> <span class="na">access=</span><span class="s">&quot;readonly&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;128&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;org.esta.identification.1/model&quot;</span> <span class="na">alias=</span><span class="s">&quot;device-model&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Model&quot;</span> <span class="na">access=</span><span class="s">&quot;readonly&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;128&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;$/device-id&quot;</span> <span class="na">alias=</span><span class="s">&quot;device-id&quot;</span> <span class="na">access=</span><span class="s">&quot;readonly&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;128&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;$/manufacturer&quot;</span> <span class="na">alias=</span><span class="s">&quot;device-manufacturer&quot;</span> <span class="na">access=</span><span class="s">&quot;readonly&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;128&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;$/model&quot;</span> <span class="na">alias=</span><span class="s">&quot;device-model&quot;</span> <span class="na">access=</span><span class="s">&quot;readonly&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;128&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/interfacedef&gt;</span>
 </pre></div>
 </div>
@@ -278,9 +278,8 @@ every device description.</p>
   <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.identification.1/device-id&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;$/device-id&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;device-id&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Device ID&quot;</span><span class="p">,</span>
       <span class="nt">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;readonly&quot;</span><span class="p">,</span>
       <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span> <span class="s2">&quot;static&quot;</span><span class="p">,</span>
       <span class="nt">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -288,9 +287,8 @@ every device description.</p>
     <span class="p">},</span>
     <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.identification.1/manufacturer&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;$/manufacturer&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;device-manufacturer&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Manufacturer&quot;</span><span class="p">,</span>
       <span class="nt">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;readonly&quot;</span><span class="p">,</span>
       <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span> <span class="s2">&quot;static&quot;</span><span class="p">,</span>
       <span class="nt">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -298,9 +296,8 @@ every device description.</p>
     <span class="p">},</span>
     <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.identification.1/model&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;$/model&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;device-model&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Model&quot;</span><span class="p">,</span>
       <span class="nt">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;readonly&quot;</span><span class="p">,</span>
       <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span> <span class="s2">&quot;static&quot;</span><span class="p">,</span>
       <span class="nt">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>

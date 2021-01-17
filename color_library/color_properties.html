@@ -161,7 +161,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_group.html">Exclusive Group Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_condition.html">Exclusive Condition Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/mac_encore.html">MAC Encore Performance WRM Device Example</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Other Resources</span></p>
@@ -288,7 +288,7 @@
   <span class="na">class=</span><span class="s">&quot;spectrum-data&quot;</span>
   <span class="na">name=</span><span class="s">&quot;Spectrum Data&quot;</span>
   <span class="na">description=</span><span class="s">&quot;The Spectral Power Distribution data of an emitter in normalized wavelength.&quot;</span>
-  <span class="na">data_type=</span><span class="s">&quot;array&quot;</span>
+  <span class="na">datatype=</span><span class="s">&quot;array&quot;</span>
   <span class="na">unit=</span><span class="s">&quot;nanometers&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
@@ -299,7 +299,7 @@
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;spectrum-data&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Spectrum Data&quot;</span><span class="p">,</span>
   <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The Spectral Power Distribution data of an emitter in normalized wavelength.&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;data_type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;datatype&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
   <span class="nt">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;nanometers&quot;</span>
 <span class="p">}</span>
 </pre></div>
@@ -402,7 +402,7 @@
   <span class="na">class=</span><span class="s">&quot;spectrum-start&quot;</span>
   <span class="na">name=</span><span class="s">&quot;Spectrum Start&quot;</span>
   <span class="na">description=</span><span class="s">&quot;The Spectral Power Distribution wavelength start.&quot;</span>
-  <span class="na">data_type=</span><span class="s">&quot;number&quot;</span>
+  <span class="na">datatype=</span><span class="s">&quot;number&quot;</span>
   <span class="na">unit=</span><span class="s">&quot;nanometers&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
@@ -413,7 +413,7 @@
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;spectrum-start&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Spectrum Start&quot;</span><span class="p">,</span>
   <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The Spectral Power Distribution wavelength start.&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;data_type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;datatype&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
   <span class="nt">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;nanometers&quot;</span>
 <span class="p">}</span>
 </pre></div>
@@ -516,7 +516,7 @@
   <span class="na">class=</span><span class="s">&quot;spectrum-end&quot;</span>
   <span class="na">name=</span><span class="s">&quot;Spectrum End&quot;</span>
   <span class="na">description=</span><span class="s">&quot;The Spectral Power Distribution wavelength end.&quot;</span>
-  <span class="na">data_type=</span><span class="s">&quot;number&quot;</span>
+  <span class="na">datatype=</span><span class="s">&quot;number&quot;</span>
   <span class="na">unit=</span><span class="s">&quot;nanometers&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
@@ -527,7 +527,7 @@
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;spectrum-end&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Spectrum End&quot;</span><span class="p">,</span>
   <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The Spectral Power Distribution wavelength end.&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;data_type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;datatype&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
   <span class="nt">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;nanometers&quot;</span>
 <span class="p">}</span>
 </pre></div>
@@ -630,7 +630,7 @@
   <span class="na">class=</span><span class="s">&quot;spectrum-step&quot;</span>
   <span class="na">name=</span><span class="s">&quot;Spectrum Step&quot;</span>
   <span class="na">description=</span><span class="s">&quot;The Spectral Power Distribution wavelength step.&quot;</span>
-  <span class="na">data_type=</span><span class="s">&quot;number&quot;</span>
+  <span class="na">datatype=</span><span class="s">&quot;number&quot;</span>
   <span class="na">unit=</span><span class="s">&quot;nanometers&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
@@ -641,7 +641,7 @@
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;spectrum-step&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Spectrum Step&quot;</span><span class="p">,</span>
   <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The Spectral Power Distribution wavelength step.&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;data_type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;datatype&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
   <span class="nt">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;nanometers&quot;</span>
 <span class="p">}</span>
 </pre></div>

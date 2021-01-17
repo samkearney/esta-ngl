@@ -67,7 +67,7 @@ architectural lighting and building automation, and the Internet of Things.
 
    examples/simple_dimmer
    examples/multi_cell
-   examples/exclusive_group
+   examples/exclusive_condition
    examples/mac_encore
 
 .. toctree::

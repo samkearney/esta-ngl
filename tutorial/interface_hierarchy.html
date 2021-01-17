@@ -138,7 +138,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../examples/simple_dimmer.html">Simple Dimmer Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/multi_cell.html">Multi-Cell Device Example</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_group.html">Exclusive Group Device Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/exclusive_condition.html">Exclusive Condition Device Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/mac_encore.html">MAC Encore Performance WRM Device Example</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Other Resources</span></p>
@@ -326,8 +326,10 @@ interface instance must have at least one cell child.</p>
 </div>
 </div>
 <p>The cell has individual intensity and color properties.</p>
-<p>Note that interface and property definitions within the same <a class="reference internal" href="../standard_objects/library.html#standard-objects-library"><span class="std std-ref">Library</span></a> do not require
-the fully qualified class id which includes the <a class="reference internal" href="identifiers.html#tutorial-identifiers-organization-id"><span class="std std-ref">Organization Identifier</span></a>.</p>
+<p>Note that object definitions and instances within the same <a class="reference internal" href="../standard_objects/library.html#standard-objects-library"><span class="std std-ref">Library</span></a> as their parent
+do not require the fully qualified class id which includes the <a class="reference internal" href="identifiers.html#tutorial-identifiers-organization-id"><span class="std std-ref">Organization Identifier</span></a>,
+but can instantiated using the <code class="docutils literal notranslate"><span class="pre">$</span></code> root identifier which indicates the definition is within the root of
+the same library.</p>
 <p>These interface definitions give this device the tools to communicate information about its cell
 layout. Assuming the definitions above appear in a library with the class <code class="docutils literal notranslate"><span class="pre">com.acme.definitions.1</span></code>,
 the device might contain:</p>
@@ -347,10 +349,15 @@ the device might contain:</p>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- A group of 4 cells --&gt;</span>
 <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell-group&quot;</span> <span class="na">alias=</span><span class="s">&quot;cell-group-1&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;4x Cells&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;1&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Top Cell&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;2&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Right Cell&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;3&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Bottom Cell&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;4&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Left Cell&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;$/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;1&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Top Cell&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;$/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;2&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Right Cell&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;$/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;3&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Bottom Cell&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;$/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;4&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Left Cell&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/interface&gt;</span>
+
+<span class="c">&lt;!-- A group of 4 cells (shorthand version) --&gt;</span>
+<span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell-group&quot;</span> <span class="na">alias=</span><span class="s">&quot;cell-group-1&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;4x Cells&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;$/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;cell!1&quot;</span> <span class="na">count=</span><span class="s">&quot;4&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/interface&gt;</span>
 </pre></div>
 </div>
@@ -364,28 +371,43 @@ the device might contain:</p>
   <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;com.acme.definitions.1/cell&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;$/cell!1&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Top Cell&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;com.acme.definitions.1/cell&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;$/cell!2&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Right Cell&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;com.acme.definitions.1/cell&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;$/cell!3&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Bottom Cell&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;com.acme.definitions.1/cell&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;$/cell!4&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Left Cell&quot;</span>
-    <span class="p">},</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="p">{</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;com.acme.definitions.1/cell-group&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;cell-group-1&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;4x Cells&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;$/cell&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;cell!1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="mi">4</span>
+    <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
@@ -393,7 +415,7 @@ the device might contain:</p>
 </div>
 </div>
 <p>To address the intensity property of cell 2, you would use the qualified ID
-<code class="docutils literal notranslate"><span class="pre">cell-group-1/2/intensity</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">udr://cell-group-1/2/intensity</span></code> or for the shorthand version <code class="docutils literal notranslate"><span class="pre">udr://cell-group-1/cell!2/intensity</span></code></p>
 <div class="section" id="order-is-meaningful">
 <span id="tutorial-interface-hierarchy-ordering"></span><h2>Order Is Meaningful<a class="headerlink" href="#order-is-meaningful" title="Permalink to this headline">¶</a></h2>
 <p>The order in which interfaces appear at the same level in the hierarchy is meaningful; similar or
@@ -415,12 +437,25 @@ it. To modify the above example:</p>
 </div>
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- A group of 4 cells --&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- 2 groups of 4 cells --&gt;</span>
+
 <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell-group&quot;</span> <span class="na">alias=</span><span class="s">&quot;cell-group-1&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;4x Cells&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;4&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Left Cell&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;1&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Top Cell&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;3&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Bottom Cell&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;2&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Right Cell&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;$/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;4&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Top Cell&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;$/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;3&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Right Cell&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;$/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;1&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Bottom Cell&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;$/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;2&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Left Cell&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/interface&gt;</span>
+
+<span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell-group&quot;</span> <span class="na">alias=</span><span class="s">&quot;cell-group-2&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;4x Cells&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;$/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;3&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Right Cell&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;$/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;4&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Top Cell&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;$/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;1&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Bottom Cell&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;$/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;2&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Left Cell&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/interface&gt;</span>
+
+<span class="c">&lt;!-- 2 group of 4 cells (shorthand version) --&gt;</span>
+<span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;com.acme.definitions.1/cell-group&quot;</span> <span class="na">alias=</span><span class="s">&quot;cell-group!1&quot;</span> <span class="na">count=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;$/cell&quot;</span> <span class="na">alias=</span><span class="s">&quot;cell!1&quot;</span> <span class="na">count=</span><span class="s">&quot;4&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/interface&gt;</span>
 </pre></div>
 </div>
@@ -434,28 +469,61 @@ it. To modify the above example:</p>
   <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;com.acme.definitions.1/cell&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;$/cell&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Left Cell&quot;</span>
     <span class="p">},</span>
-    <span class="p">{</span>
+            <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;com.acme.definitions.1/cell&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Top Cell&quot;</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;$/cell&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Right Cell&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;com.acme.definitions.1/cell&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;$/cell&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Bottom Cell&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;com.acme.definitions.1/cell&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;$/cell&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Left Cell&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="p">{</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;com.acme.definitions.1/cell-group&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;cell-group-2&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;4x Cells&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;$/cell&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Right Cell&quot;</span>
     <span class="p">},</span>
+            <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;$/cell&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Top Cell&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;$/cell&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Bottom Cell&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;$/cell&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Left Cell&quot;</span>
+    <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>

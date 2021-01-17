@@ -41,7 +41,7 @@ Markup
     .. code-block:: xml
 
       <!-- simplified example -->
-      <propertydef class="velocity-indexed" name="Velocity Index" description="The indexed velocity of a wheel" data_type="enum">
+      <propertydef class="velocity-indexed" name="Velocity Index" description="The indexed velocity of a wheel" datatype="enum">
           <case>Slow</case>
           <case>Medium</case>
           <case>Fast</case>
@@ -67,7 +67,7 @@ Markup
         "class": "velocity-indexed",
         "name": "Velocity Index",
         "description": "The indexed velocity of a wheel",
-        "data_type": "enum",
+        "datatype": "enum",
         "children": [
           {
             "type": "case",

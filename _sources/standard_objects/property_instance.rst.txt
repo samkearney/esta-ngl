@@ -5,7 +5,7 @@ Property Instance
 #################
 
 A **property instance** is a single addressable instance of a :doc:`property_definition`. Property
-instances must be children of interface defintions.
+instances must be children of interface definitions.
 
 **********
 Attributes
@@ -21,11 +21,6 @@ Class (Required)
 Indicates the :ref:`class<standard-objects-property-definition-class>` of the defined property of which
 this is an instance.
 
-When more than one instance of the same class is used within a fixture definition, each instance must be
-identified by including the ``!`` delimiter followed by a unique instance number. If multiple property
-instances are instantiated using the *count* attribute, each instance will be identified starting with
-the initial instance number and incrementing by 1 for each instance.
-
 .. _standard-objects-property-instance-alias:
 
 Alias (Required)
@@ -35,6 +30,9 @@ The **alias** is a unique string identifying this property instance. The string 
 the interface containing the property instance. When a property instance has been instatiated using the
 count mechnisim, each instance will be identified with a unique alias followed by the ``!`` delimiter
 and a unique instance number.
+
+The alias must remain consistent through revisions of a :ref:`standard-objects-device-definition`, as
+this will assist controllers with making sense of hierarchy changes.
 
 .. _standard-objects-property-instance-friendly-name:
 
@@ -51,8 +49,11 @@ Count
 =====
 
 The **count** attribute provides a mechanism for instantiating multiple property instances of the same
-type. When multiple instances are instantiated in this way, each instance is given an alias of that
-provided followed by the ``!`` delimiter and an incrementing instance number (starting from 1).
+type.
+
+If multiple property instances are instantiated using the *count* attribute, each instance will be identified
+starting with the unique alias followed by the ``!`` delimiter and initial instance number, and incrementing by
+1 for each instance. For example "alias!2" would be followed by "alias!3".
 
 .. _standard-objects-property-instance-access-and-lifetime:
 
@@ -188,12 +189,12 @@ Markup
       ============= ========== =======================================================
       Key           Value Type Represents
       ============= ========== =======================================================
-      class         string     :ref:`standard-objects-property-definition-class`
-      alias         string     :ref:`standard-objects-property-definition-alias`
-      friendlyname  string     :ref:`standard-objects-property-definition-friendly-name`
-      count         string     :ref:`standard-objects-property-definition-count`
-      access        string     :ref:`standard-objects-property-definition-description`
-      lifetime      string     :ref:`standard-objects-property-definition-data-type`
+      class         string     :ref:`standard-objects-property-instance-class`
+      alias         string     :ref:`standard-objects-property-instance-alias`
+      friendlyname  string     :ref:`standard-objects-property-instance-friendly-name`
+      count         string     :ref:`standard-objects-property-instance-count`
+      access        string     :ref:`Access<standard-objects-property-instance-access-and-lifetime>`
+      lifetime      string     :ref:`Lifetime<standard-objects-property-instance-access-and-lifetime>`
       minimum       number     :ref:`standard-objects-property-instance-minimum`
       maximum       number     :ref:`standard-objects-property-instance-maximum`
       ============= ========== =======================================================
