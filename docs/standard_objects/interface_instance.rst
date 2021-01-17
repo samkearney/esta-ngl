@@ -85,7 +85,7 @@ Markup
 
     .. code-block:: xml
 
-      <interface class="org.esta.intensity.1/binary-dimmer" alias="primary-dimmer" friendlyname="Primary Dimmer" />
+      <interface class="udr://org.esta.intensity.1/binary-dimmer" alias="primary-dimmer" friendlyname="Primary Dimmer" />
 
   .. tab:: JSON
 
@@ -107,7 +107,7 @@ Markup
 
       {
         "type": "interface",
-        "class": "org.esta.intensity.1/binary-dimmer",
+        "class": "udr://org.esta.intensity.1/binary-dimmer",
         "alias": "primary-dimmer",
         "friendlyname": "Primary Dimmer"
       }

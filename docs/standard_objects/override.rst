@@ -97,18 +97,18 @@ Markup
     .. code-block:: xml
 
       <!-- simplified example -->
-      <interface class="org.esta.identification.1/device" alias="device" friendlyname="Device">
+      <interface class="udr://org.esta.identification.1/device" alias="device" friendlyname="Device">
           <override refalias="device-id" style="absolute" attribute="value">com.acme.device-model.1</override>
       </interface>
 
       <!-- simplified example -->
-      <interface class="org.esta.wheel.1/wheel-velocity" alias="velocity" friendlyname="Wheel Speed">
+      <interface class="udr://org.esta.wheel.1/wheel-velocity" alias="velocity" friendlyname="Wheel Speed">
           <override refalias="angular-velocity" style="absolute" attribute="minimum">-720</override>
           <override refalias="angular-velocity" style="absolute" attribute="maximum">720</override>
       </interface>
 
       <!-- simplified example -->
-      <interface class="org.esta.beam.1/optics" alias="optics" friendlyname="Optics">
+      <interface class="udr://org.esta.beam.1/optics" alias="optics" friendlyname="Optics">
           <override refalias="zoom" style="multiplier" attribute="maximum" valuealias="edge">1.2<override>
       </interface>
 
@@ -133,7 +133,7 @@ Markup
 
       {
         "type": "interface",
-        "class": "org.esta.identification.1/device",
+        "class": "udr://org.esta.identification.1/device",
         "alias": "device",
         "friendlyname": "Device"
         "children": [
@@ -149,7 +149,7 @@ Markup
 
       {
         "type": "interface",
-        "class": "org.esta.wheel.1/wheel-velocity",
+        "class": "udr://org.esta.wheel.1/wheel-velocity",
         "alias": "velocity",
         "friendlyname": "Wheel Speed",
         "children": [
@@ -172,7 +172,7 @@ Markup
 
       {
         "type": "interface",
-        "class": "org.esta.beam.1/optics",
+        "class": "udr://org.esta.beam.1/optics",
         "alias": "optics",
         "friendlyname": "Optics",
         "children": [

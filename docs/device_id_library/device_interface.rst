@@ -29,9 +29,9 @@ Properties
   .. code-tab:: xml
 
     <interfacedef class="device" name="Device" description="The root-level interface that describes a device.">
-      <property class="$/device-id" alias="device-id" access="readonly" lifetime="static" minimum="0" maximum="128" />
-      <property class="$/manufacturer" alias="device-manufacturer" access="readonly" lifetime="static" minimum="0" maximum="128" />
-      <property class="$/model" alias="device-model" access="readonly" lifetime="static" minimum="0" maximum="128" />
+      <property class="udr://$/device-id" alias="device-id" access="readonly" lifetime="static" minimum="0" maximum="128" />
+      <property class="udr://$/manufacturer" alias="device-manufacturer" access="readonly" lifetime="static" minimum="0" maximum="128" />
+      <property class="udr://$/model" alias="device-model" access="readonly" lifetime="static" minimum="0" maximum="128" />
     </interfacedef>
 
   .. code-tab:: json
@@ -44,7 +44,7 @@ Properties
       "children": [
         {
           "type": "property",
-          "class": "$/device-id",
+          "class": "udr://$/device-id",
           "alias": "device-id",
           "access": "readonly",
           "lifetime": "static",
@@ -53,7 +53,7 @@ Properties
         },
         {
           "type": "property",
-          "class": "$/manufacturer",
+          "class": "udr://$/manufacturer",
           "alias": "device-manufacturer",
           "access": "readonly",
           "lifetime": "static",
@@ -62,7 +62,7 @@ Properties
         },
         {
           "type": "property",
-          "class": "$/model",
+          "class": "udr://$/model",
           "alias": "device-model",
           "access": "readonly",
           "lifetime": "static",
@@ -80,35 +80,38 @@ Instance Example
 
   .. code-tab:: xml
 
-    <interface class="org.esta.identification.1/device" alias="device" friendlyname="Device">
-      <override refalias="device-id" attribute="value">com.acme.device-model.1</override>
-      <override refalias="device-manufacturer" attribute="value">ACME Corp</override>
-      <override refalias="device-model" attribute="value">New Device Model</override>
+    <interface class="udr://org.esta.identification.1/device" alias="device" friendlyname="Device">
+      <override refalias="device-id" style="absolute" attribute="value">com.acme.device-model.1</override>
+      <override refalias="device-manufacturer" style="absolute" attribute="value">ACME Corp</override>
+      <override refalias="device-model" style="absolute" attribute="value">New Device Model</override>
     </interface>
 
   .. code-tab:: json
 
     {
       "type": "interface",
-      "class": "org.esta.identification.1/device",
+      "class": "udr://org.esta.identification.1/device",
       "alias": "device",
       "friendlyname": "Device",
       "children": [
         {
           "type": "override",
-          "refalias": "device-id"
+          "refalias": "device-id",
+          "style": "absolute",
           "attribute": "value",
           "value": "com.acme.device-model.1"
         },
         {
           "type": "override",
-          "refalias": "device-manufacturer"
+          "refalias": "device-manufacturer",
+          "style": "absolute",
           "attribute": "value",
           "value": "ACME Corp"
         },
         {
           "type": "override",
-          "refalias": "device-model"
+          "refalias": "device-model",
+          "style": "absolute",
           "attribute": "value",
           "value": "New Device Model"
         }

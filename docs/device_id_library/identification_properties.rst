@@ -54,7 +54,7 @@ Instance Example
   .. code-tab:: xml
 
     <property
-      class="org.esta.identification.1/device-id"
+      class="udr://org.esta.identification.1/device-id"
       alias="device-id"
       friendlyname="Device ID"
       access="readonly"
@@ -128,7 +128,7 @@ Instance Example
   .. code-tab:: xml
 
     <property
-      class="org.esta.identification.1/device-manufacturer"
+      class="udr://org.esta.identification.1/device-manufacturer"
       alias="manufacturer"
       friendlyname="Manufacturer"
       access="readonly"
@@ -202,7 +202,7 @@ Instance Example
   .. code-tab:: xml
 
     <property
-      class="org.esta.identification.1/device-model"
+      class="udr://org.esta.identification.1/device-model"
       alias="model"
       friendlyname="Model"
       access="readonly"

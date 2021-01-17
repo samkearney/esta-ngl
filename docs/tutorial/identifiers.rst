@@ -38,7 +38,8 @@ apply:
 ==============  ======================================================
 
 Some characters are reserved by the URI specification. UDR also uses a special ``$`` character as
-a shortcut to refer to the root identifier for example:
+a shortcut to refer to the root identifier for example if the current context was within the 
+"org.esta.gobo.1" library:
 
 udr://$/gobo-wheel is replaced with udr://org.esta.gobo.1/gobo-wheel/
 

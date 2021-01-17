@@ -175,7 +175,7 @@ Markup
     .. code-block:: xml
 
       <property
-        class="org.esta.identification.1/firmware-version"
+        class="udr://org.esta.identification.1/firmware-version"
         alias="my-firmware-version"
         friendlyname="Firmware Version"
         access="readonly"
@@ -205,7 +205,7 @@ Markup
 
       {
         "type": "property",
-        "class": "org.esta.identification.1/firmware-version",
+        "class": "udr://org.esta.identification.1/firmware-version",
         "alias": "my-firmware-version",
         "friendlyname": "Firmware Version",
         "access": "readonly",

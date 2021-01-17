@@ -27,7 +27,7 @@ Properties
         class="dimmer"
         name="Dimmer"
         description="A simple dimmer controlling an intensity.">
-      <property class="$/intensity" alias="intensity" friendlyname="Dimmer" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+      <property class="udr://$/intensity" alias="intensity" friendlyname="Dimmer" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
     </interfacedef>
 
   .. code-tab:: json
@@ -40,7 +40,7 @@ Properties
       "children": [
         {
           "type": "property",
-          "class": "$/intensity",
+          "class": "udr://$/intensity",
           "alias": "intensity",
           "friendlyname": "Dimmer",
           "access": "readwrite",
@@ -59,13 +59,13 @@ Instance Example
 
   .. code-tab:: xml
 
-    <interface class="org.esta.intensity.1/dimmer" alias="primary-dimmer" friendlyname="Primary Dimmer" />
+    <interface class="udr://org.esta.intensity.1/dimmer" alias="primary-dimmer" friendlyname="Primary Dimmer" />
 
   .. code-tab:: json
 
     {
       "type": "interface",
-      "class": "org.esta.intensity.1/dimmer",
+      "class": "udr://org.esta.intensity.1/dimmer",
       "alias": "primary-dimmer",
       "friendlyname": "Primary Dimmer"
     }
