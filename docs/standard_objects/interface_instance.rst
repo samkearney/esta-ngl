@@ -20,22 +20,22 @@ Class (Required)
 Indicates the :ref:`class<standard-objects-interface-definition-class>` of the defined interface of which
 this is an instance.
 
-When more than one instance of the same class is used within a fixture definition, each instance must be
-identified by including the ``!`` delimiter followed by a unique instance number. If multiple interface
-instances are instantiated using the *count* attribute, each instance will be identified starting with
-the initial instance number and incrementing by 1 for each instance.
-
 .. _standard-objects-interface-instance-alias:
 
 Alias (Required)
 ================
 
 The **alias** is a unique string identifying this interface instance. The string must be unique within
-the definition containing the interface instance. When an interface instance has been instatiated using the
-count mechnisim, each instance will be identified with a unique alias followed by the ``!`` delimiter
-and a unique instance number.
+the definition containing the interface instance.
 
-.. _standard-objects-interface-friendly-name:
+If multiple interface instances are instantiated using the *count* attribute, each instance will be identified
+starting with the unique alias followed by the ``!`` delimiter and initial instance number, and incrementing by
+1 for each instance. For example "alias!2" would be followed by "alias!3".
+
+The alias must remain consistent through revisions of a :ref:`standard-objects-device-definition`, as this will
+assist controllers with making sense of hierarchy changes.
+
+.. _standard-objects-interface-instance-friendly-name:
 
 Friendly Name
 =============
@@ -61,6 +61,7 @@ Interface instances can have the following children:
 
 * :ref:`standard-objects-interface-instance`
 * :ref:`standard-objects-override`
+* :ref:`standard-objects-condition`
 
 .. _standard-objects-interface-instance-markup:
 
@@ -77,8 +78,8 @@ Markup
 
       * ``class``: :ref:`standard-objects-interface-instance-class`
       * ``alias``: :ref:`standard-objects-interface-instance-alias`
-      * ``friendlyname``: :ref:`standard-objects-interface-friendly-name`
-      * ``count``: :ref:`standard-objects-interface-count`
+      * ``friendlyname``: :ref:`standard-objects-interface-instance-friendly-name`
+      * ``count``: :ref:`standard-objects-interface-instance-count`
     
     Example:
 
@@ -91,14 +92,14 @@ Markup
     * Type: ``interface``
     * Members
 
-      ============= ========== =======================================================
+      ============= ========== ========================================================
       Key           Value Type Represents
-      ============= ========== =======================================================
+      ============= ========== ========================================================
       class         string     :ref:`standard-objects-interface-instance-class`
       alias         string     :ref:`standard-objects-interface-instance-alias`
-      friendlyname  string     :ref:`standard-objects-interface-friendly-name`
-      count         string     :ref:`standard-objects-interface-count`
-      ============= ========== =======================================================
+      friendlyname  string     :ref:`standard-objects-interface-instance-friendly-name`
+      count         string     :ref:`standard-objects-interface-instance-count`
+      ============= ========== ========================================================
     
     Example:
 

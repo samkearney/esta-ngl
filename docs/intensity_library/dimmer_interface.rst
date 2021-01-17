@@ -27,7 +27,7 @@ Properties
         class="dimmer"
         name="Dimmer"
         description="A simple dimmer controlling an intensity.">
-      <property class="intensity" alias="intensity" friendlyname="Dimmer" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+      <property class="$/intensity" alias="intensity" friendlyname="Dimmer" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
     </interfacedef>
 
   .. code-tab:: json
@@ -40,7 +40,7 @@ Properties
       "children": [
         {
           "type": "property",
-          "class": "intensity",
+          "class": "$/intensity",
           "alias": "intensity",
           "friendlyname": "Dimmer",
           "access": "readwrite",

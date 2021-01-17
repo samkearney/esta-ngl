@@ -40,108 +40,114 @@ A library can have the following children:
 * :ref:`standard-objects-interface-definition`
 * :ref:`standard-objects-device-definition`
 
+.. _standard-objects-library-markup:
+
 Markup Example
 ==============
 
 .. tabs::
 
-  .. code-tab:: xml
+  .. tab:: XML
 
-    <library class="com.acme.standarddefs.1" description="ACME Corp Standard Definitions" publishdate="2020-09-02" author="ACME Corp">
-      <propertydef class="customproperty" name="Custom Property" description="My custom property" data_type="string" />
-      <interfacedef class="custominterface" name="Custom Interface" description="My custom interface">
-        <property class="org.esta.intensity.1/intensity" alias="intensity-1" friendlyname="Trim LED Intensity" access="readwrite" lifetime="runtime" minimum="0", maximum="100" />
-        <property class="org.esta.intensity.1/intensity" alias="intensity-2" friendlyname="Yoke Logo Intensity" access="readwrite" lifetime="runtime" minimum="0", maximum="100" />
+    .. code-block:: xml
 
-        <property class="customproperty" alias="custom_property_1" friendlyname="Custom Property" access="readonly" lifetime="persistent" minimum="0" maximum="128" />
+      <library class="com.acme.standarddefs.1" description="ACME Corp Standard Definitions" publishdate="2020-09-02" author="ACME Corp">
+        <propertydef class="customproperty" name="Custom Property" description="My custom property" datatype="string" />
+        <interfacedef class="custominterface" name="Custom Interface" description="My custom interface">
+          <property class="org.esta.intensity.1/intensity" alias="intensity-1" friendlyname="Trim LED Intensity" access="readwrite" lifetime="runtime" minimum="0", maximum="100" />
+          <property class="org.esta.intensity.1/intensity" alias="intensity-2" friendlyname="Yoke Logo Intensity" access="readwrite" lifetime="runtime" minimum="0", maximum="100" />
 
-        <propertydef class="customproperty2" name="Custom Property 2" description="My custom property 2" data_type="number" unit="rpm" />
-        <property class="customproperty2" alias="customproperty2-1" friendlyname="Some Custom Property" access="readwrite" lifetime="runtime" minimum="-100" maximum="100" />
-        <property class="customproperty2" alias="customproperty2-2" friendlyname="Another Custom Property" access="readwrite" lifetime="runtime" minimum="-100" maximum="100" />
-      </interfacedef>
-    </library>
+          <property class="$/customproperty" alias="custom_property_1" friendlyname="Custom Property" access="readonly" lifetime="persistent" minimum="0" maximum="128" />
 
-  .. code-tab:: json
+          <propertydef class="customproperty2" name="Custom Property 2" description="My custom property 2" datatype="number" unit="rpm" />
+          <property class="customproperty2" alias="customproperty2-1" friendlyname="Some Custom Property" access="readwrite" lifetime="runtime" minimum="-100" maximum="100" />
+          <property class="customproperty2" alias="customproperty2-2" friendlyname="Another Custom Property" access="readwrite" lifetime="runtime" minimum="-100" maximum="100" />
+        </interfacedef>
+      </library>
 
-    {
-      "type": "library",
-      "class": "com.acme.standarddefs.1",
-      "description": "ACME Corp Standard Definitions",
-      "publishdate": "2020-09-02",
-      "author": "ACME Corp"
-      "children": [
-        {
-          "type": "propertydef",
-          "class": "customproperty",
-          "name": "Custom Property",
-          "description": "My custom property",
-          "data_type": "string"
-        },
-        {
-          "type": "interfacedef",
-          "class": "custominterface",
-          "name": "Custom Interface",
-          "description": "My custom interface",
-          "children": [
-            {
-              "type": "property",
-              "class": "org.esta.intensity.1/intensity",
-              "alias": "intensity-1",
-              "friendlyname": "Trim LED Intensity",
-              "access": "readwrite",
-              "lifetime": "runtime",
-              "minimum": 0,
-              "maximum": 100
-            },
-            {
-              "type": "property",
-              "class": "org.esta.intensity.1/intensity",
-              "alias": "intensity-2",
-              "friendlyname": "Yoke Logo Intensity",
-              "access": "readwrite",
-              "lifetime": "runtime",
-              "minimum": 0,
-              "maximum": 100
-            },
-            {
-              "type": "property",
-              "class": "customproperty",
-              "alias": "custom_property_1",
-              "friendlyname": "Custom Property",
-              "access": "readwrite",
-              "lifetime": "persistent",
-              "minimum": 0,
-              "maximum": 128
-            },
-            {
-              "type": "propertydef",
-              "class": "customproperty2",
-              "name": "Custom Property 2",
-              "description": "My custom property 2",
-              "data_type": "number",
-              "unit": "rpm"
-            },
-            {
-              "type": "property",
-              "class": "customproperty2",
-              "alias": "customproperty2-1",
-              "friendlyname": "Some Custom Property",
-              "access": "readwrite",
-              "lifetime": "runtime",
-              "minimum": -100,
-              "maximum": 100
-            },
-            {
-              "type": "property",
-              "class": "customproperty2",
-              "alias": "customproperty2-2",
-              "friendlyname": "Another Custom Property",
-              "access": "readwrite",
-              "lifetime": "runtime",
-              "minimum": -100,
-              "maximum": 100
-            }
-          ]
-        }
-      ]
-    }
+  .. tab:: JSON
+
+    .. code-block:: json
+
+      {
+        "type": "library",
+        "class": "com.acme.standarddefs.1",
+        "description": "ACME Corp Standard Definitions",
+        "publishdate": "2020-09-02",
+        "author": "ACME Corp"
+        "children": [
+          {
+            "type": "propertydef",
+            "class": "$/customproperty",
+            "name": "Custom Property",
+            "description": "My custom property",
+            "datatype": "string"
+          },
+          {
+            "type": "interfacedef",
+            "class": "custominterface",
+            "name": "Custom Interface",
+            "description": "My custom interface",
+            "children": [
+              {
+                "type": "property",
+                "class": "org.esta.intensity.1/intensity",
+                "alias": "intensity-1",
+                "friendlyname": "Trim LED Intensity",
+                "access": "readwrite",
+                "lifetime": "runtime",
+                "minimum": 0,
+                "maximum": 100
+              },
+              {
+                "type": "property",
+                "class": "org.esta.intensity.1/intensity",
+                "alias": "intensity-2",
+                "friendlyname": "Yoke Logo Intensity",
+                "access": "readwrite",
+                "lifetime": "runtime",
+                "minimum": 0,
+                "maximum": 100
+              },
+              {
+                "type": "property",
+                "class": "customproperty",
+                "alias": "custom_property_1",
+                "friendlyname": "Custom Property",
+                "access": "readwrite",
+                "lifetime": "persistent",
+                "minimum": 0,
+                "maximum": 128
+              },
+              {
+                "type": "propertydef",
+                "class": "customproperty2",
+                "name": "Custom Property 2",
+                "description": "My custom property 2",
+                "datatype": "number",
+                "unit": "rpm"
+              },
+              {
+                "type": "property",
+                "class": "customproperty2",
+                "alias": "customproperty2-1",
+                "friendlyname": "Some Custom Property",
+                "access": "readwrite",
+                "lifetime": "runtime",
+                "minimum": -100,
+                "maximum": 100
+              },
+              {
+                "type": "property",
+                "class": "customproperty2",
+                "alias": "customproperty2-2",
+                "friendlyname": "Another Custom Property",
+                "access": "readwrite",
+                "lifetime": "runtime",
+                "minimum": -100,
+                "maximum": 100
+              }
+            ]
+          }
+        ]
+      }

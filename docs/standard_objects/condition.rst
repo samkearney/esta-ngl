@@ -11,12 +11,12 @@ availability or selection of child interfaces and properties.
 Attributes
 **********
 
-.. _standard-objects-condition-kind:
+.. _standard-objects-condition-style:
 
-Kind (Required)
+Style (Required)
 ===============
 
-Indicates the **kind** of this condition.
+Indicates the **style** of this condition.
 
 This can be any of the following:
 
@@ -27,7 +27,7 @@ unavailable   All child interfaces and properties are unavailable when the **ref
 ============= ==================================================================================
 
 Validility may be either a valid value within a range, or the selection of an alias of
-from within another condition with the Kind *exclusive*.
+from within another condition with the Style *exclusive*.
 
 .. _standard-objects-condition-refalias:
 
@@ -37,11 +37,11 @@ Ref Alias (Required*)
 Indicates the **alias** of the interface or property instance of which this condition
 is observing the state. This must be a valid :ref:`tutorial-identifiers-alias`.
 
-When the Kind attribute is defined as *exclusive*, the Ref Alias must be a property
+When the Style attribute is defined as *exclusive*, the Ref Alias must be a property
 instance with the data type enum. The 'selected' child index is defined by the
 current value of this property instance.
 
-\* Ref Alias is not required when the Kind attribute is defined as *exclusive*, and
+\* Ref Alias is not required when the Style attribute is defined as *exclusive*, and
 should only be included when not including Alias.
 
 .. _standard-objects-condition-alias:
@@ -52,8 +52,32 @@ Alias (Required*)
 The **alias** is a unique string identifying this condition. The string must be unique
 within the definition containing the condition.
 
-\* Alias is required, and must be included only when the Kind attribute is defined as
+\* Alias is required (and must be included) only when the Style attribute is defined as
 *exclusive*, and the Ref Alias attribute is not included.
+
+To support cross-tree conditions, the alias may be followed by a global identification
+delimiter ``+``, and then a global alias. The global alias string following this
+delimiter must be unique within the :ref:`standard-objects-library`: or
+:ref:`standard-objects-device-definition`. When a global alias is provided, any other
+conditions using the same global alias are treated as the same condition.
+
+Example:
+
+  .. code-block:: xml
+
+    <interface class="an-interface" alias="root-interface">
+      <interface class="another-interface" alias="interface-a-alias">
+        <condition style="exclusive" alias="wheel-control+global-wheel-control">
+          <!-- "global-wheel-control" exclusive children interfaces -->
+        </condition>
+      </interface>
+
+      <interface class="another-interface" alias="interface-b-alias">
+        <condition style="exclusive" alias="wheel-control+global-wheel-control">
+          <!-- "global-wheel-control" exclusive children interfaces -->
+        </condition>
+      </interface>
+    </interface>
 
 .. _standard-objects-condition-min:
 
@@ -63,7 +87,7 @@ Minimum
 Indicates the minimum value of a referenced property instance for which this condition
 is considered valid.
 
-This attribute should be excluded, and will be ignored when the Kind attribute is
+This attribute should be excluded, and will be ignored when the Style attribute is
 defined as *exclusive*.
 
 .. _standard-objects-condition-max:
@@ -74,7 +98,7 @@ Maximum
 Indicates the maximum value of a referenced property instance for which this condition
 is considered valid.
 
-This attribute should be excluded, and will be ignored when the Kind attribute is
+This attribute should be excluded, and will be ignored when the Style attribute is
 defined as *exclusive*.
 
 .. _standard-objects-condition-markup:
@@ -89,7 +113,7 @@ Markup
     * Tag name: ``condition``
     * Attributes:
 
-      * ``kind``: :ref:`standard-objects-condition-kind`
+      * ``style``: :ref:`standard-objects-condition-style`
       * ``refalias``: :ref:`standard-objects-condition-refalias`
       * ``alias``: :ref:`standard-objects-condition-alias`
       * ``min``: :ref:`standard-objects-condition-min`
@@ -100,13 +124,13 @@ Markup
     .. code-block:: xml
 
       <!-- simplified example -->
-      <condition kind="exclusive" alias="wheel-control">
+      <condition style="exclusive" alias="wheel-control">
         <interface class="org.esta.wheel.1/wheel-velocity" alias="velocity" friendlyname="Wheel Speed">
         <interface class="org.esta.wheel.1/wheel-index" alias="index" friendlyname="Wheel Index">
       </condition>
 
       <!-- simplified example -->
-      <condition kind="unavailable" refalias="wheel-control/index">
+      <condition style="unavailable" refalias="wheel-control/index">
         <interface class="org.esta.gobo.1/gobo-shake" alias="gobo-shake" friendlyname="Gobo Shake">
       </condition>
 
@@ -118,7 +142,7 @@ Markup
       ============== ========== ============================================================
       Key            Value Type Represents
       ============== ========== ============================================================
-      kind           string     :ref:`standard-objects-condition-kind`
+      style          string     :ref:`standard-objects-condition-style`
       refalias       string     :ref:`standard-objects-condition-refalias`
       alias          string     :ref:`standard-objects-condition-alias`
       min            string     :ref:`standard-objects-condition-min`
@@ -131,7 +155,7 @@ Markup
 
       {
         "type": "condition",
-        "kind": "exclusive",
+        "style": "exclusive",
         "alias": "wheel-control",
         "children": [
           {
@@ -151,7 +175,7 @@ Markup
 
       {
         "type": "condition",
-        "kind": "unavailable",
+        "style": "unavailable",
         "refalias": "wheel-control/index",
         "children": [
           {

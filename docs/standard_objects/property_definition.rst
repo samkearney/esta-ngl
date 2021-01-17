@@ -104,6 +104,8 @@ byte                     Data Size in Bytes
 percent                  Percentage of a Maximum Value
 ======================== ======================================================
 
+.. _standard-objects-property-definition-extends:
+
 Extends
 =======
 
@@ -126,7 +128,7 @@ Markup
       * ``class``: :ref:`standard-objects-property-definition-class`
       * ``name``: :ref:`standard-objects-property-definition-name`
       * ``description``: :ref:`standard-objects-property-definition-description`
-      * ``data_type``: :ref:`standard-objects-property-definition-data-type`
+      * ``datatype``: :ref:`standard-objects-property-definition-data-type`
       * ``unit``: :ref:`standard-objects-property-definition-unit`
       * ``extends``: :ref:`standard-objects-property-definition-extends`
     
@@ -138,7 +140,7 @@ Markup
         class="strobe-frequency"
         name="Strobe Frequency"
         description="The frequency of a strobe shutter in Hertz"
-        data_type="number"
+        datatype="number"
         unit="hertz" />
 
   .. tab:: JSON
@@ -152,7 +154,7 @@ Markup
       class       string     :ref:`standard-objects-property-definition-class`
       name        string     :ref:`standard-objects-property-definition-name`
       description string     :ref:`standard-objects-property-definition-description`
-      data_type   string     :ref:`standard-objects-property-definition-data-type`
+      datatype    string     :ref:`standard-objects-property-definition-data-type`
       unit        string     :ref:`standard-objects-property-definition-unit`
       extends     string     :ref:`standard-objects-property-definition-extends`
       =========== ========== =======================================================
@@ -166,6 +168,6 @@ Markup
         "class": "strobe-frequency",
         "name": "Strobe Frequency",
         "description": "The frequency of a strobe shutter in Hertz",
-        "data_type": "number",
+        "datatype": "number",
         "unit": "hertz"
       }
