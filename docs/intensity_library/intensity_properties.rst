@@ -55,7 +55,7 @@ Instance Example
   .. code-tab:: xml
 
     <property 
-      class="org.esta.intensity.1/intensity"
+      class="udr://org.esta.intensity.1/intensity"
       alias="intensity"
       access="readwrite"
       lifetime="runtime"
@@ -127,7 +127,7 @@ Instance Example
   .. code-tab:: xml
 
     <property
-      class="org.esta.intensity.1/binary-intensity"
+      class="udr://org.esta.intensity.1/binary-intensity"
       alias="primary-emitter-intensity"
       access="readwrite"
       lifetime="runtime" />

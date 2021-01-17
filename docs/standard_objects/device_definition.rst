@@ -46,10 +46,10 @@ Markup
     .. code-block:: xml
 
       <devicedef class="es1">
-        <interface class="org.esta.identification.1/device" alias="device" friendlyname="Device">
-          <override refalias="device-id" attribute="value">com.etcconnect.es1.1</override>
-          <override refalias="device-manufacturer" attribute="value">ETC Inc.</override>
-          <override refalias="device-model" attribute="value">ES1</override>
+        <interface class="udr://org.esta.identification.1/device" alias="device" friendlyname="Device">
+          <override refalias="device-id" style="absolute" attribute="value">com.etcconnect.es1.1</override>
+          <override refalias="device-manufacturer" style="absolute" attribute="value">ETC Inc.</override>
+          <override refalias="device-model" style="absolute" attribute="value">ES1</override>
         </interface>
       </devicedef>
 
@@ -74,25 +74,28 @@ Markup
         "children": [
           {
             "type": "interface",
-            "class": "org.esta.device.1/device",
+            "class": "udr://org.esta.device.1/device",
             "alias": "device",
             "friendlyname": "Device",
             "children": [
               {
                 "type": "override",
                 "refalias": "device-id",
+                "style": "absolute",
                 "attribute": "value",
                 "value": "com.etcconnect.es1.1"
               },
               {
                 "type": "override",
                 "refalias": "device-manufacturer",
+                "style": "absolute",
                 "attribute": "value",
                 "value": "ETC Inc."
               },
               {
                 "type": "override",
                 "refalias": "device-model",
+                "style": "absolute",
                 "attribute": "value",
                 "value": "ES1"
               }

@@ -15,22 +15,22 @@ controls all of the cells:
 
   .. code-tab:: xml
 
-    <interfacedef class="cell-group" name="Cell Group" description="A group of cells">
-      <property class="org.esta.intensity.1/intensity" alias="intensity-master" friendlyname="Intensity Master" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
-      <interfaceconstraint class="cell" minimum="1" />
+    <interfacedef class="udr://com.acme.definitions.1/cell-group" name="Cell Group" description="A group of cells">
+      <property class="udr://org.esta.intensity.1/intensity" alias="intensity-master" friendlyname="Intensity Master" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
+      <interfaceconstraint class="../cell" minimum="1" />
     </interfacedef>
 
   .. code-tab:: json
 
     {
       "type": "interfacedef",
-      "class": "cell-group",
+      "class": "udr://com.acme.definitions.1/cell-group",
       "name": "Cell Group",
       "description": "A group of cells",
       "children": [
         {
           "type": "property",
-          "class": "org.esta.intensity.1/intensity",
+          "class": "udr://org.esta.intensity.1/intensity",
           "alias": "intensity-master",
           "friendlyname": "Intensity Master",
           "access": "readwrite",
@@ -40,7 +40,7 @@ controls all of the cells:
         },
         {
           "type": "interfaceconstraint",
-          "class": "cell",
+          "class": "../cell",
           "minimum": 1
         }
       ]
@@ -57,8 +57,8 @@ The cell interface might look like:
   .. code-tab:: xml
 
     <interfacedef class="cell" name="Cell" description="An intensity and RGB cell">
-      <property class="org.esta.intensity.1/intensity" alias="intensity" friendlyname="Cell Intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100"/>
-      <property class="org.esta.color.1/rgb" alias="color" friendlyname="Cell Color" access="readwrite" lifetime="runtime" minimum="0" maximum="100"/>
+      <property class="udr://org.esta.intensity.1/intensity" alias="intensity" friendlyname="Cell Intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100"/>
+      <property class="udr://org.esta.color.1/rgb" alias="color" friendlyname="Cell Color" access="readwrite" lifetime="runtime" minimum="0" maximum="100"/>
     </interfacedef>
 
   .. code-tab:: json
@@ -71,7 +71,7 @@ The cell interface might look like:
       "children": [
         {
           "type": "property",
-          "class": "org.esta.intensity.1/intensity",
+          "class": "udr://org.esta.intensity.1/intensity",
           "alias": "intensity",
           "friendlyname": "Cell Intensity",
           "access": "readwrite",
@@ -81,7 +81,7 @@ The cell interface might look like:
         },
         {
           "type": "property",
-          "class": "org.esta.color.1/rgb",
+          "class": "udr://org.esta.color.1/rgb",
           "alias": "color",
           "friendlyname": "Cell Color",
           "access": "readwrite",
@@ -108,47 +108,47 @@ the device might contain:
   .. code-tab:: xml
 
     <!-- A group of 4 cells -->
-    <interface class="com.acme.definitions.1/cell-group" alias="cell-group-1" friendlyname="4x Cells">
-      <interface class="$/cell" alias="1" friendlyname="Top Cell" />
-      <interface class="$/cell" alias="2" friendlyname="Right Cell" />
-      <interface class="$/cell" alias="3" friendlyname="Bottom Cell" />
-      <interface class="$/cell" alias="4" friendlyname="Left Cell" />
+    <interface class="udr://com.acme.definitions.1/cell-group" alias="cell-group-1" friendlyname="4x Cells">
+      <interface class="../cell" alias="1" friendlyname="Top Cell" />
+      <interface class="../cell" alias="2" friendlyname="Right Cell" />
+      <interface class="../cell" alias="3" friendlyname="Bottom Cell" />
+      <interface class="../cell" alias="4" friendlyname="Left Cell" />
     </interface>
 
     <!-- A group of 4 cells (shorthand version) -->
-    <interface class="com.acme.definitions.1/cell-group" alias="cell-group-1" friendlyname="4x Cells">
-      <interface class="$/cell" alias="cell!1" count="4" />
+    <interface class="udr://com.acme.definitions.1/cell-group" alias="cell-group-1" friendlyname="4x Cells">
+      <interface class="../cell" alias="cell!1" count="4" />
     </interface>
 
   .. code-tab:: json
 
     {
       "type": "interface",
-      "class": "com.acme.definitions.1/cell-group",
+      "class": "udr://com.acme.definitions.1/cell-group",
       "alias": "cell-group-1",
       "friendlyname": "4x Cells",
       "children": [
         {
           "type": "interface",
-          "class": "$/cell!1",
+          "class": "../cell!1",
           "alias": "1",
           "friendlyname": "Top Cell"
         },
         {
           "type": "interface",
-          "class": "$/cell!2",
+          "class": "../cell!2",
           "alias": "2",
           "friendlyname": "Right Cell"
         },
         {
           "type": "interface",
-          "class": "$/cell!3",
+          "class": "../cell!3",
           "alias": "3",
           "friendlyname": "Bottom Cell"
         },
         {
           "type": "interface",
-          "class": "$/cell!4",
+          "class": "../cell!4",
           "alias": "4",
           "friendlyname": "Left Cell"
         }
@@ -157,13 +157,13 @@ the device might contain:
 
     {
       "type": "interface",
-      "class": "com.acme.definitions.1/cell-group",
+      "class": "udr://com.acme.definitions.1/cell-group",
       "alias": "cell-group-1",
       "friendlyname": "4x Cells",
       "children": [
         {
           "type": "interface",
-          "class": "$/cell",
+          "class": "../cell",
           "alias": "cell!1",
           "count": 4
         }
@@ -191,54 +191,54 @@ it. To modify the above example:
 
     <!-- 2 groups of 4 cells -->
 
-    <interface class="com.acme.definitions.1/cell-group" alias="cell-group-1" friendlyname="4x Cells">
-      <interface class="$/cell" alias="4" friendlyname="Top Cell" />
-      <interface class="$/cell" alias="3" friendlyname="Right Cell" />
-      <interface class="$/cell" alias="1" friendlyname="Bottom Cell" />
-      <interface class="$/cell" alias="2" friendlyname="Left Cell" />
+    <interface class="udr://com.acme.definitions.1/cell-group" alias="cell-group-1" friendlyname="4x Cells">
+      <interface class="../cell" alias="4" friendlyname="Top Cell" />
+      <interface class="../cell" alias="3" friendlyname="Right Cell" />
+      <interface class="../cell" alias="1" friendlyname="Bottom Cell" />
+      <interface class="../cell" alias="2" friendlyname="Left Cell" />
     </interface>
 
-    <interface class="com.acme.definitions.1/cell-group" alias="cell-group-2" friendlyname="4x Cells">
-      <interface class="$/cell" alias="3" friendlyname="Right Cell" />
-      <interface class="$/cell" alias="4" friendlyname="Top Cell" />
-      <interface class="$/cell" alias="1" friendlyname="Bottom Cell" />
-      <interface class="$/cell" alias="2" friendlyname="Left Cell" />
+    <interface class="udr://com.acme.definitions.1/cell-group" alias="cell-group-2" friendlyname="4x Cells">
+      <interface class="../cell" alias="3" friendlyname="Right Cell" />
+      <interface class="../cell" alias="4" friendlyname="Top Cell" />
+      <interface class="../cell" alias="1" friendlyname="Bottom Cell" />
+      <interface class="../cell" alias="2" friendlyname="Left Cell" />
     </interface>
 
     <!-- 2 group of 4 cells (shorthand version) -->
-    <interface class="com.acme.definitions.1/cell-group" alias="cell-group!1" count="2">
-      <interface class="$/cell" alias="cell!1" count="4" />
+    <interface class="udr://com.acme.definitions.1/cell-group" alias="cell-group!1" count="2">
+      <interface class="../cell" alias="cell!1" count="4" />
     </interface>
 
   .. code-tab:: json
 
     {
       "type": "interface",
-      "class": "com.acme.definitions.1/cell-group",
+      "class": "udr://com.acme.definitions.1/cell-group",
       "alias": "cell-group-1",
       "friendlyname": "4x Cells",
       "children": [
         {
           "type": "interface",
-          "class": "$/cell",
+          "class": "../cell",
           "alias": "4",
           "friendlyname": "Left Cell"
         },
                 {
           "type": "interface",
-          "class": "$/cell",
+          "class": "../cell",
           "alias": "3",
           "friendlyname": "Right Cell"
         },
         {
           "type": "interface",
-          "class": "$/cell",
+          "class": "../cell",
           "alias": "1",
           "friendlyname": "Bottom Cell"
         },
         {
           "type": "interface",
-          "class": "$/cell",
+          "class": "../cell",
           "alias": "2",
           "friendlyname": "Left Cell"
         }
@@ -247,31 +247,31 @@ it. To modify the above example:
 
     {
       "type": "interface",
-      "class": "com.acme.definitions.1/cell-group",
+      "class": "udr://com.acme.definitions.1/cell-group",
       "alias": "cell-group-2",
       "friendlyname": "4x Cells",
       "children": [
         {
           "type": "interface",
-          "class": "$/cell",
+          "class": "../cell",
           "alias": "3",
           "friendlyname": "Right Cell"
         },
                 {
           "type": "interface",
-          "class": "$/cell",
+          "class": "../cell",
           "alias": "4",
           "friendlyname": "Top Cell"
         },
         {
           "type": "interface",
-          "class": "$/cell",
+          "class": "../cell",
           "alias": "1",
           "friendlyname": "Bottom Cell"
         },
         {
           "type": "interface",
-          "class": "$/cell",
+          "class": "../cell",
           "alias": "2",
           "friendlyname": "Left Cell"
         }

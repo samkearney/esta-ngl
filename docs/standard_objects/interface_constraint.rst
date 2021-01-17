@@ -70,7 +70,7 @@ Markup
 
     .. code-block:: xml
 
-      <interfaceconstraint class="com.acme.definitions.1/cell" minimum="1" maximum="10" />
+      <interfaceconstraint class="udr://com.acme.definitions.1/cell" minimum="1" maximum="10" />
 
   .. tab:: JSON
 
@@ -91,7 +91,7 @@ Markup
 
       {
         "type": "interfaceconstraint",
-        "class": "com.acme.definitions.1/cell",
+        "class": "udr://com.acme.definitions.1/cell",
         "minimum": 1,
         "maximum": 10
       }

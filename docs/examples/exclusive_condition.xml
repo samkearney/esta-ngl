@@ -17,22 +17,22 @@
   <library class="com.acme.definitions.1" description="ACME General Definitions" publishdate="2020-09-02" author="ACME Corp">
     <!-- Some standard ESTA definitions put here for convenience -->
 
-    <interfacedef class="org.esta.wheel.1/wheel-velocity" name="Wheel Velocity" description="The speed of a wheel">
-      <property class="$/angular-velocity" alias="velocity" friendlyname="Velocity" access="readwrite" lifetime="runtime" />
+    <interfacedef class="udr://org.esta.wheel.1/wheel-velocity" name="Wheel Velocity" description="The speed of a wheel">
+      <property class="../angular-velocity" alias="velocity" friendlyname="Velocity" access="readwrite" lifetime="runtime" />
     </interfacedef>
-    <interfacedef class="org.esta.wheel.1/wheel-position-indexed" name="Wheel Position Index" description="The indexed position of a wheel">
-      <property class="$/index" alias="index" friendlyname="Index" access="readwrite" lifetime="runtime" />
+    <interfacedef class="udr://org.esta.wheel.1/wheel-position-indexed" name="Wheel Position Index" description="The indexed position of a wheel">
+      <property class="../index" alias="index" friendlyname="Index" access="readwrite" lifetime="runtime" />
     </interfacedef>
-    <interfacedef class="org.esta.wheel.1/wheel-position" name="Wheel Position" description="The angular position of a wheel">
-      <property class="$/angular-position" alias="position" friendlyname="Position" access="readwrite" lifetime="runtime" minimum="0" maximum="360" />
+    <interfacedef class="udr://org.esta.wheel.1/wheel-position" name="Wheel Position" description="The angular position of a wheel">
+      <property class="../angular-position" alias="position" friendlyname="Position" access="readwrite" lifetime="runtime" minimum="0" maximum="360" />
     </interfacedef>
 
-    <interfacedef class="org.esta.wheel.1/wheel" name="Wheel" description="A wheel">
-      <interfaceconstraint class="org.esta.wheel.1/wheel-velocity" maximum="1" />
-      <interfaceconstraint class="org.esta.wheel.1/wheel-position-indexed" maximum="1" />
-      <interfaceconstraint class="org.esta.wheel.1/wheel-position" maximum="1" />
-      <interfaceconstraint class="org.esta.wheel.1/wheel" maximum="1" />
-      <interfaceconstraint class="org.esta.gobo.1/gobo-description" />
+    <interfacedef class="udr://org.esta.wheel.1/wheel" name="Wheel" description="A wheel">
+      <interfaceconstraint class="../wheel-velocity" maximum="1" />
+      <interfaceconstraint class="../wheel-position-indexed" maximum="1" />
+      <interfaceconstraint class="../wheel-position" maximum="1" />
+      <interfaceconstraint class="../wheel" maximum="1" />
+      <interfaceconstraint class="../gobo-description" />
     </interfacedef>
 
   </library>
@@ -40,36 +40,36 @@
   <library class="com.acme.devices.1" description="ACME Device Definitions" publishdate="2020-09-02" author="ACME Corp"/>
     <devicedef class="gobo-wheel-5000">
     
-      <interface class="org.esta.device.1/device" alias="device" friendlyname="Device">
-        <override refalias="device-id" attribute="value">com.acme.mydevice.1</override>
-        <override refalias="device-manufacturer" attribute="value">My Organization</override>
-        <override refalias="device-model" attribute="value">Gobo Wheel 5000</override>
+      <interface class="udr://org.esta.device.1/device" alias="device" friendlyname="Device">
+        <override refalias="device-id" style="absolute" attribute="value">com.acme.mydevice.1</override>
+        <override refalias="device-manufacturer" style="absolute" attribute="value">My Organization</override>
+        <override refalias="device-model" style="absolute" attribute="value">Gobo Wheel 5000</override>
       </interface>
 
-      <interface class="org.esta.wheel.1/wheel" alias="gobo-wheel" friendlyname="Gobo Wheel">
+      <interface class="udr://org.esta.wheel.1/wheel" alias="gobo-wheel" friendlyname="Gobo Wheel">
 
         <!-- wheel-control can be used to create a virtual selector, alternatively use refalias to refer to a property with data type enum -->
         <condition style="exclusive" alias="wheel-control">
-          <interface class="org.esta.wheel.1/wheel-velocity" alias="velocity" friendlyname="Speed" />
-          <interface class="org.esta.wheel.1/wheel-position" alias="position" friendlyname="Position" />
-          <interface class="org.esta.wheel.1/wheel-position-indexed" alias="position-indexed" friendlyname="Indexed Position" />
+          <interface class="../wheel-velocity" alias="velocity" friendlyname="Speed" />
+          <interface class="../wheel-position" alias="position" friendlyname="Position" />
+          <interface class="../wheel-position-indexed" alias="position-indexed" friendlyname="Indexed Position" />
         </condition>
 
-        <interface class="org.esta.wheel.1/wheel" alias="gobo-rotator" friendlyname="Gobo Rotator">
+        <interface class="udr://org.esta.wheel.1/wheel" alias="gobo-rotator" friendlyname="Gobo Rotator">
 
           <!-- gobo-rotator-control can be used to create a virtual selector, alternatively use refalias to refer to a property with data type enum -->
           <condition style="exclusive" alias="gobo-rotator-control">
-            <interface class="org.esta.wheel.1/wheel-velocity" alias="velocity" friendlyname="Speed" />
-            <interface class="org.esta.wheel.1/wheel-position" alias="position" friendlyname="Position" />
+            <interface class="../wheel-velocity" alias="velocity" friendlyname="Speed" />
+            <interface class="../wheel-position" alias="position" friendlyname="Position" />
           </condition>
         </interface>
 
-        <interface class="org.esta.wheel.1/gobo-description" alias="1" friendlyname="Gobo 1" />
-        <interface class="org.esta.wheel.1/gobo-description" alias="2" friendlyname="Gobo 2" />
-        <interface class="org.esta.wheel.1/gobo-description" alias="3" friendlyname="Gobo 3" />
-        <interface class="org.esta.wheel.1/gobo-description" alias="4" friendlyname="Gobo 4" />
-        <interface class="org.esta.wheel.1/gobo-description" alias="5" friendlyname="Gobo 5" />
-        <interface class="org.esta.wheel.1/gobo-description" alias="6" friendlyname="Gobo 6" />
+        <interface class="../gobo-description" alias="1" friendlyname="Gobo 1" />
+        <interface class="../gobo-description" alias="2" friendlyname="Gobo 2" />
+        <interface class="../gobo-description" alias="3" friendlyname="Gobo 3" />
+        <interface class="../gobo-description" alias="4" friendlyname="Gobo 4" />
+        <interface class="../gobo-description" alias="5" friendlyname="Gobo 5" />
+        <interface class="../gobo-description" alias="6" friendlyname="Gobo 6" />
       </interface>
     </devicedef>
   </library>

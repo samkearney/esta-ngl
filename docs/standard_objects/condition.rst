@@ -125,13 +125,13 @@ Markup
 
       <!-- simplified example -->
       <condition style="exclusive" alias="wheel-control">
-        <interface class="org.esta.wheel.1/wheel-velocity" alias="velocity" friendlyname="Wheel Speed">
-        <interface class="org.esta.wheel.1/wheel-index" alias="index" friendlyname="Wheel Index">
+        <interface class="udr://org.esta.wheel.1/wheel-velocity" alias="velocity" friendlyname="Wheel Speed">
+        <interface class="udr://org.esta.wheel.1/wheel-index" alias="index" friendlyname="Wheel Index">
       </condition>
 
       <!-- simplified example -->
       <condition style="unavailable" refalias="wheel-control/index">
-        <interface class="org.esta.gobo.1/gobo-shake" alias="gobo-shake" friendlyname="Gobo Shake">
+        <interface class="udr://org.esta.gobo.1/gobo-shake" alias="gobo-shake" friendlyname="Gobo Shake">
       </condition>
 
   .. tab:: JSON
@@ -160,13 +160,13 @@ Markup
         "children": [
           {
             "type": "interface",
-            "class": "org.esta.wheel.1/wheel-velocity",
+            "class": "udr://org.esta.wheel.1/wheel-velocity",
             "alias": "velocity",
             "friendlyname": "Wheel Speed"
           },
           {
             "type": "interface",
-            "class": "org.esta.wheel.1/wheel-index",
+            "class": "udr://org.esta.wheel.1/wheel-index",
             "alias": "index",
             "friendlyname": "Wheel Index"
           }
@@ -180,7 +180,7 @@ Markup
         "children": [
           {
             "type": "interface",
-            "class": "org.esta.gobo.1/gobo-shake",
+            "class": "udr://org.esta.gobo.1/gobo-shake",
             "alias": "gobo-shake",
             "friendlyname": "Gobo Shake"
           }
