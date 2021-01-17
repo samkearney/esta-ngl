@@ -15,12 +15,18 @@ UDR uses the *scheme* and *path* components of the
 `Uniform Resource Identifier <https://en.wikipedia.org/wiki/Uniform_Resource_Identifier>`_ (URI)
 specification to identify all objects using **class** and **alias** identifiers.
 
-All UDR identifiers should begin with the scheme ``udr://``. The scheme is then followed by the path
-component, which may either be qualified or relative. UDR uses a subset of the standard URI resolution:
+All fully qualified UDR identifiers should begin with the scheme ``udr://``. The scheme is then followed
+by the path component, which may either be qualified or relative. UDR uses a subset of the standard URI
+resolution:
 
-Starting at udr://org.esta.gobo.1/gobo-wheel/gobo-rotator/speed, the following resolutions apply:
+For the purpose of URI identification, *Interfaces* are considered to be a directory. Therefore, all
+children are assumed to be at the same level as the parent.
 
-==============  ===============================================
+Starting at *property* udr://org.esta.gobo.1/gobo-wheel/gobo-rotator/speed, the following resolutions
+apply:
+
+==============  ======================================================
+"position"      udr://org.esta.gobo.1/gobo-wheel/gobo-rotator/position
 "."             udr://org.esta.gobo.1/gobo-wheel/gobo-rotator/
 "./"            udr://org.esta.gobo.1/gobo-wheel/gobo-rotator/
 ".."            udr://org.esta.gobo.1/gobo-wheel/
@@ -29,19 +35,20 @@ Starting at udr://org.esta.gobo.1/gobo-wheel/gobo-rotator/speed, the following r
 "../.."         udr://org.esta.gobo.1/
 "../../"        udr://org.esta.gobo.1/
 "../../slots"   udr://org.esta.gobo.1/slots
-==============  ===============================================
+==============  ======================================================
 
 Some characters are reserved by the URI specification. UDR also uses a special ``$`` character as
 a shortcut to refer to the root identifier for example:
 
 udr://$/gobo-wheel is replaced with udr://org.esta.gobo.1/gobo-wheel/
 
-=========== ==================== =============================================================
+=========== ==================== ==========================================================================
 Reserved    : / ? # [ ] @        These characters are standard delimiters and may not be used
-Permitted   & ' ( ) * + , ; =    These characters may be used in the path component
+Permitted   & ' ( ) * , ; =      These characters may be used in the path component
 Root ID     $                    Shortcut for the root of the current library or device
-Instance    !                    Delimiter for the instance of a repeating interface
-=========== ==================== =============================================================
+Instance    !                    Delimiter for the instance number of a repeating interface or property
+Global      +                    Delimiter for a global alias (see :ref:`standard-objects-condition-alias`)
+=========== ==================== ==========================================================================
 
 .. _tutorial-identifiers-organization-id:
 
@@ -100,3 +107,6 @@ Alias
 :ref:`standard-objects-condition` are identified by an alias.
 
 An alias is a string uniquely identifying the object within its parent object.
+
+Instantiated objects are addressed using the alias which may be qualified or relative (see
+:ref:`tutorial-identifiers-uri`).

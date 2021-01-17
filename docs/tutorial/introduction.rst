@@ -17,13 +17,19 @@ Interfaces
 
 Interfaces define a contract of behavior for some portion of a device's functionality. They provide
 a standardized way of controlling and/or observing some atomic portion of functionality on a device.
+Interfaces enable the representation of the hierarchy of a device, and provide a mechanism for
+grouping modular functionality. Interfaces are not intended to group properties by use case e.g. 
+visualizers.
+
+An example of an interface hierarchy would be a color interface, containing two child interfaces:
+additive color mixing and a fixed color wheel.
 
 **********
 Properties
 **********
 
-A property is a single controllable and/or observable piece of data. Properties standardize how data is interpreted, how data can be accessed,
-and any constraints on the value of data.
+A property is a single controllable and/or observable piece of data. Properties standardize how data
+is interpreted, how data can be accessed, and any constraints on the value of data.
 
 **********************
 Definition vs Instance
@@ -38,5 +44,5 @@ Libraries
 *********
 
 A UDR library consists of a collection of related interface and property definitions, and/or device
-definitions. Examples of possible libraries are a collection of color control methods or a group new
-lighting devices from a specific manufacturer in 2020.
+definitions. Examples of possible libraries are a collection of color control methods or a group of
+new lighting devices from a specific manufacturer in 2021.

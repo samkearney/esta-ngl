@@ -94,8 +94,10 @@ The cell interface might look like:
 
 The cell has individual intensity and color properties.
 
-Note that interface and property definitions within the same :ref:`standard-objects-library` do not require
-the fully qualified class id which includes the :ref:`tutorial-identifiers-organization-id`.
+Note that object definitions and instances within the same :ref:`standard-objects-library` as their parent
+do not require the fully qualified class id which includes the :ref:`tutorial-identifiers-organization-id`,
+but can instantiated using the ``$`` root identifier which indicates the definition is within the root of
+the same library.
 
 These interface definitions give this device the tools to communicate information about its cell
 layout. Assuming the definitions above appear in a library with the class ``com.acme.definitions.1``,
@@ -107,10 +109,15 @@ the device might contain:
 
     <!-- A group of 4 cells -->
     <interface class="com.acme.definitions.1/cell-group" alias="cell-group-1" friendlyname="4x Cells">
-      <interface class="com.acme.definitions.1/cell" alias="1" friendlyname="Top Cell" />
-      <interface class="com.acme.definitions.1/cell" alias="2" friendlyname="Right Cell" />
-      <interface class="com.acme.definitions.1/cell" alias="3" friendlyname="Bottom Cell" />
-      <interface class="com.acme.definitions.1/cell" alias="4" friendlyname="Left Cell" />
+      <interface class="$/cell" alias="1" friendlyname="Top Cell" />
+      <interface class="$/cell" alias="2" friendlyname="Right Cell" />
+      <interface class="$/cell" alias="3" friendlyname="Bottom Cell" />
+      <interface class="$/cell" alias="4" friendlyname="Left Cell" />
+    </interface>
+
+    <!-- A group of 4 cells (shorthand version) -->
+    <interface class="com.acme.definitions.1/cell-group" alias="cell-group-1" friendlyname="4x Cells">
+      <interface class="$/cell" alias="cell!1" count="4" />
     </interface>
 
   .. code-tab:: json
@@ -123,33 +130,48 @@ the device might contain:
       "children": [
         {
           "type": "interface",
-          "class": "com.acme.definitions.1/cell",
+          "class": "$/cell!1",
           "alias": "1",
           "friendlyname": "Top Cell"
         },
         {
           "type": "interface",
-          "class": "com.acme.definitions.1/cell",
+          "class": "$/cell!2",
           "alias": "2",
           "friendlyname": "Right Cell"
         },
         {
           "type": "interface",
-          "class": "com.acme.definitions.1/cell",
+          "class": "$/cell!3",
           "alias": "3",
           "friendlyname": "Bottom Cell"
         },
         {
           "type": "interface",
-          "class": "com.acme.definitions.1/cell",
+          "class": "$/cell!4",
           "alias": "4",
           "friendlyname": "Left Cell"
-        },
+        }
+      ]
+    }
+
+    {
+      "type": "interface",
+      "class": "com.acme.definitions.1/cell-group",
+      "alias": "cell-group-1",
+      "friendlyname": "4x Cells",
+      "children": [
+        {
+          "type": "interface",
+          "class": "$/cell",
+          "alias": "cell!1",
+          "count": 4
+        }
       ]
     }
 
 To address the intensity property of cell 2, you would use the qualified ID
-``cell-group-1/2/intensity``.
+``udr://cell-group-1/2/intensity`` or for the shorthand version ``udr://cell-group-1/cell!2/intensity``
 
 .. _tutorial-interface-hierarchy-ordering:
 
@@ -167,12 +189,25 @@ it. To modify the above example:
 
   .. code-tab:: xml
 
-    <!-- A group of 4 cells -->
+    <!-- 2 groups of 4 cells -->
+
     <interface class="com.acme.definitions.1/cell-group" alias="cell-group-1" friendlyname="4x Cells">
-      <interface class="com.acme.definitions.1/cell" alias="4" friendlyname="Left Cell" />
-      <interface class="com.acme.definitions.1/cell" alias="1" friendlyname="Top Cell" />
-      <interface class="com.acme.definitions.1/cell" alias="3" friendlyname="Bottom Cell" />
-      <interface class="com.acme.definitions.1/cell" alias="2" friendlyname="Right Cell" />
+      <interface class="$/cell" alias="4" friendlyname="Top Cell" />
+      <interface class="$/cell" alias="3" friendlyname="Right Cell" />
+      <interface class="$/cell" alias="1" friendlyname="Bottom Cell" />
+      <interface class="$/cell" alias="2" friendlyname="Left Cell" />
+    </interface>
+
+    <interface class="com.acme.definitions.1/cell-group" alias="cell-group-2" friendlyname="4x Cells">
+      <interface class="$/cell" alias="3" friendlyname="Right Cell" />
+      <interface class="$/cell" alias="4" friendlyname="Top Cell" />
+      <interface class="$/cell" alias="1" friendlyname="Bottom Cell" />
+      <interface class="$/cell" alias="2" friendlyname="Left Cell" />
+    </interface>
+
+    <!-- 2 group of 4 cells (shorthand version) -->
+    <interface class="com.acme.definitions.1/cell-group" alias="cell-group!1" count="2">
+      <interface class="$/cell" alias="cell!1" count="4" />
     </interface>
 
   .. code-tab:: json
@@ -185,28 +220,61 @@ it. To modify the above example:
       "children": [
         {
           "type": "interface",
-          "class": "com.acme.definitions.1/cell",
+          "class": "$/cell",
           "alias": "4",
           "friendlyname": "Left Cell"
         },
-        {
+                {
           "type": "interface",
-          "class": "com.acme.definitions.1/cell",
-          "alias": "1",
-          "friendlyname": "Top Cell"
+          "class": "$/cell",
+          "alias": "3",
+          "friendlyname": "Right Cell"
         },
         {
           "type": "interface",
-          "class": "com.acme.definitions.1/cell",
-          "alias": "3",
+          "class": "$/cell",
+          "alias": "1",
           "friendlyname": "Bottom Cell"
         },
         {
           "type": "interface",
-          "class": "com.acme.definitions.1/cell",
+          "class": "$/cell",
           "alias": "2",
+          "friendlyname": "Left Cell"
+        }
+      ]
+    }
+
+    {
+      "type": "interface",
+      "class": "com.acme.definitions.1/cell-group",
+      "alias": "cell-group-2",
+      "friendlyname": "4x Cells",
+      "children": [
+        {
+          "type": "interface",
+          "class": "$/cell",
+          "alias": "3",
           "friendlyname": "Right Cell"
         },
+                {
+          "type": "interface",
+          "class": "$/cell",
+          "alias": "4",
+          "friendlyname": "Top Cell"
+        },
+        {
+          "type": "interface",
+          "class": "$/cell",
+          "alias": "1",
+          "friendlyname": "Bottom Cell"
+        },
+        {
+          "type": "interface",
+          "class": "$/cell",
+          "alias": "2",
+          "friendlyname": "Left Cell"
+        }
       ]
     }
 

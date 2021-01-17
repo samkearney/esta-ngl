@@ -33,7 +33,7 @@ Definition Markup
       class="intensity"
       name="Intensity"
       description="Represents an emitter intensity as a percentage of its maximum brightness"
-      data_type="number"
+      datatype="number"
       unit="percent" />
     
   .. code-tab:: json
@@ -43,7 +43,7 @@ Definition Markup
       "class": "intensity",
       "name": "Name",
       "description": "Represents an emitter intensity as a percentage of its maximum brightness",
-      "data_type": "number",
+      "datatype": "number",
       "unit": "percent"
     }
 
@@ -57,7 +57,6 @@ Instance Example
     <property 
       class="org.esta.intensity.1/intensity"
       alias="intensity"
-      friendlyname="Intensity"
       access="readwrite"
       lifetime="runtime"
       minimum="0"
@@ -70,7 +69,6 @@ Instance Example
         {
           "class": "org.esta.intensity.1/intensity",
           "alias": "intensity",
-          "friendlyname": "Intensity",
           "access": "readwrite",
           "lifetime": "runtime",
           "minimum": 0,
@@ -108,8 +106,8 @@ Definition Markup
     <propertydef 
       class="binary-intensity"
       name="Binary Intensity"
-      description="Represents an emitter intensity as an on/off state where "true" indicates "on"."
-      data_type="boolean" />
+      description="Represents an emitter intensity as an on/off state where 'true' indicates 'on'"
+      datatype="boolean" />
     
   .. code-tab:: json
 
@@ -117,8 +115,8 @@ Definition Markup
       "type": "propertydef"
       "class": "binary-intensity",
       "name": "Binary Intensity"
-      "description": "Represents an emitter intensity as an on/off state where "true" indicates "on"",
-      "data_type": "boolean"
+      "description": "Represents an emitter intensity as an on/off state where \"true\" indicates \"on\"",
+      "datatype": "boolean"
     }
 
 Instance Example
@@ -131,7 +129,6 @@ Instance Example
     <property
       class="org.esta.intensity.1/binary-intensity"
       alias="primary-emitter-intensity"
-      friendlyname="Primary Emitter Intensity"
       access="readwrite"
       lifetime="runtime" />
     
@@ -142,7 +139,6 @@ Instance Example
         {
           "class": "org.esta.intensity.1/binary-intensity",
           "alias": "primary-emitter-intensity",
-          "friendlyname": "Primary Emitter Intensity",
           "access": "readwrite",
           "lifetime": "runtime"
         }

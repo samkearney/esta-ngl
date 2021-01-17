@@ -1,12 +1,13 @@
-<estadl>
+<udr>
+
     <import name="org.esta.identification.1" />
 
     <!-- ESTA Intensity -->
     <library class="org.esta.intensity.1" description="ESTA Intensity Definitions" publishdate="2020-09-02" author="ESTA">
-        <propertydef class="intensity" name="Intensity" description="Represents an emitter intensity as a percentage of its maximum brightness" data_type="number" unit="percent" />
-        <propertydef class="intensity-binary" name="Binary Intensity" description="Represents an emitter intensity as either on or off" data_type="boolean" />
-        <propertydef class="strobe-frequency" name="Strobe Frequency" description="The frequency of a strobe shutter in Hertz" data_type="number" unit="hertz"/>
-        <propertydef class="strobe-random" name="Strobe Frequency" description="The random frequency of a strobe shutter" data_type="number" unit="none" />
+        <propertydef class="intensity" name="Intensity" description="Represents an emitter intensity as a percentage of its maximum brightness" datatype="number" unit="percent" />
+        <propertydef class="intensity-binary" name="Binary Intensity" description="Represents an emitter intensity as either on or off" datatype="boolean" />
+        <propertydef class="strobe-frequency" name="Strobe Frequency" description="The frequency of a strobe shutter in Hertz" datatype="number" unit="hertz"/>
+        <propertydef class="strobe-random" name="Strobe Frequency" description="The random frequency of a strobe shutter" datatype="number" unit="none" />
 
         <interfacedef class="intensity" name="Intensity" description="Represents an emitter intensity as a percentage of its maximum brightness">
             <property class="intensity" id="intensity" access="readwrite" lifetime="runtime" minimum="0" maximum="100"/>
@@ -18,11 +19,11 @@
 
     <!-- ESTA Color -->
     <library class="org.esta.color.1" description="ESTA Color Definitions" publishdate="2020-09-02" author="ESTA">
-        <propertydef class="cyan" name="Cyan" description="Cyan color" data_type="number" unit="percent" />
-        <propertydef class="magenta" name="Magenta" description="Magenta color" data_type="number" unit="percent" />
-        <propertydef class="yellow" name="Yellow" description="Yellow color" data_type="number" unit="percent" />
-        <propertydef class="ctb" name="CTB" description="Color temperature blue correction" data_type="number" unit="percent" />
-        <propertydef class="color-description" name="Color" description="The description of the color, such as manufacturer and number" data_type="string" />
+        <propertydef class="cyan" name="Cyan" description="Cyan color" datatype="number" unit="percent" />
+        <propertydef class="magenta" name="Magenta" description="Magenta color" datatype="number" unit="percent" />
+        <propertydef class="yellow" name="Yellow" description="Yellow color" datatype="number" unit="percent" />
+        <propertydef class="ctb" name="CTB" description="Color temperature blue correction" datatype="number" unit="percent" />
+        <propertydef class="color-description" name="Color" description="The description of the color, such as manufacturer and number" datatype="string" />
 
         <interfacedef class="cmy" name="CMY" description="Represents CMY color control of a light source">
             <property class="cyan" id="cyan" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
@@ -42,10 +43,10 @@
 
     <!-- ESTA Wheel -->
     <library class="org.esta.wheel.1" description="ESTA Wheel Definitions" publishdate="2020-09-02" author="ESTA">
-        <propertydef class="angular-velocity" name="Angular Velocity" description="The angular velocity of a wheel" data_type="number" unit="degree-per-second" />
-        <propertydef class="index" name="Index" description="The selected index of a wheel" data_type="enum" />
-        <propertydef class="angular-position" name="Angular Position" description="The angular position of a wheel" data_type="number" unit="degree" />
-        <propertydef class="velocity-indexed" name="Velocity Index" description="The indexed velocity of a wheel" data_type="enum">
+        <propertydef class="angular-velocity" name="Angular Velocity" description="The angular velocity of a wheel" datatype="number" unit="degree-per-second" />
+        <propertydef class="index" name="Index" description="The selected index of a wheel" datatype="enum" />
+        <propertydef class="angular-position" name="Angular Position" description="The angular position of a wheel" datatype="number" unit="degree" />
+        <propertydef class="velocity-indexed" name="Velocity Index" description="The indexed velocity of a wheel" datatype="enum">
             <case>Slow</case>
             <case>Medium</case>
             <case>Fast</case>
@@ -82,10 +83,10 @@
 
     <!-- ESTA Framing-->
     <library class="org.esta.framing.1" description="ESTA Framing Definitions" publishdate="2020-09-02" author="ESTA">
-        <propertydef class="frame-position" name="Frame Position" description="The position of a framing shutter from the edge of the beam" data_type="number" />
-        <propertydef class="frame-angle" name="Frame Angle" description="The angle of a framing shutter" data_type="number" unit="degrees" />
-        <propertydef class="frame-location" name="Frame Location" description="The frame location" data_type="number" unit="degrees" />
-        <propertydef class="framing-angle" name="Framing Angle" description="The angle of a framing module" data_type="number" unit="degrees" />
+        <propertydef class="frame-position" name="Frame Position" description="The position of a framing shutter from the edge of the beam" datatype="number" />
+        <propertydef class="frame-angle" name="Frame Angle" description="The angle of a framing shutter" datatype="number" unit="degrees" />
+        <propertydef class="frame-location" name="Frame Location" description="The frame location" datatype="number" unit="degrees" />
+        <propertydef class="framing-angle" name="Framing Angle" description="The angle of a framing module" datatype="number" unit="degrees" />
 
         <interfacedef class="frame" name="Frame" description="A framing shutter">
             <property class="frame-position" id="position" access="readwrite" lifetime="runtime" minimum="0" maximum="100" />
@@ -102,7 +103,7 @@
 
     <!-- ESTA Gobo -->
     <library class="org.esta.gobo.1" description="ESTA Gobo Definitions" publishdate="2020-09-02" author="ESTA">
-        <propertydef class="gobo-description" name="Gobo Description" description="The description of the gobo, such as manufacturer and number" data_type="string" />
+        <propertydef class="gobo-description" name="Gobo Description" description="The description of the gobo, such as manufacturer and number" datatype="string" />
 
         <interfacedef class="gobo-description" name="Gobo Description" description="The description of the gobo, such as manufacturer and number">
             <property class="gobo-description" id="description" access="readwrite" lifetime="runtime" minimum="0" maximum="128"/>
@@ -114,16 +115,16 @@
 
     <!-- ESTA Beam -->
     <library class="org.esta.beam.1" description="ESTA Beam Definitions" publishdate="2020-09-02" author="ESTA">
-        <propertydef class="frost" name="Frost" description="The diffusion of a beam of light" data_type="number" unit="percent" />
-        <propertydef class="iris" name="Iris" description="The percentage of the beam radius that is masked by the iris" data_type="number" unit="percent" />
-        <propertydef class="zoom-angle" name="Zoom" description="The angle of the beam" data_type="number" unit="degrees" />
-        <propertydef class="edge" name="Edge" description="The focus of the beam" data_type="number" unit="someunit" />
+        <propertydef class="frost" name="Frost" description="The diffusion of a beam of light" datatype="number" unit="percent" />
+        <propertydef class="iris" name="Iris" description="The percentage of the beam radius that is masked by the iris" datatype="number" unit="percent" />
+        <propertydef class="zoom-angle" name="Zoom" description="The angle of the beam" datatype="number" unit="degrees" />
+        <propertydef class="edge" name="Edge" description="The focus of the beam" datatype="number" unit="someunit" />
     </library>
 
     <!-- ESTA Focus -->
     <library class="org.esta.focus.1" description="ESTA Focus Definitions" publishdate="2020-09-02" author="ESTA">
-        <propertydef class="pan" name="Pan" description="The pan angle of a device" data_type="number" unit="degrees" />
-        <propertydef class="tilt" name="Tilt" description="The tilt angle of a device" data_type="number" unit="degrees" />
+        <propertydef class="pan" name="Pan" description="The pan angle of a device" datatype="number" unit="degrees" />
+        <propertydef class="tilt" name="Tilt" description="The tilt angle of a device" datatype="number" unit="degrees" />
 
         <interfacedef class="pan-tilt" name="Pan/Tilt" description="The pan/tilt of a device">
             <property class="pan" id="pan" access="readwrite" lifetime="runtime" minimum="-1440" maximum="1440"/>
@@ -133,8 +134,8 @@
 
     <!-- ESTA Effects -->
     <library class="org.esta.effects.1" description="ESTA Effects Definitions" publishdate="2020-09-02" author="ESTA">
-        <propertydef class="effect" name="Effect Selection" description="The selected effect" data_type="boolen" />
-        <propertydef class="effect-speed" name="Effect Speed" description="The speed of an effect" data_type="number" unit="someunit" />
+        <propertydef class="effect" name="Effect Selection" description="The selected effect" datatype="boolen" />
+        <propertydef class="effect-speed" name="Effect Speed" description="The speed of an effect" datatype="number" unit="someunit" />
 
         <interfacedef class="effect-velocity" name="Effect Velocity" description="The effect selection and velocity">
             <property class="effect" id="effect" access="readwrite" lifetime="runtime" />
@@ -144,7 +145,7 @@
 
     <!-- Martin General -->
     <library class="com.martin.general.1" description="Martin General Definitions" publishdate="2020-09-02" author="HARMAN International">
-        <propertydef class="stepped-shake" name="Shake" description="Stepped shake" data_type="enum" />
+        <propertydef class="stepped-shake" name="Shake" description="Stepped shake" datatype="enum" />
             <case>5 deg</case>
             <case>15 deg</case>
             <case>30 deg</case>
@@ -330,4 +331,4 @@
         </devicedef>
     </library>
 
-</estadl>
+</udr>

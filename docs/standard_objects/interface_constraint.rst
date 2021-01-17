@@ -7,6 +7,9 @@ Interface Constraint
 Interface definitions can contain *interface constraint* objects, which set rules for which
 interface instances are allowed as children of the defined interface.
 
+When multiple conflicting contraints are present within an interface definition, the most
+permissive constraints are considered correct.
+
 Attributes
 ==========
 
@@ -47,13 +50,7 @@ Maximum
 The maximum number of instances of the child interface that are allowed. If this attribute is
 absent, the maximum is assumed to be infinite.
 
-.. _standard-objects-interface-constraint-exclusive-group:
-
-Exclusive Group
----------------
-
-The name of an exclusive group that this child is a member of, if instantiated. See
-:ref:`tutorial-mutual-exclusion`.
+.. _standard-objects-interface-constraint-markup:
 
 Markup
 ======
@@ -68,7 +65,6 @@ Markup
       * ``class``: :ref:`standard-objects-interface-constraint-class`
       * ``minimum``: :ref:`standard-objects-interface-constraint-minimum`
       * ``maximum``: :ref:`standard-objects-interface-constraint-maximum`
-      * ``exclusivegroup``: :ref:`standard-objects-interface-constraint-exclusive-group`
 
     Example:
 
@@ -81,14 +77,13 @@ Markup
     * Type: ``interfaceconstraint``
     * Members:
 
-      ============== ========== ============================================================
+      ============== ========== ====================================================
       Key            Value Type Represents
-      ============== ========== ============================================================
+      ============== ========== ====================================================
       class          string     :ref:`standard-objects-interface-constraint-class`
       minimum        number     :ref:`standard-objects-interface-constraint-minimum`
       maximum        number     :ref:`standard-objects-interface-constraint-maximum`
-      exclusivegroup string     :ref:`standard-objects-interface-constraint-exclusive-group`
-      ============== ========== ============================================================
+      ============== ========== ====================================================
 
     Example:
 

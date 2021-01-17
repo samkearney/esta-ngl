@@ -23,67 +23,8 @@
         <override refalias="device-model" attribute="value">Multi-Cell 5000</override>
       </interface>
 
-      <interface class="com.acme.definitions.1/cell-group" alias="cell-group-1" friendlyname="Beam Cells">
-        <interface class="com.acme.definitions.1/cell" alias="1" friendlyname="Beam Cell 1">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-        <interface class="com.acme.definitions.1/cell" alias="2" friendlyname="Beam Cell 2">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-        <interface class="com.acme.definitions.1/cell" alias="3" friendlyname="Beam Cell 3">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-        <interface class="com.acme.definitions.1/cell" alias="4" friendlyname="Beam Cell 4">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-        <interface class="com.acme.definitions.1/cell" alias="5" friendlyname="Beam Cell 5">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-        <interface class="com.acme.definitions.1/cell" alias="6" friendlyname="Beam Cell 6">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-        <interface class="com.acme.definitions.1/cell" alias="7" friendlyname="Beam Cell 7">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-        <interface class="com.acme.definitions.1/cell" alias="8" friendlyname="Beam Cell 8">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-        <interface class="com.acme.definitions.1/cell" alias="9" friendlyname="Beam Cell 9">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-        <interface class="com.acme.definitions.1/cell" alias="10" friendlyname="Beam Cell 10">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-      </interface>
-      <interface class="com.acme.definitions.1/cell-group" alias="cell-group-2" friendlyname="Face Cells">
-        <interface class="com.acme.definitions.1/cell" alias="1" friendlyname="Face Cell 1">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-        <interface class="com.acme.definitions.1/cell" alias="2" friendlyname="Face Cell 2">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-        <interface class="com.acme.definitions.1/cell" alias="3" friendlyname="Face Cell 3">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-        <interface class="com.acme.definitions.1/cell" alias="4" friendlyname="Face Cell 4">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-        <interface class="com.acme.definitions.1/cell" alias="5" friendlyname="Face Cell 5">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-        <interface class="com.acme.definitions.1/cell" alias="6" friendlyname="Face Cell 6">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-        <interface class="com.acme.definitions.1/cell" alias="7" friendlyname="Face Cell 7">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-        <interface class="com.acme.definitions.1/cell" alias="8" friendlyname="Face Cell 8">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-        <interface class="com.acme.definitions.1/cell" alias="9" friendlyname="Face Cell 9">
-          <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
-        </interface>
-        <interface class="com.acme.definitions.1/cell" alias="10" friendlyname="Face Cell 10">
+      <interface class="com.acme.definitions.1/cell-group" alias="cell-group" count="2">
+        <interface class="com.acme.definitions.1/cell" alias="1" count="10">
           <interface class="org.esta.color.1/rgb" alias="rgb" friendlyname="RGB" />
         </interface>
       </interface>

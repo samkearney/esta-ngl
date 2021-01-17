@@ -33,7 +33,7 @@ Definition Markup
       class="spectrum-data"
       name="Spectrum Data"
       description="The Spectral Power Distribution data of an emitter in normalized wavelength."
-      data_type="array"
+      datatype="array"
       unit="nanometers" />
     
   .. code-tab:: json
@@ -43,7 +43,7 @@ Definition Markup
       "class": "spectrum-data",
       "name": "Spectrum Data",
       "description": "The Spectral Power Distribution data of an emitter in normalized wavelength.",
-      "data_type": "array",
+      "datatype": "array",
       "unit": "nanometers"
     }
 
@@ -106,7 +106,7 @@ Definition Markup
       class="spectrum-start"
       name="Spectrum Start"
       description="The Spectral Power Distribution wavelength start."
-      data_type="number"
+      datatype="number"
       unit="nanometers" />
     
   .. code-tab:: json
@@ -116,7 +116,7 @@ Definition Markup
       "class": "spectrum-start",
       "name": "Spectrum Start",
       "description": "The Spectral Power Distribution wavelength start.",
-      "data_type": "number",
+      "datatype": "number",
       "unit": "nanometers"
     }
 
@@ -179,7 +179,7 @@ Definition Markup
       class="spectrum-end"
       name="Spectrum End"
       description="The Spectral Power Distribution wavelength end."
-      data_type="number"
+      datatype="number"
       unit="nanometers" />
     
   .. code-tab:: json
@@ -189,7 +189,7 @@ Definition Markup
       "class": "spectrum-end",
       "name": "Spectrum End",
       "description": "The Spectral Power Distribution wavelength end.",
-      "data_type": "number",
+      "datatype": "number",
       "unit": "nanometers"
     }
 
@@ -252,7 +252,7 @@ Definition Markup
       class="spectrum-step"
       name="Spectrum Step"
       description="The Spectral Power Distribution wavelength step."
-      data_type="number"
+      datatype="number"
       unit="nanometers" />
     
   .. code-tab:: json
@@ -262,7 +262,7 @@ Definition Markup
       "class": "spectrum-step",
       "name": "Spectrum Step",
       "description": "The Spectral Power Distribution wavelength step.",
-      "data_type": "number",
+      "datatype": "number",
       "unit": "nanometers"
     }
 

@@ -34,7 +34,7 @@ Definition Markup
       class="device-id"
       name="Device ID"
       description="A globally unique identifier for a device model."
-      data_type="string" />
+      datatype="string" />
     
   .. code-tab:: json
 
@@ -43,7 +43,7 @@ Definition Markup
       "class": "device-id",
       "name": "Device ID"
       "description": "A globally unique identifier for a device model.",
-      "data_type": "string"
+      "datatype": "string"
     }
 
 Instance Example
@@ -108,7 +108,7 @@ Definition Markup
       class="device-manufacturer"
       name="Manufacturer"
       description="Identifies a device's manufacturer."
-      data_type="string" />
+      datatype="string" />
     
   .. code-tab:: json
 
@@ -117,7 +117,7 @@ Definition Markup
       "class": "device-manufacturer",
       "name": "Manufacturer"
       "description": "Identifies a device's manufacturer.",
-      "data_type": "string"
+      "datatype": "string"
     }
 
 Instance Example
@@ -182,7 +182,7 @@ Definition Markup
       class="device-model"
       name="Model"
       description="Identifies a device's model name."
-      data_type="string" />
+      datatype="string" />
     
   .. code-tab:: json
 
@@ -191,7 +191,7 @@ Definition Markup
       "class": "device-model",
       "name": "Model"
       "description": "Identifies a device's model name.",
-      "data_type": "string"
+      "datatype": "string"
     }
 
 Instance Example
