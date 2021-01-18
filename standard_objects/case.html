@@ -112,6 +112,11 @@
 <li class="toctree-l1"><a class="reference internal" href="property_instance.html">Property Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="override.html">Override</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Case</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#property-min-required">Property Min (Required*)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#property-max-required">Property Max (Required*)</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#value">Value</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#markup">Markup</a></li>
 </ul>
@@ -217,15 +222,36 @@
   <div class="section" id="case">
 <span id="standard-objects-case"></span><h1>Case<a class="headerlink" href="#case" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference internal" href="property_definition.html#standard-objects-property-definition"><span class="std std-ref">Property Definitions</span></a> and
-<a class="reference internal" href="property_instance.html#standard-objects-property-instance"><span class="std std-ref">Property Instances</span></a>, using
-certain enumerated data types can contain child <em>case</em> objects which provide
-human-readable values describing each of the potential cases. These values
-are considered the key for any localization.</p>
-<p>Cases are available for <em>Boolean</em> and <em>Enum</em>
-<a class="reference internal" href="property_definition.html#standard-objects-property-definition-data-type"><span class="std std-ref">data types</span></a>.</p>
-<p>The number of cases should match the number of enumerated items. In the
-case of <em>Boolean</em> data types, this is always 2. When new cases are provided
-they replace all previously defined cases.</p>
+<a class="reference internal" href="property_instance.html#standard-objects-property-instance"><span class="std std-ref">Property Instances</span></a> can contain
+child <em>case</em> objects which provide human-readable values describing either
+ranges of possible property values, or each of the potential cases. These
+values are considered the key for any localization.</p>
+<p>Un-ranged cases are available for <em>Boolean</em> and <em>Enum</em>
+<a class="reference internal" href="property_definition.html#standard-objects-property-definition-data-type"><span class="std std-ref">data types</span></a>. The number
+of cases should match the number of enumerated items. In the case of <em>Boolean</em>
+data types, this is always 2.</p>
+<p>Ranged cases are available for all
+<a class="reference internal" href="property_definition.html#standard-objects-property-definition-data-type"><span class="std std-ref">data types</span></a> apart from
+<em>Boolean</em> and <em>Enum</em>. Cases should be provided for all possible values of the
+property, and must not overlap.</p>
+<p>When new cases are provided they replace all previously defined cases.</p>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="property-min-required">
+<span id="standard-objects-case-property-min"></span><h3>Property Min (Required*)<a class="headerlink" href="#property-min-required" title="Permalink to this headline">¶</a></h3>
+<p>The minimum (inclusive) value of the range this case provides a value for.</p>
+<ul class="simple">
+<li><p>required for ranged data types.</p></li>
+</ul>
+</div>
+<div class="section" id="property-max-required">
+<span id="standard-objects-case-property-max"></span><h3>Property Max (Required*)<a class="headerlink" href="#property-max-required" title="Permalink to this headline">¶</a></h3>
+<p>The maximum (inclusive) value of the range this case provides a value for.</p>
+<ul class="simple">
+<li><p>required for ranged data types.</p></li>
+</ul>
+</div>
+</div>
 <div class="section" id="value">
 <span id="standard-objects-case-value"></span><h2>Value<a class="headerlink" href="#value" title="Permalink to this headline">¶</a></h2>
 <p>The value of the string describing this case.</p>
@@ -247,6 +273,12 @@ they replace all previously defined cases.</p>
 <div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active docutils container">
 <ul class="simple">
 <li><p>Tag name: <code class="docutils literal notranslate"><span class="pre">case</span></code></p></li>
+<li><p>Attributes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">propertymin</span></code>: <a class="reference internal" href="#standard-objects-case-property-min"><span class="std std-ref">Property Min (Required*)</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">propertymax</span></code>: <a class="reference internal" href="#standard-objects-case-property-max"><span class="std std-ref">Property Max (Required*)</span></a></p></li>
+</ul>
+</li>
 </ul>
 <p>Example:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- simplified example --&gt;</span>
@@ -254,6 +286,14 @@ they replace all previously defined cases.</p>
     <span class="nt">&lt;case&gt;</span>Slow<span class="nt">&lt;/case&gt;</span>
     <span class="nt">&lt;case&gt;</span>Medium<span class="nt">&lt;/case&gt;</span>
     <span class="nt">&lt;case&gt;</span>Fast<span class="nt">&lt;/case&gt;</span>
+<span class="nt">&lt;/propertydef&gt;</span>
+
+<span class="c">&lt;!-- simplified color wheel example --&gt;</span>
+<span class="nt">&lt;propertydef</span> <span class="na">class=</span><span class="s">&quot;wheel-position&quot;</span> <span class="na">name=</span><span class="s">&quot;Wheel Position&quot;</span> <span class="na">description=</span><span class="s">&quot;The position of a wheel&quot;</span> <span class="na">datatype=</span><span class="s">&quot;number&quot;</span> <span class="na">unit=</span><span class="s">&quot;degree&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;case</span> <span class="na">propertymin=</span><span class="s">&quot;0&quot;</span> <span class="na">property_max=</span><span class="s">&quot;4&quot;</span><span class="nt">&gt;</span>Red<span class="nt">&lt;/case&gt;</span>
+    <span class="nt">&lt;case</span> <span class="na">propertymin=</span><span class="s">&quot;5&quot;</span> <span class="na">property_max=</span><span class="s">&quot;19&quot;</span><span class="nt">&gt;</span>Red/Orange<span class="nt">&lt;/case&gt;</span>
+    <span class="nt">&lt;case</span> <span class="na">propertymin=</span><span class="s">&quot;20&quot;</span> <span class="na">property_max=</span><span class="s">&quot;24&quot;</span><span class="nt">&gt;</span>Orange<span class="nt">&lt;/case&gt;</span>
+    ...
 <span class="nt">&lt;/propertydef&gt;</span>
 </pre></div>
 </div>
@@ -275,6 +315,14 @@ they replace all previously defined cases.</p>
 </tr>
 </thead>
 <tbody>
+<tr class="row-even"><td><p>propertymin</p></td>
+<td><p>number</p></td>
+<td><p><a class="reference internal" href="#standard-objects-case-property-min"><span class="std std-ref">Property Min (Required*)</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>propertymax</p></td>
+<td><p>number</p></td>
+<td><p><a class="reference internal" href="#standard-objects-case-property-max"><span class="std std-ref">Property Max (Required*)</span></a></p></td>
+</tr>
 <tr class="row-even"><td><p>value</p></td>
 <td><p>various</p></td>
 <td><p><a class="reference internal" href="#standard-objects-case-value"><span class="std std-ref">Value</span></a></p></td>
@@ -302,6 +350,35 @@ they replace all previously defined cases.</p>
     <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;case&quot;</span><span class="p">,</span>
       <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Fast&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="p">{</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;propertydef&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;wheel-position&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Wheel Position&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The position of a wheel&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;datatype&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;degree&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;case&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;propertymin&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;propertymin&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Red&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;case&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;propertymin&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;propertymin&quot;</span><span class="p">:</span> <span class="s2">&quot;19&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Red/Orange&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;case&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;propertymin&quot;</span><span class="p">:</span> <span class="s2">&quot;20&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;propertymin&quot;</span><span class="p">:</span> <span class="s2">&quot;24&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Orange&quot;</span>
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span>

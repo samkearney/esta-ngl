@@ -233,7 +233,8 @@ this is an instance.</p>
 <div class="section" id="alias-required">
 <span id="standard-objects-interface-instance-alias"></span><h3>Alias (Required)<a class="headerlink" href="#alias-required" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>alias</strong> is a unique string identifying this interface instance. The string must be unique within
-the definition containing the interface instance.</p>
+the definition containing the interface instance, unless it is paired with a revision of the same class
+found in another child using the same alias (see <a class="reference internal" href="device_definition.html#standard-objects-device-definition-versioning"><span class="std std-ref">versioning</span></a>).</p>
 <p>If multiple interface instances are instantiated using the <em>count</em> attribute, each instance will be identified
 starting with the unique alias followed by the <code class="docutils literal notranslate"><span class="pre">!</span></code> delimiter and initial instance number, and incrementing by
 1 for each instance. For example “alias!2” would be followed by “alias!3”.</p>
