@@ -5,17 +5,44 @@ Case
 ####
 
 :ref:`Property Definitions<standard-objects-property-definition>` and
-:ref:`Property Instances<standard-objects-property-instance>`, using
-certain enumerated data types can contain child *case* objects which provide
-human-readable values describing each of the potential cases. These values
-are considered the key for any localization.
+:ref:`Property Instances<standard-objects-property-instance>` can contain
+child *case* objects which provide human-readable values describing either
+ranges of possible property values, or each of the potential cases. These
+values are considered the key for any localization.
 
-Cases are available for *Boolean* and *Enum*
-:ref:`data types<standard-objects-property-definition-data-type>`.
+Un-ranged cases are available for *Boolean* and *Enum*
+:ref:`data types<standard-objects-property-definition-data-type>`. The number
+of cases should match the number of enumerated items. In the case of *Boolean*
+data types, this is always 2.
 
-The number of cases should match the number of enumerated items. In the
-case of *Boolean* data types, this is always 2. When new cases are provided
-they replace all previously defined cases.
+Ranged cases are available for all
+:ref:`data types<standard-objects-property-definition-data-type>` apart from
+*Boolean* and *Enum*. Cases should be provided for all possible values of the
+property, and must not overlap.
+
+When new cases are provided they replace all previously defined cases.
+
+**********
+Attributes
+**********
+
+.. _standard-objects-case-property-min:
+
+Property Min (Required*)
+========================
+
+The minimum (inclusive) value of the range this case provides a value for.
+
+* required for ranged data types.
+
+.. _standard-objects-case-property-max:
+
+Property Max (Required*)
+========================
+
+The maximum (inclusive) value of the range this case provides a value for.
+
+* required for ranged data types.
 
 .. _standard-objects-case-value:
 
@@ -35,6 +62,10 @@ Markup
   .. tab:: XML
 
     * Tag name: ``case``
+    * Attributes:
+
+      * ``propertymin``: :ref:`standard-objects-case-property-min`
+      * ``propertymax``: :ref:`standard-objects-case-property-max`
 
     Example:
 
@@ -47,6 +78,14 @@ Markup
           <case>Fast</case>
       </propertydef>
 
+      <!-- simplified color wheel example -->
+      <propertydef class="wheel-position" name="Wheel Position" description="The position of a wheel" datatype="number" unit="degree">
+          <case propertymin="0" property_max="4">Red</case>
+          <case propertymin="5" property_max="19">Red/Orange</case>
+          <case propertymin="20" property_max="24">Orange</case>
+          ...
+      </propertydef>
+
   .. tab:: JSON
 
     * Type: ``case``
@@ -55,6 +94,8 @@ Markup
       ============== ========== ============================================================
       Key            Value Type Represents
       ============== ========== ============================================================
+      propertymin    number     :ref:`standard-objects-case-property-min`
+      propertymax    number     :ref:`standard-objects-case-property-max`
       value          various    :ref:`standard-objects-case-value`
       ============== ========== ============================================================
 
@@ -80,6 +121,35 @@ Markup
           {
             "type": "case",
             "value": "Fast"
+          }
+        ]
+      }
+
+      {
+        "type": "propertydef",
+        "class": "wheel-position",
+        "name": "Wheel Position",
+        "description": "The position of a wheel",
+        "datatype": "number",
+        "unit": "degree",
+        "children": [
+          {
+            "type": "case",
+            "propertymin": "0",
+            "propertymin": "4",
+            "value": "Red"
+          },
+          {
+            "type": "case",
+            "propertymin": "5",
+            "propertymin": "19",
+            "value": "Red/Orange"
+          },
+          {
+            "type": "case",
+            "propertymin": "20",
+            "propertymin": "24",
+            "value": "Orange"
           }
         ]
       }
