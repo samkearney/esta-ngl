@@ -38,7 +38,7 @@
   </library>
 
   <library class="com.acme.devices.1" description="ACME Device Definitions" publishdate="2020-09-02" author="ACME Corp"/>
-    <devicedef class="gobo-wheel-5000">
+    <devicedef class="gobo-wheel-5000" version="1">
     
       <interface class="udr://org.esta.device.1/device" alias="device" friendlyname="Device">
         <override refalias="device-id" style="absolute" attribute="value">com.acme.mydevice.1</override>

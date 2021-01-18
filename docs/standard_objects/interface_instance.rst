@@ -26,7 +26,8 @@ Alias (Required)
 ================
 
 The **alias** is a unique string identifying this interface instance. The string must be unique within
-the definition containing the interface instance.
+the definition containing the interface instance, unless it is paired with a revision of the same class
+found in another child using the same alias (see :ref:`versioning<standard-objects-device-definition-versioning>`).
 
 If multiple interface instances are instantiated using the *count* attribute, each instance will be identified
 starting with the unique alias followed by the ``!`` delimiter and initial instance number, and incrementing by

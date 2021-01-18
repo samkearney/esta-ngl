@@ -160,7 +160,7 @@
 
     <!-- Martin MAC Encore Performance WRM -->
     <library class="com.martin.devices.1" description="Martin Device Definitions" publishdate="2020-09-02" author="HARMAN International">
-        <devicedef class="encore-performance-wrm">
+        <devicedef class="encore-performance-wrm" version="1">
 
             <!-- device definitions -->
             <interfacedef class="shutter" name="Shutter" description="Intensity shutter controls">

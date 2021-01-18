@@ -27,9 +27,12 @@ Alias (Required)
 ================
 
 The **alias** is a unique string identifying this property instance. The string must be unique within
-the interface containing the property instance. When a property instance has been instatiated using the
-count mechnisim, each instance will be identified with a unique alias followed by the ``!`` delimiter
-and a unique instance number.
+the interface containing the property instance, unless it is paired with a revision of the same class
+found in another child using the same alias (see :ref:`versioning<standard-objects-device-definition-versioning>`).
+
+If multiple property instances are instantiated using the *count* attribute, each instance will be identified
+starting with the unique alias followed by the ``!`` delimiter and initial instance number, and incrementing by
+1 for each instance. For example "alias!2" would be followed by "alias!3".
 
 The alias must remain consistent through revisions of a :ref:`standard-objects-device-definition`, as
 this will assist controllers with making sense of hierarchy changes.

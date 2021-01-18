@@ -77,7 +77,7 @@ The organization identifier is followed by an identifying string for the library
 dot.
 
 The last part of the qualified class is a version number. This must be an integer in string
-representation.
+representation, which must increment when any change is made to a published library.
 
 Putting it all together, version 1 of ACME's device library could have the qualified class
 ``com.acme.devices.1``.
