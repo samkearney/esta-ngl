@@ -35,14 +35,14 @@ Markup Example
   .. code-tab:: json
 
     {
-      "type": "udr",
+      "udrtype": "udr",
       "children": [
         {
-          "type": "import",
+          "udrtype": "import",
           "name": "org.esta.intensity.1"
         },
         {
-          "type": "library",
+          "udrtype": "library",
           "class": "com.acme.standarddefs.1",
           "description": "ACME Corp Standard Definitions",
           "publishdate": "2020-09-02",
@@ -51,7 +51,7 @@ Markup Example
           ]
         },
         {
-          "type": "library",
+          "udrtype": "library",
           "class": "com.acme.devices.1",
           "description": "ACME Corp Standard Devices",
           "publishdate": "2020-09-02",

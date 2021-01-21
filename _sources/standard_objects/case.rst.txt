@@ -104,29 +104,29 @@ Markup
     .. code-block:: json
 
       {
-        "type": "propertydef",
+        "udrtype": "propertydef",
         "class": "velocity-indexed",
         "name": "Velocity Index",
         "description": "The indexed velocity of a wheel",
         "datatype": "enum",
         "children": [
           {
-            "type": "case",
+            "udrtype": "case",
             "value": "Slow"
           },
           {
-            "type": "case",
+            "udrtype": "case",
             "value": "Medium"
           },
           {
-            "type": "case",
+            "udrtype": "case",
             "value": "Fast"
           }
         ]
       }
 
       {
-        "type": "propertydef",
+        "udrtype": "propertydef",
         "class": "wheel-position",
         "name": "Wheel Position",
         "description": "The position of a wheel",
@@ -134,19 +134,19 @@ Markup
         "unit": "degree",
         "children": [
           {
-            "type": "case",
+            "udrtype": "case",
             "propertymin": "0",
             "propertymin": "4",
             "value": "Red"
           },
           {
-            "type": "case",
+            "udrtype": "case",
             "propertymin": "5",
             "propertymin": "19",
             "value": "Red/Orange"
           },
           {
-            "type": "case",
+            "udrtype": "case",
             "propertymin": "20",
             "propertymin": "24",
             "value": "Orange"

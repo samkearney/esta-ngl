@@ -41,15 +41,15 @@
     <devicedef class="gobo-wheel-5000" version="1">
     
       <interface class="udr://org.esta.device.1/device" alias="device" friendlyname="Device">
-        <override refalias="device-id" style="absolute" attribute="value">com.acme.mydevice.1</override>
-        <override refalias="device-manufacturer" style="absolute" attribute="value">My Organization</override>
-        <override refalias="device-model" style="absolute" attribute="value">Gobo Wheel 5000</override>
+        <override refalias="device-id" type="absolute" attribute="value">com.acme.mydevice.1</override>
+        <override refalias="device-manufacturer" type="absolute" attribute="value">My Organization</override>
+        <override refalias="device-model" type="absolute" attribute="value">Gobo Wheel 5000</override>
       </interface>
 
       <interface class="udr://org.esta.wheel.1/wheel" alias="gobo-wheel" friendlyname="Gobo Wheel">
 
         <!-- wheel-control can be used to create a virtual selector, alternatively use refalias to refer to a property with data type enum -->
-        <condition style="exclusive" alias="wheel-control">
+        <condition type="exclusive" alias="wheel-control">
           <interface class="../wheel-velocity" alias="velocity" friendlyname="Speed" />
           <interface class="../wheel-position" alias="position" friendlyname="Position" />
           <interface class="../wheel-position-indexed" alias="position-indexed" friendlyname="Indexed Position" />
@@ -58,7 +58,7 @@
         <interface class="udr://org.esta.wheel.1/wheel" alias="gobo-rotator" friendlyname="Gobo Rotator">
 
           <!-- gobo-rotator-control can be used to create a virtual selector, alternatively use refalias to refer to a property with data type enum -->
-          <condition style="exclusive" alias="gobo-rotator-control">
+          <condition type="exclusive" alias="gobo-rotator-control">
             <interface class="../wheel-velocity" alias="velocity" friendlyname="Speed" />
             <interface class="../wheel-position" alias="position" friendlyname="Position" />
           </condition>

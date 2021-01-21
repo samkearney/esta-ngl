@@ -81,9 +81,9 @@ Markup
 
       <devicedef class="es1" version="1">
         <interface class="udr://org.esta.identification.1/device" alias="device" friendlyname="Device">
-          <override refalias="device-id" style="absolute" attribute="value">com.etcconnect.es1.1</override>
-          <override refalias="device-manufacturer" style="absolute" attribute="value">ETC Inc.</override>
-          <override refalias="device-model" style="absolute" attribute="value">ES1</override>
+          <override refalias="device-id" type="absolute" attribute="value">com.etcconnect.es1.1</override>
+          <override refalias="device-manufacturer" type="absolute" attribute="value">ETC Inc.</override>
+          <override refalias="device-model" type="absolute" attribute="value">ES1</override>
         </interface>
       </devicedef>
 
@@ -104,34 +104,34 @@ Markup
     .. code-block:: json
 
       {
-        "type": "devicedef",
+        "udrtype": "devicedef",
         "class": "es1",
         "version": "1",
         "children": [
           {
-            "type": "interface",
+            "udrtype": "interface",
             "class": "udr://org.esta.device.1/device",
             "alias": "device",
             "friendlyname": "Device",
             "children": [
               {
-                "type": "override",
+                "udrtype": "override",
                 "refalias": "device-id",
-                "style": "absolute",
+                "type": "absolute",
                 "attribute": "value",
                 "value": "com.etcconnect.es1.1"
               },
               {
-                "type": "override",
+                "udrtype": "override",
                 "refalias": "device-manufacturer",
-                "style": "absolute",
+                "type": "absolute",
                 "attribute": "value",
                 "value": "ETC Inc."
               },
               {
-                "type": "override",
+                "udrtype": "override",
                 "refalias": "device-model",
-                "style": "absolute",
+                "type": "absolute",
                 "attribute": "value",
                 "value": "ES1"
               }

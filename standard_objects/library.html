@@ -286,27 +286,27 @@ usable by anything that imports the library.</p>
 </div>
 <div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-1 docutils container">
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;library&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;library&quot;</span><span class="p">,</span>
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;com.acme.standarddefs.1&quot;</span><span class="p">,</span>
   <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;ACME Corp Standard Definitions&quot;</span><span class="p">,</span>
   <span class="nt">&quot;publishdate&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-09-02&quot;</span><span class="p">,</span>
   <span class="nt">&quot;author&quot;</span><span class="p">:</span> <span class="nt">&quot;ACME Corp&quot;</span>
   <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;propertydef&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;propertydef&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;udr://$/customproperty&quot;</span><span class="p">,</span>
       <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Custom Property&quot;</span><span class="p">,</span>
       <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;My custom property&quot;</span><span class="p">,</span>
       <span class="nt">&quot;datatype&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interfacedef&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interfacedef&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;custominterface&quot;</span><span class="p">,</span>
       <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Custom Interface&quot;</span><span class="p">,</span>
       <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;My custom interface&quot;</span><span class="p">,</span>
       <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
-          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
           <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;udr://org.esta.intensity.1/intensity&quot;</span><span class="p">,</span>
           <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;intensity-1&quot;</span><span class="p">,</span>
           <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Trim LED Intensity&quot;</span><span class="p">,</span>
@@ -316,7 +316,7 @@ usable by anything that imports the library.</p>
           <span class="nt">&quot;maximum&quot;</span><span class="p">:</span> <span class="mi">100</span>
         <span class="p">},</span>
         <span class="p">{</span>
-          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
           <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;udr://org.esta.intensity.1/intensity&quot;</span><span class="p">,</span>
           <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;intensity-2&quot;</span><span class="p">,</span>
           <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Yoke Logo Intensity&quot;</span><span class="p">,</span>
@@ -326,7 +326,7 @@ usable by anything that imports the library.</p>
           <span class="nt">&quot;maximum&quot;</span><span class="p">:</span> <span class="mi">100</span>
         <span class="p">},</span>
         <span class="p">{</span>
-          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
           <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;customproperty&quot;</span><span class="p">,</span>
           <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;custom_property_1&quot;</span><span class="p">,</span>
           <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Custom Property&quot;</span><span class="p">,</span>
@@ -336,7 +336,7 @@ usable by anything that imports the library.</p>
           <span class="nt">&quot;maximum&quot;</span><span class="p">:</span> <span class="mi">128</span>
         <span class="p">},</span>
         <span class="p">{</span>
-          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;propertydef&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;propertydef&quot;</span><span class="p">,</span>
           <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;customproperty2&quot;</span><span class="p">,</span>
           <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Custom Property 2&quot;</span><span class="p">,</span>
           <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;My custom property 2&quot;</span><span class="p">,</span>
@@ -344,7 +344,7 @@ usable by anything that imports the library.</p>
           <span class="nt">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;rpm&quot;</span>
         <span class="p">},</span>
         <span class="p">{</span>
-          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
           <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;customproperty2&quot;</span><span class="p">,</span>
           <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;customproperty2-1&quot;</span><span class="p">,</span>
           <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Some Custom Property&quot;</span><span class="p">,</span>
@@ -354,7 +354,7 @@ usable by anything that imports the library.</p>
           <span class="nt">&quot;maximum&quot;</span><span class="p">:</span> <span class="mi">100</span>
         <span class="p">},</span>
         <span class="p">{</span>
-          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
           <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;customproperty2&quot;</span><span class="p">,</span>
           <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;customproperty2-2&quot;</span><span class="p">,</span>
           <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Another Custom Property&quot;</span><span class="p">,</span>

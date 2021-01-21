@@ -33,13 +33,13 @@ Properties
   .. code-tab:: json
 
     {
-      "type": "interfacedef",
+      "udrtype": "interfacedef",
       "class": "dimmer",
       "name": "Dimmer",
       "description": "A simple dimmer controlling an intensity.",
       "children": [
         {
-          "type": "property",
+          "udrtype": "property",
           "class": "udr://$/intensity",
           "alias": "intensity",
           "friendlyname": "Dimmer",
@@ -64,7 +64,7 @@ Instance Example
   .. code-tab:: json
 
     {
-      "type": "interface",
+      "udrtype": "interface",
       "class": "udr://org.esta.intensity.1/dimmer",
       "alias": "primary-dimmer",
       "friendlyname": "Primary Dimmer"

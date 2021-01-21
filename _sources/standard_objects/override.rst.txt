@@ -25,12 +25,12 @@ Ref Alias (Required)
 Indicates the **alias** of the property instance which this object is
 providing new values for. This must be a valid :ref:`tutorial-identifiers-alias`.
 
-.. _standard-objects-override-style:
+.. _standard-objects-override-type:
 
-Style (Required)
+Type (Required)
 ===============
 
-Indicates the **style** of this override.
+Indicates the **type** of this override.
 
 For properties with a :ref:`data type<standard-objects-property-definition-data-type>` of *number*
 this can be any of the following:
@@ -62,7 +62,7 @@ Value Alias
 
 Indicates the **alias** of the property instance which this object should
 observe for new values. This must be a valid :ref:`tutorial-identifiers-alias`.
-When this attribute is defined and the **style** is absolute, any discrete value
+When this attribute is defined and the **type** is absolute, any discrete value
 provided will be ignored.
 
 .. _standard-objects-override-value:
@@ -73,7 +73,7 @@ Value
 
 The value for the attribute specified, or the value for this property if the
 attribute is specified as **value**. This value should be excluded, and will
-be ignored if a **valuealias** is included with a **style** of absolute.
+be ignored if a **valuealias** is included with a **type** of absolute.
 
 .. _standard-objects-override-markup:
 
@@ -88,7 +88,7 @@ Markup
     * Attributes:
 
       * ``refalias``: :ref:`standard-objects-override-refalias`
-      * ``style``: :ref:`standard-objects-override-style`
+      * ``type``: :ref:`standard-objects-override-type`
       * ``attribute``: :ref:`standard-objects-override-attribute`
       * ``valuealias``: :ref:`standard-objects-override-valuealias`
 
@@ -98,18 +98,18 @@ Markup
 
       <!-- simplified example -->
       <interface class="udr://org.esta.identification.1/device" alias="device" friendlyname="Device">
-          <override refalias="device-id" style="absolute" attribute="value">com.acme.device-model.1</override>
+          <override refalias="device-id" type="absolute" attribute="value">com.acme.device-model.1</override>
       </interface>
 
       <!-- simplified example -->
       <interface class="udr://org.esta.wheel.1/wheel-velocity" alias="velocity" friendlyname="Wheel Speed">
-          <override refalias="angular-velocity" style="absolute" attribute="minimum">-720</override>
-          <override refalias="angular-velocity" style="absolute" attribute="maximum">720</override>
+          <override refalias="angular-velocity" type="absolute" attribute="minimum">-720</override>
+          <override refalias="angular-velocity" type="absolute" attribute="maximum">720</override>
       </interface>
 
       <!-- simplified example -->
       <interface class="udr://org.esta.beam.1/optics" alias="optics" friendlyname="Optics">
-          <override refalias="zoom" style="multiplier" attribute="maximum" valuealias="edge">1.2<override>
+          <override refalias="zoom" type="multiplier" attribute="maximum" valuealias="edge">1.2<override>
       </interface>
 
   .. tab:: JSON
@@ -121,7 +121,7 @@ Markup
       Key            Value Type Represents
       ============== ========== ============================================================
       refalias       string     :ref:`standard-objects-override-refalias`
-      style          string     :ref:`standard-objects-override-style`
+      type          string     :ref:`standard-objects-override-type`
       attribute      string     :ref:`standard-objects-override-attribute`
       valuealias     string     :ref:`standard-objects-override-valuealias`
       value          various    :ref:`standard-objects-override-value`
@@ -132,15 +132,15 @@ Markup
     .. code-block:: json
 
       {
-        "type": "interface",
+        "udrtype": "interface",
         "class": "udr://org.esta.identification.1/device",
         "alias": "device",
         "friendlyname": "Device"
         "children": [
           {
-            "type": "override",
+            "udrtype": "override",
             "refalias": "device-id",
-            "style": "absolute",
+            "type": "absolute",
             "attribute": "value",
             "value": "com.acme.device-model.1"
           }
@@ -148,22 +148,22 @@ Markup
       }
 
       {
-        "type": "interface",
+        "udrtype": "interface",
         "class": "udr://org.esta.wheel.1/wheel-velocity",
         "alias": "velocity",
         "friendlyname": "Wheel Speed",
         "children": [
           {
-            "type": "override",
+            "udrtype": "override",
             "refalias": "angular-velocity",
-            "style": "absolute",
+            "type": "absolute",
             "attribute": "minimum",
             "value": -720
           },
           {
-            "type": "override",
+            "udrtype": "override",
             "refalias": "angular-velocity",
-            "style": "absolute",
+            "type": "absolute",
             "attribute": "maximum",
             "value": 720
           }
@@ -171,15 +171,15 @@ Markup
       }
 
       {
-        "type": "interface",
+        "udrtype": "interface",
         "class": "udr://org.esta.beam.1/optics",
         "alias": "optics",
         "friendlyname": "Optics",
         "children": [
           {
-            "type": "override",
+            "udrtype": "override",
             "refalias": "zoom",
-            "style": "multiplier",
+            "type": "multiplier",
             "attribute": "maximum",
             "valuealias": "edge"
             "value": 1.2

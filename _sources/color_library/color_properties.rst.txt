@@ -39,7 +39,7 @@ Definition Markup
   .. code-tab:: json
 
     {
-      "type": "propertydef"
+      "udrtype": "propertydef"
       "class": "spectrum-data",
       "name": "Spectrum Data",
       "description": "The Spectral Power Distribution data of an emitter in normalized wavelength.",
@@ -112,7 +112,7 @@ Definition Markup
   .. code-tab:: json
 
     {
-      "type": "propertydef"
+      "udrtype": "propertydef"
       "class": "spectrum-start",
       "name": "Spectrum Start",
       "description": "The Spectral Power Distribution wavelength start.",
@@ -185,7 +185,7 @@ Definition Markup
   .. code-tab:: json
 
     {
-      "type": "propertydef"
+      "udrtype": "propertydef"
       "class": "spectrum-end",
       "name": "Spectrum End",
       "description": "The Spectral Power Distribution wavelength end.",
@@ -258,7 +258,7 @@ Definition Markup
   .. code-tab:: json
 
     {
-      "type": "propertydef"
+      "udrtype": "propertydef"
       "class": "spectrum-step",
       "name": "Spectrum Step",
       "description": "The Spectral Power Distribution wavelength step.",

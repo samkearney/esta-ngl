@@ -70,27 +70,27 @@ Markup Example
     .. code-block:: json
 
       {
-        "type": "library",
+        "udrtype": "library",
         "class": "com.acme.standarddefs.1",
         "description": "ACME Corp Standard Definitions",
         "publishdate": "2020-09-02",
         "author": "ACME Corp"
         "children": [
           {
-            "type": "propertydef",
+            "udrtype": "propertydef",
             "class": "udr://$/customproperty",
             "name": "Custom Property",
             "description": "My custom property",
             "datatype": "string"
           },
           {
-            "type": "interfacedef",
+            "udrtype": "interfacedef",
             "class": "custominterface",
             "name": "Custom Interface",
             "description": "My custom interface",
             "children": [
               {
-                "type": "property",
+                "udrtype": "property",
                 "class": "udr://org.esta.intensity.1/intensity",
                 "alias": "intensity-1",
                 "friendlyname": "Trim LED Intensity",
@@ -100,7 +100,7 @@ Markup Example
                 "maximum": 100
               },
               {
-                "type": "property",
+                "udrtype": "property",
                 "class": "udr://org.esta.intensity.1/intensity",
                 "alias": "intensity-2",
                 "friendlyname": "Yoke Logo Intensity",
@@ -110,7 +110,7 @@ Markup Example
                 "maximum": 100
               },
               {
-                "type": "property",
+                "udrtype": "property",
                 "class": "customproperty",
                 "alias": "custom_property_1",
                 "friendlyname": "Custom Property",
@@ -120,7 +120,7 @@ Markup Example
                 "maximum": 128
               },
               {
-                "type": "propertydef",
+                "udrtype": "propertydef",
                 "class": "customproperty2",
                 "name": "Custom Property 2",
                 "description": "My custom property 2",
@@ -128,7 +128,7 @@ Markup Example
                 "unit": "rpm"
               },
               {
-                "type": "property",
+                "udrtype": "property",
                 "class": "customproperty2",
                 "alias": "customproperty2-1",
                 "friendlyname": "Some Custom Property",
@@ -138,7 +138,7 @@ Markup Example
                 "maximum": 100
               },
               {
-                "type": "property",
+                "udrtype": "property",
                 "class": "customproperty2",
                 "alias": "customproperty2-2",
                 "friendlyname": "Another Custom Property",

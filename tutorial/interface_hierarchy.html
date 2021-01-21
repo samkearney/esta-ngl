@@ -241,13 +241,13 @@ controls all of the cells:</p>
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interfacedef&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interfacedef&quot;</span><span class="p">,</span>
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;udr://com.acme.definitions.1/cell-group&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Cell Group&quot;</span><span class="p">,</span>
   <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A group of cells&quot;</span><span class="p">,</span>
   <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;udr://org.esta.intensity.1/intensity&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;intensity-master&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Intensity Master&quot;</span><span class="p">,</span>
@@ -257,7 +257,7 @@ controls all of the cells:</p>
       <span class="nt">&quot;maximum&quot;</span><span class="p">:</span> <span class="mi">100</span>
     <span class="p">},</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interfaceconstraint&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interfaceconstraint&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;../cell&quot;</span><span class="p">,</span>
       <span class="nt">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">1</span>
     <span class="p">}</span>
@@ -294,13 +294,13 @@ interface instance must have at least one cell child.</p>
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interfacedef&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interfacedef&quot;</span><span class="p">,</span>
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;cell&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Cell&quot;</span><span class="p">,</span>
   <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An intensity and RGB cell&quot;</span><span class="p">,</span>
   <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;udr://org.esta.intensity.1/intensity&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;intensity&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Cell Intensity&quot;</span><span class="p">,</span>
@@ -310,7 +310,7 @@ interface instance must have at least one cell child.</p>
       <span class="nt">&quot;maximum&quot;</span><span class="p">:</span> <span class="mi">100</span>
     <span class="p">},</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;property&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;udr://org.esta.color.1/rgb&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;color&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Cell Color&quot;</span><span class="p">,</span>
@@ -364,31 +364,31 @@ the device might contain:</p>
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;udr://com.acme.definitions.1/cell-group&quot;</span><span class="p">,</span>
   <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;cell-group-1&quot;</span><span class="p">,</span>
   <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;4x Cells&quot;</span><span class="p">,</span>
   <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;../cell!1&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Top Cell&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;../cell!2&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Right Cell&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;../cell!3&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Bottom Cell&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;../cell!4&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Left Cell&quot;</span>
@@ -397,13 +397,13 @@ the device might contain:</p>
 <span class="p">}</span>
 
 <span class="p">{</span>
-  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;udr://com.acme.definitions.1/cell-group&quot;</span><span class="p">,</span>
   <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;cell-group-1&quot;</span><span class="p">,</span>
   <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;4x Cells&quot;</span><span class="p">,</span>
   <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;../cell&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;cell!1&quot;</span><span class="p">,</span>
       <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="mi">4</span>
@@ -462,31 +462,31 @@ it. To modify the above example:</p>
 </div>
 <div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;udr://com.acme.definitions.1/cell-group&quot;</span><span class="p">,</span>
   <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;cell-group-1&quot;</span><span class="p">,</span>
   <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;4x Cells&quot;</span><span class="p">,</span>
   <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;../cell&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Left Cell&quot;</span>
     <span class="p">},</span>
             <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;../cell&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Right Cell&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;../cell&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Bottom Cell&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;../cell&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Left Cell&quot;</span>
@@ -495,31 +495,31 @@ it. To modify the above example:</p>
 <span class="p">}</span>
 
 <span class="p">{</span>
-  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;udr://com.acme.definitions.1/cell-group&quot;</span><span class="p">,</span>
   <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;cell-group-2&quot;</span><span class="p">,</span>
   <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;4x Cells&quot;</span><span class="p">,</span>
   <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;../cell&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Right Cell&quot;</span>
     <span class="p">},</span>
             <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;../cell&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Top Cell&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;../cell&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Bottom Cell&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;../cell&quot;</span><span class="p">,</span>
       <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
       <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Left Cell&quot;</span>

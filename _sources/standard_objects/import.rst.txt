@@ -30,6 +30,6 @@ Example
   .. code-tab:: json
 
     {
-      "type": "import",
+      "udrtype": "import",
       "name": "org.esta.intensity.1"
     }
