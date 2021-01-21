@@ -107,7 +107,7 @@ Markup
     .. code-block:: json
 
       {
-        "type": "interface",
+        "udrtype": "interface",
         "class": "udr://org.esta.intensity.1/binary-dimmer",
         "alias": "primary-dimmer",
         "friendlyname": "Primary Dimmer"

@@ -188,9 +188,9 @@
 
             <!-- device -->
             <interface class="udr://org.esta.identification.1/device" alias="device">
-                <override refalias="device-id" style="absolute" attribute="value">com.martin.encore-performance-wrm.1</override>
-                <override refalias="device-manufacturer" style="absolute" attribute="value">HARMAN International</override>
-                <override refalias="device-model" style="absolute" attribute="value">MAC Encore Performance WRM</override>
+                <override refalias="device-id" type="absolute" attribute="value">com.martin.encore-performance-wrm.1</override>
+                <override refalias="device-manufacturer" type="absolute" attribute="value">HARMAN International</override>
+                <override refalias="device-model" type="absolute" attribute="value">MAC Encore Performance WRM</override>
             </interface>
 
             <!-- color | cmy -->
@@ -199,15 +199,15 @@
             <!-- gobo wheel -->
             <interface class="udr://$/custom-gobo-wheel" alias="gobo-wheel">
 
-                <condition style="exclusive" alias="wheel-control">
+                <condition type="exclusive" alias="wheel-control">
 
                     <!-- wheel indexed -->
                     <interface class="../wheel-position-indexed" alias="wheel-position-indexed" />
 
                     <!-- wheel continuous rotation-->
                     <interface class="../wheel-velocity" alias="wheel-velocity">
-                        <override refalias="angular-velocity" style="absolute" attribute="minimum">-45</override>
-                        <override refalias="angular-velocity" style="absolute" attribute="maximum">45</override>
+                        <override refalias="angular-velocity" type="absolute" attribute="minimum">-45</override>
+                        <override refalias="angular-velocity" type="absolute" attribute="maximum">45</override>
                     </interface>
 
                 </condition>
@@ -215,21 +215,21 @@
                 <!-- gobo rotator -->
                 <interface class="udr://$/custom-gobo-wheel" alias="gobo-rotator">
 
-                    <condition style="exclusive" alias="gobo-rotator-control">
+                    <condition type="exclusive" alias="gobo-rotator-control">
 
                         <!-- indexing -->
-                        <condition style="available" refalias="udr://$/gobo-wheel/wheel-control/wheel-position-indexed">
+                        <condition type="available" refalias="udr://$/gobo-wheel/wheel-control/wheel-position-indexed">
                             <interface class="../wheel-position" alias="position" />
                         </condition>
 
                         <!-- continuous rotation -->
                         <interface class="../wheel-velocity" alias="velocity">
-                            <override refalias="angular-velocity" style="absolute" attribute="minimum">-720</override>
-                            <override refalias="angular-velocity" style="absolute" attribute="maximum">720</override>
+                            <override refalias="angular-velocity" type="absolute" attribute="minimum">-720</override>
+                            <override refalias="angular-velocity" type="absolute" attribute="maximum">720</override>
                         </interface>
 
                         <!-- shake-->
-                        <condition style="available" refalias="udr://$/gobo-wheel/wheel-control/wheel-position-indexed">
+                        <condition type="available" refalias="udr://$/gobo-wheel/wheel-control/wheel-position-indexed">
                             <interface class="custom-wheel-shake" alias="shake" />
                         </condition>
 
@@ -242,7 +242,7 @@
             <!-- color wheel -->
             <interface class="udr://org.esta.org.color.1/color-wheel" alias="color-wheel">
 
-                <condition style="exclusive" alias="wheel-control">
+                <condition type="exclusive" alias="wheel-control">
 
                     <!-- wheel indexed continuous -->
                     <interface class="../wheel-position" alias="position" />
@@ -252,8 +252,8 @@
 
                     <!-- wheel continuous rotation-->
                     <interface class="../wheel-velocity" alias="wheel-velocity">
-                        <override refalias="angular-velocity" style="absolute" attribute="minimum">-45</override>
-                        <override refalias="angular-velocity" style="absolute" attribute="maximum">45</override>
+                        <override refalias="angular-velocity" type="absolute" attribute="minimum">-45</override>
+                        <override refalias="angular-velocity" type="absolute" attribute="maximum">45</override>
                     </interface>
 
                     <!-- wheel random -->
@@ -269,38 +269,38 @@
             <!-- framing -->
             <interface class="udr://org.esta.framing.1/framing-rotating" alias="framing">
                 <interface class="../frame" alias="frame-top">
-                    <override refalias="frame-location" style="absolute" attribute="value">0</override>
+                    <override refalias="frame-location" type="absolute" attribute="value">0</override>
                 </interface>
 
                 <interface class="../frame" alias="frame-right">
-                    <override refalias="frame-location" style="absolute" attribute="value">90</override>
+                    <override refalias="frame-location" type="absolute" attribute="value">90</override>
                 </interface>
 
                 <interface class="../frame" alias="frame-bottom">
-                    <override refalias="frame-location" style="absolute" attribute="value">180</override>
+                    <override refalias="frame-location" type="absolute" attribute="value">180</override>
                 </interface>
 
                 <interface class="../frame" alias="frame-left">
-                    <override refalias="frame-location" style="absolute" attribute="value">270</override>
+                    <override refalias="frame-location" type="absolute" attribute="value">270</override>
                 </interface>
 
-                <override refalias="framing-angle" style="absolute" attribute="minimum">-180</override>
-                <override refalias="framing-angle" style="absolute" attribute="maximum">180</override>
+                <override refalias="framing-angle" type="absolute" attribute="minimum">-180</override>
+                <override refalias="framing-angle" type="absolute" attribute="maximum">180</override>
             </interface>
 
             <!-- pan/tilt -->
             <interface class="udr://org.esta.focus.1/pan-tilt" alias="pan-tilt">
-                <override refalias="pan" style="absolute" attribute="minimum">-270</override>
-                <override refalias="pan" style="absolute" attribute="maximum">270</override>
-                <override refalias="tilt" style="absolute" attribute="minimum">-138.5</override>
-                <override refalias="tilt" style="absolute" attribute="maximum">139.5</override>
+                <override refalias="pan" type="absolute" attribute="minimum">-270</override>
+                <override refalias="pan" type="absolute" attribute="maximum">270</override>
+                <override refalias="tilt" type="absolute" attribute="minimum">-138.5</override>
+                <override refalias="tilt" type="absolute" attribute="maximum">139.5</override>
             </interface>
 
             <!-- strobe -->
             <interface class="udr://$/shutter" alias="shutter">
                 <interface class="strobe-frequency" alias="strobe-frequency">
-                    <override refalias="strobe-frequency" style="absolute" attribute="minimum">0.5</override>
-                    <override refalias="strobe-frequency" style="absolute" attribute="maximum">100</override>
+                    <override refalias="strobe-frequency" type="absolute" attribute="minimum">0.5</override>
+                    <override refalias="strobe-frequency" type="absolute" attribute="maximum">100</override>
                 </interface>
             </interface>
 

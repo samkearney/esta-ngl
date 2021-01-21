@@ -39,7 +39,7 @@ Definition Markup
   .. code-tab:: json
 
     {
-      "type": "propertydef"
+      "udrtype": "propertydef"
       "class": "device-id",
       "name": "Device ID"
       "description": "A globally unique identifier for a device model.",
@@ -113,7 +113,7 @@ Definition Markup
   .. code-tab:: json
 
     {
-      "type": "propertydef"
+      "udrtype": "propertydef"
       "class": "device-manufacturer",
       "name": "Manufacturer"
       "description": "Identifies a device's manufacturer.",
@@ -187,7 +187,7 @@ Definition Markup
   .. code-tab:: json
 
     {
-      "type": "propertydef"
+      "udrtype": "propertydef"
       "class": "device-model",
       "name": "Model"
       "description": "Identifies a device's model name.",

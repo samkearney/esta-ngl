@@ -54,14 +54,14 @@ a unique alias.
   .. code-tab:: json
 
     {
-      "type": "interfacedef",
+      "udrtype": "interfacedef",
       "class": "my-dimmer",
       "name": "My Dimmer",
       "extends": "udr://org.esta.intensity.1/dimmer",
       "description": "A simple dimmer with status LED intensity control.",
       "children": [
         {
-          "type": "property",
+          "udrtype": "property",
           "class": "udr://org.esta.intensity.1/intensity",
           "alias": "led-interface",
           "friendlyname": "Status LED",

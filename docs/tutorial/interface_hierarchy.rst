@@ -23,13 +23,13 @@ controls all of the cells:
   .. code-tab:: json
 
     {
-      "type": "interfacedef",
+      "udrtype": "interfacedef",
       "class": "udr://com.acme.definitions.1/cell-group",
       "name": "Cell Group",
       "description": "A group of cells",
       "children": [
         {
-          "type": "property",
+          "udrtype": "property",
           "class": "udr://org.esta.intensity.1/intensity",
           "alias": "intensity-master",
           "friendlyname": "Intensity Master",
@@ -39,7 +39,7 @@ controls all of the cells:
           "maximum": 100
         },
         {
-          "type": "interfaceconstraint",
+          "udrtype": "interfaceconstraint",
           "class": "../cell",
           "minimum": 1
         }
@@ -64,13 +64,13 @@ The cell interface might look like:
   .. code-tab:: json
 
     {
-      "type": "interfacedef",
+      "udrtype": "interfacedef",
       "class": "cell",
       "name": "Cell",
       "description": "An intensity and RGB cell",
       "children": [
         {
-          "type": "property",
+          "udrtype": "property",
           "class": "udr://org.esta.intensity.1/intensity",
           "alias": "intensity",
           "friendlyname": "Cell Intensity",
@@ -80,7 +80,7 @@ The cell interface might look like:
           "maximum": 100
         },
         {
-          "type": "property",
+          "udrtype": "property",
           "class": "udr://org.esta.color.1/rgb",
           "alias": "color",
           "friendlyname": "Cell Color",
@@ -123,31 +123,31 @@ the device might contain:
   .. code-tab:: json
 
     {
-      "type": "interface",
+      "udrtype": "interface",
       "class": "udr://com.acme.definitions.1/cell-group",
       "alias": "cell-group-1",
       "friendlyname": "4x Cells",
       "children": [
         {
-          "type": "interface",
+          "udrtype": "interface",
           "class": "../cell!1",
           "alias": "1",
           "friendlyname": "Top Cell"
         },
         {
-          "type": "interface",
+          "udrtype": "interface",
           "class": "../cell!2",
           "alias": "2",
           "friendlyname": "Right Cell"
         },
         {
-          "type": "interface",
+          "udrtype": "interface",
           "class": "../cell!3",
           "alias": "3",
           "friendlyname": "Bottom Cell"
         },
         {
-          "type": "interface",
+          "udrtype": "interface",
           "class": "../cell!4",
           "alias": "4",
           "friendlyname": "Left Cell"
@@ -156,13 +156,13 @@ the device might contain:
     }
 
     {
-      "type": "interface",
+      "udrtype": "interface",
       "class": "udr://com.acme.definitions.1/cell-group",
       "alias": "cell-group-1",
       "friendlyname": "4x Cells",
       "children": [
         {
-          "type": "interface",
+          "udrtype": "interface",
           "class": "../cell",
           "alias": "cell!1",
           "count": 4
@@ -213,31 +213,31 @@ it. To modify the above example:
   .. code-tab:: json
 
     {
-      "type": "interface",
+      "udrtype": "interface",
       "class": "udr://com.acme.definitions.1/cell-group",
       "alias": "cell-group-1",
       "friendlyname": "4x Cells",
       "children": [
         {
-          "type": "interface",
+          "udrtype": "interface",
           "class": "../cell",
           "alias": "4",
           "friendlyname": "Left Cell"
         },
                 {
-          "type": "interface",
+          "udrtype": "interface",
           "class": "../cell",
           "alias": "3",
           "friendlyname": "Right Cell"
         },
         {
-          "type": "interface",
+          "udrtype": "interface",
           "class": "../cell",
           "alias": "1",
           "friendlyname": "Bottom Cell"
         },
         {
-          "type": "interface",
+          "udrtype": "interface",
           "class": "../cell",
           "alias": "2",
           "friendlyname": "Left Cell"
@@ -246,31 +246,31 @@ it. To modify the above example:
     }
 
     {
-      "type": "interface",
+      "udrtype": "interface",
       "class": "udr://com.acme.definitions.1/cell-group",
       "alias": "cell-group-2",
       "friendlyname": "4x Cells",
       "children": [
         {
-          "type": "interface",
+          "udrtype": "interface",
           "class": "../cell",
           "alias": "3",
           "friendlyname": "Right Cell"
         },
                 {
-          "type": "interface",
+          "udrtype": "interface",
           "class": "../cell",
           "alias": "4",
           "friendlyname": "Top Cell"
         },
         {
-          "type": "interface",
+          "udrtype": "interface",
           "class": "../cell",
           "alias": "1",
           "friendlyname": "Bottom Cell"
         },
         {
-          "type": "interface",
+          "udrtype": "interface",
           "class": "../cell",
           "alias": "2",
           "friendlyname": "Left Cell"

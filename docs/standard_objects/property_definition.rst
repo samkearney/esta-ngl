@@ -164,7 +164,7 @@ Markup
     .. code-block:: json
 
       {
-        "type": "propertydef",
+        "udrtype": "propertydef",
         "class": "strobe-frequency",
         "name": "Strobe Frequency",
         "description": "The frequency of a strobe shutter in Hertz",

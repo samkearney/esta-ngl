@@ -107,13 +107,13 @@ Markup
     .. code-block:: json
 
       {
-        "type": "interfacedef",
+        "udrtype": "interfacedef",
         "class": "binary-dimmer",
         "name": "Binary Dimmer",
         "description": "Represents non-dimming control of a light source",
         "children": [
           {
-            "type": "property",
+            "udrtype": "property",
             "class": "udr://org.esta.intensity.1/binary-intensity",
             "alias": "intensity",
             "friendlyname": "Intensity",

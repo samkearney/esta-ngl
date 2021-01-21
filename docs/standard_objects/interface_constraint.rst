@@ -90,7 +90,7 @@ Markup
     .. code-block:: json
 
       {
-        "type": "interfaceconstraint",
+        "udrtype": "interfaceconstraint",
         "class": "udr://com.acme.definitions.1/cell",
         "minimum": 1,
         "maximum": 10

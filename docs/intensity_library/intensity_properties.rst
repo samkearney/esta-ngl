@@ -39,7 +39,7 @@ Definition Markup
   .. code-tab:: json
 
     {
-      "type": "propertydef"
+      "udrtype": "propertydef"
       "class": "intensity",
       "name": "Name",
       "description": "Represents an emitter intensity as a percentage of its maximum brightness",
@@ -112,7 +112,7 @@ Definition Markup
   .. code-tab:: json
 
     {
-      "type": "propertydef"
+      "udrtype": "propertydef"
       "class": "binary-intensity",
       "name": "Binary Intensity"
       "description": "Represents an emitter intensity as an on/off state where \"true\" indicates \"on\"",

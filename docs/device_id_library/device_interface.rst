@@ -37,13 +37,13 @@ Properties
   .. code-tab:: json
 
     {
-      "type": "interfacedef",
+      "udrtype": "interfacedef",
       "class": "device",
       "name": "Device",
       "description": "The root-level interface that describes a device.",
       "children": [
         {
-          "type": "property",
+          "udrtype": "property",
           "class": "udr://$/device-id",
           "alias": "device-id",
           "access": "readonly",
@@ -52,7 +52,7 @@ Properties
           "maximum": 128
         },
         {
-          "type": "property",
+          "udrtype": "property",
           "class": "udr://$/manufacturer",
           "alias": "device-manufacturer",
           "access": "readonly",
@@ -61,7 +61,7 @@ Properties
           "maximum": 128
         },
         {
-          "type": "property",
+          "udrtype": "property",
           "class": "udr://$/model",
           "alias": "device-model",
           "access": "readonly",
@@ -81,37 +81,37 @@ Instance Example
   .. code-tab:: xml
 
     <interface class="udr://org.esta.identification.1/device" alias="device" friendlyname="Device">
-      <override refalias="device-id" style="absolute" attribute="value">com.acme.device-model.1</override>
-      <override refalias="device-manufacturer" style="absolute" attribute="value">ACME Corp</override>
-      <override refalias="device-model" style="absolute" attribute="value">New Device Model</override>
+      <override refalias="device-id" type="absolute" attribute="value">com.acme.device-model.1</override>
+      <override refalias="device-manufacturer" type="absolute" attribute="value">ACME Corp</override>
+      <override refalias="device-model" type="absolute" attribute="value">New Device Model</override>
     </interface>
 
   .. code-tab:: json
 
     {
-      "type": "interface",
+      "udrtype": "interface",
       "class": "udr://org.esta.identification.1/device",
       "alias": "device",
       "friendlyname": "Device",
       "children": [
         {
-          "type": "override",
+          "udrtype": "override",
           "refalias": "device-id",
-          "style": "absolute",
+          "type": "absolute",
           "attribute": "value",
           "value": "com.acme.device-model.1"
         },
         {
-          "type": "override",
+          "udrtype": "override",
           "refalias": "device-manufacturer",
-          "style": "absolute",
+          "type": "absolute",
           "attribute": "value",
           "value": "ACME Corp"
         },
         {
-          "type": "override",
+          "udrtype": "override",
           "refalias": "device-model",
-          "style": "absolute",
+          "type": "absolute",
           "attribute": "value",
           "value": "New Device Model"
         }

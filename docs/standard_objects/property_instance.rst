@@ -207,7 +207,7 @@ Markup
     .. code-block:: json
 
       {
-        "type": "property",
+        "udrtype": "property",
         "class": "udr://org.esta.identification.1/firmware-version",
         "alias": "my-firmware-version",
         "friendlyname": "Firmware Version",
