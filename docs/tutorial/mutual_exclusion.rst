@@ -5,7 +5,7 @@ Mutual Exclusion
 ################
 
 It is common to require only a single interface to be 'selected' from some number of interfaces
-at any point. UDR achieves this using the :ref:`standard-objects-condition` mechanism with a Style
+at any point. UDR achieves this using the :ref:`standard-objects-condition` mechanism with a Type
 of *exclusive*. Any child interface is considered mutually exclusive to other child interfaces.
 This means each can only be controlled "one at a time".
 
@@ -30,7 +30,7 @@ by a controller to generate a virtual selector.
 
       <!-- simplified example -->
       <interface class="udr://org.esta.wheel.1/wheel" alias="wheel">
-        <condition style="exclusive" alias="wheel-control">
+        <condition type="exclusive" alias="wheel-control">
           <interface class="../wheel-velocity" alias="velocity" friendlyname="Wheel Speed">
           <interface class="../wheel-index" alias="index" friendlyname="Wheel Index">
         </condition>
@@ -41,23 +41,23 @@ by a controller to generate a virtual selector.
     .. code-block:: json
 
       {
-        "type": "interface",
+        "udrtype": "interface",
         "class": "udr://org.esta.wheel.1/wheel",
         "alias": "wheel",
         "children": [
           {
-            "type": "condition",
-            "style": "exclusive",
+            "udrtype": "condition",
+            "type": "exclusive",
             "alias": "wheel-control",
             "children": [
               {
-                "type": "interface",
+                "udrtype": "interface",
                 "class": "../wheel-velocity",
                 "alias": "velocity",
                 "friendlyname": "Wheel Speed"
               },
               {
-                "type": "interface",
+                "udrtype": "interface",
                 "class": "../wheel-index",
                 "alias": "index",
                 "friendlyname": "Wheel Index"
@@ -94,7 +94,7 @@ To expand on the example from above:
 
       <!-- simplified example (note the condition references the property) -->
       <interface class="udr://org.esta.wheel.1/wheel" alias="wheel">
-        <condition style="exclusive" refalias="../interface-selector">
+        <condition type="exclusive" refalias="../interface-selector">
           <interface class="../wheel-velocity" alias="velocity" friendlyname="Wheel Speed">
           <interface class="../wheel-index" alias="index" friendlyname="Wheel Index">
         </condition>
@@ -105,24 +105,24 @@ To expand on the example from above:
     .. code-block:: json
 
       {
-        "type": "interfacedef",
+        "udrtype": "interfacedef",
         "class": "udr://org.esta.wheel.1/wheel",
         "name": "Wheel",
         "children": [
           {
-            "type": "property",
+            "udrtype": "property",
             "class": "udr://org.esta.core.1/interface-selector",
             "alias": "interface-selector",
             "access": "readwrite"
             "lifetime": "runtime"
           },
           {
-            "type": "interfaceconstraint",
+            "udrtype": "interfaceconstraint",
             "class": "../wheel-velocity",
             "maximum": 1
           },
           {
-            "type": "interfaceconstraint",
+            "udrtype": "interfaceconstraint",
             "class": "../wheel-index",
             "maximum": 1
           }
@@ -130,23 +130,23 @@ To expand on the example from above:
       }
 
       {
-        "type": "interface",
+        "udrtype": "interface",
         "class": "udr://org.esta.wheel.1/wheel",
         "alias": "wheel",
         "children": [
           {
-            "type": "condition",
-            "style": "exclusive",
+            "udrtype": "condition",
+            "type": "exclusive",
             "refalias": "../interface-selector",
             "children": [
               {
-                "type": "interface",
+                "udrtype": "interface",
                 "class": "../wheel-velocity",
                 "alias": "velocity",
                 "friendlyname": "Wheel Speed"
               },
               {
-                "type": "interface",
+                "udrtype": "interface",
                 "class": "../wheel-index",
                 "alias": "index",
                 "friendlyname": "Wheel Index"

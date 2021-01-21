@@ -36,34 +36,34 @@ Properties
   .. code-tab:: json
 
     {
-      "type": "interfacedef",
+      "udrtype": "interfacedef",
       "class": "spectrum",
       "name": "Spectrum",
       "description": "The Spectral Power Distribution data of an emitter in normalized wavelength.",
       "children": [
         {
-          "type": "property",
+          "udrtype": "property",
           "class": "udr://$/spectrum-data",
           "alias": "spectrum-data",
           "access": "readonly",
           "lifetime": "static"
         },
         {
-          "type": "property",
+          "udrtype": "property",
           "class": "udr://$/spectrum-start",
           "alias": "spectrum-start",
           "access": "readonly",
           "lifetime": "static"
         },
         {
-          "type": "property",
+          "udrtype": "property",
           "class": "udr://$/spectrum-end",
           "alias": "spectrum-end",
           "access": "readonly",
           "lifetime": "static"
         },
         {
-          "type": "property",
+          "udrtype": "property",
           "class": "udr://$/spectrum-step",
           "alias": "spectrum-step",
           "access": "readonly",
@@ -81,45 +81,45 @@ Instance Example
   .. code-tab:: xml
 
     <interface class="udr://org.esta.color.1/spectrum" alias="red-spectrum" friendlyname="Red Spectrum" />
-      <override refalias="spectrum-data" style="absolute" attribute="value">0.4, 0.5, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.3, 1.4, 1.6, 1.8, 2.0, 2.3, 2.7, 3.0, 3.3, 3.8</override>
-      <override refalias="spectrum-start" style="absolute" attribute="value">496</override>
-      <override refalias="spectrum-end" style="absolute" attribute="value">584</override>
-      <override refalias="spectrum-step" style="absolute" attribute="value">1</override>
+      <override refalias="spectrum-data" type="absolute" attribute="value">0.4, 0.5, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.3, 1.4, 1.6, 1.8, 2.0, 2.3, 2.7, 3.0, 3.3, 3.8</override>
+      <override refalias="spectrum-start" type="absolute" attribute="value">496</override>
+      <override refalias="spectrum-end" type="absolute" attribute="value">584</override>
+      <override refalias="spectrum-step" type="absolute" attribute="value">1</override>
     </interface>
 
   .. code-tab:: json
 
     {
-      "type": "interface",
+      "udrtype": "interface",
       "class": "udr://org.esta.spectrum.1/red-spectrum",
       "alias": "red-spectrum",
       "friendlyname": "Red Spectrum",
       "children": [
         {
-          "type": "override",
+          "udrtype": "override",
           "refalias": "spectrum-data",
-          "style": "absolute",
+          "type": "absolute",
           "attribute": "value",
           "value": [0.4, 0.5, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.3, 1.4, 1.6, 1.8, 2.0, 2.3, 2.7, 3.0, 3.3, 3.8]
         },
         {
-          "type": "override",
+          "udrtype": "override",
           "refalias": "spectrum-start",
-          "style": "absolute",
+          "type": "absolute",
           "attribute": "value",
           "value": 496
         },
         {
-          "type": "override",
+          "udrtype": "override",
           "refalias": "spectrum-end",
-          "style": "absolute",
+          "type": "absolute",
           "attribute": "value",
           "value": 584
         },
         {
-          "type": "override",
+          "udrtype": "override",
           "refalias": "spectrum-step",
-          "style": "absolute",
+          "type": "absolute",
           "attribute": "value",
           "value": 1
         }
