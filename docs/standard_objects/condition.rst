@@ -4,6 +4,8 @@
 Condition
 #########
 
+WORK IN PROGRESS
+
 Interface instances can contain *condition* objects, which provide conditional
 availability or selection of child interfaces and properties.
 
