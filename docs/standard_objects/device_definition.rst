@@ -99,7 +99,7 @@ Markup
 
   .. tab:: JSON
 
-    * Type: ``devicedef``
+    * UDR Type: ``devicedef``
     * Members:
 
       =========== ========== =======================================================

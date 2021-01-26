@@ -64,7 +64,7 @@ Markup
 
   .. tab:: JSON
 
-    * Type: ``translation``
+    * UDR Type: ``translation``
     * Members:
 
       ============== ========== ============================================================
