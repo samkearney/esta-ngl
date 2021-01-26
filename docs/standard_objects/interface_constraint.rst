@@ -74,7 +74,7 @@ Markup
 
   .. tab:: JSON
 
-    * Type: ``interfaceconstraint``
+    * UDR Type: ``interfaceconstraint``
     * Members:
 
       ============== ========== ====================================================

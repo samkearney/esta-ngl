@@ -145,7 +145,7 @@ Markup
 
   .. tab:: JSON
 
-    * Type: ``propertydef``
+    * UDR Type: ``propertydef``
     * Members:
 
       =========== ========== =======================================================

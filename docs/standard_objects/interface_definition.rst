@@ -90,7 +90,7 @@ Markup
 
   .. tab:: JSON
 
-    * Type: ``interfacedef``
+    * UDR Type: ``interfacedef``
     * Members:
 
       =========== ========== =======================================================

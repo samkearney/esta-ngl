@@ -37,6 +37,7 @@ architectural lighting and building automation, and the Internet of Things.
    standard_objects/override
    standard_objects/case
    standard_objects/condition
+   standard_objects/translation
 
 .. toctree::
    :maxdepth: 2
