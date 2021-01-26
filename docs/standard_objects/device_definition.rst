@@ -61,6 +61,16 @@ change is made to a published device.
 
 .. _standard-objects-device-definition-markup:
 
+Children
+========
+
+A device definition can have the following children:
+
+* :ref:`standard-objects-property-definition`
+* :ref:`standard-objects-interface-definition`
+* :ref:`standard-objects-interface-instance`
+* :ref:`standard-objects-translation`
+
 ******
 Markup
 ******

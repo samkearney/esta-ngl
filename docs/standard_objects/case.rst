@@ -96,7 +96,7 @@ Markup
       ============== ========== ============================================================
       propertymin    number     :ref:`standard-objects-case-property-min`
       propertymax    number     :ref:`standard-objects-case-property-max`
-      value          various    :ref:`standard-objects-case-value`
+      value          string     :ref:`standard-objects-case-value`
       ============== ========== ============================================================
 
     Example:
