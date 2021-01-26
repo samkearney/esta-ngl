@@ -13,10 +13,7 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
 
   
@@ -37,8 +34,7 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
-        <script src="../_static/sphinx_tabs/tabs.js"></script>
+        <script src="../_static/tabs.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -120,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="override.html">Override</a></li>
 <li class="toctree-l1"><a class="reference internal" href="case.html">Case</a></li>
 <li class="toctree-l1"><a class="reference internal" href="condition.html">Condition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
 <ul>
@@ -229,33 +226,17 @@ in the current context.</p>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-WE1M docutils container">
-<div class="docutils container">
-<p>XML</p>
-</div>
-</div>
-<div class="item sphinx-data-tab-SlNPTg== docutils container">
-<div class="docutils container">
-<p>JSON</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Import the contents of &quot;org.esta.device.1&quot; into the current file. --&gt;</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-WE1M" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-WE1M" name="WE1M" role="tab" tabindex="0">XML</button><button aria-controls="panel-0-SlNPTg==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-SlNPTg==" name="SlNPTg==" role="tab" tabindex="-1">JSON</button></div><div aria-labelledby="tab-0-WE1M" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-WE1M" name="WE1M" role="tabpanel" tabindex="0"><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Import the contents of &quot;org.esta.device.1&quot; into the current file. --&gt;</span>
 <span class="nt">&lt;import</span> <span class="na">name=</span><span class="s">&quot;org.esta.device.1&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+</div><div aria-labelledby="tab-0-SlNPTg==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-SlNPTg==" name="SlNPTg==" role="tabpanel" tabindex="0"><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;import&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.intensity.1&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </div>
 

@@ -13,10 +13,7 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
 
   
@@ -37,15 +34,14 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
-        <script src="../_static/sphinx_tabs/tabs.js"></script>
+        <script src="../_static/tabs.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Device Interface" href="../device_id_library/device_interface.html" />
+    <link rel="next" title="Translation" href="translation.html" />
     <link rel="prev" title="Case" href="case.html" /> 
 </head>
 
@@ -124,6 +120,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
 <ul>
@@ -307,20 +304,7 @@ defined as <em>exclusive</em>.</p>
 <div class="section" id="markup">
 <span id="standard-objects-condition-markup"></span><h3>Markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h3>
 <div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-0-0 docutils container">
-<div class="docutils container">
-<p>XML</p>
-</div>
-</div>
-<div class="item sphinx-data-tab-0-1 docutils container">
-<div class="docutils container">
-<p>JSON</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active docutils container">
-<ul class="simple">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">XML</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">JSON</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><ul class="simple">
 <li><p>Tag name: <code class="docutils literal notranslate"><span class="pre">condition</span></code></p></li>
 <li><p>Attributes:</p>
 <ul>
@@ -345,10 +329,8 @@ defined as <em>exclusive</em>.</p>
 <span class="nt">&lt;/condition&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-1 docutils container">
-<ul class="simple">
-<li><p>Type: <code class="docutils literal notranslate"><span class="pre">condition</span></code></p></li>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><ul class="simple">
+<li><p>UDR Type: <code class="docutils literal notranslate"><span class="pre">condition</span></code></p></li>
 <li><p>Members:</p></li>
 </ul>
 <p>Example:</p>
@@ -387,8 +369,7 @@ defined as <em>exclusive</em>.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </div>
 </div>
@@ -399,7 +380,7 @@ defined as <em>exclusive</em>.</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../device_id_library/device_interface.html" class="btn btn-neutral float-right" title="Device Interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="translation.html" class="btn btn-neutral float-right" title="Translation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="case.html" class="btn btn-neutral float-left" title="Case" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

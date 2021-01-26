@@ -13,10 +13,7 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
 
   
@@ -37,8 +34,7 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
-        <script src="../_static/sphinx_tabs/tabs.js"></script>
+        <script src="../_static/tabs.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -113,6 +109,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/override.html">Override</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/case.html">Case</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/condition.html">Condition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/translation.html">Translation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
 <ul>
@@ -271,20 +268,7 @@
 <div class="section" id="definition-markup">
 <h3>Definition Markup<a class="headerlink" href="#definition-markup" title="Permalink to this headline">¶</a></h3>
 <div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-WE1M docutils container">
-<div class="docutils container">
-<p>XML</p>
-</div>
-</div>
-<div class="item sphinx-data-tab-SlNPTg== docutils container">
-<div class="docutils container">
-<p>JSON</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;propertydef</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-WE1M" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-WE1M" name="WE1M" role="tab" tabindex="0">XML</button><button aria-controls="panel-0-SlNPTg==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-SlNPTg==" name="SlNPTg==" role="tab" tabindex="-1">JSON</button></div><div aria-labelledby="tab-0-WE1M" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-WE1M" name="WE1M" role="tabpanel" tabindex="0"><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;propertydef</span>
   <span class="na">class=</span><span class="s">&quot;spectrum-data&quot;</span>
   <span class="na">name=</span><span class="s">&quot;Spectrum Data&quot;</span>
   <span class="na">description=</span><span class="s">&quot;The Spectral Power Distribution data of an emitter in normalized wavelength.&quot;</span>
@@ -292,9 +276,7 @@
   <span class="na">unit=</span><span class="s">&quot;nanometers&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+</div><div aria-labelledby="tab-0-SlNPTg==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-SlNPTg==" name="SlNPTg==" role="tabpanel" tabindex="0"><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="nt">&quot;propertydef&quot;</span>
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;spectrum-data&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Spectrum Data&quot;</span><span class="p">,</span>
@@ -304,26 +286,12 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div class="section" id="instance-example">
 <h3>Instance Example<a class="headerlink" href="#instance-example" title="Permalink to this headline">¶</a></h3>
 <div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-WE1M docutils container">
-<div class="docutils container">
-<p>XML</p>
-</div>
-</div>
-<div class="item sphinx-data-tab-SlNPTg== docutils container">
-<div class="docutils container">
-<p>JSON</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-1-WE1M" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-WE1M" name="WE1M" role="tab" tabindex="0">XML</button><button aria-controls="panel-1-SlNPTg==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-SlNPTg==" name="SlNPTg==" role="tab" tabindex="-1">JSON</button></div><div aria-labelledby="tab-1-WE1M" class="sphinx-tabs-panel code-tab group-tab" id="panel-1-WE1M" name="WE1M" role="tabpanel" tabindex="0"><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span>
   <span class="na">class=</span><span class="s">&quot;org.esta.color.1/spectrum-data&quot;</span>
   <span class="na">alias=</span><span class="s">&quot;red-spectrum-data&quot;</span>
   <span class="na">friendlyname=</span><span class="s">&quot;Red Spectrum Data&quot;</span>
@@ -331,9 +299,7 @@
   <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+</div><div aria-labelledby="tab-1-SlNPTg==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-1-SlNPTg==" name="SlNPTg==" role="tabpanel" tabindex="0"><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.color.1/spectrum-data&quot;</span><span class="p">,</span>
@@ -346,8 +312,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </div>
 <div class="section" id="spectrum-wavelength-start">
@@ -385,20 +350,7 @@
 <div class="section" id="id2">
 <h3>Definition Markup<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-WE1M docutils container">
-<div class="docutils container">
-<p>XML</p>
-</div>
-</div>
-<div class="item sphinx-data-tab-SlNPTg== docutils container">
-<div class="docutils container">
-<p>JSON</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;propertydef</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-2-WE1M" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-2-WE1M" name="WE1M" role="tab" tabindex="0">XML</button><button aria-controls="panel-2-SlNPTg==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-2-SlNPTg==" name="SlNPTg==" role="tab" tabindex="-1">JSON</button></div><div aria-labelledby="tab-2-WE1M" class="sphinx-tabs-panel code-tab group-tab" id="panel-2-WE1M" name="WE1M" role="tabpanel" tabindex="0"><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;propertydef</span>
   <span class="na">class=</span><span class="s">&quot;spectrum-start&quot;</span>
   <span class="na">name=</span><span class="s">&quot;Spectrum Start&quot;</span>
   <span class="na">description=</span><span class="s">&quot;The Spectral Power Distribution wavelength start.&quot;</span>
@@ -406,9 +358,7 @@
   <span class="na">unit=</span><span class="s">&quot;nanometers&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+</div><div aria-labelledby="tab-2-SlNPTg==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-2-SlNPTg==" name="SlNPTg==" role="tabpanel" tabindex="0"><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="nt">&quot;propertydef&quot;</span>
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;spectrum-start&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Spectrum Start&quot;</span><span class="p">,</span>
@@ -418,26 +368,12 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div class="section" id="id3">
 <h3>Instance Example<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-WE1M docutils container">
-<div class="docutils container">
-<p>XML</p>
-</div>
-</div>
-<div class="item sphinx-data-tab-SlNPTg== docutils container">
-<div class="docutils container">
-<p>JSON</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-3-WE1M" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-3-WE1M" name="WE1M" role="tab" tabindex="0">XML</button><button aria-controls="panel-3-SlNPTg==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-3-SlNPTg==" name="SlNPTg==" role="tab" tabindex="-1">JSON</button></div><div aria-labelledby="tab-3-WE1M" class="sphinx-tabs-panel code-tab group-tab" id="panel-3-WE1M" name="WE1M" role="tabpanel" tabindex="0"><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span>
   <span class="na">class=</span><span class="s">&quot;org.esta.color.1/spectrum-start&quot;</span>
   <span class="na">alias=</span><span class="s">&quot;spectrum-start&quot;</span>
   <span class="na">friendlyname=</span><span class="s">&quot;Spectrum Start&quot;</span>
@@ -445,9 +381,7 @@
   <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+</div><div aria-labelledby="tab-3-SlNPTg==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-3-SlNPTg==" name="SlNPTg==" role="tabpanel" tabindex="0"><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.color.1/spectrum-start&quot;</span><span class="p">,</span>
@@ -460,8 +394,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </div>
 <div class="section" id="spectrum-wavelength-end">
@@ -499,20 +432,7 @@
 <div class="section" id="id5">
 <h3>Definition Markup<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-WE1M docutils container">
-<div class="docutils container">
-<p>XML</p>
-</div>
-</div>
-<div class="item sphinx-data-tab-SlNPTg== docutils container">
-<div class="docutils container">
-<p>JSON</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;propertydef</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-4-WE1M" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-4-WE1M" name="WE1M" role="tab" tabindex="0">XML</button><button aria-controls="panel-4-SlNPTg==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-4-SlNPTg==" name="SlNPTg==" role="tab" tabindex="-1">JSON</button></div><div aria-labelledby="tab-4-WE1M" class="sphinx-tabs-panel code-tab group-tab" id="panel-4-WE1M" name="WE1M" role="tabpanel" tabindex="0"><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;propertydef</span>
   <span class="na">class=</span><span class="s">&quot;spectrum-end&quot;</span>
   <span class="na">name=</span><span class="s">&quot;Spectrum End&quot;</span>
   <span class="na">description=</span><span class="s">&quot;The Spectral Power Distribution wavelength end.&quot;</span>
@@ -520,9 +440,7 @@
   <span class="na">unit=</span><span class="s">&quot;nanometers&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+</div><div aria-labelledby="tab-4-SlNPTg==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-4-SlNPTg==" name="SlNPTg==" role="tabpanel" tabindex="0"><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="nt">&quot;propertydef&quot;</span>
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;spectrum-end&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Spectrum End&quot;</span><span class="p">,</span>
@@ -532,26 +450,12 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div class="section" id="id6">
 <h3>Instance Example<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-WE1M docutils container">
-<div class="docutils container">
-<p>XML</p>
-</div>
-</div>
-<div class="item sphinx-data-tab-SlNPTg== docutils container">
-<div class="docutils container">
-<p>JSON</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-5-WE1M" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-5-WE1M" name="WE1M" role="tab" tabindex="0">XML</button><button aria-controls="panel-5-SlNPTg==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-5-SlNPTg==" name="SlNPTg==" role="tab" tabindex="-1">JSON</button></div><div aria-labelledby="tab-5-WE1M" class="sphinx-tabs-panel code-tab group-tab" id="panel-5-WE1M" name="WE1M" role="tabpanel" tabindex="0"><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span>
   <span class="na">class=</span><span class="s">&quot;org.esta.color.1/spectrum-end&quot;</span>
   <span class="na">alias=</span><span class="s">&quot;spectrum-end&quot;</span>
   <span class="na">friendlyname=</span><span class="s">&quot;Spectrum End&quot;</span>
@@ -559,9 +463,7 @@
   <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+</div><div aria-labelledby="tab-5-SlNPTg==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-5-SlNPTg==" name="SlNPTg==" role="tabpanel" tabindex="0"><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.color.1/spectrum-end&quot;</span><span class="p">,</span>
@@ -574,8 +476,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </div>
 <div class="section" id="spectrum-wavelength-step">
@@ -613,20 +514,7 @@
 <div class="section" id="id8">
 <h3>Definition Markup<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-WE1M docutils container">
-<div class="docutils container">
-<p>XML</p>
-</div>
-</div>
-<div class="item sphinx-data-tab-SlNPTg== docutils container">
-<div class="docutils container">
-<p>JSON</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;propertydef</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-6-WE1M" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-6-WE1M" name="WE1M" role="tab" tabindex="0">XML</button><button aria-controls="panel-6-SlNPTg==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-6-SlNPTg==" name="SlNPTg==" role="tab" tabindex="-1">JSON</button></div><div aria-labelledby="tab-6-WE1M" class="sphinx-tabs-panel code-tab group-tab" id="panel-6-WE1M" name="WE1M" role="tabpanel" tabindex="0"><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;propertydef</span>
   <span class="na">class=</span><span class="s">&quot;spectrum-step&quot;</span>
   <span class="na">name=</span><span class="s">&quot;Spectrum Step&quot;</span>
   <span class="na">description=</span><span class="s">&quot;The Spectral Power Distribution wavelength step.&quot;</span>
@@ -634,9 +522,7 @@
   <span class="na">unit=</span><span class="s">&quot;nanometers&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+</div><div aria-labelledby="tab-6-SlNPTg==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-6-SlNPTg==" name="SlNPTg==" role="tabpanel" tabindex="0"><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="nt">&quot;propertydef&quot;</span>
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;spectrum-step&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Spectrum Step&quot;</span><span class="p">,</span>
@@ -646,26 +532,12 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div class="section" id="id9">
 <h3>Instance Example<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-WE1M docutils container">
-<div class="docutils container">
-<p>XML</p>
-</div>
-</div>
-<div class="item sphinx-data-tab-SlNPTg== docutils container">
-<div class="docutils container">
-<p>JSON</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-7-WE1M" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-7-WE1M" name="WE1M" role="tab" tabindex="0">XML</button><button aria-controls="panel-7-SlNPTg==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-7-SlNPTg==" name="SlNPTg==" role="tab" tabindex="-1">JSON</button></div><div aria-labelledby="tab-7-WE1M" class="sphinx-tabs-panel code-tab group-tab" id="panel-7-WE1M" name="WE1M" role="tabpanel" tabindex="0"><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;property</span>
   <span class="na">class=</span><span class="s">&quot;org.esta.color.1/spectrum-step&quot;</span>
   <span class="na">alias=</span><span class="s">&quot;spectrum-step&quot;</span>
   <span class="na">friendlyname=</span><span class="s">&quot;Spectrum End&quot;</span>
@@ -673,9 +545,7 @@
   <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+</div><div aria-labelledby="tab-7-SlNPTg==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-7-SlNPTg==" name="SlNPTg==" role="tabpanel" tabindex="0"><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;org.esta.color.1/spectrum-step&quot;</span><span class="p">,</span>
@@ -688,8 +558,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </div>
 </div>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Interface Instance &mdash; Uniform Device Representation 0.1.0 documentation</title>
+  <title>Translation &mdash; Uniform Device Representation 0.1.0 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Interface Constraint" href="interface_constraint.html" />
-    <link rel="prev" title="Interface Definition" href="interface_definition.html" /> 
+    <link rel="next" title="Device Interface" href="../device_id_library/device_interface.html" />
+    <link rel="prev" title="Condition" href="condition.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -102,25 +102,22 @@
 <li class="toctree-l1"><a class="reference internal" href="import.html">Import</a></li>
 <li class="toctree-l1"><a class="reference internal" href="device_definition.html">Device Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface_definition.html">Interface Definition</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Interface Instance</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#class-required">Class (Required)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#alias-required">Alias (Required)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#friendly-name">Friendly Name</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#count">Count</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#children">Children</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#markup">Markup</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="interface_instance.html">Interface Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface_constraint.html">Interface Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="property_definition.html">Property Definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="property_instance.html">Property Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="override.html">Override</a></li>
 <li class="toctree-l1"><a class="reference internal" href="case.html">Case</a></li>
 <li class="toctree-l1"><a class="reference internal" href="condition.html">Condition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Translation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#code-required">Code (Required)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#children">Children</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#markup">Markup</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
 <ul>
@@ -197,13 +194,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Interface Instance</li>
+      <li>Translation</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/standard_objects/interface_instance.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/standard_objects/translation.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -216,75 +213,61 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="interface-instance">
-<span id="standard-objects-interface-instance"></span><h1>Interface Instance<a class="headerlink" href="#interface-instance" title="Permalink to this headline">¶</a></h1>
-<p>An <strong>interface instance</strong> is a single addressable instance of an <a class="reference internal" href="interface_definition.html"><span class="doc">Interface Definition</span></a>.</p>
+  <div class="section" id="translation">
+<span id="standard-objects-translation"></span><h1>Translation<a class="headerlink" href="#translation" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="library.html#standard-objects-library"><span class="std std-ref">Libraries</span></a> and
+<a class="reference internal" href="device_definition.html#standard-objects-device-definition"><span class="std std-ref">Device Definitions</span></a> can contain
+child <em>translation</em> objects which provide translation values for a
+specified language/country code.</p>
+<p>Codes must be compliant with <span class="xref std std-ref">ISO 639-1</span></p>
 <div class="section" id="attributes">
 <h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
-<p>Instance attributes are per-interface-instance; they can vary between instances of the interface.</p>
-<div class="section" id="class-required">
-<span id="standard-objects-interface-instance-class"></span><h3>Class (Required)<a class="headerlink" href="#class-required" title="Permalink to this headline">¶</a></h3>
-<p>Indicates the <a class="reference internal" href="interface_definition.html#standard-objects-interface-definition-class"><span class="std std-ref">class</span></a> of the defined interface of which
-this is an instance.</p>
-</div>
-<div class="section" id="alias-required">
-<span id="standard-objects-interface-instance-alias"></span><h3>Alias (Required)<a class="headerlink" href="#alias-required" title="Permalink to this headline">¶</a></h3>
-<p>The <strong>alias</strong> is a unique string identifying this interface instance. The string must be unique within
-the definition containing the interface instance, unless it is paired with a revision of the same class
-found in another child using the same alias (see <a class="reference internal" href="device_definition.html#standard-objects-device-definition-versioning"><span class="std std-ref">versioning</span></a>).</p>
-<p>If multiple interface instances are instantiated using the <em>count</em> attribute, each instance will be identified
-starting with the unique alias followed by the <code class="docutils literal notranslate"><span class="pre">!</span></code> delimiter and initial instance number, and incrementing by
-1 for each instance. For example “alias!2” would be followed by “alias!3”.</p>
-<p>The alias must remain consistent through revisions of a <a class="reference internal" href="device_definition.html#standard-objects-device-definition"><span class="std std-ref">Device Definition</span></a>, as this will
-assist controllers with making sense of hierarchy changes.</p>
-</div>
-<div class="section" id="friendly-name">
-<span id="standard-objects-interface-instance-friendly-name"></span><h3>Friendly Name<a class="headerlink" href="#friendly-name" title="Permalink to this headline">¶</a></h3>
-<p>The <strong>friendly name</strong> attribute provides a string that could be used to identify a particular instance
-of an interface in a software user interface, in order to provide more context to a user. It is not
-intended to uniquely identify the interface in a database.</p>
-</div>
-<div class="section" id="count">
-<span id="standard-objects-interface-instance-count"></span><h3>Count<a class="headerlink" href="#count" title="Permalink to this headline">¶</a></h3>
-<p>The <strong>count</strong> attribute provides a mechanism for instantiating multiple interface instances of the same
-type. When multiple instances are instantiated in this way, each instance is given an alias of that
-provided followed by the <code class="docutils literal notranslate"><span class="pre">!</span></code> delimiter and an incrementing instance number (starting from 1).</p>
-</div>
+<div class="section" id="code-required">
+<span id="standard-objects-translation-code"></span><h3>Code (Required)<a class="headerlink" href="#code-required" title="Permalink to this headline">¶</a></h3>
+<p>The language code, compliant with <span class="xref std std-ref">ISO 639-1</span></p>
 </div>
 <div class="section" id="children">
-<h2>Children<a class="headerlink" href="#children" title="Permalink to this headline">¶</a></h2>
-<p>Interface instances can have the following children:</p>
+<h3>Children<a class="headerlink" href="#children" title="Permalink to this headline">¶</a></h3>
+<p>A translation object can have the following children:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#standard-objects-interface-instance"><span class="std std-ref">Interface Instance</span></a></p></li>
-<li><p><a class="reference internal" href="override.html#standard-objects-override"><span class="std std-ref">Override</span></a></p></li>
-<li><p><a class="reference internal" href="condition.html#standard-objects-condition"><span class="std std-ref">Condition</span></a></p></li>
+<li><p><a class="reference internal" href="keygroup.html#standard-objects-key-group"><span class="std std-ref">Key Group</span></a></p></li>
+<li><p><a class="reference internal" href="key.html#standard-objects-key"><span class="std std-ref">Key</span></a></p></li>
 </ul>
 </div>
 <div class="section" id="markup">
-<span id="standard-objects-interface-instance-markup"></span><h2>Markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h2>
+<span id="standard-objects-case-markup"></span><h3>Markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h3>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">XML</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">JSON</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><ul class="simple">
-<li><p>Tag name: <code class="docutils literal notranslate"><span class="pre">interface</span></code></p></li>
+<li><p>Tag name: <code class="docutils literal notranslate"><span class="pre">translation</span></code></p></li>
 <li><p>Attributes:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">class</span></code>: <a class="reference internal" href="#standard-objects-interface-instance-class"><span class="std std-ref">Class (Required)</span></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">alias</span></code>: <a class="reference internal" href="#standard-objects-interface-instance-alias"><span class="std std-ref">Alias (Required)</span></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">friendlyname</span></code>: <a class="reference internal" href="#standard-objects-interface-instance-friendly-name"><span class="std std-ref">Friendly Name</span></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code>: <a class="reference internal" href="#standard-objects-interface-instance-count"><span class="std std-ref">Count</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code>: <a class="reference internal" href="#standard-objects-translation-code"><span class="std std-ref">Code (Required)</span></a></p></li>
 </ul>
 </li>
 </ul>
 <p>Example:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;udr://org.esta.intensity.1/binary-dimmer&quot;</span> <span class="na">alias=</span><span class="s">&quot;primary-dimmer&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Primary Dimmer&quot;</span> <span class="nt">/&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;translation</span> <span class="na">code=</span><span class="s">&quot;en-gb&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;keygroup</span> <span class="na">class=</span><span class="s">&quot;udr://org.esta.intensity.1&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;key</span> <span class="na">class=</span><span class="s">&quot;dimmer&quot;</span><span class="nt">&gt;</span>dimmer<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;key</span> <span class="na">class=</span><span class="s">&quot;intensity&quot;</span><span class="nt">&gt;</span>intensity<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;/keygroup&gt;</span>
+<span class="nt">&lt;/translation&gt;</span>
+
+<span class="nt">&lt;translation</span> <span class="na">code=</span><span class="s">&quot;de&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;keygroup</span> <span class="na">class=</span><span class="s">&quot;udr://org.esta.intensity.1&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;key</span> <span class="na">class=</span><span class="s">&quot;dimmer&quot;</span><span class="nt">&gt;</span>dimmer<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;key</span> <span class="na">class=</span><span class="s">&quot;intensity&quot;</span><span class="nt">&gt;</span>intensität<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;/keygroup&gt;</span>
+<span class="nt">&lt;/translation&gt;</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><ul>
-<li><p>UDR Type: <code class="docutils literal notranslate"><span class="pre">interface</span></code></p></li>
-<li><p>Members</p>
+<li><p>UDR Type: <code class="docutils literal notranslate"><span class="pre">translation</span></code></p></li>
+<li><p>Members:</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 16%" />
-<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 12%" />
 <col style="width: 71%" />
 </colgroup>
 <thead>
@@ -294,21 +277,9 @@ provided followed by the <code class="docutils literal notranslate"><span class=
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>class</p></td>
+<tr class="row-even"><td><p>code</p></td>
 <td><p>string</p></td>
-<td><p><a class="reference internal" href="#standard-objects-interface-instance-class"><span class="std std-ref">Class (Required)</span></a></p></td>
-</tr>
-<tr class="row-odd"><td><p>alias</p></td>
-<td><p>string</p></td>
-<td><p><a class="reference internal" href="#standard-objects-interface-instance-alias"><span class="std std-ref">Alias (Required)</span></a></p></td>
-</tr>
-<tr class="row-even"><td><p>friendlyname</p></td>
-<td><p>string</p></td>
-<td><p><a class="reference internal" href="#standard-objects-interface-instance-friendly-name"><span class="std std-ref">Friendly Name</span></a></p></td>
-</tr>
-<tr class="row-odd"><td><p>count</p></td>
-<td><p>string</p></td>
-<td><p><a class="reference internal" href="#standard-objects-interface-instance-count"><span class="std std-ref">Count</span></a></p></td>
+<td><p><a class="reference internal" href="#standard-objects-translation-code"><span class="std std-ref">Code (Required)</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -316,14 +287,54 @@ provided followed by the <code class="docutils literal notranslate"><span class=
 </ul>
 <p>Example:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;udr://org.esta.intensity.1/binary-dimmer&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;primary-dimmer&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;friendlyname&quot;</span><span class="p">:</span> <span class="s2">&quot;Primary Dimmer&quot;</span>
+  <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;translation&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;en-gb&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;keygroup&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;udr://org.esta.intensity.1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;key&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;dimmer&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;dimmer&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;key&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;intensity&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;intensity&quot;</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="p">{</span>
+  <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;translation&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;de&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;keygroup&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;udr://org.esta.intensity.1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;key&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;dimmer&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;dimmer&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;key&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;intensity&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;intensität&quot;</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div></div>
+</div>
 </div>
 </div>
 
@@ -333,8 +344,8 @@ provided followed by the <code class="docutils literal notranslate"><span class=
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="interface_constraint.html" class="btn btn-neutral float-right" title="Interface Constraint" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="interface_definition.html" class="btn btn-neutral float-left" title="Interface Definition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../device_id_library/device_interface.html" class="btn btn-neutral float-right" title="Device Interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="condition.html" class="btn btn-neutral float-left" title="Condition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

@@ -13,10 +13,7 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
 
   
@@ -37,8 +34,7 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
-        <script src="../_static/sphinx_tabs/tabs.js"></script>
+        <script src="../_static/tabs.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -124,6 +120,7 @@
 <li class="toctree-l1"><a class="reference internal" href="override.html">Override</a></li>
 <li class="toctree-l1"><a class="reference internal" href="case.html">Case</a></li>
 <li class="toctree-l1"><a class="reference internal" href="condition.html">Condition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
 <ul>
@@ -250,25 +247,13 @@ usable by anything that imports the library.</p>
 <li><p><a class="reference internal" href="property_definition.html#standard-objects-property-definition"><span class="std std-ref">Property Definition</span></a></p></li>
 <li><p><a class="reference internal" href="interface_definition.html#standard-objects-interface-definition"><span class="std std-ref">Interface Definition</span></a></p></li>
 <li><p><a class="reference internal" href="device_definition.html#standard-objects-device-definition"><span class="std std-ref">Device Definition</span></a></p></li>
+<li><p><a class="reference internal" href="translation.html#standard-objects-translation"><span class="std std-ref">Translation</span></a></p></li>
 </ul>
 </div>
 <div class="section" id="markup-example">
 <span id="standard-objects-library-markup"></span><h2>Markup Example<a class="headerlink" href="#markup-example" title="Permalink to this headline">¶</a></h2>
 <div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-0-0 docutils container">
-<div class="docutils container">
-<p>XML</p>
-</div>
-</div>
-<div class="item sphinx-data-tab-0-1 docutils container">
-<div class="docutils container">
-<p>JSON</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>&lt;library class=&quot;com.acme.standarddefs.1&quot; description=&quot;ACME Corp Standard Definitions&quot; publishdate=&quot;2020-09-02&quot; author=&quot;ACME Corp&quot;&gt;
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">XML</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">JSON</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>&lt;library class=&quot;com.acme.standarddefs.1&quot; description=&quot;ACME Corp Standard Definitions&quot; publishdate=&quot;2020-09-02&quot; author=&quot;ACME Corp&quot;&gt;
   &lt;propertydef class=&quot;customproperty&quot; name=&quot;Custom Property&quot; description=&quot;My custom property&quot; datatype=&quot;string&quot; /&gt;
   &lt;interfacedef class=&quot;custominterface&quot; name=&quot;Custom Interface&quot; description=&quot;My custom interface&quot;&gt;
     &lt;property class=&quot;udr://org.esta.intensity.1/intensity&quot; alias=&quot;intensity-1&quot; friendlyname=&quot;Trim LED Intensity&quot; access=&quot;readwrite&quot; lifetime=&quot;runtime&quot; minimum=&quot;0&quot;, maximum=&quot;100&quot; /&gt;
@@ -283,9 +268,7 @@ usable by anything that imports the library.</p>
 &lt;/library&gt;
 </pre></div>
 </div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-1 docutils container">
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;library&quot;</span><span class="p">,</span>
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;com.acme.standarddefs.1&quot;</span><span class="p">,</span>
   <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;ACME Corp Standard Definitions&quot;</span><span class="p">,</span>
@@ -369,8 +352,7 @@ usable by anything that imports the library.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </div>
 

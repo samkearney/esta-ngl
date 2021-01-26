@@ -13,10 +13,7 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
 
   
@@ -37,8 +34,7 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
-        <script src="../_static/sphinx_tabs/tabs.js"></script>
+        <script src="../_static/tabs.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -46,7 +42,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Identification Properties" href="identification_properties.html" />
-    <link rel="prev" title="Condition" href="../standard_objects/condition.html" /> 
+    <link rel="prev" title="Translation" href="../standard_objects/translation.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -113,6 +109,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/override.html">Override</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/case.html">Case</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../standard_objects/condition.html">Condition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_objects/translation.html">Translation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
 <ul class="current">
@@ -248,29 +245,14 @@ every <a class="reference internal" href="../standard_objects/device_definition.
 <li><p><a class="reference internal" href="identification_properties.html#properties-identification-model"><span class="std std-ref">Model</span></a></p></li>
 </ul>
 <div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-WE1M docutils container">
-<div class="docutils container">
-<p>XML</p>
-</div>
-</div>
-<div class="item sphinx-data-tab-SlNPTg== docutils container">
-<div class="docutils container">
-<p>JSON</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;device&quot;</span> <span class="na">name=</span><span class="s">&quot;Device&quot;</span> <span class="na">description=</span><span class="s">&quot;The root-level interface that describes a device.&quot;</span><span class="nt">&gt;</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-WE1M" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-WE1M" name="WE1M" role="tab" tabindex="0">XML</button><button aria-controls="panel-0-SlNPTg==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-SlNPTg==" name="SlNPTg==" role="tab" tabindex="-1">JSON</button></div><div aria-labelledby="tab-0-WE1M" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-WE1M" name="WE1M" role="tabpanel" tabindex="0"><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interfacedef</span> <span class="na">class=</span><span class="s">&quot;device&quot;</span> <span class="na">name=</span><span class="s">&quot;Device&quot;</span> <span class="na">description=</span><span class="s">&quot;The root-level interface that describes a device.&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;udr://$/device-id&quot;</span> <span class="na">alias=</span><span class="s">&quot;device-id&quot;</span> <span class="na">access=</span><span class="s">&quot;readonly&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;128&quot;</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;udr://$/manufacturer&quot;</span> <span class="na">alias=</span><span class="s">&quot;device-manufacturer&quot;</span> <span class="na">access=</span><span class="s">&quot;readonly&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;128&quot;</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;property</span> <span class="na">class=</span><span class="s">&quot;udr://$/model&quot;</span> <span class="na">alias=</span><span class="s">&quot;device-model&quot;</span> <span class="na">access=</span><span class="s">&quot;readonly&quot;</span> <span class="na">lifetime=</span><span class="s">&quot;static&quot;</span> <span class="na">minimum=</span><span class="s">&quot;0&quot;</span> <span class="na">maximum=</span><span class="s">&quot;128&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/interfacedef&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+</div><div aria-labelledby="tab-0-SlNPTg==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-SlNPTg==" name="SlNPTg==" role="tabpanel" tabindex="0"><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interfacedef&quot;</span><span class="p">,</span>
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;device&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Device&quot;</span><span class="p">,</span>
@@ -307,35 +289,19 @@ every <a class="reference internal" href="../standard_objects/device_definition.
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div class="section" id="instance-example">
 <h2>Instance Example<a class="headerlink" href="#instance-example" title="Permalink to this headline">¶</a></h2>
 <div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-WE1M docutils container">
-<div class="docutils container">
-<p>XML</p>
-</div>
-</div>
-<div class="item sphinx-data-tab-SlNPTg== docutils container">
-<div class="docutils container">
-<p>JSON</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-WE1M active docutils container">
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;udr://org.esta.identification.1/device&quot;</span> <span class="na">alias=</span><span class="s">&quot;device&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Device&quot;</span><span class="nt">&gt;</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-1-WE1M" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-WE1M" name="WE1M" role="tab" tabindex="0">XML</button><button aria-controls="panel-1-SlNPTg==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-SlNPTg==" name="SlNPTg==" role="tab" tabindex="-1">JSON</button></div><div aria-labelledby="tab-1-WE1M" class="sphinx-tabs-panel code-tab group-tab" id="panel-1-WE1M" name="WE1M" role="tabpanel" tabindex="0"><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;interface</span> <span class="na">class=</span><span class="s">&quot;udr://org.esta.identification.1/device&quot;</span> <span class="na">alias=</span><span class="s">&quot;device&quot;</span> <span class="na">friendlyname=</span><span class="s">&quot;Device&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;override</span> <span class="na">refalias=</span><span class="s">&quot;device-id&quot;</span> <span class="na">type=</span><span class="s">&quot;absolute&quot;</span> <span class="na">attribute=</span><span class="s">&quot;value&quot;</span><span class="nt">&gt;</span>com.acme.device-model.1<span class="nt">&lt;/override&gt;</span>
   <span class="nt">&lt;override</span> <span class="na">refalias=</span><span class="s">&quot;device-manufacturer&quot;</span> <span class="na">type=</span><span class="s">&quot;absolute&quot;</span> <span class="na">attribute=</span><span class="s">&quot;value&quot;</span><span class="nt">&gt;</span>ACME Corp<span class="nt">&lt;/override&gt;</span>
   <span class="nt">&lt;override</span> <span class="na">refalias=</span><span class="s">&quot;device-model&quot;</span> <span class="na">type=</span><span class="s">&quot;absolute&quot;</span> <span class="na">attribute=</span><span class="s">&quot;value&quot;</span><span class="nt">&gt;</span>New Device Model<span class="nt">&lt;/override&gt;</span>
 <span class="nt">&lt;/interface&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SlNPTg== docutils container">
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+</div><div aria-labelledby="tab-1-SlNPTg==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-1-SlNPTg==" name="SlNPTg==" role="tabpanel" tabindex="0"><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;udrtype&quot;</span><span class="p">:</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span>
   <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;udr://org.esta.identification.1/device&quot;</span><span class="p">,</span>
   <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;device&quot;</span><span class="p">,</span>
@@ -366,8 +332,7 @@ every <a class="reference internal" href="../standard_objects/device_definition.
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </div>
 
@@ -378,7 +343,7 @@ every <a class="reference internal" href="../standard_objects/device_definition.
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="identification_properties.html" class="btn btn-neutral float-right" title="Identification Properties" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../standard_objects/condition.html" class="btn btn-neutral float-left" title="Condition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../standard_objects/translation.html" class="btn btn-neutral float-left" title="Translation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

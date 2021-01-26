@@ -39,6 +39,7 @@ A library can have the following children:
 * :ref:`standard-objects-property-definition`
 * :ref:`standard-objects-interface-definition`
 * :ref:`standard-objects-device-definition`
+* :ref:`standard-objects-translation`
 
 .. _standard-objects-library-markup:
 

@@ -13,10 +13,7 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
 
   
@@ -37,8 +34,7 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
-        <script src="../_static/sphinx_tabs/tabs.js"></script>
+        <script src="../_static/tabs.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -110,7 +106,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#class-required">Class (Required)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#version-required">Version (Required)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#version-required">Version (Required)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#children">Children</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#markup">Markup</a></li>
 </ul>
 </li>
@@ -124,6 +121,7 @@
 <li class="toctree-l1"><a class="reference internal" href="override.html">Override</a></li>
 <li class="toctree-l1"><a class="reference internal" href="case.html">Case</a></li>
 <li class="toctree-l1"><a class="reference internal" href="condition.html">Condition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ESTA Device Identification Library</span></p>
 <ul>
@@ -262,23 +260,20 @@ must be unique within the <a class="reference internal" href="library.html#stand
 <span id="standard-objects-device-definition-version"></span><h2>Version (Required)<a class="headerlink" href="#version-required" title="Permalink to this headline">¶</a></h2>
 <p>A device definition’s <strong>version</strong> is an integer in string representation, which must increment when any
 change is made to a published device.</p>
-<div class="section" id="markup">
-<span id="standard-objects-device-definition-markup"></span><h3>Markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h3>
-<div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-0-0 docutils container">
-<div class="docutils container">
-<p>XML</p>
 </div>
-</div>
-<div class="item sphinx-data-tab-0-1 docutils container">
-<div class="docutils container">
-<p>JSON</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active docutils container">
+<div class="section" id="children">
+<span id="standard-objects-device-definition-markup"></span><h2>Children<a class="headerlink" href="#children" title="Permalink to this headline">¶</a></h2>
+<p>A device definition can have the following children:</p>
 <ul class="simple">
+<li><p><a class="reference internal" href="property_definition.html#standard-objects-property-definition"><span class="std std-ref">Property Definition</span></a></p></li>
+<li><p><a class="reference internal" href="interface_definition.html#standard-objects-interface-definition"><span class="std std-ref">Interface Definition</span></a></p></li>
+<li><p><a class="reference internal" href="interface_instance.html#standard-objects-interface-instance"><span class="std std-ref">Interface Instance</span></a></p></li>
+<li><p><a class="reference internal" href="translation.html#standard-objects-translation"><span class="std std-ref">Translation</span></a></p></li>
+</ul>
+<div class="section" id="markup">
+<h3>Markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h3>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">XML</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">JSON</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><ul class="simple">
 <li><p>Tag name: <code class="docutils literal notranslate"><span class="pre">devicedef</span></code></p></li>
 <li><p>Attributes:</p>
 <ul>
@@ -297,10 +292,8 @@ change is made to a published device.</p>
 <span class="nt">&lt;/devicedef&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-1 docutils container">
-<ul>
-<li><p>Type: <code class="docutils literal notranslate"><span class="pre">devicedef</span></code></p></li>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><ul>
+<li><p>UDR Type: <code class="docutils literal notranslate"><span class="pre">devicedef</span></code></p></li>
 <li><p>Members:</p>
 <table class="docutils align-default">
 <colgroup>
@@ -366,8 +359,7 @@ change is made to a published device.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </div>
 </div>
