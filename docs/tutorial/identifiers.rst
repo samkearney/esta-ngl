@@ -19,8 +19,8 @@ All fully qualified UDR identifiers should begin with the scheme ``udr://``. The
 by the path component, which may either be qualified or relative. UDR uses a subset of the standard URI
 resolution:
 
-For the purpose of URI identification, *Interfaces* are considered to be a directory. Therefore, all
-children are assumed to be at the same level as the parent.
+For the purpose of URI identification, *Interfaces* are treated in the same way as a directory is in a
+file system URI. Therefore, all children are assumed to be at the same level as the parent.
 
 Starting at *property* udr://org.esta.gobo.1/gobo-wheel/gobo-rotator/speed, the following resolutions
 apply:
