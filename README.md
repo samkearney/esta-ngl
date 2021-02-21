@@ -1,3 +1,9 @@
+<mark><b>THIS REPOSITORY HAS MOVED!</b></mark>
+
+The new location of the repository is https://gitlab.com/skearney/udr-docs. The new rendered
+webpage is https://udr-docs.com. Note that these locations are currently accessible to ESTA
+Next-Gen Library Task Group members only.
+
 # ESTA Next Generation Entertainment Control Model: Uniform Device Representation (UDR)
 
 This repository houses working documentation for ESTA's Next Generation Entertainment Control Model: Uniform Device Representation (UDR),
